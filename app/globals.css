@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/*
+ * SV Consulting design tokens — exact palette from docs/websitecolotheme.avif
+ * (see BUILD_PLAN.md "Design Tokens (locked)").
+ */
+@theme {
+  --color-navy-950: #0a1b2a; /* deep navy — primary dark surfaces, footer, hero */
+  --color-navy-700: #203d63; /* royal navy — secondary surfaces, links, accents */
+  --color-gold-500: #c8a53a; /* warm gold — CTA accent, rules, highlights (sparingly) */
+  --color-ivory-100: #f8f0dc; /* ivory — light section backgrounds */
+  --color-slate-500: #6b7280; /* slate — muted text, borders */
+
+  /* Derived tints/shades (identity stays the five above) */
+  --color-ivory-50: #fcf8ee; /* lighter ivory — page background */
+  --color-gold-600: #b08f2e; /* gold hover state */
+}
+
+/* next/font CSS variables mapped to Tailwind font utilities */
+@theme inline {
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-manrope);
+  --font-lao: var(--font-noto-sans-lao);
+  --font-lao-display: var(--font-noto-serif-lao);
+}
+
+/* Base typography — English defaults */
+body {
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+}
+
+/*
+ * Per-locale font strategy: Lao pages switch to Noto Sans Lao for body/UI
+ * and Noto Serif Lao for display headings. Lao script needs a taller
+ * line-height (~1.8) to avoid clipped ascenders/descenders.
+ */
+html[lang='lo'] body {
+  font-family: var(--font-lao), var(--font-body);
+  line-height: 1.8;
+}
+
+html[lang='lo'] h1,
+html[lang='lo'] h2,
+html[lang='lo'] h3,
+html[lang='lo'] h4,
+html[lang='lo'] h5,
+html[lang='lo'] h6 {
+  font-family: var(--font-lao-display), var(--font-display);
+  line-height: 1.6;
+}
+
+html[lang='lo'] .font-display {
+  font-family: var(--font-lao-display), var(--font-display);
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
