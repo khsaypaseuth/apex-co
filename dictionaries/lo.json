@@ -20,7 +20,8 @@
     "contact": "ຕິດຕໍ່ພວກເຮົາ",
     "menu": "ເມນູ",
     "openMenu": "ເປີດເມນູ",
-    "closeMenu": "ປິດເມນູ"
+    "closeMenu": "ປິດເມນູ",
+    "mainNavLabel": "ເມນູນຳທາງຫຼັກ"
   },
   "cta": {
     "bookConsultation": "ນັດປຶກສາຫາລື",
@@ -29,20 +30,99 @@
     "getInTouch": "ຕິດຕໍ່ຫາພວກເຮົາ",
     "learnMore": "ສຶກສາເພີ່ມເຕີມ",
     "readMore": "ອ່ານເພີ່ມເຕີມ",
-    "viewAll": "ເບິ່ງທັງໝົດ"
+    "viewAll": "ເບິ່ງທັງໝົດ",
+    "readGuide": "ອ່ານຄູ່ມື"
   },
   "language": {
     "label": "ພາສາ",
     "en": "English",
-    "lo": "ພາສາລາວ"
+    "lo": "ພາສາລາວ",
+    "enShort": "EN",
+    "loShort": "ລາວ"
+  },
+  "common": {
+    "lastUpdated": "ອັບເດດລ່າສຸດ",
+    "minRead": "ນາທີໃນການອ່ານ",
+    "breadcrumbLabel": "ເສັ້ນທາງນຳທາງ",
+    "relatedArticles": "ບົດຄວາມທີ່ກ່ຽວຂ້ອງ",
+    "relatedServices": "ບໍລິການທີ່ກ່ຽວຂ້ອງ",
+    "sampleContent": "ເນື້ອຫາຕົວຢ່າງ ສຳລັບການສະແດງຜົນເທົ່ານັ້ນ."
+  },
+  "verification": {
+    "verified": "ກວດສອບແລ້ວ",
+    "needsVerification": "ລໍຖ້າການກວດສອບ",
+    "generalInfo": "ຂໍ້ມູນທົ່ວໄປ"
+  },
+  "articleCategories": {
+    "starting-a-business": "ການເລີ່ມຕົ້ນທຸລະກິດໃນລາວ",
+    "tax-accounting": "ອາກອນ ແລະ ບັນຊີ",
+    "visa-immigration": "ວີຊາ ແລະ ການເຂົ້າເມືອງ",
+    "lao-law-basics": "ພື້ນຖານກົດໝາຍລາວ",
+    "labour-employment": "ແຮງງານ ແລະ ການຈ້າງງານ",
+    "investment": "ການລົງທຶນໃນລາວ",
+    "marriage-family": "ການແຕ່ງງານ ແລະ ຄອບຄົວ",
+    "living-in-laos": "ການໃຊ້ຊີວິດໃນລາວ",
+    "compliance-checklists": "ລາຍການກວດກາການປະຕິບັດຕາມລະບຽບ"
+  },
+  "lawCategories": {
+    "company-law": "ກົດໝາຍວ່າດ້ວຍວິສາຫະກິດ",
+    "investment-law": "ກົດໝາຍວ່າດ້ວຍການລົງທຶນ",
+    "tax-law": "ກົດໝາຍວ່າດ້ວຍອາກອນ",
+    "labour-law": "ກົດໝາຍວ່າດ້ວຍແຮງງານ",
+    "immigration": "ການເຂົ້າເມືອງ",
+    "family-law": "ກົດໝາຍວ່າດ້ວຍຄອບຄົວ",
+    "intellectual-property": "ຊັບສິນທາງປັນຍາ",
+    "commercial-contracts": "ສັນຍາທາງການຄ້າ"
+  },
+  "legal": {
+    "disclaimerLabel": "ຂໍ້ຄວນຊາບ",
+    "disclaimer": "ຂໍ້ມູນນີ້ໃຫ້ໄວ້ເພື່ອເປັນແນວທາງທົ່ວໄປເທົ່ານັ້ນ ແລະ ບໍ່ຖືເປັນຄຳແນະນຳທາງດ້ານກົດໝາຍ, ອາກອນ, ການເຂົ້າເມືອງ ຫຼື ບັນຊີ. ກົດໝາຍ ແລະ ຂັ້ນຕອນຕ່າງໆອາດມີການປ່ຽນແປງ. ກະລຸນາຕິດຕໍ່ SV Consulting ຫຼື ຜູ້ຊ່ຽວຊານທີ່ມີຄຸນວຸດທິ ກ່ອນການຕັດສິນໃຈ."
+  },
+  "filter": {
+    "searchLabel": "ຄົ້ນຫາ",
+    "searchPlaceholder": "ຄົ້ນຫາຕາມຫົວຂໍ້ ຫຼື ບົດສະຫຼຸບ…",
+    "allCategories": "ທັງໝົດ",
+    "categoriesLabel": "ກັ່ນຕອງຕາມໝວດໝູ່",
+    "noResults": "ບໍ່ພົບຜົນການຄົ້ນຫາ. ກະລຸນາລອງຄຳຄົ້ນ ຫຼື ໝວດໝູ່ອື່ນ."
+  },
+  "contactForm": {
+    "fullName": "ຊື່ ແລະ ນາມສະກຸນ",
+    "company": "ຊື່ບໍລິສັດ",
+    "email": "ອີເມວ",
+    "phone": "ເບີໂທ / WhatsApp",
+    "preferredContact": "ຊ່ອງທາງຕິດຕໍ່ທີ່ສະດວກ",
+    "serviceNeeded": "ບໍລິການທີ່ຕ້ອງການ",
+    "message": "ຂໍ້ຄວາມ",
+    "selectPlaceholder": "ກະລຸນາເລືອກ",
+    "required": "ຈຳເປັນ",
+    "submit": "ສົ່ງຂໍ້ຄວາມ",
+    "demoNotice": "ເປັນຕົວຢ່າງເທົ່ານັ້ນ — ຟອມນີ້ຍັງບໍ່ສາມາດສົ່ງຂໍ້ຄວາມໄດ້ເທື່ອ. ກະລຸນາຕິດຕໍ່ພວກເຮົາໂດຍກົງ.",
+    "methods": {
+      "email": "ອີເມວ",
+      "phone": "ໂທລະສັບ",
+      "whatsapp": "WhatsApp",
+      "line": "LINE"
+    }
+  },
+  "floating": {
+    "whatsapp": "ຕິດຕໍ່ພວກເຮົາຜ່ານ WhatsApp",
+    "line": "ຕິດຕໍ່ພວກເຮົາຜ່ານ LINE"
   },
   "footer": {
     "quickLinks": "ລິ້ງດ່ວນ",
     "ourServices": "ບໍລິການຂອງພວກເຮົາ",
+    "knowledge": "ຄວາມຮູ້",
     "contact": "ຕິດຕໍ່",
     "legal": "ຂໍ້ມູນທາງກົດໝາຍ",
     "rights": "ສະຫງວນລິຂະສິດ.",
-    "disclaimer": "ຂໍ້ມູນໃນເວັບໄຊນີ້ແມ່ນເພື່ອເປັນແນວທາງທົ່ວໄປເທົ່ານັ້ນ ແລະ ບໍ່ຖືເປັນຄຳແນະນຳທາງດ້ານກົດໝາຍ, ອາກອນ ຫຼື ການເຂົ້າເມືອງ."
+    "disclaimer": "ຂໍ້ມູນໃນເວັບໄຊນີ້ແມ່ນເພື່ອເປັນແນວທາງທົ່ວໄປເທົ່ານັ້ນ ແລະ ບໍ່ຖືເປັນຄຳແນະນຳທາງດ້ານກົດໝາຍ, ອາກອນ ຫຼື ການເຂົ້າເມືອງ.",
+    "address": "ນະຄອນຫຼວງວຽງຈັນ, ສປປ ລາວ",
+    "phoneLabel": "ໂທລະສັບ",
+    "emailLabel": "ອີເມວ",
+    "chatLabel": "WhatsApp / LINE",
+    "phonePlaceholder": "[ເພີ່ມເບີໂທລະສັບ]",
+    "emailPlaceholder": "[ເພີ່ມອີເມວ]",
+    "chatPlaceholder": "[ເພີ່ມລິ້ງຕິດຕໍ່]"
   },
   "home": {
     "heroTitle": "ຄຳແນະນຳທີ່ຊັດເຈນ ສຳລັບເລື່ອງທຸລະກິດ, ກົດໝາຍ ແລະ ຊີວິດ ໃນລາວ",

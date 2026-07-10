@@ -20,7 +20,8 @@
     "contact": "Contact",
     "menu": "Menu",
     "openMenu": "Open menu",
-    "closeMenu": "Close menu"
+    "closeMenu": "Close menu",
+    "mainNavLabel": "Main navigation"
   },
   "cta": {
     "bookConsultation": "Book a Consultation",
@@ -29,20 +30,99 @@
     "getInTouch": "Get in Touch",
     "learnMore": "Learn More",
     "readMore": "Read More",
-    "viewAll": "View All"
+    "viewAll": "View All",
+    "readGuide": "Read the Guide"
   },
   "language": {
     "label": "Language",
     "en": "English",
-    "lo": "ພາສາລາວ"
+    "lo": "ພາສາລາວ",
+    "enShort": "EN",
+    "loShort": "ລາວ"
+  },
+  "common": {
+    "lastUpdated": "Last updated",
+    "minRead": "min read",
+    "breadcrumbLabel": "Breadcrumb",
+    "relatedArticles": "Related articles",
+    "relatedServices": "Related services",
+    "sampleContent": "Sample content for preview purposes only."
+  },
+  "verification": {
+    "verified": "Verified",
+    "needsVerification": "Needs verification",
+    "generalInfo": "General information"
+  },
+  "articleCategories": {
+    "starting-a-business": "Starting a Business in Laos",
+    "tax-accounting": "Tax & Accounting",
+    "visa-immigration": "Visa & Immigration",
+    "lao-law-basics": "Lao Law Basics",
+    "labour-employment": "Labour & Employment",
+    "investment": "Investment in Laos",
+    "marriage-family": "Marriage & Family",
+    "living-in-laos": "Living in Laos",
+    "compliance-checklists": "Compliance Checklists"
+  },
+  "lawCategories": {
+    "company-law": "Company Law",
+    "investment-law": "Investment Law",
+    "tax-law": "Tax Law",
+    "labour-law": "Labour Law",
+    "immigration": "Immigration",
+    "family-law": "Family Law",
+    "intellectual-property": "Intellectual Property",
+    "commercial-contracts": "Commercial Contracts"
+  },
+  "legal": {
+    "disclaimerLabel": "Important notice",
+    "disclaimer": "This information is provided for general guidance only and does not constitute legal, tax, immigration, or accounting advice. Laws and procedures may change. Please contact SV Consulting or a qualified professional before making decisions."
+  },
+  "filter": {
+    "searchLabel": "Search",
+    "searchPlaceholder": "Search by title or summary…",
+    "allCategories": "All",
+    "categoriesLabel": "Filter by category",
+    "noResults": "No results found. Try a different search or category."
+  },
+  "contactForm": {
+    "fullName": "Full Name",
+    "company": "Company Name",
+    "email": "Email",
+    "phone": "Phone / WhatsApp",
+    "preferredContact": "Preferred Contact Method",
+    "serviceNeeded": "Service Needed",
+    "message": "Message",
+    "selectPlaceholder": "Please select",
+    "required": "required",
+    "submit": "Send Message",
+    "demoNotice": "Demo only — this form does not send messages yet. Please contact us directly.",
+    "methods": {
+      "email": "Email",
+      "phone": "Phone call",
+      "whatsapp": "WhatsApp",
+      "line": "LINE"
+    }
+  },
+  "floating": {
+    "whatsapp": "Contact us on WhatsApp",
+    "line": "Contact us on LINE"
   },
   "footer": {
     "quickLinks": "Quick Links",
     "ourServices": "Our Services",
+    "knowledge": "Knowledge",
     "contact": "Contact",
     "legal": "Legal",
     "rights": "All rights reserved.",
-    "disclaimer": "The information on this website is for general guidance only and does not constitute legal, tax, or immigration advice."
+    "disclaimer": "The information on this website is for general guidance only and does not constitute legal, tax, or immigration advice.",
+    "address": "Vientiane Capital, Lao PDR",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "chatLabel": "WhatsApp / LINE",
+    "phonePlaceholder": "[Add phone number]",
+    "emailPlaceholder": "[Add email]",
+    "chatPlaceholder": "[Add contact link]"
   },
   "home": {
     "heroTitle": "Clear guidance for business, legal, and life matters in Laos",

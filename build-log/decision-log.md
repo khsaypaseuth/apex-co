@@ -87,3 +87,33 @@ Format per master plan: question we would have asked → decision → reason →
 ## D-017 — Lao terminology: "tax" = ອາກອນ
 - **Decision:** Dictionaries use ອາກອນ for "tax" (e.g. ບັນຊີ ແລະ ອາກອນ for Accounting & Tax), not ພາສີ, which in Lao usage commonly means customs duty.
 - **Risk:** Low; standard Lao fiscal terminology. Native review still recommended in Phase 7 QA.
+
+## D-018 — Content taxonomy slugs fixed as enums
+- **Question:** Master plan lists category names in prose; how do they become code?
+- **Decision:** Kebab-case slug enums in `lib/types.ts`: 9 article categories (`starting-a-business` … `compliance-checklists`), 8 law categories (`company-law` … `commercial-contracts`), 4 service category slugs matching the `/services/*` routes. Guides are categorised by service category. Zod frontmatter schemas (`lib/content-schema.ts`) enforce them; localized display names live in `dictionaries/*.json` under `articleCategories` / `lawCategories`.
+- **Reason:** Slugs must be stable across locales (used in URLs, filters, frontmatter); display names must translate.
+- **Change later:** Add a slug to the const array + a display name per dictionary.
+
+## D-019 — Content loader error semantics
+- **Decision:** In `lib/content.ts`, a **missing file** returns `null` (caller decides between fallback and `notFound()`); **invalid frontmatter** throws a descriptive build-time error naming the file and the Zod issues (`z.prettifyError`). Missing locale directories list as empty — inactive locales don't break builds. YAML's habit of parsing unquoted dates into `Date` objects is normalised back to ISO strings in the schema.
+- **Reason:** Wrong content must fail the build loudly; absent content is a routing concern, not corruption.
+
+## D-020 — Header is a client component
+- **Question:** Guideline says server components by default; Header needs "transparent over hero → navy on scroll".
+- **Decision:** `Header` is `'use client'` — the scroll-reactive background requires a scroll listener, and CSS scroll-driven animations aren't cross-browser yet. All strings still arrive as props from dictionaries. `LanguageSwitcher` is also client (needs `usePathname` to swap the `/[lang]` segment while preserving the path). Everything else except `MobileNav`, `ContactForm`, `FilterBar` stays server.
+- **Risk:** Slightly larger client bundle for the nav; negligible.
+
+## D-021 — FilterBar owns its state, reports via callback
+- **Decision:** `FilterBar` keeps `useState` for query + category and emits `{ query, category }` through `onChange`; list pages wrap it in a small client component that filters. No URL state (`useSearchParams`) at launch.
+- **Reason:** Plan explicitly prefers the simple prop/callback design; URL state can be layered on later without changing the component API.
+
+## D-022 — Disclaimer: constant + dictionary pair
+- **Decision:** Canonical English disclaimer is `LEGAL_DISCLAIMER` in `lib/site-config.ts` (exact master-plan wording); rendered copies come from `dictionaries/*.json` `legal.disclaimer` (Lao translation added, using ອາກອນ per D-017) via `DisclaimerBox` props. `en.json` must match the constant verbatim.
+- **Reason:** One legal wording source, per-locale rendering without components importing server-only config.
+
+## D-023 — Floating contact buttons use brand colors + generic glyphs
+- **Decision:** WhatsApp/LINE floating buttons use the services' recognizable brand greens (`#25D366`, `#06C755`) as arbitrary values (not added to the token palette) with simple generic chat glyphs, `href="#"` placeholders and `title="Placeholder — add real contact"`.
+- **Reason:** Recognizability requires brand colors; official logo SVGs can be dropped in when real contact links are added.
+
+## D-024 — Styleguide route ships noindexed
+- **Decision:** `/[lang]/styleguide` renders every Phase 2 component with dictionary-driven sample data for EN/LO visual QA; `robots: { index: false, follow: false }` metadata. Phase 8 decides removal vs keeping it noindexed. The sample article renders through the real markdown pipeline (Lao page falls back to the EN article until Phase 7 content lands).
