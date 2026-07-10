@@ -117,3 +117,22 @@ Format per master plan: question we would have asked → decision → reason →
 
 ## D-024 — Styleguide route ships noindexed
 - **Decision:** `/[lang]/styleguide` renders every Phase 2 component with dictionary-driven sample data for EN/LO visual QA; `robots: { index: false, follow: false }` metadata. Phase 8 decides removal vs keeping it noindexed. The sample article renders through the real markdown pipeline (Lao page falls back to the EN article until Phase 7 content lands).
+
+## D-030 — Phase 3 imagery decision-numbering range
+- **Decision:** Phase 3 (imagery) agent uses the D-030+ range to avoid colliding with the Phase 2 agent writing D-018+ concurrently.
+
+## D-031 — Pexels-only sourcing
+- **Question:** Plan allows Unsplash and Pexels; which to use?
+- **Decision:** Sourced all 19 images from Pexels only. Pexels CDN URLs are deterministic from the photo ID (`images.pexels.com/photos/<id>/pexels-photo-<id>.jpeg`), so every downloaded file is provably the photo whose page/alt text was verified. Unsplash CDN filenames (`photo-<timestamp>-<hash>`) cannot be derived from the photo page ID, making blind-guess downloads too risky for subject verification.
+- **Risk:** None; Pexels License equally permissive.
+
+## D-032 — Hero cityscape is not confirmed Vientiane
+- **Question:** The best skyline-at-dusk candidate (Pexels 34428997, found via a "Vientiane" search) has no location tag on its source page; photographer appears Myanmar-based.
+- **Decision:** Kept the image (aerial riverside SEA city at golden dusk — perfect brand mood) but named it `hero/riverside-city-dusk-aerial.jpg` and flagged in ATTRIBUTIONS.md that alt text must say "Southeast Asian riverside city at dusk", never "Vientiane". Confirmed-Laos heroes exist alongside it (Mekong Luang Prabang, Mekong Bokeo).
+- **Change later:** Swap in a verified Vientiane skyline if one surfaces on Pexels/Unsplash.
+
+## D-033 — Portrait Mekong hero cropped via CDN
+- **Decision:** Pexels 17653315 (Mekong sunset, Luang Prabang — strongest confirmed-Laos hero) is portrait 2400x3600 at full size; downloaded with CDN crop params (`w=2400&h=1400&fit=crop`) to get a 2400x1400 landscape hero at 378KB. Local `sips` recompression was abandoned — it inflated file size versus Pexels' own CDN compression, so oversized files were re-fetched at tuned CDN widths instead.
+
+## D-034 — Passport imagery: generic stamps over national covers
+- **Decision:** For the visa/immigration section image, chose an open passport showing visa stamps (Pexels 4922086) rather than close-ups of identifiable national passport covers (most Pexels results are Ukrainian/Russian/EU passports, which would read oddly for a Laos-focused consultancy). The articles/ travel image (33497885) shows passports with travel tickets at an angle where nationality is not prominent.
