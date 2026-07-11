@@ -136,3 +136,40 @@ Format per master plan: question we would have asked → decision → reason →
 
 ## D-034 — Passport imagery: generic stamps over national covers
 - **Decision:** For the visa/immigration section image, chose an open passport showing visa stamps (Pexels 4922086) rather than close-ups of identifiable national passport covers (most Pexels results are Ukrainian/Russian/EU passports, which would read oddly for a Laos-focused consultancy). The articles/ travel image (33497885) shows passports with travel tickets at an angle where nationality is not prominent.
+
+## D-040 — Phase 4 restarted; crashed agent's partial work kept
+- **Question:** A prior Phase 4 agent crashed mid-run leaving modified `lib/types.ts`, `dictionaries/en.json` and new `content/en/{services,service-pages,faq}.ts`. Keep or redo?
+- **Decision:** Reviewed and kept all of it unchanged (service lists verified verbatim against the master plan: 10/10/9/7/8 items; FAQ covers all 5 sections and every listed question; wording consistently hedged). Completed the missing half: `dictionaries/lo.json` brought to structural parity with `en.json` (the `Dictionary` type derives from en.json, so drift fails typecheck), plus two new `knowledgePage.emptyTitle/emptyText` keys in both locales.
+- **Risk:** Low — typecheck enforces dictionary parity; content was re-read line by line.
+- **Change later:** N/A.
+
+## D-041 — Global chrome lives in the locale layout; Header gets an 'auto' variant
+- **Question:** Render Header/Footer/FloatingContactButtons per page or once in `app/[lang]/layout.tsx`?
+- **Decision:** Once in the layout. `Header` gained a default `variant='auto'` that resolves via `usePathname()`: transparent-over-hero on the locale home (`/{lang}`), sticky solid navy elsewhere; explicit `variant` still overrides. Styleguide page dropped its own chrome copies.
+- **Reason:** 13 pages would otherwise repeat ~30 lines of identical props; the master plan wants floating contact buttons and footer on every page.
+- **Risk:** None observed; `usePathname` is already a dependency of the header's LanguageSwitcher.
+- **Change later:** Pass an explicit variant from any page that needs different behavior.
+
+## D-042 — Article detail route added in Phase 4 (`/[lang]/knowledge/[slug]`)
+- **Question:** Phase 4's sitemap is 13 routes, but home and `/knowledge` render ArticleCards that must link somewhere; Phase 5 owns articles.
+- **Decision:** Added a minimal article page now (breadcrumbs, category + verification badge, markdown body, DisclaimerBox, related services/articles, CTA) with `generateStaticParams` from `listArticleSlugs` and `dynamicParams = false`. Related links are filtered to entries that actually exist, so the one starter article's two not-yet-written related slugs don't produce dead links.
+- **Reason:** Cards linking to 404s would fail the "all internal links resolve" QA bar.
+- **Change later:** Phase 5 adds the remaining 11 articles; nothing here changes.
+
+## D-043 — Lao routes reuse English long-form prose until Phase 7
+- **Decision:** UI chrome, headings, meta, and alt text are fully localized via `dictionaries/lo.json` now; long-form English content (`content/en/{services,service-pages,faq}.ts`, article markdown) renders on `/lo` routes as-is until Phase 7 delivers `content/lo/`. `/lo/knowledge/[slug]` falls back to the English article rather than 404ing; `/lo/knowledge` shows a designed empty state (no articles listed for `lo`).
+- **Reason:** BUILD_PLAN sequences Lao content in Phase 7; a Lao-chrome page with English body is more useful than a 404 or a machine-translation risk.
+- **Risk:** English "leaks" on Lao pages pre-Phase 7 — accepted and tracked by the Phase 7 verify step.
+- **Change later:** Phase 7 mirrors the content files under `content/lo/` and localizes the three `.ts` content modules.
+
+## D-044 — Home hero uses the confirmed-Laos Mekong image
+- **Decision:** `hero/mekong-river-sunset-luang-prabang.jpg` (confirmed Luang Prabang, Laos) is the home hero, not the visually striking but location-unconfirmed `riverside-city-dusk-aerial.jpg` (per D-032 that image must not be captioned as Vientiane; it is currently unused). Alt text names Luang Prabang and lives in `dict.alt.heroMekong`.
+- **Change later:** The aerial image can back a future section with its generic "Southeast Asian riverside city at dusk" alt.
+
+## D-045 — Services rendered as grouped editorial lists, not 44 cards
+- **Decision:** `/services` and the "Services in this area" sections render the exact master-plan service lists as two-column lists with thin gold dash markers (title + one-line summary), grouped under the five master-plan group headings; cards are reserved for the six home highlights. `/services/legal-family` shows both of its groups (Corporate Legal, Family & Personal) under one page, matching the 4-page sitemap.
+- **Reason:** 44 near-identical cards would bury the hierarchy and read as template filler; lists keep the editorial, premium rhythm.
+
+## D-046 — Service category pages are one dynamic route
+- **Decision:** The four category pages are `app/[lang]/services/[category]/page.tsx` with `generateStaticParams` over the four slugs and `dynamicParams = false` — still fully prerendered (8 static paths), with per-category dictionary keys, hero image (static import + blur), and content from `content/en/service-pages.ts`.
+- **Reason:** The four pages share an identical section skeleton (overview → who it's for → services → topics → process → documents → timeline note → disclaimer → how we help → related); one route keeps them structurally consistent.

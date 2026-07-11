@@ -125,8 +125,266 @@
     "chatPlaceholder": "[Add contact link]"
   },
   "home": {
-    "heroTitle": "Clear guidance for business, legal, and life matters in Laos",
-    "heroSubtitle": "SV Consulting helps local and international clients navigate company setup, visas, legal, and tax matters in the Lao PDR — with clarity and care.",
-    "trustLine": "A subsidiary of Super Vision Co., Ltd. — Vientiane Capital, Lao PDR."
+    "heroTitle": "Professional Consulting Services for Doing Business and Living in Laos",
+    "heroSubtitle": "SV Consulting helps local and international clients with business registration, legal support, visa and immigration services, accounting, tax, and corporate compliance.",
+    "trustLine": "A subsidiary of Super Vision Co., Ltd. — Vientiane Capital, Lao PDR.",
+    "trustStatement": "Your trusted partner for business, legal, immigration, accounting, and corporate services in Laos.",
+    "highlightsEyebrow": "What we do",
+    "highlightsTitle": "Service highlights",
+    "highlights": {
+      "businessRegistration": {
+        "title": "Business Registration",
+        "summary": "Company setup, licensing, and registrations — handled end to end."
+      },
+      "visaImmigration": {
+        "title": "Visa & Immigration",
+        "summary": "Visas, work permits, and stay permits for professionals, investors, and families."
+      },
+      "legalServices": {
+        "title": "Legal Services",
+        "summary": "Contracts, compliance, due diligence, and trademark support for your business."
+      },
+      "accountingTax": {
+        "title": "Accounting & Tax",
+        "summary": "Bookkeeping, tax filings, payroll, and annual compliance — kept in good order."
+      },
+      "familyLegal": {
+        "title": "Family & Personal Legal Services",
+        "summary": "Marriage registration, family documents, and support for foreign spouses."
+      },
+      "laoKnowledge": {
+        "title": "Lao Business Knowledge",
+        "summary": "Plain-language articles on Lao business, tax, visa, and legal topics."
+      }
+    },
+    "whyEyebrow": "Why choose us",
+    "whyTitle": "Why Choose SV Consulting",
+    "why": {
+      "localKnowledge": {
+        "title": "Local knowledge",
+        "description": "We work with Lao procedures and authorities every day."
+      },
+      "practicalAdvice": {
+        "title": "Practical advice",
+        "description": "Clear recommendations you can act on — not legal jargon."
+      },
+      "clearProcess": {
+        "title": "Clear process",
+        "description": "You always know the steps, the status, and what comes next."
+      },
+      "transparentCommunication": {
+        "title": "Transparent communication",
+        "description": "Honest updates and clear scopes of work — no surprises."
+      },
+      "companiesAndIndividuals": {
+        "title": "Support for companies and individuals",
+        "description": "From foreign investors to families — the same care for every client."
+      },
+      "backedBySuperVision": {
+        "title": "Backed by Super Vision Co., Ltd.",
+        "description": "Part of an established Lao company group."
+      }
+    },
+    "knowledgeTitle": "Learn before you decide",
+    "knowledgeLede": "Educational articles about business in Laos, taxes, visas, compliance, and legal procedures.",
+    "finalCtaTitle": "Start with a consultation.",
+    "finalCtaLede": "Tell us about your situation — we will explain the options, the process, and provide a clear quote."
+  },
+  "about": {
+    "eyebrow": "About SV Consulting",
+    "title": "A one-stop consulting partner in Laos",
+    "lede": "SV Consulting, a business unit of Super Vision Co., Ltd., provides practical support for individuals, entrepreneurs, investors, and companies in Laos.",
+    "introP1": "Doing business — or building a life — in Laos involves procedures that are rarely written down in one place. Registrations, licences, visas, taxes, and family documents each follow their own path through different offices, in different languages, on different timetables.",
+    "introP2": "SV Consulting exists to walk those paths for you. We combine local knowledge with professional standards, explain every step in plain language, and stay with our clients long after the first certificate is issued.",
+    "missionTitle": "Our mission",
+    "missionText": "Make business, legal, immigration, and compliance processes easier, clearer, and more reliable for clients in Laos.",
+    "visionTitle": "Our vision",
+    "visionText": "Become a trusted one-stop professional consulting partner for local and international clients in Laos.",
+    "valuesEyebrow": "What guides us",
+    "valuesTitle": "Our values",
+    "values": {
+      "trust": {
+        "title": "Trust",
+        "description": "We earn it slowly, protect it carefully, and never trade it for a shortcut."
+      },
+      "clarity": {
+        "title": "Clarity",
+        "description": "Plain language, honest answers, and no hiding behind jargon."
+      },
+      "professionalism": {
+        "title": "Professionalism",
+        "description": "Careful work, on time, to a standard we are proud to sign."
+      },
+      "practicalExecution": {
+        "title": "Practical execution",
+        "description": "Advice matters only when it gets done — we carry matters through."
+      },
+      "confidentiality": {
+        "title": "Confidentiality",
+        "description": "Your business and family matters stay private, always."
+      },
+      "longTermRelationship": {
+        "title": "Long-term client relationship",
+        "description": "We plan to be your partner next year, not just this month."
+      }
+    },
+    "howEyebrow": "How we work",
+    "howTitle": "How the firm works",
+    "howLede": "Every engagement follows the same clear rhythm — so you always know where things stand.",
+    "steps": {
+      "consult": {
+        "title": "Consult",
+        "description": "We start with a conversation about your situation and what you want to achieve."
+      },
+      "assess": {
+        "title": "Assess & quote",
+        "description": "We confirm what your case requires and give you a clear scope of work and quote."
+      },
+      "execute": {
+        "title": "Execute & liaise",
+        "description": "We prepare the documents and coordinate with the relevant authorities on your behalf."
+      },
+      "deliver": {
+        "title": "Deliver & support",
+        "description": "You receive the outcome clearly explained — and ongoing support where obligations continue."
+      }
+    },
+    "parentTitle": "Backed by Super Vision Co., Ltd.",
+    "parentText": "SV Consulting is a business unit of Super Vision Co., Ltd., an established Lao company. That backing gives our clients continuity, accountability, and a partner that will still be here next year."
+  },
+  "servicesPage": {
+    "lede": "Five service areas covering the full journey of doing business and living in Laos — explore each area, or contact us for a tailored assessment.",
+    "exploreArea": "Explore this service area"
+  },
+  "servicePage": {
+    "overviewTitle": "Overview",
+    "whoTitle": "Who this is for",
+    "servicesInAreaTitle": "Services in this area",
+    "processTitle": "How the process works",
+    "documentsTitle": "Documents commonly required",
+    "timelineTitle": "A note on timelines",
+    "helpTitle": "How SV Consulting helps",
+    "otherServicesTitle": "Other service areas"
+  },
+  "knowledgePage": {
+    "lede": "Plain-language articles about business, tax, visa, legal, and life matters in Laos — organised into nine categories.",
+    "browseTitle": "Browse by category",
+    "articlesTitle": "All articles",
+    "countSingular": "article",
+    "countPlural": "articles",
+    "emptyTitle": "Articles are on the way",
+    "emptyText": "Knowledge Center articles will be published here soon. Explore our services in the meantime."
+  },
+  "lawsPage": {
+    "lede": "Plain-language summaries of Lao laws and regulations relevant to businesses and individuals.",
+    "emptyTitle": "Law topics are on the way",
+    "emptyText": "Plain-language summaries of Lao laws will be published here soon. In the meantime, the Knowledge Center covers many related topics."
+  },
+  "guidesPage": {
+    "lede": "In-depth, practical guides for starting, running, and living in Laos.",
+    "emptyTitle": "Guides are being prepared",
+    "emptyText": "Practical business guides will be published here soon. Explore the Knowledge Center for articles in the meantime."
+  },
+  "newsPage": {
+    "lede": "Official updates and announcements from SV Consulting.",
+    "emptyTitle": "No news yet",
+    "emptyText": "News and updates will be published here.",
+    "typesTitle": "What will be published here",
+    "types": {
+      "legal": "Legal updates",
+      "tax": "Tax updates",
+      "visa": "Visa updates",
+      "business": "Business notices",
+      "investment": "Investment news",
+      "company": "Company announcements"
+    }
+  },
+  "faqPage": {
+    "lede": "Answers to the questions we hear most — about business setup, visas, legal matters, accounting, and family services in Laos."
+  },
+  "contactPage": {
+    "lede": "Tell us about your situation and we will come back to you with clear next steps.",
+    "formTitle": "Send us a message",
+    "detailsTitle": "Company details",
+    "businessUnitLine": "A business unit of Super Vision Co., Ltd.",
+    "nextTitle": "What happens next",
+    "next": {
+      "read": {
+        "title": "We read your message",
+        "description": "A consultant reviews your situation — not an automated system."
+      },
+      "reply": {
+        "title": "We come back to you",
+        "description": "You hear from us through your preferred contact method to clarify the details."
+      },
+      "propose": {
+        "title": "You receive a clear proposal",
+        "description": "We explain the process and provide a clear scope and quote before any commitment."
+      }
+    }
+  },
+  "meta": {
+    "home": {
+      "title": "SV Consulting — Business, Legal & Visa Consulting in Laos",
+      "description": "SV Consulting helps local and international clients with business registration, legal support, visa and immigration services, accounting, tax, and corporate compliance in Laos."
+    },
+    "about": {
+      "title": "About Us",
+      "description": "SV Consulting is a business unit of Super Vision Co., Ltd., providing practical business, legal, immigration, and accounting support in Laos."
+    },
+    "services": {
+      "title": "Services",
+      "description": "Five service areas: business setup and licensing, visa and immigration, corporate legal, family and personal legal, and accounting and tax services in Laos."
+    },
+    "businessSetup": {
+      "title": "Business Setup & Licensing in Laos",
+      "description": "Company registration, foreign investment registration, business licences, and tax registration in Laos — practical setup support from SV Consulting."
+    },
+    "visaImmigration": {
+      "title": "Visa & Immigration Services in Laos",
+      "description": "Business visas, work visas and permits, investor visas, and long-term stay support in Laos — document preparation and government liaison."
+    },
+    "legalFamily": {
+      "title": "Legal & Family Services in Laos",
+      "description": "Contracts, compliance, due diligence, trademarks, marriage registration, and family documentation support in Laos."
+    },
+    "accountingTax": {
+      "title": "Accounting & Tax Services in Laos",
+      "description": "Bookkeeping, tax registration and filing, payroll, financial reporting, and annual compliance support in Laos."
+    },
+    "knowledge": {
+      "title": "Knowledge Center",
+      "description": "Plain-language articles about business, tax, visa, legal, and life matters in Laos."
+    },
+    "laws": {
+      "title": "Lao Laws Library",
+      "description": "Plain-language summaries of Lao laws and regulations relevant to businesses and individuals."
+    },
+    "guides": {
+      "title": "Business Guides",
+      "description": "Practical business guides for starting, running, and living in Laos."
+    },
+    "news": {
+      "title": "News & Updates",
+      "description": "News and updates from SV Consulting: legal, tax, visa, and business notices for Laos."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "description": "Frequently asked questions about business setup, visas, legal matters, accounting, and family services in Laos."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "Contact SV Consulting in Vientiane Capital, Lao PDR — book a consultation for business, legal, visa, or accounting support."
+    }
+  },
+  "alt": {
+    "heroMekong": "Sunset over the Mekong River and forested hills in Luang Prabang, Laos",
+    "officeInterior": "Calm modern office interior with natural light",
+    "handshake": "Two people shaking hands over documents at a meeting table",
+    "meetingDocuments": "Consultants reviewing business documents and charts in a meeting",
+    "contractSigning": "Close-up of hands signing a business document",
+    "passportStamps": "Hand holding an open passport showing visa stamps",
+    "stoneColumns": "Sunlit corridor of classical stone columns",
+    "accountingDesk": "Desk with a calculator, financial report, and pen"
   }
 }

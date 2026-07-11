@@ -10,10 +10,7 @@ import { ContactForm } from '@/components/ContactForm'
 import { CtaSection } from '@/components/CtaSection'
 import { DisclaimerBox } from '@/components/DisclaimerBox'
 import { FaqAccordion } from '@/components/FaqAccordion'
-import { FloatingContactButtons } from '@/components/FloatingContactButtons'
-import { Footer } from '@/components/Footer'
 import { GuideCard } from '@/components/GuideCard'
-import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
 import { LawTopicCard } from '@/components/LawTopicCard'
 import { RelatedArticles } from '@/components/RelatedArticles'
@@ -63,15 +60,6 @@ export default async function StyleguidePage({
       `Styleguide sample article missing: content/en/articles/${articleSlug}.md`,
     )
   }
-
-  const navItems = [
-    { label: dict.nav.about, href: `/${lang}/about` },
-    { label: dict.nav.services, href: `/${lang}/services` },
-    { label: dict.nav.knowledge, href: `/${lang}/knowledge` },
-    { label: dict.nav.laws, href: `/${lang}/laws` },
-    { label: dict.nav.guides, href: `/${lang}/guides` },
-    { label: dict.nav.faq, href: `/${lang}/faq` },
-  ]
 
   const serviceCards = [
     { title: dict.nav.businessSetup, slug: 'business-setup' },
@@ -133,25 +121,6 @@ export default async function StyleguidePage({
 
   return (
     <>
-      <Header
-        lang={lang}
-        variant="solid"
-        siteName={dict.site.name}
-        navItems={navItems}
-        navLabel={dict.nav.mainNavLabel}
-        ctaLabel={dict.cta.bookConsultation}
-        ctaHref={`/${lang}/contact`}
-        languageLabel={dict.language.label}
-        languageOptions={[
-          { code: 'en', label: dict.language.enShort },
-          { code: 'lo', label: dict.language.loShort },
-        ]}
-        menuLabels={{
-          menu: dict.nav.menu,
-          open: dict.nav.openMenu,
-          close: dict.nav.closeMenu,
-        }}
-      />
 
       <main>
         <Hero
@@ -372,12 +341,6 @@ export default async function StyleguidePage({
         />
       </main>
 
-      <Footer lang={lang} dict={dict} />
-
-      <FloatingContactButtons
-        whatsAppLabel={dict.floating.whatsapp}
-        lineLabel={dict.floating.line}
-      />
     </>
   )
 }

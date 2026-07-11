@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import type { Locale } from '@/lib/i18n-config'
 import { LanguageSwitcher, type LanguageOption } from './LanguageSwitcher'
 import { MobileNav } from './MobileNav'
@@ -14,10 +15,12 @@ export interface HeaderNavItem {
 export interface HeaderProps {
   lang: Locale
   /**
-   * 'solid'      — sticky navy bar (default, inner pages).
+   * 'solid'      — sticky navy bar (inner pages).
    * 'transparent' — fixed, transparent over the hero, turns navy on scroll.
+   * 'auto' (default) — transparent on the locale home page, solid elsewhere;
+   *                    lets the layout render one global header.
    */
-  variant?: 'solid' | 'transparent'
+  variant?: 'solid' | 'transparent' | 'auto'
   siteName: string
   navItems: HeaderNavItem[]
   /** Accessible name for the desktop nav (dict.nav.mainNavLabel). */
@@ -36,7 +39,7 @@ export interface HeaderProps {
  */
 export function Header({
   lang,
-  variant = 'solid',
+  variant = 'auto',
   siteName,
   navItems,
   navLabel,
@@ -47,23 +50,28 @@ export function Header({
   menuLabels,
 }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false)
+  const pathname = usePathname()
+
+  const isHome = pathname === `/${lang}` || pathname === `/${lang}/`
+  const resolved: 'solid' | 'transparent' =
+    variant === 'auto' ? (isHome ? 'transparent' : 'solid') : variant
 
   useEffect(() => {
-    if (variant !== 'transparent') return
+    if (resolved !== 'transparent') return
 
     const onScroll = () => setScrolled(window.scrollY > 24)
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
-  }, [variant])
+  }, [resolved])
 
-  const solid = variant === 'solid' || scrolled
+  const solid = resolved === 'solid' || scrolled
 
   return (
     <header
       className={[
         'inset-x-0 top-0 z-40 transition-colors duration-300',
-        variant === 'transparent' ? 'fixed' : 'sticky',
+        resolved === 'transparent' ? 'fixed' : 'sticky',
         solid
           ? 'bg-navy-950/95 shadow-md shadow-navy-950/20 backdrop-blur-sm'
           : 'bg-transparent',

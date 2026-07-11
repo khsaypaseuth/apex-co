@@ -107,6 +107,60 @@ export interface Guide extends ContentEntryBase {
   category: ServiceCategorySlug
 }
 
+/**
+ * A display group on the `/services` overview page. The master plan lists
+ * FIVE groups but the sitemap has FOUR category pages — Corporate Legal and
+ * Family & Personal Legal both live on `/services/legal-family`, so each
+ * group carries the category page it links to.
+ */
+export interface ServiceGroup {
+  id: string
+  categorySlug: ServiceCategorySlug
+  title: string
+  summary: string
+  services: Service[]
+}
+
+/** One numbered step in a process overview (service pages, about page). */
+export interface ProcessStep {
+  title: string
+  description: string
+}
+
+/** A titled prose block on a service category page (page-specific sections). */
+export interface ServicePageTopic {
+  heading: string
+  body: string
+}
+
+/**
+ * Full English content for one `/services/[category]` page. Long-form prose
+ * stays English-only until Phase 7 (see BUILD_PLAN.md); shared section
+ * headings ("Overview", "Who this is for", …) are dictionary keys instead.
+ */
+export interface ServicePageContent {
+  slug: ServiceCategorySlug
+  heroLede: string
+  /** Overview paragraphs. */
+  overview: string[]
+  /** "Who this is for" bullet items. */
+  whoItsFor: string[]
+  /** Page-specific topical sections (per master plan section lists). */
+  topics: ServicePageTopic[]
+  /** Process overview steps. */
+  process: ProcessStep[]
+  /** Documents commonly requested — cautious wording required. */
+  documents: {
+    intro: string
+    items: string[]
+    note: string
+  }
+  /** Timeline disclaimer paragraph (never states fixed durations). */
+  timelineNote: string
+  /** "How SV Consulting helps" bullet items. */
+  howWeHelp: string[]
+}
+
 /** Single FAQ entry. */
 export interface FaqItem {
   question: string
