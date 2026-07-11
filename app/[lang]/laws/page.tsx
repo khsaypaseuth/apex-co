@@ -4,11 +4,12 @@ import { notFound } from 'next/navigation'
 import { getDictionary, hasLocale } from '@/lib/dictionaries'
 import { pageMetadata } from '@/lib/seo'
 import { listLawTopics } from '@/lib/content'
+import { LAW_CATEGORIES } from '@/lib/types'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { CtaSection } from '@/components/CtaSection'
 import { DisclaimerBox } from '@/components/DisclaimerBox'
 import { Hero } from '@/components/Hero'
-import { LawTopicCard } from '@/components/LawTopicCard'
+import { LawList } from './law-list'
 
 export async function generateMetadata({
   params,
@@ -38,6 +39,11 @@ export default async function LawsPage({ params }: PageProps<'/[lang]/laws'>) {
     'needs-verification': dict.verification.needsVerification,
     'general-info': dict.verification.generalInfo,
   }
+
+  const categories = LAW_CATEGORIES.map((category) => ({
+    value: category,
+    label: dict.lawCategories[category],
+  }))
 
   return (
     <main id="main-content">
@@ -81,19 +87,28 @@ export default async function LawsPage({ params }: PageProps<'/[lang]/laws'>) {
             <>
               {/* sr-only section heading so card <h3>s don't skip a level */}
               <h2 className="sr-only">{dict.lawsPage.listTitle}</h2>
-              <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {topics.map((topic) => (
-                <LawTopicCard
-                  key={topic.slug}
-                  title={topic.title}
-                  summary={topic.summary}
-                  href={`/${lang}/laws/${topic.slug}`}
-                  categoryLabel={dict.lawCategories[topic.category]}
-                  verificationStatus={topic.verificationStatus}
-                  verificationLabels={verificationLabels}
-                />
-              ))}
-              </div>
+              <LawList
+                categories={categories}
+                verificationLabels={verificationLabels}
+                items={topics.map((topic) => ({
+                  slug: topic.slug,
+                  href: `/${lang}/laws/${topic.slug}`,
+                  title: topic.title,
+                  summary: topic.summary,
+                  category: topic.category,
+                  categoryLabel: dict.lawCategories[topic.category],
+                  verificationStatus: topic.verificationStatus,
+                }))}
+                labels={{
+                  searchLabel: dict.filter.searchLabel,
+                  searchPlaceholder: dict.filter.searchPlaceholder,
+                  allLabel: dict.filter.allCategories,
+                  categoriesLabel: dict.filter.categoriesLabel,
+                  noResults: dict.filter.noResults,
+                  countSingular: dict.lawsPage.countSingular,
+                  countPlural: dict.lawsPage.countPlural,
+                }}
+              />
             </>
           )}
 

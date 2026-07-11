@@ -285,3 +285,24 @@ Format per master plan: question we would have asked → decision → reason →
 - **Decision:** Operative terms standardised, with the English term in parentheses on first use per page where the reader will meet it on official forms: enterprise registration = ການຂຶ້ນທະບຽນວິສາຫະກິດ; enterprise registration certificate = ໃບທະບຽນວິສາຫະກິດ (Enterprise Registration Certificate); operating license = ໃບອະນຸຍາດດຳເນີນທຸລະກິດ (Operating License); sole trader = ວິສາຫະກິດສ່ວນບຸກຄົນ; limited company = ບໍລິສັດຈຳກັດ; joint venture = ວິສາຫະກິດຮ່ວມທຶນ (Joint Venture); branch = ສາຂາ; representative office = ຫ້ອງການຜູ້ຕາງໜ້າ; concession = ສຳປະທານ (Concession); special economic zone = ເຂດເສດຖະກິດພິເສດ (Special Economic Zone); nominee = ຜູ້ຖືຮຸ້ນແທນ (Nominee); due diligence = ການກວດສອບສະຖານະ (Due Diligence); trademark = ເຄື່ອງໝາຍການຄ້າ (Trademark); clearance search = ການຄົ້ນຫາກວດສອບ (Clearance Search); work permit = ໃບອະນຸຍາດເຮັດວຽກ (Work Permit); stay permit = ໃບອະນຸຍາດພັກເຊົາ (Stay Permit); quota = ໂກຕາ (Quota); legalisation = ການຢັ້ງຢືນເອກະສານ (Legalisation); profit/corporate income tax = ອາກອນກຳໄລ; VAT = ອາກອນມູນຄ່າເພີ່ມ (VAT); withholding = ອາກອນຫັກ ນະ ທີ່ຈ່າຍ (Withholding); nil filing = ການຍື່ນແບບເປົ່າ (Nil Filing); TIN = ເລກປະຈຳຕົວຜູ້ເສຍອາກອນ; social security = ປະກັນສັງຄົມ; compliance = ການປະຕິບັດຕາມລະບຽບ (matches lo.json); mediation = ການໄກ່ເກ່ຍ (Mediation); marital property = ສິນສົມສ້າງ; employer/employee = ຜູ້ໃຊ້ແຮງງານ/ຜູ້ອອກແຮງງານ (statutory labour-law register, not ນາຍຈ້າງ/ລູກຈ້າງ). Ministries: ກະຊວງອຸດສາຫະກຳ ແລະ ການຄ້າ; ກະຊວງແຮງງານ ແລະ ສະຫວັດດີການສັງຄົມ; ກະຊວງການເງິນ; ກະຊວງພາຍໃນ; ກະຊວງປ້ອງກັນຄວາມສະຫງົບ. Guide chapter headings use ບົດທີ N —; portal/product names (Lao Trade Portal, Invest Laos) stay in English.
 - **Reason:** One glossary across laws, guides, and (via shared anchors) 7b's articles keeps cross-links coherent; official-form English terms in parentheses help readers match documents they will actually receive.
 - **Change later:** Native legal reviewer may adjust register (esp. ອາກອນຫັກ ນະ ທີ່ຈ່າຍ and ການກວດສອບສະຖານະ, where Lao practice varies).
+
+## D-110 — Styleguide route ships noindexed, not removed
+- **Question:** D-024 deferred to Phase 8 the choice between deleting `/[lang]/styleguide` and keeping it noindexed.
+- **Decision:** Keep it. It already carries `robots: { index: false, follow: false }`, is disallowed in `robots.txt`, excluded from the sitemap, and linked from no page (the Phase 8 link crawl confirms it is unreachable from `/en` and `/lo`).
+- **Reason:** It is the only place every component renders side-by-side in both locales — valuable for future content/locale QA (activating th/vi/zh) at zero SEO or UX cost.
+- **Risk:** None identified; direct-URL visitors see an obviously internal page.
+- **Change later:** Delete `app/[lang]/styleguide/` if unwanted (nothing imports from it).
+
+## D-111 — Laws Library filter was missing; added in Phase 8 QA (master-plan QA item 10)
+- **Question:** QA item 10 "Test Lao Laws Library filters" — but `/laws` rendered a plain card grid; `FilterBar` was only ever wired into the Knowledge Center (Phase 5 gap).
+- **Decision:** Fixed during QA rather than only reporting it: new `app/[lang]/laws/law-list.tsx` client wrapper cloning the proven `knowledge/article-list.tsx` pattern (FilterBar with search + 8 law-category pills + All, filtering `LawTopicCard`s, `role="status"` count/no-results lines); `laws/page.tsx` rewired to pass serializable items; new `lawsPage.countSingular`/`countPlural` keys added to `en.json` + `lo.json` (Lao uses the same string for both — Lao does not inflect for number).
+- **Reason:** Master plan requires the Laws Library to be "searchable and filterable"; the Definition of Done cannot be met with the gap open, and the one-pattern-three-content-types principle (D-062) made the fix low-risk.
+- **Risk:** Minimal — no new abstractions; lint/typecheck/build re-ran clean and the full link crawl was re-run (79 URLs, 0 failures). Verified served on `/en/laws` and `/lo/laws`.
+- **Change later:** If URL-persistent filters land (D-021), upgrade ArticleList and LawList together.
+
+## D-112 — Parent-company wording aligned to master plan: "business unit", not "subsidiary"
+- **Question:** `site.parentCompanyLine` and `home.trustLine` said "A subsidiary of Super Vision Co., Ltd." — the master plan consistently says "a business unit under/of Super Vision Co., Ltd." (§Mission, §Contact Page).
+- **Decision:** Dictionaries updated during Phase 8 to "A business unit of Super Vision Co., Ltd." (EN) / "ໜ່ວຍທຸລະກິດຂອງ Super Vision Co., Ltd." (LO). Verified in served HTML.
+- **Reason:** "Subsidiary" makes a corporate-structure claim the master plan does not; "business unit" is the owner's own wording.
+- **Risk:** None — wording only, both locales updated in parity (typecheck enforces key parity).
+- **Change later:** Single pair of dictionary keys.
