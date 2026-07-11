@@ -5,6 +5,9 @@ import { pageMetadata } from '@/lib/seo'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { CtaSection } from '@/components/CtaSection'
 import { Hero } from '@/components/Hero'
+// Location-generic aerial (no source location tag) — alt must NOT claim
+// Vientiane/Laos; see public/images/ATTRIBUTIONS.md Notes and D-122/D-150.
+import riversideCity from '@/public/images/hero/riverside-city-dusk-aerial.jpg'
 
 export async function generateMetadata({
   params,
@@ -46,6 +49,7 @@ export default async function NewsPage({ params }: PageProps<'/[lang]/news'>) {
         eyebrow={dict.site.name}
         title={dict.nav.news}
         lede={dict.newsPage.lede}
+        image={{ src: riversideCity, alt: dict.alt.riversideCity }}
       />
 
       <div className="border-b border-navy-950/5">

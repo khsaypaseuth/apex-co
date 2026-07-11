@@ -56,6 +56,7 @@ export default async function AboutPage({ params }: PageProps<'/[lang]/about'>) 
         eyebrow={dict.about.eyebrow}
         title={dict.about.title}
         lede={dict.about.lede}
+        image={{ src: officeInterior, alt: dict.alt.officeInterior }}
       />
 
       <div className="border-b border-navy-950/5">

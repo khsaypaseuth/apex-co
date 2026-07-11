@@ -18,7 +18,7 @@ import { RelatedServices } from '@/components/RelatedServices'
 import { SectionHeader } from '@/components/SectionHeader'
 import contractSigning from '@/public/images/sections/contract-signing.jpg'
 import passportStamps from '@/public/images/sections/passport-stamps.jpg'
-import handshakeOverTable from '@/public/images/sections/handshake-over-table.jpg'
+import meetingDocuments from '@/public/images/sections/meeting-documents.jpg'
 import accountingDesk from '@/public/images/sections/accounting-calculator-report.jpg'
 
 /** Per-category wiring: dictionary keys + hero image (static import → blur). */
@@ -32,8 +32,8 @@ const CATEGORY_CONFIG: Record<
 > = {
   'business-setup': {
     dictKey: 'businessSetup',
-    image: contractSigning,
-    altKey: 'contractSigning',
+    image: meetingDocuments,
+    altKey: 'meetingDocuments',
   },
   'visa-immigration': {
     dictKey: 'visaImmigration',
@@ -42,8 +42,8 @@ const CATEGORY_CONFIG: Record<
   },
   'legal-family': {
     dictKey: 'legalFamily',
-    image: handshakeOverTable,
-    altKey: 'handshake',
+    image: contractSigning,
+    altKey: 'contractSigning',
   },
   'accounting-tax': {
     dictKey: 'accountingTax',

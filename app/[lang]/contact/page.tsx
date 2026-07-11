@@ -6,6 +6,9 @@ import { CONTACT } from '@/lib/site-config'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { ContactForm } from '@/components/ContactForm'
 import { Hero } from '@/components/Hero'
+// Confirmed-Laos image (freed up when the home hero switched to Patuxai,
+// D-147) — alt may name Luang Prabang/Mekong per ATTRIBUTIONS.md.
+import mekongSunset from '@/public/images/hero/mekong-river-sunset-luang-prabang.jpg'
 import {
   IconMail,
   IconMapPin,
@@ -102,6 +105,7 @@ export default async function ContactPage({
         eyebrow={dict.site.name}
         title={dict.nav.contact}
         lede={dict.contactPage.lede}
+        image={{ src: mekongSunset, alt: dict.alt.mekongSunset }}
       />
 
       <div className="border-b border-navy-950/5">

@@ -8,6 +8,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { CtaSection } from '@/components/CtaSection'
 import { Hero } from '@/components/Hero'
 import { SectionHeader } from '@/components/SectionHeader'
+import handshakeOverTable from '@/public/images/sections/handshake-over-table.jpg'
 
 export async function generateMetadata({
   params,
@@ -39,6 +40,7 @@ export default async function ServicesPage({
         eyebrow={dict.site.name}
         title={dict.nav.services}
         lede={dict.servicesPage.lede}
+        image={{ src: handshakeOverTable, alt: dict.alt.handshake }}
       />
 
       <div className="border-b border-navy-950/5">

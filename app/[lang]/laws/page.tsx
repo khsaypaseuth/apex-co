@@ -10,6 +10,7 @@ import { CtaSection } from '@/components/CtaSection'
 import { DisclaimerBox } from '@/components/DisclaimerBox'
 import { Hero } from '@/components/Hero'
 import { LawList } from './law-list'
+import stoneColumns from '@/public/images/sections/stone-columns-corridor.jpg'
 
 export async function generateMetadata({
   params,
@@ -51,6 +52,7 @@ export default async function LawsPage({ params }: PageProps<'/[lang]/laws'>) {
         eyebrow={dict.site.name}
         title={dict.nav.laws}
         lede={dict.lawsPage.lede}
+        image={{ src: stoneColumns, alt: dict.alt.stoneColumns }}
       />
 
       <div className="border-b border-navy-950/5">

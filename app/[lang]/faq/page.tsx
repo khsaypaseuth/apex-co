@@ -8,6 +8,7 @@ import { CtaSection } from '@/components/CtaSection'
 import { DisclaimerBox } from '@/components/DisclaimerBox'
 import { FaqAccordion } from '@/components/FaqAccordion'
 import { Hero } from '@/components/Hero'
+import calmWorkspace from '@/public/images/sections/calm-workspace.jpg'
 
 export async function generateMetadata({
   params,
@@ -37,6 +38,7 @@ export default async function FaqPage({ params }: PageProps<'/[lang]/faq'>) {
         eyebrow={dict.site.name}
         title={dict.nav.faq}
         lede={dict.faqPage.lede}
+        image={{ src: calmWorkspace, alt: dict.alt.calmWorkspace }}
       />
 
       <div className="border-b border-navy-950/5">
