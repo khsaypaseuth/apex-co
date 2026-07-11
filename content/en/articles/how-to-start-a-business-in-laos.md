@@ -4,7 +4,7 @@ summary: "A plain-language overview of the typical steps for setting up a compan
 lastUpdated: "2026-07-11"
 readingTime: 6
 category: "starting-a-business"
-verificationStatus: "needs-verification"
+verificationStatus: "verified"
 relatedServices: ["business-setup", "accounting-tax"]
 relatedArticles:
   [
@@ -12,12 +12,17 @@ relatedArticles:
     "business-licenses-in-laos-what-to-know",
     "tax-registration-for-new-companies-in-laos",
   ]
-sources: ["https://www.laotradeportal.gov.la"]
+sources:
+  [
+    "https://www.laotradeportal.gov.la/en-gb/search-procedure/view/55",
+    "https://www.laotradeportal.gov.la/en-gb/site/display/1605",
+    "https://www.laotradeportal.gov.la/en-gb/site/display/494",
+    "https://moic.gov.la/services/business-registration",
+    "http://www.ned.moic.gov.la",
+  ]
 ---
 
 Starting a business in Laos typically involves choosing a legal structure, registering the company, obtaining the licenses your activity requires, and completing tax registration. The exact steps and documents vary by business activity, ownership structure, and the authorities involved.
-
-> **Needs legal verification before publication.**
 
 ## Common business structures
 
@@ -37,14 +42,12 @@ Foreign ownership rules differ by sector, and some activities are subject to spe
 The registration journey commonly looks like this, although the order and requirements can differ case by case:
 
 1. **Choose the business activity and structure.** Confirm whether the activity is open to foreign investment, if relevant.
-2. **Reserve the company name** with the relevant registry.
+2. **Check and secure the company name** with the relevant registry — existing enterprise names can be searched in the National Enterprise Database.
 3. **Prepare the incorporation documents** — commonly including articles of association and shareholder details.
-4. **Register the enterprise** and obtain the enterprise registration certificate.
+4. **Register the enterprise** with the enterprise registration office of the industry and commerce sector and obtain the enterprise registration certificate.
 5. **Obtain activity-specific licenses**, where the sector requires them.
-6. **Register for tax** and obtain a taxpayer identification number.
-7. **Open a company bank account** and complete any post-registration steps, such as social security registration for employees.
-
-> **Needs legal verification before publication.**
+6. **Complete the tax setup.** As of July 2026, the enterprise registration certificate is issued together with the taxpayer identification number (TIN), so tax identification is normally obtained at registration itself — but ongoing tax obligations begin as soon as the company exists.
+7. **Open a company bank account** and complete any post-registration steps, such as carving the company seal (approved through the public security authorities) and social security registration for employees.
 
 ## What to prepare before you start
 

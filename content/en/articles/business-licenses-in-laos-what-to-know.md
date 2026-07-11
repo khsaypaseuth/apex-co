@@ -12,7 +12,12 @@ relatedArticles:
     "company-registration-in-laos-basic-steps",
     "annual-compliance-checklist-for-companies-in-laos",
   ]
-sources: ["https://www.laotradeportal.gov.la"]
+sources:
+  [
+    "https://www.laotradeportal.gov.la/en-gb/search-procedure/view/55",
+    "https://www.laotradeportal.gov.la/en-gb/site/display/1393",
+    "https://www.laotradeportal.gov.la",
+  ]
 ---
 
 Registering a company and being licensed to operate are two different things in Laos. The enterprise registration certificate establishes the company as a legal entity, but many activities also require an operating licence, permit, or approval from the ministry or authority that supervises that sector. Understanding which licences apply to your activity — before you commit to premises, staff, or contracts — is one of the most valuable pieces of early planning.

@@ -13,7 +13,13 @@ relatedArticles:
     "company-registration-in-laos-basic-steps",
     "corporate-income-tax-in-laos-simple-overview",
   ]
-sources: ["https://investlaos.gov.la"]
+sources:
+  [
+    "https://investlaos.gov.la",
+    "https://investlaos.gov.la/starting-a-business/one-stop-service/",
+    "https://investlaos.gov.la/wp-content/uploads/2026/01/Lao-PDR-Investment-Law-Brochure_20Jan26_EN.pdf",
+    "https://www.laotradeportal.gov.la/en-gb/site/display/494",
+  ]
 ---
 
 This guide gives foreign investors a structured orientation to investing in the Lao PDR: how the legal framework is organised, the routes into the market, what conditions and incentives look like, and the practical matters — capital, banking, visas, people — that determine whether an investment runs smoothly. It is an educational overview, not a prospectus; figures such as minimum capital, incentive rates, and tax rates change and must be confirmed at the time of investment.
@@ -29,7 +35,7 @@ This guide gives foreign investors a structured orientation to investing in the 
 
 ## Chapter 1 — How the Lao investment framework is organised
 
-Laos regulates investment primarily through its investment promotion framework, administered by the investment authorities alongside the enterprise registration system. The framework divides activities into those open to general business registration and those requiring concessions — negotiated agreements with the state for land, mining, energy, and similar projects. This chapter maps the institutions an investor will deal with and how the pieces fit together.
+Laos regulates investment primarily through its investment promotion framework, administered by the investment authorities alongside the enterprise registration system. As of July 2026, this framework is the Law on Investment Promotion as amended (in force since 1 October 2024), overseen by the Investment Promotion and Management Committee (IPMC), whose office operates the central one-stop investment service. The framework divides activities into those open to general business registration and those requiring concessions — negotiated agreements with the state for land, mining, energy, and similar projects. This chapter maps the institutions an investor will deal with and how the pieces fit together.
 
 ## Chapter 2 — What you can invest in: open, conditional, and reserved activities
 

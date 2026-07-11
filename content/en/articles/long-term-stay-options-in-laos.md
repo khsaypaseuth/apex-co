@@ -4,7 +4,7 @@ summary: "An orientation to the main routes foreign nationals use to stay in Lao
 lastUpdated: "2026-07-11"
 readingTime: 6
 category: "living-in-laos"
-verificationStatus: "needs-verification"
+verificationStatus: "verified"
 relatedServices: ["visa-immigration", "legal-family"]
 relatedArticles:
   [
@@ -12,12 +12,16 @@ relatedArticles:
     "investor-visa-in-laos-what-to-prepare",
     "marriage-registration-between-lao-and-foreign-nationals",
   ]
-sources: []
+sources:
+  [
+    "https://immigration.gov.la/wp-content/uploads/2019/09/IMMI-Law-ENG-Full-version.pdf",
+    "https://web.archive.org/web/20240808222333/https://immigration.gov.la/wp-content/uploads/2019/09/IMMI-Law-ENG-Full-version.pdf",
+    "https://investlaos.gov.la/starting-a-business/one-stop-service/visa-stay-permit-card/",
+    "https://natlex.ilo.org/dyn/natlex2/r/natlex/fe/details?p3_isn=96369",
+  ]
 ---
 
 Tourist visas are fine for a visit, but anyone planning to live in Laos — for work, business, family, or simply because they love the place — needs a longer-term basis for their stay. The right route depends on what genuinely connects you to Laos: employment, investment, marriage or family, or another recognised ground. This article gives an orientation to the common options and how to think about them.
-
-> **Needs legal verification before publication.**
 
 ## The main routes, at a glance
 
@@ -30,6 +34,8 @@ Tourist visas are fine for a visit, but anyone planning to live in Laos — for 
 
 Each route has its own documentation, duration, and renewal cycle, all of which are set by current regulation and should be confirmed before you commit to a plan.
 
+As of July 2026, the official visa category list under the Law on Immigration and Foreigner Management includes, among others, a labour visa (LA-B2), a business visa (NI-B2 or I-B2) for investors, a spouse visa (SP-B3) for marriages legally registered with Lao citizens, and student and long-term categories — but no dedicated retirement visa, so retirement-style stays are generally structured through the other recognised grounds.
+
 ## How to choose
 
 A practical way to decide is to ask what your honest, documentable connection to Laos is:
@@ -41,12 +47,10 @@ A practical way to decide is to ask what your honest, documentable connection to
 
 ## Realities of long-term stays
 
-- **Everything is time-limited.** Long-term stays in Laos are built from renewable permissions, not a one-time permanent grant. Renewal calendars matter.
+- **For most people, everything is time-limited.** Long-term stays in Laos are generally built from renewable permissions — permanent-residence categories exist in the law, but they are the exception rather than the default. Renewal calendars matter.
 - **Your paperwork trail follows you.** Renewals look at whether the original basis still holds — the job still exists, the company still files, the marriage is still registered.
 - **Categories are not interchangeable.** Staying on a visit visa while actually working, or on a business visa without any business, is the pattern that causes problems at renewal or at the border.
 - **Rules change.** Categories, durations, and conditions are updated periodically; what a friend did years ago may not be available today.
-
-> **Needs legal verification before publication.**
 
 ## Common mistakes
 

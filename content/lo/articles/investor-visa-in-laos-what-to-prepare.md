@@ -4,7 +4,7 @@ summary: "ນັກລົງທຶນຕ່າງປະເທດໂດຍທົ�
 lastUpdated: "2026-07-11"
 readingTime: 5
 category: "visa-immigration"
-verificationStatus: "needs-verification"
+verificationStatus: "verified"
 relatedServices: ["visa-immigration", "business-setup"]
 relatedArticles:
   [
@@ -12,14 +12,18 @@ relatedArticles:
     "long-term-stay-options-in-laos",
     "how-to-start-a-business-in-laos",
   ]
-sources: []
+sources:
+  [
+    "https://investlaos.gov.la/starting-a-business/one-stop-service/visa-stay-permit-card/",
+    "https://immigration.gov.la/wp-content/uploads/2019/09/IMMI-Law-ENG-Full-version.pdf",
+    "https://web.archive.org/web/20240808222333/https://immigration.gov.la/wp-content/uploads/2019/09/IMMI-Law-ENG-Full-version.pdf",
+    "https://natlex.ilo.org/dyn/natlex2/r/natlex/fe/details?p3_isn=96369",
+  ]
 ---
 
 ຄົນຕ່າງປະເທດທີ່ລົງທຶນໃນທຸລະກິດລາວ — ໃນຖານະຜູ້ຖືຮຸ້ນ, ຜູ້ອຳນວຍການ ຫຼື ຜູ້ກໍ່ຕັ້ງ — ໂດຍທົ່ວໄປອາໄສວີຊາປະເພດນັກລົງທຶນ (Investor Visa) ແລະ ເອກະສານພັກເຊົາທີ່ກ່ຽວຂ້ອງ ແທນການຈັດການແບບພະນັກງານທົ່ວໄປ. ຈຸດຮ່ວມກໍຄື ສະຖານະການເຂົ້າເມືອງແມ່ນຜູກຕິດກັບການລົງທຶນທີ່ແທ້ຈິງ ແລະ ມີເອກະສານຢັ້ງຢືນ: ເອກະສານບໍລິສັດຂອງທ່ານຍິ່ງແໜ້ນໜາ ແລະ ຮຽບຮ້ອຍພຽງໃດ, ຝ່າຍວີຊາກໍມີແນວໂນ້ມລາບລື່ນຂຶ້ນເທົ່ານັ້ນ.
 
-> **Needs legal verification before publication.**
->
-> **ຕ້ອງກວດສອບທາງກົດໝາຍກ່ອນເຜີຍແຜ່.**
+ນັບເຖິງເດືອນກໍລະກົດ 2026, ປະເພດວີຊາທີ່ນັກລົງທຶນໃຊ້ໂດຍທົ່ວໄປແມ່ນວີຊາທຸລະກິດ (ລະຫັດ NI-B2 ຫຼື I-B2) ຕາມກົດໝາຍວ່າດ້ວຍການເຂົ້າ-ອອກເມືອງ ແລະ ການຄຸ້ມຄອງຄົນຕ່າງປະເທດ ເຊິ່ງອອກໃຫ້ນັກທຸລະກິດຕ່າງປະເທດທີ່ເຂົ້າມາລົງທຶນ ລວມທັງສະມາຊິກຄອບຄົວຂອງເຂົາເຈົ້າ. ບັດອະນຸຍາດພັກເຊົາ (Stay Permit Card) ອອກໂດຍເຈົ້າໜ້າທີ່ຕຳຫຼວດຄຸ້ມຄອງຄົນຕ່າງປະເທດ ພາຍໃຕ້ກະຊວງປ້ອງກັນຄວາມສະຫງົບ, ແລະ ນັກລົງທຶນ ແລະ ຜູ້ພັດທະນາໂຄງການ ຫຼື ສັນຍາສຳປະທານກັບລັດຖະບານ ສປປ ລາວ ສາມາດໄດ້ຮັບບັດອະນຸຍາດພັກເຊົາທີ່ມີອາຍຸໜຶ່ງຫາຫ້າປີ ແລະ ຕໍ່ອາຍຸໄດ້.
 
 ## ເໝາະສຳລັບໃຜ
 

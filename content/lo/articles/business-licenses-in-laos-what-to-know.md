@@ -12,7 +12,12 @@ relatedArticles:
     "company-registration-in-laos-basic-steps",
     "annual-compliance-checklist-for-companies-in-laos",
   ]
-sources: ["https://www.laotradeportal.gov.la"]
+sources:
+  [
+    "https://www.laotradeportal.gov.la/en-gb/search-procedure/view/55",
+    "https://www.laotradeportal.gov.la/en-gb/site/display/1393",
+    "https://www.laotradeportal.gov.la",
+  ]
 ---
 
 ການຈົດທະບຽນບໍລິສັດ ກັບ ການໄດ້ຮັບອະນຸຍາດໃຫ້ດຳເນີນທຸລະກິດ ແມ່ນສອງເລື່ອງທີ່ແຕກຕ່າງກັນໃນລາວ. ໃບທະບຽນວິສາຫະກິດ (Enterprise Registration Certificate) ສ້າງບໍລິສັດຂຶ້ນເປັນນິຕິບຸກຄົນ, ແຕ່ກິດຈະການຫຼາຍປະເພດຍັງຕ້ອງມີໃບອະນຸຍາດດຳເນີນທຸລະກິດ, ໃບອະນຸຍາດສະເພາະ ຫຼື ການອະນຸມັດຈາກກະຊວງ ຫຼື ອົງການທີ່ຄຸ້ມຄອງຂະແໜງການນັ້ນອີກ. ການເຂົ້າໃຈວ່າໃບອະນຸຍາດໃດແດ່ນຳໃຊ້ກັບກິດຈະການຂອງທ່ານ — ກ່ອນທີ່ຈະຜູກມັດຕົນເອງກັບສະຖານທີ່, ພະນັກງານ ຫຼື ສັນຍາ — ແມ່ນໜຶ່ງໃນການວາງແຜນເບື້ອງຕົ້ນທີ່ມີຄຸນຄ່າທີ່ສຸດ.

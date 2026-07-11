@@ -4,7 +4,7 @@ summary: "A plain-language guide to the Lao tax and accounting system for compan
 lastUpdated: "2026-07-11"
 readingTime: 9
 category: "accounting-tax"
-verificationStatus: "needs-verification"
+verificationStatus: "verified"
 relatedServices: ["accounting-tax", "business-setup"]
 relatedArticles:
   [
@@ -13,12 +13,19 @@ relatedArticles:
     "corporate-income-tax-in-laos-simple-overview",
     "annual-compliance-checklist-for-companies-in-laos",
   ]
-sources: []
+sources:
+  [
+    "https://taxservice.mof.gov.la/",
+    "https://www.laotradeportal.gov.la/en-gb/site/display/1842",
+    "https://www.laotradeportal.gov.la/en-gb/site/display/1843",
+    "https://www.laotradeportal.gov.la/en-gb/site/display/1846",
+    "http://www.laoofficialgazette.gov.la/kcfinder/upload/files/Accounting%20Law%202013-%20engl%20revised%205%20nov%202014...pdf",
+    "https://faolex.fao.org/docs/pdf/lao208893.pdf",
+    "https://taxsummaries.pwc.com/lao-pdr/corporate/tax-administration",
+  ]
 ---
 
 This guide explains how the Lao tax and accounting system works for companies, in plain language: which taxes apply, when filings are due, what books must be kept, and how the year closes. It is written for business owners and managers rather than accountants, and it deliberately avoids quoting rates, thresholds, and deadlines as fixed facts — these are set by regulation, change through amendments, and should be confirmed with the tax authority or a qualified adviser for your situation.
-
-> **Needs legal verification before publication.**
 
 ## Who this guide is for
 
@@ -37,9 +44,7 @@ Tax registration and the taxpayer identification number, VAT registration where 
 
 ## Chapter 3 — The filing calendar
 
-Lao companies file on a recurring rhythm — commonly monthly or quarterly declarations depending on the tax, plus an annual finalisation. This chapter shows how to build a compliance calendar, why nil filings are required even in inactive months, and how penalties for late or missed filings typically accumulate quietly until a certificate or bank process forces the issue. Specific deadlines vary and should be confirmed against current regulations.
-
-> **Needs legal verification before publication.**
+Lao companies file on a recurring rhythm — declarations on the cycle set for each tax, monthly for some taxes and less frequent for others, plus an annual finalisation. This chapter shows how to build a compliance calendar, why nil filings are required even in inactive months, and how penalties for late or missed filings typically accumulate quietly until a certificate or bank process forces the issue. Specific deadlines vary and should be confirmed against current regulations.
 
 ## Chapter 4 — Books, records, and invoices
 

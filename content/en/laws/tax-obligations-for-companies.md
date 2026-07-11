@@ -4,7 +4,7 @@ summary: "A plain-language overview of the main taxes and filing duties that reg
 lastUpdated: "2026-07-11"
 readingTime: 5
 category: "tax-law"
-verificationStatus: "needs-verification"
+verificationStatus: "verified"
 relatedServices: ["accounting-tax", "business-setup"]
 relatedArticles:
   [
@@ -13,12 +13,18 @@ relatedArticles:
     "corporate-income-tax-in-laos-simple-overview",
     "annual-compliance-checklist-for-companies-in-laos",
   ]
-sources: []
+sources:
+  [
+    "https://taxservice.mof.gov.la/",
+    "https://www.laotradeportal.gov.la/en-gb/site/display/1842",
+    "https://www.laotradeportal.gov.la/en-gb/site/display/1843",
+    "https://www.laotradeportal.gov.la/en-gb/site/display/1846",
+    "http://www.laoofficialgazette.gov.la/kcfinder/upload/files/Accounting%20Law%202013-%20engl%20revised%205%20nov%202014...pdf",
+    "https://faolex.fao.org/docs/pdf/lao208893.pdf",
+  ]
 ---
 
 Companies registered in the Lao PDR take on tax obligations from the moment they exist — not from the moment they become profitable. The Lao tax framework covers several distinct taxes, each with its own registration, filing, and payment rules, administered by the tax authorities under the Ministry of Finance. The main ones a typical operating company encounters are profit (corporate income) tax, value added tax, withholding obligations on certain payments, and payroll-related obligations for employees.
-
-> **Needs legal verification before publication.**
 
 ## Who it affects
 
@@ -33,15 +39,13 @@ The exact set of obligations depends on the company's size, activity, and VAT st
 
 - Complete tax registration with the tax authority after enterprise registration and obtain a taxpayer identification number
 - Register for value added tax where the business meets the registration criteria, and charge, collect, and remit VAT on taxable supplies
-- File periodic tax declarations — typically on a monthly or quarterly rhythm depending on the tax — and an annual profit tax finalisation
+- File periodic tax declarations — each tax has its own filing cycle set by law, and the current calendar should be confirmed with the tax authority — plus an annual profit tax finalisation
 - Withhold tax on certain payments, commonly including salaries and some payments to contractors or overseas suppliers, and remit the withheld amounts
 - Register employees for social security contributions and remit both employer and employee portions
 - Keep accounting records that comply with the Lao accounting rules, in a form the authorities can inspect
 - File on time even in months with no activity, where nil filings are required
 
 Current tax rates, VAT registration thresholds, filing deadlines, and penalty levels change through amendments and annual instructions — confirm the current figures with the tax authority or a qualified adviser before relying on them.
-
-> **Needs legal verification before publication.**
 
 ## Common mistakes
 

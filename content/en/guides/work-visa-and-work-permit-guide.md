@@ -4,7 +4,7 @@ summary: "A practical guide to working legally in Laos as a foreign national —
 lastUpdated: "2026-07-11"
 readingTime: 8
 category: "visa-immigration"
-verificationStatus: "needs-verification"
+verificationStatus: "verified"
 relatedServices: ["visa-immigration", "legal-family"]
 relatedArticles:
   [
@@ -12,12 +12,16 @@ relatedArticles:
     "long-term-stay-options-in-laos",
     "investor-visa-in-laos-what-to-prepare",
   ]
-sources: []
+sources:
+  [
+    "https://natlex.ilo.org/dyn/natlex2/r/natlex/fe/details?p3_isn=96369",
+    "https://immigration.gov.la/wp-content/uploads/2019/09/IMMI-Law-ENG-Full-version.pdf",
+    "https://web.archive.org/web/20240808222333/https://immigration.gov.la/wp-content/uploads/2019/09/IMMI-Law-ENG-Full-version.pdf",
+    "https://investlaos.gov.la/starting-a-business/one-stop-service/visa-stay-permit-card/",
+  ]
 ---
 
 Working legally in the Lao PDR as a foreign national involves several linked documents — a visa in the right category, a stay permit, and a work permit — issued by different authorities that each expect the others to be in order. This guide explains how the pieces connect, in what order to obtain them, and how employers and employees each stay on the right side of the rules. Durations, fees, and document lists change and vary by nationality and role, so treat this as a map and confirm the current requirements before applying.
-
-> **Needs legal verification before publication.**
 
 ## Who this guide is for
 
@@ -32,13 +36,11 @@ Visa, stay permit, work permit: what each one is, which authority issues it, and
 
 ## Chapter 2 — Getting the visa category right
 
-Entering Laos on the wrong visa category is the most common early mistake. This chapter outlines the categories commonly used for business and employment purposes, how they differ from tourist and visit visas, and why "arrive first, sort it out later" plans tend to cost more than doing it in the right order. It also covers where applications are made — embassies, consulates, or in-country processes — and how practice varies.
+Entering Laos on the wrong visa category is the most common early mistake. This chapter outlines the categories commonly used for business and employment purposes, how they differ from tourist and visit visas, and why "arrive first, sort it out later" plans tend to cost more than doing it in the right order. It also covers where applications are made — embassies, consulates, or in-country processes — and how practice varies. As of July 2026, the categories most relevant here under the Law on Immigration and Foreigner Management are the business visa (NI-B2 or I-B2) and the labour visa (LA-B2) — and the labour visa category extends to the worker's family members.
 
 ## Chapter 3 — The employer's side: quotas, approval, and sponsorship
 
 Employers in Laos are commonly subject to rules limiting the proportion of foreign staff and requiring approval before foreign workers are hired. This chapter walks through the employer's obligations: obtaining approval to employ foreign workers, sponsoring the applications, keeping records, reporting changes, and cancelling permits when employment ends. It also explains the position of directors and shareholders, whose right to work in their own company still typically requires the proper permits.
-
-> **Needs legal verification before publication.**
 
 ## Chapter 4 — The work permit application, step by step
 

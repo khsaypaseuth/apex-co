@@ -12,10 +12,16 @@ relatedArticles:
     "investor-visa-in-laos-what-to-prepare",
     "company-registration-in-laos-basic-steps",
   ]
-sources: ["https://investlaos.gov.la"]
+sources:
+  [
+    "https://investlaos.gov.la",
+    "https://investlaos.gov.la/starting-a-business/one-stop-service/",
+    "https://investlaos.gov.la/wp-content/uploads/2026/01/Lao-PDR-Investment-Law-Brochure_20Jan26_EN.pdf",
+    "https://www.laotradeportal.gov.la/en-gb/site/display/494",
+  ]
 ---
 
-Foreign investment in the Lao PDR is governed primarily by the investment promotion framework, which sets out how foreign individuals and companies may invest, which sectors are open, conditional, or reserved, and what incentives may be available for promoted activities. The framework distinguishes between general business activities, which typically register through the ordinary enterprise registration channel, and concession activities — such as land concessions, mining, or energy projects — which follow a separate approval process with additional government agreements.
+Foreign investment in the Lao PDR is governed primarily by the investment promotion framework — the Law on Investment Promotion as amended, in force since 1 October 2024 — which sets out how foreign individuals and companies may invest, which sectors are open, conditional, or reserved, and what incentives may be available for promoted activities. The framework distinguishes between general business activities, which typically register through the ordinary enterprise registration channel, and concession activities — such as land concessions, mining, or energy projects — which follow a separate approval process with additional government agreements.
 
 > **Needs legal verification before publication.**
 
@@ -53,4 +59,4 @@ Minimum capital figures, incentive rates, and concession terms vary by sector an
 
 ## Where to confirm the current rules
 
-The Investment Promotion Department publishes official information for investors, including through the Invest Laos portal. Sector ministries handle activity-specific approvals. Because sector lists and conditions change, confirm the current requirements for your specific activity with the authority — or ask SV Consulting to assess your planned investment.
+As of July 2026, investment promotion is overseen by the Investment Promotion and Management Committee (IPMC), whose office serves as the central one-stop investment service and publishes official information for investors through the Invest Laos portal. Sector ministries handle activity-specific approvals. Because sector lists and conditions change, confirm the current requirements for your specific activity with the authority — or ask SV Consulting to assess your planned investment.

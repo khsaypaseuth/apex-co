@@ -166,6 +166,28 @@ export default async function GuidePage({
             dangerouslySetInnerHTML={{ __html: guide.html }}
           />
 
+          {(guide.sources ?? []).length > 0 && (
+            <div className="mt-12 rounded-sm border border-navy-950/10 bg-ivory-100 p-6">
+              <h2 className="font-display text-lg text-navy-950">
+                {dict.common.sources}
+              </h2>
+              <ul className="mt-3 space-y-2 text-sm">
+                {(guide.sources ?? []).map((source) => (
+                  <li key={source}>
+                    <a
+                      href={source}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      className="break-all text-navy-700 underline decoration-gold-500/60 underline-offset-4 transition-colors hover:text-gold-600"
+                    >
+                      {source}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
           {/* Lead-capture CTA (master plan §Business Guides) */}
           <div className="mt-12">
             <LeadCaptureForm

@@ -13,7 +13,14 @@ relatedArticles:
     "corporate-income-tax-in-laos-simple-overview",
     "contract-review-for-businesses-in-laos",
   ]
-sources: []
+sources:
+  [
+    "https://taxservice.mof.gov.la/",
+    "https://www.laotradeportal.gov.la/en-gb/site/display/1842",
+    "https://www.laotradeportal.gov.la/en-gb/site/display/1843",
+    "http://www.laoofficialgazette.gov.la/kcfinder/upload/files/Accounting%20Law%202013-%20engl%20revised%205%20nov%202014...pdf",
+    "https://faolex.fao.org/docs/pdf/lao208893.pdf",
+  ]
 ---
 
 A Lao company's obligations do not end when the registration certificate is issued — they begin there. This guide is organised as a working checklist of what a company operating in the Lao PDR should keep current through the year, grouped by area, with the reasoning behind each item. Deadlines, fees, and renewal cycles vary by company and are revised by the authorities from time to time, so pair this checklist with confirmation of the current requirements for your specific case.

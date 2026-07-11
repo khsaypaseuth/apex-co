@@ -12,7 +12,10 @@ relatedArticles:
     "long-term-stay-options-in-laos",
     "work-visa-and-work-permit-in-laos",
   ]
-sources: []
+sources:
+  [
+    "https://www.nederlandwereldwijd.nl/binaries/content/assets/pdfs-engels/decree-marriage-between-lao-citizen-and-foreigner.pdf",
+  ]
 ---
 
 This guide is for couples and individuals building a long-term life in the Lao PDR — particularly marriages between Lao and foreign nationals, and the residence arrangements that follow. It connects the family-law side (getting the marriage legally registered) with the immigration side (visas and stay permits based on marriage or other long-term grounds), because in practice the two depend on each other. Document requirements and procedures vary by nationality and district and change over time, so confirm the current requirements for your case before starting.
@@ -28,7 +31,7 @@ This guide is for couples and individuals building a long-term life in the Lao P
 
 ## Chapter 1 — Getting legally married in Laos
 
-A ceremony does not create a legal marriage — registration does. This chapter walks through the path for mixed-nationality couples: the application for permission to marry, the documents the foreign spouse needs from home (identity, single-status confirmation, background documents), translation and legalisation so Lao authorities accept them, interviews and checks, and finally registration and the marriage certificate. It flags the common failure point: foreign documents that arrive too old, untranslated, or unauthenticated.
+A ceremony does not create a legal marriage — registration does. This chapter walks through the path for mixed-nationality couples under the framework of the Decree on Marriage Between Lao Citizens and Foreigners (No. 198/PM, 1994) and the family-registration rules: the application for permission to marry, the documents the foreign spouse needs from home (identity, single-status confirmation, background documents), translation and legalisation so Lao authorities accept them, interviews and checks, and finally registration and the marriage certificate. It flags the common failure point: foreign documents that arrive too old, untranslated, or unauthenticated.
 
 ## Chapter 2 — Married abroad: recognition in Laos
 

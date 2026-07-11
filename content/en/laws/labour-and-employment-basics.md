@@ -12,10 +12,13 @@ relatedArticles:
     "annual-compliance-checklist-for-companies-in-laos",
     "contract-review-for-businesses-in-laos",
   ]
-sources: []
+sources:
+  [
+    "https://natlex.ilo.org/dyn/natlex2/r/natlex/fe/details?p3_isn=96369",
+  ]
 ---
 
-Lao labour law sets the ground rules for the relationship between employers and employees in the Lao PDR: how employment contracts are formed, what working conditions must be respected, how employment ends, and what protections employees have. It applies to Lao and foreign employees working in Laos, and to Lao and foreign-owned employers alike. The Ministry of Labour and Social Welfare administers the framework, alongside the social security scheme that covers registered employees.
+Lao labour law — principally the Labour Law (No. 43/NA, 2013, as of July 2026) — sets the ground rules for the relationship between employers and employees in the Lao PDR: how employment contracts are formed, what working conditions must be respected, how employment ends, and what protections employees have. It applies to Lao and foreign employees working in Laos, and to Lao and foreign-owned employers alike. The Ministry of Labour and Social Welfare administers the framework, alongside the social security scheme that covers registered employees.
 
 > **Needs legal verification before publication.**
 

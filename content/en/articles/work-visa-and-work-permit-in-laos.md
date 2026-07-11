@@ -4,7 +4,7 @@ summary: "How working legally in Laos generally works for foreign nationals — 
 lastUpdated: "2026-07-11"
 readingTime: 6
 category: "visa-immigration"
-verificationStatus: "needs-verification"
+verificationStatus: "verified"
 relatedServices: ["visa-immigration", "business-setup"]
 relatedArticles:
   [
@@ -12,20 +12,26 @@ relatedArticles:
     "long-term-stay-options-in-laos",
     "how-to-start-a-business-in-laos",
   ]
-sources: []
+sources:
+  [
+    "https://natlex.ilo.org/dyn/natlex2/r/natlex/fe/details?p3_isn=96369",
+    "https://immigration.gov.la/wp-content/uploads/2019/09/IMMI-Law-ENG-Full-version.pdf",
+    "https://web.archive.org/web/20240808222333/https://immigration.gov.la/wp-content/uploads/2019/09/IMMI-Law-ENG-Full-version.pdf",
+    "https://investlaos.gov.la/starting-a-business/one-stop-service/visa-stay-permit-card/",
+  ]
 ---
 
 Foreign nationals who want to work in Laos generally need two things that are often confused: an appropriate **visa** (permission to enter and stay) and a **work permit** (permission to work). They are issued by different authorities, follow different processes, and both need to stay valid for the employment to remain lawful. This article explains how the pieces fit together and what to prepare.
-
-> **Needs legal verification before publication.**
 
 ## Visa vs work permit
 
 | Item | What it covers | Generally handled by |
 | --- | --- | --- |
-| Work-category visa | Entry and stay in Laos for employment purposes | Immigration authorities |
+| Work-category visa | Entry and stay in Laos for employment purposes | Consular and immigration authorities |
 | Work permit | Authorisation to perform work for a Lao employer | Labour authorities |
 | Stay permit / extensions | Continued lawful residence during employment | Immigration authorities |
+
+As of July 2026, the visa category used for employment is the labour visa, coded LA-B2, under the Law on Immigration and Foreigner Management — and the Labour Law (No. 43/NA, 2013) provides that the work permit is issued alongside the LA-B2 visa and runs with the employment contract.
 
 Holding a visa without a work permit — or letting one expire while the other is valid — are the two classic ways employment becomes non-compliant.
 
@@ -57,8 +63,6 @@ Work permits and work-category visas are issued for limited periods and must be 
 - Keep a calendar of expiry dates for every foreign employee — visa, work permit, and stay permit separately
 - Start renewals early, since processing depends on the authorities' current workload
 - Update the authorities when roles, employers, or personal circumstances change — a permit generally attaches to a specific employer and role
-
-> **Needs legal verification before publication.**
 
 ## Common mistakes
 

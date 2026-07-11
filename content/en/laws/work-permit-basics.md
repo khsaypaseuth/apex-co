@@ -4,7 +4,7 @@ summary: "What Lao law requires before a foreign national can work in Laos — t
 lastUpdated: "2026-07-11"
 readingTime: 4
 category: "immigration"
-verificationStatus: "needs-verification"
+verificationStatus: "verified"
 relatedServices: ["visa-immigration", "business-setup"]
 relatedArticles:
   [
@@ -12,12 +12,16 @@ relatedArticles:
     "long-term-stay-options-in-laos",
     "investor-visa-in-laos-what-to-prepare",
   ]
-sources: []
+sources:
+  [
+    "https://natlex.ilo.org/dyn/natlex2/r/natlex/fe/details?p3_isn=96369",
+    "https://immigration.gov.la/wp-content/uploads/2019/09/IMMI-Law-ENG-Full-version.pdf",
+    "https://web.archive.org/web/20240808222333/https://immigration.gov.la/wp-content/uploads/2019/09/IMMI-Law-ENG-Full-version.pdf",
+    "https://investlaos.gov.la/starting-a-business/one-stop-service/visa-stay-permit-card/",
+  ]
 ---
 
-Foreign nationals working in the Lao PDR are generally required to hold a valid work permit, alongside an appropriate visa and stay permit. The work permit framework sits between two ministries: the labour authority, which approves the employment of a foreign worker and issues the work permit, and the immigration authority, which handles the visa and stay permit that let the person live in Laos. The pieces are linked — each document typically depends on the others being in order — so the sequence matters.
-
-> **Needs legal verification before publication.**
+Foreign nationals working in the Lao PDR are generally required to hold a valid work permit, alongside an appropriate visa and stay permit. The work permit framework sits between two ministries: the labour authority, which approves the employment of a foreign worker and issues the work permit, and the immigration authority, which handles the visa and stay permit that let the person live in Laos. The pieces are linked — each document typically depends on the others being in order — so the sequence matters. The framework is set principally by the Labour Law (No. 43/NA, 2013) and the Law on Immigration and Foreigner Management.
 
 ## Who it affects
 
@@ -37,9 +41,9 @@ The exact steps depend on the role and the employer, but the framework commonly 
 - The employer to report changes — end of employment, change of role — to the authorities, and to cancel permits when the employment ends
 - Health checks and supporting documents, which are commonly requested as part of applications
 
-Permit durations, fees, quota percentages, and document lists are set by regulation and change from time to time — confirm the current requirements with the labour and immigration authorities before applying.
+As of July 2026, the Labour Law (No. 43/NA, 2013) provides that the work permit is issued together with the labour visa (LA-B2) and expires in accordance with the employment contract, and that foreign employees under an employment contract may stay for periods of up to twelve months at a time, renewable in twelve-month intervals up to a five-year total — with management and specialist roles considered case by case (Articles 44–45).
 
-> **Needs legal verification before publication.**
+Precise permit durations for a given case, fees, quota percentages, and document lists are set by regulation and change from time to time — confirm the current requirements with the labour and immigration authorities before applying.
 
 ## Common mistakes
 

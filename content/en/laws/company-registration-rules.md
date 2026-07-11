@@ -12,7 +12,14 @@ relatedArticles:
     "company-registration-in-laos-basic-steps",
     "business-licenses-in-laos-what-to-know",
   ]
-sources: ["https://www.laotradeportal.gov.la"]
+sources:
+  [
+    "https://www.laotradeportal.gov.la/en-gb/search-procedure/view/55",
+    "https://www.laotradeportal.gov.la/en-gb/site/display/1605",
+    "https://www.laotradeportal.gov.la/en-gb/site/display/494",
+    "https://moic.gov.la/services/business-registration",
+    "http://www.ned.moic.gov.la",
+  ]
 ---
 
 Lao law requires businesses operating in the Lao PDR to be registered with the authorities before they begin trading. The rules governing enterprise registration set out which legal forms a business may take, how a company name is reserved and approved, what founding documents are required, and which authority handles the registration. In practice, most registrations are handled through the enterprise registration offices under the Ministry of Industry and Commerce, with additional steps at other agencies depending on the business activity.
@@ -56,4 +63,4 @@ Minimum registered capital expectations, official fees, and processing timeframe
 
 ## Where to confirm the current rules
 
-The enterprise registration offices of the Ministry of Industry and Commerce are the primary authority for company registration questions. The Lao Trade Portal publishes procedural information in English. Because forms, fees, and requirements change, always confirm the current requirements directly with the authority — or ask SV Consulting to confirm them for your specific case.
+The enterprise registration offices of the Ministry of Industry and Commerce are the primary authority for company registration questions. The Lao Trade Portal publishes procedural information in English. As of July 2026, registered enterprise names and basic company details can also be searched in the ministry's National Enterprise Database. Because forms, fees, and requirements change, always confirm the current requirements directly with the authority — or ask SV Consulting to confirm them for your specific case.

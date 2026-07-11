@@ -4,7 +4,7 @@ summary: "What foreign investors generally need to prepare for an investor-categ
 lastUpdated: "2026-07-11"
 readingTime: 5
 category: "visa-immigration"
-verificationStatus: "needs-verification"
+verificationStatus: "verified"
 relatedServices: ["visa-immigration", "business-setup"]
 relatedArticles:
   [
@@ -12,12 +12,18 @@ relatedArticles:
     "long-term-stay-options-in-laos",
     "how-to-start-a-business-in-laos",
   ]
-sources: []
+sources:
+  [
+    "https://investlaos.gov.la/starting-a-business/one-stop-service/visa-stay-permit-card/",
+    "https://immigration.gov.la/wp-content/uploads/2019/09/IMMI-Law-ENG-Full-version.pdf",
+    "https://web.archive.org/web/20240808222333/https://immigration.gov.la/wp-content/uploads/2019/09/IMMI-Law-ENG-Full-version.pdf",
+    "https://natlex.ilo.org/dyn/natlex2/r/natlex/fe/details?p3_isn=96369",
+  ]
 ---
 
 Foreign nationals who invest in a Lao business — as shareholders, directors, or founders — generally rely on an investor-category visa and associated stay documentation rather than a standard work arrangement. The common thread is that the immigration status is tied to a genuine, documented investment: the stronger and cleaner your company paperwork, the smoother the visa side tends to be.
 
-> **Needs legal verification before publication.**
+As of July 2026, the category investors commonly use is the business visa (coded NI-B2 or I-B2) under the Law on Immigration and Foreigner Management, which is issued to foreign business people who come for investment, including their family members. Stay permit cards are issued by the foreigner-management police under the Ministry of Public Security, and investors and developers in project or concession agreements with the Government of the Lao PDR can receive stay permit cards valid from one to five years, renewable.
 
 ## Who this is for
 

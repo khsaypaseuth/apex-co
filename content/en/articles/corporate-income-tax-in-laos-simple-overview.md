@@ -12,10 +12,16 @@ relatedArticles:
     "vat-in-laos-simple-overview",
     "annual-compliance-checklist-for-companies-in-laos",
   ]
-sources: []
+sources:
+  [
+    "https://www.laotradeportal.gov.la/en-gb/site/display/1843",
+    "https://www.laotradeportal.gov.la/en-gb/site/display/1842",
+    "https://taxsummaries.pwc.com/lao-pdr/corporate/taxes-on-corporate-income",
+    "https://taxsummaries.pwc.com/lao-pdr/corporate/tax-administration",
+  ]
 ---
 
-Companies operating in Laos are generally subject to tax on their profits — commonly referred to as profit tax or corporate income tax (CIT). This article explains the concept and the compliance rhythm in plain language. It deliberately avoids stating rates, because rates and incentives are set by law and change; the current position must be confirmed with the tax authority.
+Companies operating in Laos are generally subject to tax on their profits — commonly referred to as profit tax or corporate income tax (CIT). This article explains the concept and the compliance rhythm in plain language. The only figure it quotes is the standard headline rate, dated to the time of writing, because rates and incentives are set by law and change; the current position must be confirmed with the tax authority.
 
 > **Needs legal verification before publication.**
 
@@ -44,7 +50,7 @@ Small enterprises may fall under simplified or presumptive regimes rather than f
 | Finalisation | Preparing the annual tax return, adjusting accounting profit to taxable profit |
 | Filing and payment | Filing and settling by the deadlines set by the tax authority |
 
-The specific deadlines and any interim (advance) payment schedule are set by regulation and should be confirmed for the current year.
+Under the rules in force as of July 2026, profit tax is declared on a twice-yearly cycle, with payments made in advance and settled through the annual finalisation. The specific deadlines and the advance payment schedule are set by regulation and should be confirmed for the current year.
 
 ## Common mistakes
 
@@ -55,7 +61,7 @@ The specific deadlines and any interim (advance) payment schedule are set by reg
 
 ## Rates and incentives
 
-Profit tax rates, incentive regimes, and small-business thresholds are set by law and have changed over time. We do not publish figures here — current rates and any incentives relevant to your sector should be confirmed with the tax authority or a qualified adviser before you build them into a business plan.
+Profit tax rates, incentive regimes, and small-business thresholds are set by law and have changed over time. As of July 2026, the standard profit tax rate for most companies is 20 percent under the Income Tax Law No. 67/NA (2019), with different rates for certain sectors — higher for areas such as minerals and tobacco, lower for some promoted activities — and lump-sum regimes for the smallest businesses. Because rates and incentives change, the current position and any incentives relevant to your sector should be confirmed with the tax authority or a qualified adviser before you build them into a business plan.
 
 ## How SV Consulting can help
 

@@ -4,7 +4,7 @@ summary: "What tax registration involves for a newly formed Lao company — obta
 lastUpdated: "2026-07-11"
 readingTime: 5
 category: "tax-accounting"
-verificationStatus: "needs-verification"
+verificationStatus: "verified"
 relatedServices: ["accounting-tax", "business-setup"]
 relatedArticles:
   [
@@ -13,12 +13,18 @@ relatedArticles:
     "corporate-income-tax-in-laos-simple-overview",
     "annual-compliance-checklist-for-companies-in-laos",
   ]
-sources: []
+sources:
+  [
+    "https://taxservice.mof.gov.la/",
+    "https://www.laotradeportal.gov.la/en-gb/site/display/1842",
+    "https://www.laotradeportal.gov.la/en-gb/site/display/1843",
+    "https://www.laotradeportal.gov.la/en-gb/site/display/2225",
+    "http://www.laoofficialgazette.gov.la/kcfinder/upload/files/Accounting%20Law%202013-%20engl%20revised%205%20nov%202014...pdf",
+    "https://faolex.fao.org/docs/pdf/lao208893.pdf",
+  ]
 ---
 
 Once a company is registered in Laos, it must enter the tax system. Tax registration gives the company a taxpayer identification number (TIN) and places it under the administration of the tax authority, which determines what the company must file and when. Getting this step right — and setting up the bookkeeping to support it — is the foundation of staying compliant.
-
-> **Needs legal verification before publication.**
 
 ## Who needs to register
 
@@ -32,13 +38,11 @@ Which regime applies to a given business — and what that means for filings —
 
 ## What registration generally involves
 
-1. **Apply for a taxpayer identification number** after (or alongside) enterprise registration.
+1. **Apply for a taxpayer identification number** after (or alongside) enterprise registration. The Tax Department administers TINs through its TaxRIS online system (taxservice.mof.gov.la), and for companies the TIN is commonly issued in connection with enterprise registration.
 2. **Provide company information** — the enterprise registration certificate, registered address, activity description, and responsible persons are commonly requested.
 3. **Confirm which taxes apply to you.** Depending on the business, this can include profit (corporate income) tax, value added tax, withholding obligations, and payroll-related obligations for employees.
 4. **Understand your filing calendar.** Different taxes have different filing and payment cycles; the current schedule should be confirmed with the tax authority.
-5. **Set up compliant bookkeeping** so filings can actually be prepared from reliable records.
-
-> **Needs legal verification before publication.**
+5. **Set up compliant bookkeeping** so filings can actually be prepared from reliable records. Under the Accounting Law, an enterprise registered as a juristic entity must keep books from the date of its registration.
 
 ## Obligations that commonly follow registration
 

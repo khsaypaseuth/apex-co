@@ -13,7 +13,14 @@ relatedArticles:
     "corporate-income-tax-in-laos-simple-overview",
     "contract-review-for-businesses-in-laos",
   ]
-sources: []
+sources:
+  [
+    "https://taxservice.mof.gov.la/",
+    "https://www.laotradeportal.gov.la/en-gb/site/display/1842",
+    "https://www.laotradeportal.gov.la/en-gb/site/display/1843",
+    "http://www.laoofficialgazette.gov.la/kcfinder/upload/files/Accounting%20Law%202013-%20engl%20revised%205%20nov%202014...pdf",
+    "https://faolex.fao.org/docs/pdf/lao208893.pdf",
+  ]
 ---
 
 ພັນທະຂອງບໍລິສັດລາວບໍ່ໄດ້ສິ້ນສຸດເມື່ອໃບທະບຽນວິສາຫະກິດຖືກອອກໃຫ້ — ມັນເລີ່ມຕົ້ນຢູ່ທີ່ນັ້ນ. ຄູ່ມືນີ້ຈັດເປັນລາຍການກວດກາທີ່ໃຊ້ວຽກໄດ້ຈິງ ວ່າບໍລິສັດທີ່ດຳເນີນງານໃນ ສປປ ລາວ ຄວນຮັກສາຫຍັງໃຫ້ເປັນປັດຈຸບັນຕະຫຼອດປີ ຈັດກຸ່ມຕາມຂົງເຂດ ພ້ອມເຫດຜົນເບື້ອງຫຼັງແຕ່ລະລາຍການ. ກຳນົດເສັ້ນຕາຍ, ຄ່າທຳນຽມ, ແລະ ຮອບການຕໍ່ອາຍຸ ແຕກຕ່າງກັນຕາມບໍລິສັດ ແລະ ຖືກປັບປຸງໂດຍອົງການເປັນແຕ່ລະໄລຍະ ດັ່ງນັ້ນຄວນໃຊ້ລາຍການກວດການີ້ຄູ່ກັບການຢືນຢັນເງື່ອນໄຂປັດຈຸບັນສຳລັບກໍລະນີສະເພາະຂອງທ່ານ.

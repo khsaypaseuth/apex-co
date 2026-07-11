@@ -14,7 +14,7 @@ export const servicePages: Record<ServicePageContent['slug'], ServicePageContent
     heroLede:
       'From choosing a structure to holding your registration certificate — practical, step-by-step support for setting up a business in Laos.',
     overview: [
-      'Setting up a business in Laos typically involves choosing a legal structure, registering the enterprise, obtaining the licences your activity requires, and completing tax registration. The exact sequence and requirements vary by business activity, ownership structure, and the authorities involved.',
+      'Setting up a business in Laos typically involves choosing a legal structure, registering the enterprise — as of July 2026 the registration certificate is issued together with the taxpayer identification number — and obtaining the licences your activity requires. The exact sequence and requirements vary by business activity, ownership structure, and the authorities involved.',
       'SV Consulting manages this journey end to end: we help you confirm what applies to your specific case, prepare the paperwork, and coordinate with the relevant offices — so the process stays clear and predictable for you.',
     ],
     whoItsFor: [
@@ -52,7 +52,7 @@ export const servicePages: Record<ServicePageContent['slug'], ServicePageContent
       {
         title: 'Complete post-registration steps',
         description:
-          'We help with tax registration, social security registration, and the practical steps that follow — so the company is genuinely ready to operate.',
+          'We help with social security registration, the company seal, sector licences, and the practical steps that follow — so the company is genuinely ready to operate.',
       },
     ],
     documents: {
@@ -201,7 +201,7 @@ export const servicePages: Record<ServicePageContent['slug'], ServicePageContent
       },
       {
         heading: 'Trademark and IP',
-        body: 'We support trademark registration in Laos and practical intellectual property protection, from availability checks through filing and registration follow-up.',
+        body: 'We support trademark registration with the Department of Intellectual Property under the Ministry of Industry and Commerce, and practical IP protection — from availability checks through filing and registration follow-up.',
       },
       {
         heading: 'Marriage with a Lao citizen',
@@ -289,7 +289,7 @@ export const servicePages: Record<ServicePageContent['slug'], ServicePageContent
       },
       {
         heading: 'Tax registration',
-        body: 'New businesses typically need to register with the tax authorities and obtain a taxpayer identification number. We handle the registration and make sure the company starts its tax life correctly.',
+        body: 'As of July 2026, a taxpayer identification number is normally issued together with enterprise registration, and tax accounts are managed through the TaxRIS system. We make sure the company starts its tax life correctly and its registrations are complete.',
       },
       {
         heading: 'Tax filing',

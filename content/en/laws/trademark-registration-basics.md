@@ -4,19 +4,22 @@ summary: "How trademark protection works in the Lao PDR — why registration mat
 lastUpdated: "2026-07-11"
 readingTime: 4
 category: "intellectual-property"
-verificationStatus: "needs-verification"
+verificationStatus: "verified"
 relatedServices: ["legal-family", "business-setup"]
 relatedArticles:
   [
     "contract-review-for-businesses-in-laos",
     "how-to-start-a-business-in-laos",
   ]
-sources: []
+sources:
+  [
+    "https://www.wipo.int/wipolex/en/legislation/details/18024",
+    "https://www.moic.gov.la/en/departments",
+    "https://www.wipo.int/madrid/en/news/2015/news_0023.html",
+  ]
 ---
 
-Trademark protection in the Lao PDR is based on registration: as a general rule, the business that registers a mark first holds the rights to it in Laos, regardless of who used it first elsewhere. A trademark registered in another country does not automatically protect the brand in Laos. Registration is handled by the intellectual property authority under the Ministry of Industry and Commerce, and Laos also participates in international filing arrangements that can extend foreign registrations into Laos — the right route depends on the situation.
-
-> **Needs legal verification before publication.**
+Trademark protection in the Lao PDR is based on registration under the Law on Intellectual Property (No. 38/NA, 2017): as a general rule, the business that registers a mark first holds the rights to it in Laos, regardless of who used it first elsewhere. A trademark registered in another country does not automatically protect the brand in Laos. Registration is handled by the Department of Intellectual Property under the Ministry of Industry and Commerce (as of July 2026), and Laos has been a member of the Madrid Protocol since 2016, so international registrations can designate Laos — the right route depends on the situation.
 
 ## Who it affects
 
@@ -32,13 +35,11 @@ The framework commonly works as follows:
 - Protection generally requires registration in Laos; use alone gives limited protection
 - An application typically covers specific classes of goods or services — the mark is protected for what is registered, not everything
 - The authority examines applications for conflicts with earlier marks and for signs that cannot be registered, so a clearance search before filing is strongly advisable
-- Registration is valid for a fixed period and must be renewed to stay in force — renewal deadlines are the owner's responsibility
+- Registration is valid for ten years from the filing date and can be renewed for further ten-year periods — renewal deadlines are the owner's responsibility
 - The registered owner is responsible for monitoring the market and enforcing the mark; the authority does not police infringements on its own
 - Changes of owner, name, or address should be recorded against the registration to keep it enforceable
 
-Filing routes, class systems, official fees, and validity periods follow the current regulations and international arrangements — confirm the details with the intellectual property authority before filing.
-
-> **Needs legal verification before publication.**
+Filing routes, class coverage, official fees, and current procedures follow the regulations in force and the international arrangements Laos participates in — confirm the details with the Department of Intellectual Property before filing.
 
 ## Common mistakes
 
@@ -50,4 +51,4 @@ Filing routes, class systems, official fees, and validity periods follow the cur
 
 ## Where to confirm the current rules
 
-The intellectual property department under the Ministry of Industry and Commerce is the registration authority. Filing strategy — direct filing versus international routes, class coverage, clearance searching — depends on the specific brand and plans, so take advice on your case or ask SV Consulting to handle the search and filing.
+The Department of Intellectual Property under the Ministry of Industry and Commerce is the registration authority (as of July 2026). Filing strategy — direct filing versus international routes, class coverage, clearance searching — depends on the specific brand and plans, so take advice on your case or ask SV Consulting to handle the search and filing.

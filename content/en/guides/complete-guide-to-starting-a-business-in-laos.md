@@ -14,7 +14,13 @@ relatedArticles:
     "tax-registration-for-new-companies-in-laos",
     "annual-compliance-checklist-for-companies-in-laos",
   ]
-sources: ["https://www.laotradeportal.gov.la"]
+sources:
+  [
+    "https://www.laotradeportal.gov.la/en-gb/search-procedure/view/55",
+    "https://www.laotradeportal.gov.la/en-gb/site/display/1605",
+    "https://moic.gov.la/services/business-registration",
+    "https://investlaos.gov.la",
+  ]
 ---
 
 This guide walks through the full journey of starting a business in the Lao PDR — from the first planning decisions to the end of the first compliant year of operation. It is written in plain language for people who have not set up a Lao company before, and it deliberately avoids quoting fees, capital figures, or processing times, because those change and should be confirmed for your specific case at the time you file.
@@ -46,7 +52,7 @@ The registration certificate creates the company; it does not authorise every ac
 
 ## Chapter 5 — Tax registration and the accounting setup
 
-Tax obligations begin when the company exists, not when it earns. This chapter covers tax registration and the taxpayer identification number, VAT registration where criteria are met, the filing calendar a new company should diary from day one, social security registration for staff, and setting up books that comply with Lao accounting requirements. It also explains why nil filings matter — dormant companies that file nothing commonly accumulate penalties.
+Tax obligations begin when the company exists, not when it earns. This chapter covers the taxpayer identification number — which, as of July 2026, is issued together with the enterprise registration certificate — VAT registration where criteria are met, the filing calendar a new company should diary from day one, social security registration for staff, and setting up books that comply with Lao accounting requirements. It also explains why nil filings matter — dormant companies that file nothing commonly accumulate penalties.
 
 > **Needs legal verification before publication.**
 

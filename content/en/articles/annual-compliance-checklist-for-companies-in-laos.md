@@ -12,7 +12,14 @@ relatedArticles:
     "corporate-income-tax-in-laos-simple-overview",
     "business-licenses-in-laos-what-to-know",
   ]
-sources: []
+sources:
+  [
+    "https://taxservice.mof.gov.la/",
+    "https://www.laotradeportal.gov.la/en-gb/site/display/1842",
+    "https://www.laotradeportal.gov.la/en-gb/site/display/1843",
+    "http://www.laoofficialgazette.gov.la/kcfinder/upload/files/Accounting%20Law%202013-%20engl%20revised%205%20nov%202014...pdf",
+    "https://faolex.fao.org/docs/pdf/lao208893.pdf",
+  ]
 ---
 
 Registering a company in Laos is a one-time event; keeping it compliant is a yearly rhythm. Most compliance failures are not dramatic — they are quiet lapses: a licence that expired, a filing that slipped, a register that was never updated. This checklist organises the recurring obligations most companies face so you can build a calendar around them. Exact deadlines and requirements are set by regulation and change, so each item should be confirmed for your company and the current year.

@@ -11,7 +11,10 @@ relatedArticles:
     "long-term-stay-options-in-laos",
     "work-visa-and-work-permit-in-laos",
   ]
-sources: []
+sources:
+  [
+    "https://www.nederlandwereldwijd.nl/binaries/content/assets/pdfs-engels/decree-marriage-between-lao-citizen-and-foreigner.pdf",
+  ]
 ---
 
 Marriage between a Lao national and a foreign national is legally recognised in Laos, but it follows a more formal process than a marriage between two Lao nationals. Cross-nationality marriages generally require official approval and registration through the competent authorities, and the paperwork — on both the Lao and the foreign side — is the heart of the process. Doing it properly matters far beyond the wedding: the registered marriage is the foundation for spousal visas, family documentation, and property and inheritance questions later.
@@ -30,7 +33,7 @@ Registration is what turns the relationship into a legal status the authorities 
 
 ## What the process generally involves
 
-Procedures are updated from time to time and can differ in practice between provinces, but the process commonly includes:
+The framework builds on the Decree on Marriage Between Lao Citizens and Foreigners (No. 198/PM, 1994), applied together with the family-registration rules. Procedures are updated from time to time and can differ in practice between provinces, but the process commonly includes:
 
 1. **Preparing documents on both sides.** The Lao spouse gathers Lao civil documents; the foreign spouse gathers documents from their home country, which typically need legalisation or authentication and certified translation.
 2. **Filing the application** with the competent Lao authorities.
@@ -44,7 +47,7 @@ The full sequence, the authorities involved, and current processing practice sho
 | Side | Commonly requested |
 | --- | --- |
 | Lao spouse | Identity documents, family book, civil status confirmation |
-| Foreign spouse | Passport, evidence of single status / capacity to marry, police clearance, health certificate |
+| Foreign spouse | Passport, evidence of single status / capacity to marry, police clearance, health certificate, evidence of financial status |
 | Both | Photographs, application forms, and certified Lao translations of foreign documents |
 
 Foreign documents usually need to be issued recently, authenticated through the proper channels, and translated by recognised translators — three requirements that cause most of the delays when missed. The current checklist should be confirmed before gathering documents, since validity windows can expire while other papers are still in progress.

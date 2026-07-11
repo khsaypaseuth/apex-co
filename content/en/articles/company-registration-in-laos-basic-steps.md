@@ -1,10 +1,10 @@
 ---
 title: "Company Registration in Laos: Basic Steps"
-summary: "What company registration in the Lao PDR generally involves — name reservation, incorporation documents, the enterprise registration certificate, and what comes after."
+summary: "What company registration in the Lao PDR generally involves — name checks, incorporation documents, the enterprise registration certificate, and what comes after."
 lastUpdated: "2026-07-11"
 readingTime: 5
 category: "starting-a-business"
-verificationStatus: "needs-verification"
+verificationStatus: "verified"
 relatedServices: ["business-setup", "legal-family"]
 relatedArticles:
   [
@@ -12,12 +12,17 @@ relatedArticles:
     "business-licenses-in-laos-what-to-know",
     "tax-registration-for-new-companies-in-laos",
   ]
-sources: ["https://www.laotradeportal.gov.la"]
+sources:
+  [
+    "https://www.laotradeportal.gov.la/en-gb/search-procedure/view/55",
+    "https://www.laotradeportal.gov.la/en-gb/site/display/1605",
+    "https://www.laotradeportal.gov.la/en-gb/site/display/494",
+    "https://moic.gov.la/services/business-registration",
+    "http://www.ned.moic.gov.la",
+  ]
 ---
 
-Company registration is the formal step that turns a business idea into a legal entity in Laos. The core of the process is enterprise registration with the authorities responsible for the commerce registry, which results in an enterprise registration certificate. This article walks through what the process generally involves and what to have ready.
-
-> **Needs legal verification before publication.**
+Company registration is the formal step that turns a business idea into a legal entity in Laos. The core of the process is enterprise registration with the enterprise registration offices of the industry and commerce sector, which results in an enterprise registration certificate. This article walks through what the process generally involves and what to have ready.
 
 ## Who this applies to
 
@@ -32,13 +37,11 @@ Foreign-owned registrations often involve additional checks, because some sector
 While the details depend on your structure and sector, registration commonly follows this general shape:
 
 1. **Confirm the activity is permitted** for your intended ownership structure.
-2. **Reserve the company name.** The registry checks that the proposed name is available and acceptable.
+2. **Check and secure the company name.** The registry checks that the proposed name is available and acceptable — existing enterprise names can be searched in the National Enterprise Database.
 3. **Prepare incorporation documents.** These commonly include articles of association, shareholder and director details, and evidence of a registered address.
 4. **Submit the application** to the enterprise registration authority.
 5. **Receive the enterprise registration certificate** once the application is approved.
-6. **Complete follow-on registrations** — tax registration, any sector licences, a company seal where required, and social security registration once you hire staff.
-
-> **Needs legal verification before publication.**
+6. **Complete follow-on steps** — any sector licences, the company seal (approved through the public security authorities), and social security registration once you hire staff. As of July 2026, the enterprise registration certificate is issued together with the taxpayer identification number (TIN), so tax identification is normally obtained at registration itself.
 
 ## Documents commonly requested
 
@@ -55,7 +58,7 @@ Authorities may request additional documents depending on the sector, the nation
 ## Common mistakes
 
 - **Vague or mismatched activity descriptions.** The registered activity should reflect what the business will actually do; operating outside it can create licensing problems later.
-- **Assuming the certificate is the finish line.** Tax registration, sector licences, and ongoing compliance obligations follow immediately after registration.
+- **Assuming the certificate is the finish line.** Tax filings, sector licences, and ongoing compliance obligations follow immediately after registration.
 - **Weak constitutional documents.** Generic articles of association that ignore how the founders actually intend to run and share the company cause disputes later.
 
 ## Fees and timing

@@ -11,10 +11,13 @@ relatedArticles:
     "marriage-registration-between-lao-and-foreign-nationals",
     "long-term-stay-options-in-laos",
   ]
-sources: []
+sources:
+  [
+    "https://www.nederlandwereldwijd.nl/binaries/content/assets/pdfs-engels/decree-marriage-between-lao-citizen-and-foreigner.pdf",
+  ]
 ---
 
-Marriage in the Lao PDR has legal effect through registration with the family registration authorities — a ceremony alone, however traditional or elaborate, does not create a legal marriage. For two Lao citizens the process is relatively straightforward. For a marriage between a Lao citizen and a foreign national, the law adds an approval layer: the marriage typically requires permission from the Lao authorities before it can be registered, with documents from both the Lao and the foreign side, and the process runs through several offices.
+Marriage in the Lao PDR has legal effect through registration with the family registration authorities — a ceremony alone, however traditional or elaborate, does not create a legal marriage. For two Lao citizens the process is relatively straightforward. For a marriage between a Lao citizen and a foreign national, the law — notably the Decree on Marriage Between Lao Citizens and Foreigners (No. 198/PM, 1994), applied alongside the family-registration rules — adds an approval layer: the marriage typically requires permission from the Lao authorities before it can be registered, with documents from both the Lao and the foreign side, and the process runs through several offices.
 
 > **Needs legal verification before publication.**
 

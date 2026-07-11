@@ -12,7 +12,14 @@ relatedArticles:
     "corporate-income-tax-in-laos-simple-overview",
     "business-licenses-in-laos-what-to-know",
   ]
-sources: []
+sources:
+  [
+    "https://taxservice.mof.gov.la/",
+    "https://www.laotradeportal.gov.la/en-gb/site/display/1842",
+    "https://www.laotradeportal.gov.la/en-gb/site/display/1843",
+    "http://www.laoofficialgazette.gov.la/kcfinder/upload/files/Accounting%20Law%202013-%20engl%20revised%205%20nov%202014...pdf",
+    "https://faolex.fao.org/docs/pdf/lao208893.pdf",
+  ]
 ---
 
 ການຈົດທະບຽນບໍລິສັດໃນລາວແມ່ນເຫດການທີ່ເກີດຂຶ້ນເທື່ອດຽວ; ແຕ່ການຮັກສາໃຫ້ບໍລິສັດປະຕິບັດຖືກຕ້ອງຕາມລະບຽບແມ່ນຈັງຫວະທີ່ຕ້ອງເຮັດທຸກໆປີ. ຄວາມຜິດພາດດ້ານການປະຕິບັດຕາມລະບຽບສ່ວນຫຼາຍບໍ່ແມ່ນເລື່ອງໃຫຍ່ໂຕ — ມັນເປັນການພາດເລັກໆນ້ອຍໆທີ່ເກີດຂຶ້ນແບບງຽບໆ: ໃບອະນຸຍາດທີ່ໝົດອາຍຸ, ການແຈ້ງເສຍອາກອນທີ່ຫຼຸດກຳນົດ, ທະບຽນທີ່ບໍ່ເຄີຍຖືກປັບປຸງ. ລາຍການກວດການີ້ຈັດລຽງພັນທະທີ່ເກີດຂຶ້ນເປັນປະຈຳ ທີ່ບໍລິສັດສ່ວນຫຼາຍຕ້ອງພົບ ເພື່ອໃຫ້ທ່ານສາມາດວາງປະຕິທິນວຽກອ້ອມຮອບມັນໄດ້. ກຳນົດເວລາ ແລະ ເງື່ອນໄຂທີ່ແນ່ນອນແມ່ນກຳນົດໂດຍລະບຽບການ ແລະ ມີການປ່ຽນແປງ, ສະນັ້ນແຕ່ລະລາຍການຄວນຢືນຢັນຄືນສຳລັບບໍລິສັດຂອງທ່ານ ແລະ ສຳລັບປີປັດຈຸບັນ.
