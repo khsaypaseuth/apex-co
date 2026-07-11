@@ -107,6 +107,7 @@ export default async function RootLayout({
         <FloatingContactButtons
           whatsAppLabel={dict.floating.whatsapp}
           lineLabel={dict.floating.line}
+          placeholderNote={dict.floating.placeholderNote}
         />
       </body>
     </html>

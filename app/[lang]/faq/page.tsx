@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getDictionary, hasLocale } from '@/lib/dictionaries'
 import { pageMetadata } from '@/lib/seo'
-import { faqSections } from '@/content/en/faq'
+import { getFaqSections } from '@/lib/page-data'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { CtaSection } from '@/components/CtaSection'
 import { DisclaimerBox } from '@/components/DisclaimerBox'
@@ -29,6 +29,7 @@ export default async function FaqPage({ params }: PageProps<'/[lang]/faq'>) {
   if (!hasLocale(lang)) notFound()
 
   const dict = await getDictionary(lang)
+  const faqSections = getFaqSections(lang)
 
   return (
     <main id="main-content">
@@ -52,7 +53,7 @@ export default async function FaqPage({ params }: PageProps<'/[lang]/faq'>) {
 
       <section className="py-16 md:py-20">
         <div className="mx-auto max-w-3xl space-y-14 px-6">
-          {/* All five master-plan FAQ sections (content/en/faq.ts; Lao in Phase 7) */}
+          {/* All five master-plan FAQ sections (content/{lang}/faq.ts) */}
           {faqSections.map((section) => (
             <div key={section.title}>
               <h2 className="font-display text-2xl leading-tight text-navy-950 md:text-3xl">

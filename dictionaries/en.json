@@ -120,7 +120,8 @@
   },
   "floating": {
     "whatsapp": "Contact us on WhatsApp",
-    "line": "Contact us on LINE"
+    "line": "Contact us on LINE",
+    "placeholderNote": "Placeholder — add real contact"
   },
   "footer": {
     "quickLinks": "Quick Links",

@@ -8,8 +8,7 @@ import {
   SERVICE_CATEGORY_SLUGS,
   type ServiceCategorySlug,
 } from '@/lib/types'
-import { servicePages } from '@/content/en/service-pages'
-import { groupsForCategory } from '@/content/en/services'
+import { getGroupsForCategory, getServicePageContent } from '@/lib/page-data'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { CtaSection } from '@/components/CtaSection'
 import { DisclaimerBox } from '@/components/DisclaimerBox'
@@ -87,8 +86,8 @@ export default async function ServiceCategoryPage({
 
   const dict = await getDictionary(lang)
   const config = CATEGORY_CONFIG[category]
-  const page = servicePages[category]
-  const groups = groupsForCategory(category)
+  const page = getServicePageContent(lang, category)
+  const groups = getGroupsForCategory(lang, category)
   const title = dict.nav[config.dictKey]
 
   // Knowledge Center articles related to this service area (empty-safe).

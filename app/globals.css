@@ -64,6 +64,18 @@ html[lang='lo'] .font-display {
 }
 
 /*
+ * Lao body-copy leading floor (Phase 7). `leading-relaxed` (1.625) is set
+ * directly on most body-text elements, which would defeat the inherited 1.8
+ * from `html[lang='lo'] body`; these un-layered rules win over Tailwind's
+ * layered utilities and the base `.prose-article` (1.75), keeping Lao
+ * paragraph text at ≥ 1.8 so stacked vowels/tone marks never clip.
+ */
+html[lang='lo'] .leading-relaxed,
+html[lang='lo'] .prose-article {
+  line-height: 1.8;
+}
+
+/*
  * Rendered markdown content (output of lib/content.ts pipeline).
  * Applied via <div className="prose-article" dangerouslySetInnerHTML=... />.
  */

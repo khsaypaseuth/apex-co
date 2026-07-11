@@ -3,9 +3,9 @@ export interface FloatingContactButtonsProps {
   whatsAppLabel: string
   /** Accessible label, e.g. dict.floating.line. */
   lineLabel: string
+  /** Hover note marking the placeholder hrefs, dict.floating.placeholderNote. */
+  placeholderNote: string
 }
-
-const PLACEHOLDER_TITLE = 'Placeholder — add real contact'
 
 /**
  * Fixed WhatsApp + LINE contact buttons (bottom-right). The hrefs are
@@ -15,12 +15,13 @@ const PLACEHOLDER_TITLE = 'Placeholder — add real contact'
 export function FloatingContactButtons({
   whatsAppLabel,
   lineLabel,
+  placeholderNote,
 }: FloatingContactButtonsProps) {
   return (
     <div className="fixed right-5 bottom-5 z-40 flex flex-col gap-3">
       <a
         href="#"
-        title={PLACEHOLDER_TITLE}
+        title={placeholderNote}
         aria-label={whatsAppLabel}
         className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-navy-950/20 transition-transform hover:scale-105 focus-visible:outline-2 focus-visible:outline-gold-500"
       >
@@ -41,7 +42,7 @@ export function FloatingContactButtons({
       </a>
       <a
         href="#"
-        title={PLACEHOLDER_TITLE}
+        title={placeholderNote}
         aria-label={lineLabel}
         className="flex h-12 w-12 items-center justify-center rounded-full bg-[#06C755] text-white shadow-lg shadow-navy-950/20 transition-transform hover:scale-105 focus-visible:outline-2 focus-visible:outline-gold-500"
       >

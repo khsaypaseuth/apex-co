@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getDictionary, hasLocale } from '@/lib/dictionaries'
 import { pageMetadata } from '@/lib/seo'
-import { serviceGroups } from '@/content/en/services'
+import { getServiceGroups } from '@/lib/page-data'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { CtaSection } from '@/components/CtaSection'
 import { Hero } from '@/components/Hero'
@@ -31,6 +31,7 @@ export default async function ServicesPage({
   if (!hasLocale(lang)) notFound()
 
   const dict = await getDictionary(lang)
+  const serviceGroups = getServiceGroups(lang)
 
   return (
     <main id="main-content">
@@ -52,7 +53,7 @@ export default async function ServicesPage({
         </div>
       </div>
 
-      {/* Five service groups — exact master-plan lists from content/en/services.ts */}
+      {/* Five service groups — exact master-plan lists from content/{lang}/services.ts */}
       {serviceGroups.map((group, index) => (
         <section
           key={group.id}
