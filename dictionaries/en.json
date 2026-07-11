@@ -46,6 +46,7 @@
     "breadcrumbLabel": "Breadcrumb",
     "relatedArticles": "Related articles",
     "relatedServices": "Related services",
+    "sources": "Sources",
     "sampleContent": "Sample content for preview purposes only."
   },
   "verification": {
@@ -103,6 +104,18 @@
       "whatsapp": "WhatsApp",
       "line": "LINE"
     }
+  },
+  "leadForm": {
+    "title": "Get advice tailored to your situation",
+    "lede": "Leave your details and an SV Consulting adviser will follow up on the topics in this guide — no obligation.",
+    "fullName": "Full Name",
+    "email": "Email",
+    "phone": "Phone / WhatsApp",
+    "serviceInterest": "Service Interest",
+    "selectPlaceholder": "Please select",
+    "required": "required",
+    "submit": "Request a Consultation",
+    "demoNotice": "Demo only — this form does not send messages yet. Please contact us directly."
   },
   "floating": {
     "whatsapp": "Contact us on WhatsApp",

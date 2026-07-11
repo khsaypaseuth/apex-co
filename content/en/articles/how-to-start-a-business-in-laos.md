@@ -1,19 +1,23 @@
 ---
 title: "How to Start a Business in Laos"
 summary: "A plain-language overview of the typical steps for setting up a company in the Lao PDR — from choosing a structure to registration, licensing, and tax basics."
-lastUpdated: "2026-07-10"
+lastUpdated: "2026-07-11"
 readingTime: 6
 category: "starting-a-business"
 verificationStatus: "needs-verification"
 relatedServices: ["business-setup", "accounting-tax"]
 relatedArticles:
-  ["company-registration-in-laos-basic-steps", "business-licenses-in-laos-what-to-know"]
-sources: []
+  [
+    "company-registration-in-laos-basic-steps",
+    "business-licenses-in-laos-what-to-know",
+    "tax-registration-for-new-companies-in-laos",
+  ]
+sources: ["https://www.laotradeportal.gov.la"]
 ---
 
 Starting a business in Laos typically involves choosing a legal structure, registering the company, obtaining the licenses your activity requires, and completing tax registration. The exact steps and documents vary by business activity, ownership structure, and the authorities involved.
 
-> **Needs legal verification before publication** — the steps, structures, and timelines below are a general orientation only and must be confirmed against current regulations before this article is published.
+> **Needs legal verification before publication.**
 
 ## Common business structures
 
@@ -26,7 +30,7 @@ Businesses in Laos are commonly set up under one of a few structures. Which one 
 | Public company | Larger enterprises raising capital publicly |
 | Branch or representative office | Foreign companies establishing a presence |
 
-Foreign ownership rules differ by sector, and some activities are subject to specific conditions or restrictions. This is one of the first things to confirm before committing to a structure.
+Foreign ownership rules differ by sector, and some activities are subject to specific conditions or restrictions. This is one of the first things to confirm before committing to a structure, because changing structure after registration usually means repeating parts of the process.
 
 ## Typical steps
 
@@ -40,12 +44,33 @@ The registration journey commonly looks like this, although the order and requir
 6. **Register for tax** and obtain a taxpayer identification number.
 7. **Open a company bank account** and complete any post-registration steps, such as social security registration for employees.
 
-> **Needs legal verification before publication** — do not rely on this sequence as a checklist; requirements vary and change.
+> **Needs legal verification before publication.**
+
+## What to prepare before you start
+
+Being organised before you approach the authorities usually saves the most time. Founders commonly prepare:
+
+- Passports or identity documents for all shareholders and directors
+- A clear description of the planned business activity
+- Evidence of a registered address in Laos (for example, a lease agreement)
+- Draft constitutional documents such as articles of association
+- Information about planned capital and how it will be contributed
+
+Requirements differ by structure and sector, so treat this list as a starting point rather than a checklist.
+
+## Common mistakes
+
+- **Choosing a structure before checking sector rules.** Some activities are restricted or conditional for foreign investors.
+- **Underestimating post-registration obligations.** Registration is the beginning — tax filings, accounting, and licence renewals follow.
+- **Incomplete or inconsistent documents.** Small mismatches between documents (names, addresses, activity descriptions) are a frequent cause of delays.
+- **Ignoring licensing.** An enterprise registration certificate alone is often not enough to operate in regulated sectors.
 
 ## Timelines and costs
 
-Processing times and official fees vary depending on the structure, the sector, and the completeness of the application. We deliberately do not publish figures here until they can be verified against current official schedules.
+Processing times and official fees vary depending on the structure, the sector, and the completeness of the application. We deliberately do not publish figures here until they can be verified against current official schedules — current fees and timelines should be confirmed with the relevant authorities before you plan around them.
 
-## How SV Consulting helps
+## How SV Consulting can help
 
 SV Consulting supports clients through the full setup journey — advising on structure, preparing and filing documents, coordinating with the relevant authorities, and setting up tax and accounting foundations — so you can focus on the business itself.
+
+*The site-wide disclaimer applies to this article: it is general information, not legal, tax, or immigration advice.*

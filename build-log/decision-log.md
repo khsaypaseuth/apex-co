@@ -173,3 +173,42 @@ Format per master plan: question we would have asked → decision → reason →
 ## D-046 — Service category pages are one dynamic route
 - **Decision:** The four category pages are `app/[lang]/services/[category]/page.tsx` with `generateStaticParams` over the four slugs and `dynamicParams = false` — still fully prerendered (8 static paths), with per-category dictionary keys, hero image (static import + blur), and content from `content/en/service-pages.ts`.
 - **Reason:** The four pages share an identical section skeleton (overview → who it's for → services → topics → process → documents → timeline note → disclaimer → how we help → related); one route keeps them structurally consistent.
+
+## D-050 — Phase 5a article-to-category mapping
+- **Question:** The master plan lists 12 starter article titles but not which of the 9 Knowledge Center categories each belongs to.
+- **Decision:** starting-a-business ×3 (how-to-start, company-registration, business-licenses); tax-accounting ×3 (tax-registration, VAT, CIT); visa-immigration ×2 (work-visa, investor-visa); living-in-laos ×1 (long-term-stay); marriage-family ×1 (marriage-registration); lao-law-basics ×1 (contract-review); compliance-checklists ×1 (annual-compliance).
+- **Reason:** Spreads content across 7 of 9 categories so the Knowledge Center filter doesn't look empty; long-term-stay placed under living-in-laos (its audience is people relocating, not just visa applicants) and contract-review under lao-law-basics (it is legal-literacy content, not a startup step). `labour-employment` and `investment` remain empty until later content phases.
+- **Risk:** Low; categories are frontmatter fields — trivially recategorised.
+- **Change later:** Edit `category:` in the article's frontmatter.
+
+## D-051 — Sources policy for starter articles
+- **Question:** Zod allows `sources` URLs, but guardrail 5 forbids invented facts — which URLs are safe to cite pre-verification?
+- **Decision:** Only `https://www.laotradeportal.gov.la` (root URL, high confidence it exists — cited in the master plan itself) on the 3 business-registration/licensing articles. All other articles ship `sources: []`. No deep links anywhere; no tax/immigration authority URLs since exact current domains were not verifiable offline.
+- **Risk:** Articles look thinly sourced — acceptable because every factual article is marked `needs-verification` and the verification pass should attach real sources.
+- **Change later:** Add URLs to `sources:` during the legal verification pass; flip `verificationStatus` to `verified` per D-018 semantics.
+
+## D-052 — Verification-marker and closing-section conventions
+- **Decision:** Every `needs-verification` article contains the literal blockquote line `> **Needs legal verification before publication.**` (standalone, with period) at each point where unverified process claims cluster — usually after the intro and after the step list. All numeric specifics (fees, processing times, rates, thresholds, visa durations) are replaced by "current X should be confirmed with the authority" wording; VAT/CIT articles explain concept + compliance cycle only, never rates. Every article ends with `## How SV Consulting can help` plus an italic note that the site-wide disclaimer applies (the page template additionally renders DisclaimerBox). `contract-review` is the sole `general-info` article (genuinely generic guidance, no Lao statutory claims). The pre-existing article #1 was normalised to these conventions and expanded (prep list + common-mistakes section).
+- **Reason:** Master plan §Guardrails 5–6 and §Knowledge Center marker requirement; a machine-checkable literal marker lets the publication gate grep for it.
+- **Change later:** The verification pass removes marker lines it clears and updates `lastUpdated`.
+
+## D-060 — Law topic → category mapping leaves two categories empty at launch
+- **Question:** The master plan's 8 starter law topics don't map 1:1 onto the 8 law categories. How to categorise?
+- **Decision:** company-registration-rules → company-law; foreign-investment-rules → investment-law; tax-obligations-for-companies → tax-law; labour-and-employment-basics → labour-law; work-permit-basics → immigration; trademark-registration-basics → intellectual-property; marriage-registration-basics AND divorce-assistance-basics → family-law. The commercial-contracts category (and no second immigration topic) has no starter page.
+- **Reason:** Categories describe the law area, not the page count; forcing divorce into commercial-contracts to "fill" the taxonomy would be wrong. The category filter UI is data-driven, so empty categories simply don't mislabel anything.
+- **Change later:** Add contract-law and further immigration topics as content grows.
+
+## D-061 — Law/guide sources restricted to two confidently-known official portals
+- **Decision:** Only `https://www.laotradeportal.gov.la` (company registration + starting-a-business guide) and `https://investlaos.gov.la` (foreign investment topic + investor guide) are cited as sources; all other law topics and guides ship `sources: []`. Verification status: `needs-verification` everywhere factual obligations are summarised, except divorce-assistance-basics (`general-info` — it describes general routes, not obligations).
+- **Reason:** Master plan guardrail — never cite a URL we aren't confident is the real official portal. Ministry sub-sites (tax, IP, labour) have unstable/uncertain URLs; naming the authority in prose without a link is safer than a guessed link.
+- **Change later:** The owner's legal review (pre-launch checklist) adds verified sources and flips statuses to `verified`.
+
+## D-062 — Law and guide detail routes clone the knowledge/[slug] pattern
+- **Decision:** `app/[lang]/laws/[slug]/page.tsx` and `app/[lang]/guides/[slug]/page.tsx` copy the article route exactly (D-042/D-043 behaviours: `generateStaticParams` over en+lo slugs, `dynamicParams = false`, English-body fallback on `/lo`, existence-filtered related links, DisclaimerBox, CtaSection). Laws additionally render a Sources box (new `common.sources` key) and the status-coloured verification badge matching LawTopicCard's styles; guides use the plain badge plus the category eyebrow. Related articles on both routes link into `/knowledge/`.
+- **Reason:** Three content types, one proven pattern — consistent UX and zero new routing concepts.
+
+## D-063 — Guides get a dedicated compact LeadCaptureForm, not a reused ContactForm
+- **Question:** Master plan requires a lead-capture CTA on every guide (Full Name, Email, Phone/WhatsApp, Service Interest). Reuse ContactForm?
+- **Decision:** New `components/LeadCaptureForm.tsx` client component with exactly the four master-plan fields, its own `dict.leadForm` namespace (added to en.json + lo.json in structural parity), placeholder submit revealing the demo notice, and `defaultServiceInterest` preselecting the guide's own service category. ContactForm stays untouched.
+- **Reason:** ContactForm carries three extra fields (company, preferred contact, message) the master plan doesn't ask for here; trimming it via props would complicate both forms. Field IDs are `lead-*` so a guide page and contact page never collide.
+- **Change later:** Point both forms at the same backend action when one exists.
