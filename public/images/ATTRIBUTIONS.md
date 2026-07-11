@@ -9,6 +9,7 @@ All images sourced from Pexels under the [Pexels License](https://www.pexels.com
 | `hero/riverside-city-dusk-aerial.jpg` | https://www.pexels.com/photo/stunning-aerial-view-of-vibrant-cityscape-at-sunset-34428997/ | AiTa Thant | Pexels License | Aerial view of a Southeast Asian riverside city with bridges at golden sunset (no location tag on source — do not caption as Vientiane) |
 | `hero/mekong-river-sunset-luang-prabang.jpg` | https://www.pexels.com/photo/forest-around-river-at-dusk-17653315/ | Ehsan Haque (itsehsanh) | Pexels License | Sunset over the Mekong River and lush hills, Luang Prabang, Laos (landscape crop of portrait original) |
 | `hero/mekong-mountains-dusk-bokeo.jpg` | https://www.pexels.com/photo/sunset-over-the-mountain-range-near-the-river-6642093/ | Dick Hoskins | Pexels License | Serene sunset over the Mekong River with mountains, Bokeo Province, Laos |
+| `hero/patuxai-victory-gate-vientiane.jpg` | https://www.pexels.com/photo/36477129/ | Leo | Pexels License | Patuxai (Victory Gate) monument at dusk, Vientiane, Laos — location-confirmed (landscape crop of portrait original, upper section) |
 
 ## sections/
 

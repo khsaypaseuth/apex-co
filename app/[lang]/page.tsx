@@ -20,7 +20,7 @@ import {
   IconStamp,
   IconUsers,
 } from '@/components/icons'
-import heroMekong from '@/public/images/hero/mekong-river-sunset-luang-prabang.jpg'
+import heroPatuxai from '@/public/images/hero/patuxai-victory-gate-vientiane.jpg'
 import cityNight from '@/public/images/sections/city-lights-night-skyline.jpg'
 
 export async function generateMetadata({
@@ -99,7 +99,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
         eyebrow={dict.site.name}
         title={dict.home.heroTitle}
         lede={dict.home.heroSubtitle}
-        image={{ src: heroMekong, alt: dict.alt.heroMekong }}
+        image={{ src: heroPatuxai, alt: dict.alt.heroPatuxai }}
         actions={
           <>
             <Link

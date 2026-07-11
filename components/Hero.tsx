@@ -47,8 +47,10 @@ export function Hero({
             sizes="100vw"
             className="-z-20 object-cover"
           />
+          {/* Graded scrim: heavier at the edges where eyebrow/CTAs sit, lighter
+              mid-frame so the photo reads through; ivory/gold text stays AA. */}
           <div
-            className="absolute inset-0 -z-10 bg-navy-950/75"
+            className="absolute inset-0 -z-10 bg-linear-to-b from-navy-950/80 via-navy-950/55 to-navy-950/85"
             aria-hidden="true"
           />
         </>

@@ -373,3 +373,9 @@ Format per master plan: question we would have asked → decision → reason →
 - **Decision:** ArticleCard and GuideCard thumbnails render `alt=""` (decorative) per WCAG guidance for images whose meaning is conveyed by adjacent text; GuideCard's image prop no longer accepts alt. Meaningful images (heroes, about-page photos) keep real localized alt.
 - **Risk:** None; improves both accessibility and location-claim integrity (D-122).
 - **Change later:** If a thumbnail ever becomes content-bearing, reintroduce a per-image alt.
+
+## D-147 — Home hero image: Patuxai at dusk + graded hero scrim
+- **Question:** Owner asked for a visible, "nice" hero image — the Mekong photo disappeared under the flat 75% navy overlay.
+- **Decision:** New home hero: Pexels 36477129 (Patuxai / Victory Gate, Vientiane — location-confirmed, warm dusk tones matching the gold/navy brand), cropped from portrait to a 2400×1600 band of the ornate crown and spires, served at 2000px/507KB. Hero overlay changed from flat `bg-navy-950/75` to a vertical gradient `from-navy-950/80 via-navy-950/55 to-navy-950/85` so the photo reads through mid-frame while eyebrow/title/CTA zones keep strong contrast. Applies to all image heroes (knowledge/guides benefit too). Rejected candidates: Pexels 31418553 (Patuxai, midday — 60% empty blue sky) and 36049216 (white-gold stupa — likely That Phanom, Thailand; mis-tagged, location risk).
+- **Risk:** Mid-frame contrast is lower by design; text does not sit there. Mekong photo retained in repo for reuse; `alt.heroMekong` key replaced by `alt.heroPatuxai` in both dictionaries.
+- **Change later:** Swap the static import in `app/[lang]/page.tsx`; scrim stops live in `components/Hero.tsx`.
