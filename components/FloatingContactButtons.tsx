@@ -1,27 +1,31 @@
+import { CONTACT } from '@/lib/site-config'
+
 export interface FloatingContactButtonsProps {
   /** Accessible label, e.g. dict.floating.whatsapp. */
   whatsAppLabel: string
   /** Accessible label, e.g. dict.floating.line. */
   lineLabel: string
-  /** Hover note marking the placeholder hrefs, dict.floating.placeholderNote. */
-  placeholderNote: string
+  /** Hover note marking the LINE placeholder, dict.floating.placeholderNote. */
+  linePlaceholderNote: string
 }
 
 /**
- * Fixed WhatsApp + LINE contact buttons (bottom-right). The hrefs are
- * placeholders until the owner supplies real contact links — each button is
- * marked with a `title` attribute so the placeholder is visible on hover.
+ * Fixed WhatsApp + LINE contact buttons (bottom-right). WhatsApp opens the
+ * real wa.me chat (CONTACT.whatsappHref, D-133). LINE has no official ID
+ * yet — its href stays a placeholder, marked with a `title` attribute so
+ * the state is visible on hover.
  */
 export function FloatingContactButtons({
   whatsAppLabel,
   lineLabel,
-  placeholderNote,
+  linePlaceholderNote,
 }: FloatingContactButtonsProps) {
   return (
     <div className="fixed right-5 bottom-5 z-40 flex flex-col gap-3">
       <a
-        href="#"
-        title={placeholderNote}
+        href={CONTACT.whatsappHref}
+        target="_blank"
+        rel="noopener noreferrer"
         aria-label={whatsAppLabel}
         className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-navy-950/20 transition-transform hover:scale-105 focus-visible:outline-2 focus-visible:outline-gold-500"
       >
@@ -40,9 +44,10 @@ export function FloatingContactButtons({
           <path d="M9 9.5c.5 2.5 3 5 5.5 5.5l1-1.5-2-1-1 .5c-.8-.5-1.5-1.2-2-2l.5-1-1-2L9 9.5z" />
         </svg>
       </a>
+      {/* LINE placeholder — no official LINE ID yet (see decision log D-133). */}
       <a
         href="#"
-        title={placeholderNote}
+        title={linePlaceholderNote}
         aria-label={lineLabel}
         className="flex h-12 w-12 items-center justify-center rounded-full bg-[#06C755] text-white shadow-lg shadow-navy-950/20 transition-transform hover:scale-105 focus-visible:outline-2 focus-visible:outline-gold-500"
       >

@@ -2,9 +2,16 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getDictionary, hasLocale } from '@/lib/dictionaries'
 import { pageMetadata } from '@/lib/seo'
+import { CONTACT } from '@/lib/site-config'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { ContactForm } from '@/components/ContactForm'
 import { Hero } from '@/components/Hero'
+import {
+  IconMail,
+  IconMapPin,
+  IconMessageCircle,
+  IconPhone,
+} from '@/components/icons'
 
 export async function generateMetadata({
   params,
@@ -43,12 +50,44 @@ export default async function ContactPage({
     { value: 'accounting-tax', label: dict.nav.accountingTax },
   ]
 
-  // Placeholder contact details, exactly per the master plan — clearly
-  // marked with bracketed dictionary strings until the owner supplies them.
-  const contactRows = [
-    { label: dict.footer.phoneLabel, value: dict.footer.phonePlaceholder },
-    { label: dict.footer.emailLabel, value: dict.footer.emailPlaceholder },
-    { label: dict.footer.chatLabel, value: dict.footer.chatPlaceholder },
+  // Real contact details from lib/site-config.ts (D-133) — address, email,
+  // phone, and WhatsApp as icon rows with live mailto:/tel:/wa.me links.
+  const contactRows: {
+    key: string
+    icon: typeof IconMapPin
+    label: string
+    value: string
+    href?: string
+    external?: boolean
+  }[] = [
+    {
+      key: 'address',
+      icon: IconMapPin,
+      label: dict.footer.addressLabel,
+      value: lang === 'lo' ? CONTACT.addressLo : CONTACT.address,
+    },
+    {
+      key: 'phone',
+      icon: IconPhone,
+      label: dict.footer.phoneLabel,
+      value: CONTACT.phone,
+      href: CONTACT.phoneHref,
+    },
+    {
+      key: 'whatsapp',
+      icon: IconMessageCircle,
+      label: dict.footer.chatLabel,
+      value: CONTACT.phone,
+      href: CONTACT.whatsappHref,
+      external: true,
+    },
+    {
+      key: 'email',
+      icon: IconMail,
+      label: dict.footer.emailLabel,
+      value: CONTACT.email,
+      href: `mailto:${CONTACT.email}`,
+    },
   ]
 
   const nextSteps = [
@@ -117,19 +156,42 @@ export default async function ContactPage({
               <p className="mt-1 text-sm text-ivory-100/70">
                 {dict.contactPage.businessUnitLine}
               </p>
-              <p className="mt-1 text-sm text-ivory-100/70">
-                {dict.footer.address}
-              </p>
-              <ul className="mt-6 space-y-3 text-sm">
-                {contactRows.map((row) => (
-                  <li key={row.label}>
-                    <span className="text-ivory-100/60">{row.label}: </span>
-                    {/* Placeholder value — replace before launch (see README). */}
-                    <span className="rounded-sm border border-dashed border-gold-500/40 px-1.5 py-0.5 text-ivory-100/80">
-                      {row.value}
-                    </span>
-                  </li>
-                ))}
+              <ul className="mt-6 space-y-4 text-sm">
+                {contactRows.map((row) => {
+                  const body = (
+                    <>
+                      <span className="block text-xs tracking-wide text-ivory-100/60 uppercase">
+                        {row.label}
+                      </span>
+                      <span className="mt-0.5 block leading-relaxed text-ivory-100/90">
+                        {row.value}
+                      </span>
+                    </>
+                  )
+                  return (
+                    <li key={row.key} className="flex items-start gap-3.5">
+                      <span
+                        aria-hidden="true"
+                        className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-gold-500/15 text-gold-500"
+                      >
+                        <row.icon size={19} />
+                      </span>
+                      {row.href ? (
+                        <a
+                          href={row.href}
+                          {...(row.external
+                            ? { target: '_blank', rel: 'noopener noreferrer' }
+                            : {})}
+                          className="transition-colors hover:text-gold-500"
+                        >
+                          {body}
+                        </a>
+                      ) : (
+                        <span>{body}</span>
+                      )}
+                    </li>
+                  )
+                })}
               </ul>
             </div>
 

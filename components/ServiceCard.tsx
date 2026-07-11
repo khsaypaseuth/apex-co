@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { ReactNode } from 'react'
+import { IconArrowRight } from './icons'
 
 export interface ServiceCardProps {
   title: string
@@ -38,7 +39,7 @@ export function ServiceCard({
       <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-navy-700 transition-colors group-hover:text-gold-600">
         {linkLabel}
         <span aria-hidden="true" className="transition-transform group-hover:translate-x-0.5">
-          →
+          <IconArrowRight size={16} />
         </span>
       </span>
     </Link>

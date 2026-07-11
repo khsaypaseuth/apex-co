@@ -10,7 +10,18 @@ import { Hero } from '@/components/Hero'
 import { SectionHeader } from '@/components/SectionHeader'
 import { ServiceCard } from '@/components/ServiceCard'
 import { TrustBadge } from '@/components/TrustBadge'
+import {
+  IconBookOpen,
+  IconBriefcase,
+  IconCalculator,
+  IconCheckCircle,
+  IconScale,
+  IconShieldCheck,
+  IconStamp,
+  IconUsers,
+} from '@/components/icons'
 import heroMekong from '@/public/images/hero/mekong-river-sunset-luang-prabang.jpg'
+import cityNight from '@/public/images/sections/city-lights-night-skyline.jpg'
 
 export async function generateMetadata({
   params,
@@ -41,33 +52,43 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
     {
       ...dict.home.highlights.businessRegistration,
       href: `/${lang}/services/business-setup`,
+      icon: IconBriefcase,
     },
     {
       ...dict.home.highlights.visaImmigration,
       href: `/${lang}/services/visa-immigration`,
+      icon: IconStamp,
     },
     {
       ...dict.home.highlights.legalServices,
       href: `/${lang}/services/legal-family`,
+      icon: IconScale,
     },
     {
       ...dict.home.highlights.accountingTax,
       href: `/${lang}/services/accounting-tax`,
+      icon: IconCalculator,
     },
     {
       ...dict.home.highlights.familyLegal,
       href: `/${lang}/services/legal-family`,
+      icon: IconUsers,
     },
-    { ...dict.home.highlights.laoKnowledge, href: `/${lang}/knowledge` },
+    {
+      ...dict.home.highlights.laoKnowledge,
+      href: `/${lang}/knowledge`,
+      icon: IconBookOpen,
+    },
   ]
 
+  // Check icons for the proof points; shield for the parent-company backing.
   const whyPoints = [
-    dict.home.why.localKnowledge,
-    dict.home.why.practicalAdvice,
-    dict.home.why.clearProcess,
-    dict.home.why.transparentCommunication,
-    dict.home.why.companiesAndIndividuals,
-    dict.home.why.backedBySuperVision,
+    { ...dict.home.why.localKnowledge, icon: IconCheckCircle },
+    { ...dict.home.why.practicalAdvice, icon: IconCheckCircle },
+    { ...dict.home.why.clearProcess, icon: IconCheckCircle },
+    { ...dict.home.why.transparentCommunication, icon: IconCheckCircle },
+    { ...dict.home.why.companiesAndIndividuals, icon: IconCheckCircle },
+    { ...dict.home.why.backedBySuperVision, icon: IconShieldCheck },
   ]
 
   return (
@@ -124,6 +145,11 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
                 summary={item.summary}
                 href={item.href}
                 linkLabel={dict.cta.learnMore}
+                icon={
+                  <span className="flex h-11 w-11 items-center justify-center rounded-sm bg-gold-500/10 text-gold-600">
+                    <item.icon size={22} />
+                  </span>
+                }
               />
             ))}
           </div>
@@ -141,12 +167,15 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
           </h2>
           <div className="mt-5 h-px w-16 bg-gold-500" aria-hidden="true" />
           <div className="mt-12 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-            {whyPoints.map((point, index) => (
+            {whyPoints.map((point) => (
               <div key={point.title}>
-                <p className="font-display text-sm tracking-widest text-gold-500">
-                  {String(index + 1).padStart(2, '0')}
-                </p>
-                <h3 className="font-display mt-3 text-xl leading-snug text-ivory-100">
+                <span
+                  aria-hidden="true"
+                  className="flex h-10 w-10 items-center justify-center rounded-sm bg-gold-500/10 text-gold-500"
+                >
+                  <point.icon size={20} />
+                </span>
+                <h3 className="font-display mt-4 text-xl leading-snug text-ivory-100">
                   {point.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-ivory-100/70">
@@ -184,6 +213,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
                   href={`/${lang}/knowledge/${article.slug}`}
                   title={article.title}
                   summary={article.summary}
+                  category={article.category}
                   categoryLabel={dict.articleCategories[article.category]}
                   readingTime={article.readingTime}
                   lastUpdated={article.lastUpdated}
@@ -198,8 +228,10 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
         </div>
       </section>
 
-      {/* 6 — Final CTA */}
+      {/* 6 — Final CTA (night-lights background; image is location-generic,
+          so the alt never claims Laos — see D-143/D-122) */}
       <CtaSection
+        image={{ src: cityNight, alt: dict.alt.cityNight }}
         title={dict.home.finalCtaTitle}
         lede={dict.home.finalCtaLede}
         ctaLabel={dict.cta.bookConsultation}

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { VerificationStatus } from '@/lib/types'
+import { IconArrowRight, IconBookOpen } from './icons'
 
 export interface LawTopicCardProps {
   title: string
@@ -32,7 +33,15 @@ export function LawTopicCard({
       href={href}
       className="group flex h-full flex-col rounded-sm border border-navy-950/10 bg-white p-6 transition-colors hover:border-gold-500 focus-visible:outline-2 focus-visible:outline-gold-500"
     >
+      {/* Text-first reference card — a small book icon anchors it visually
+          instead of a thumbnail (D-142). */}
       <div className="flex flex-wrap items-center gap-2 text-xs">
+        <span
+          aria-hidden="true"
+          className="flex h-7 w-7 items-center justify-center rounded-sm bg-gold-500/10 text-gold-600"
+        >
+          <IconBookOpen size={15} />
+        </span>
         <span className="rounded-sm bg-ivory-100 px-2 py-1 font-medium tracking-wide text-navy-700 uppercase">
           {categoryLabel}
         </span>
@@ -48,6 +57,13 @@ export function LawTopicCard({
       <p className="mt-3 flex-1 text-sm leading-relaxed text-slate-500">
         {summary}
       </p>
+      {/* Subtle read-on affordance, consistent with ServiceCard/GuideCard */}
+      <span
+        aria-hidden="true"
+        className="mt-5 inline-flex text-navy-700/50 transition-all group-hover:translate-x-0.5 group-hover:text-gold-600"
+      >
+        <IconArrowRight size={16} />
+      </span>
     </Link>
   )
 }

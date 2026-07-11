@@ -8,6 +8,7 @@ import { ARTICLE_CATEGORIES } from '@/lib/types'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { CtaSection } from '@/components/CtaSection'
 import { Hero } from '@/components/Hero'
+import luangPrabangStreet from '@/public/images/sections/luang-prabang-street-corner.jpg'
 import { ArticleList } from './article-list'
 
 export async function generateMetadata({
@@ -41,10 +42,12 @@ export default async function KnowledgePage({
 
   return (
     <main id="main-content">
+      {/* Confirmed-Laos image (Luang Prabang) — alt may name the location */}
       <Hero
         eyebrow={dict.site.name}
         title={dict.nav.knowledge}
         lede={dict.knowledgePage.lede}
+        image={{ src: luangPrabangStreet, alt: dict.alt.luangPrabangStreet }}
       />
 
       <div className="border-b border-navy-950/5">

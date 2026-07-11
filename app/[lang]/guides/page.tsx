@@ -4,11 +4,13 @@ import { notFound } from 'next/navigation'
 import { getDictionary, hasLocale } from '@/lib/dictionaries'
 import { pageMetadata } from '@/lib/seo'
 import { listGuides } from '@/lib/content'
+import { GUIDE_CATEGORY_IMAGES } from '@/lib/category-images'
 import type { ServiceCategorySlug } from '@/lib/types'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { CtaSection } from '@/components/CtaSection'
 import { GuideCard } from '@/components/GuideCard'
 import { Hero } from '@/components/Hero'
+import advisoryMeeting from '@/public/images/sections/advisory-consultation-meeting.jpg'
 
 const NAV_KEY_BY_CATEGORY: Record<
   ServiceCategorySlug,
@@ -51,6 +53,7 @@ export default async function GuidesPage({
         eyebrow={dict.site.name}
         title={dict.nav.guides}
         lede={dict.guidesPage.lede}
+        image={{ src: advisoryMeeting, alt: dict.alt.advisoryMeeting }}
       />
 
       <div className="border-b border-navy-950/5">
@@ -96,6 +99,7 @@ export default async function GuidesPage({
                   href={`/${lang}/guides/${guide.slug}`}
                   ctaLabel={dict.cta.readGuide}
                   eyebrow={dict.nav[NAV_KEY_BY_CATEGORY[guide.category]]}
+                  image={{ src: GUIDE_CATEGORY_IMAGES[guide.category] }}
                 />
               ))}
               </div>

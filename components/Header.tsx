@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import type { Locale } from '@/lib/i18n-config'
 import { LanguageSwitcher, type LanguageOption } from './LanguageSwitcher'
-import { MobileNav } from './MobileNav'
+import { MobileNav, type MobileNavGroup } from './MobileNav'
 
 export interface HeaderNavItem {
   label: string
@@ -22,7 +22,10 @@ export interface HeaderProps {
    */
   variant?: 'solid' | 'transparent' | 'auto'
   siteName: string
+  /** Slimmed desktop nav (D-130) — the slide-over gets the full list. */
   navItems: HeaderNavItem[]
+  /** Full grouped page list for the mobile slide-over (D-130). */
+  mobileGroups: MobileNavGroup[]
   /** Accessible name for the desktop nav (dict.nav.mainNavLabel). */
   navLabel: string
   ctaLabel: string
@@ -42,6 +45,7 @@ export function Header({
   variant = 'auto',
   siteName,
   navItems,
+  mobileGroups,
   navLabel,
   ctaLabel,
   ctaHref,
@@ -117,12 +121,17 @@ export function Header({
             {ctaLabel}
           </Link>
           <MobileNav
-            items={navItems}
+            groups={mobileGroups}
             menuLabel={menuLabels.menu}
             openLabel={menuLabels.open}
             closeLabel={menuLabels.close}
             ctaLabel={ctaLabel}
             ctaHref={ctaHref}
+            language={{
+              lang,
+              label: languageLabel,
+              options: languageOptions,
+            }}
           />
         </div>
       </div>

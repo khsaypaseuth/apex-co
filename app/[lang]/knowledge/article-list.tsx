@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import type { Locale } from '@/lib/i18n-config'
+import type { ArticleCategory } from '@/lib/types'
 import { ArticleCard } from '@/components/ArticleCard'
 import {
   FilterBar,
@@ -15,7 +16,7 @@ export interface ArticleListItem {
   href: string
   title: string
   summary: string
-  category: string
+  category: ArticleCategory
   categoryLabel: string
   readingTime: number
   lastUpdated: string
@@ -85,6 +86,7 @@ export function ArticleList({ lang, items, categories, labels }: ArticleListProp
                 href={item.href}
                 title={item.title}
                 summary={item.summary}
+                category={item.category}
                 categoryLabel={item.categoryLabel}
                 readingTime={item.readingTime}
                 lastUpdated={item.lastUpdated}

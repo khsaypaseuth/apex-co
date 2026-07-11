@@ -42,7 +42,7 @@ export function Hero({
             src={image.src}
             alt={image.alt}
             fill
-            priority // hero images are always above the fold (LCP)
+            preload // hero images are always above the fold (LCP); `priority` is deprecated in Next 16
             placeholder={typeof image.src === 'string' ? 'empty' : 'blur'}
             sizes="100vw"
             className="-z-20 object-cover"

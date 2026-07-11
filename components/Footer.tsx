@@ -1,7 +1,13 @@
 import Link from 'next/link'
 import type { Dictionary } from '@/lib/dictionaries'
 import type { Locale } from '@/lib/i18n-config'
-import { PARENT_COMPANY } from '@/lib/site-config'
+import { CONTACT, PARENT_COMPANY } from '@/lib/site-config'
+import {
+  IconMail,
+  IconMapPin,
+  IconMessageCircle,
+  IconPhone,
+} from '@/components/icons'
 
 export interface FooterProps {
   lang: Locale
@@ -10,8 +16,8 @@ export interface FooterProps {
 
 /**
  * Four-column footer: brand + parent company, services, knowledge, contact.
- * Contact details are placeholders, clearly marked via bracketed dictionary
- * strings (e.g. "[Add phone number]") until the owner supplies real details.
+ * The knowledge column carries the pages slimmed out of the desktop nav
+ * (D-130); contact rows are real mailto:/tel:/wa.me links (D-133).
  */
 export function Footer({ lang, dict }: FooterProps) {
   const serviceLinks = [
@@ -23,16 +29,44 @@ export function Footer({ lang, dict }: FooterProps) {
 
   const knowledgeLinks = [
     { label: dict.nav.knowledge, href: `/${lang}/knowledge` },
-    { label: dict.nav.laws, href: `/${lang}/laws` },
+    { label: dict.nav.lawsShort, href: `/${lang}/laws` },
     { label: dict.nav.guides, href: `/${lang}/guides` },
     { label: dict.nav.news, href: `/${lang}/news` },
     { label: dict.nav.faq, href: `/${lang}/faq` },
   ]
 
-  const contactRows = [
-    { label: dict.footer.phoneLabel, value: dict.footer.phonePlaceholder },
-    { label: dict.footer.emailLabel, value: dict.footer.emailPlaceholder },
-    { label: dict.footer.chatLabel, value: dict.footer.chatPlaceholder },
+  const address = lang === 'lo' ? CONTACT.addressLo : CONTACT.address
+
+  const contactRows: {
+    key: string
+    icon: typeof IconPhone
+    label: string
+    value: string
+    href: string
+    external?: boolean
+  }[] = [
+    {
+      key: 'phone',
+      icon: IconPhone,
+      label: dict.footer.phoneLabel,
+      value: CONTACT.phone,
+      href: CONTACT.phoneHref,
+    },
+    {
+      key: 'whatsapp',
+      icon: IconMessageCircle,
+      label: dict.footer.chatLabel,
+      value: CONTACT.phone,
+      href: CONTACT.whatsappHref,
+      external: true,
+    },
+    {
+      key: 'email',
+      icon: IconMail,
+      label: dict.footer.emailLabel,
+      value: CONTACT.email,
+      href: `mailto:${CONTACT.email}`,
+    },
   ]
 
   return (
@@ -46,7 +80,6 @@ export function Footer({ lang, dict }: FooterProps) {
           <p className="mt-3 text-sm text-ivory-100/70">
             {dict.site.parentCompanyLine}
           </p>
-          <p className="mt-1 text-sm text-ivory-100/70">{dict.footer.address}</p>
         </div>
 
         <div>
@@ -89,14 +122,31 @@ export function Footer({ lang, dict }: FooterProps) {
           <p className="text-sm font-semibold tracking-widest text-gold-500 uppercase">
             {dict.footer.contact}
           </p>
-          <ul className="mt-4 space-y-2 text-sm text-ivory-100/80">
+          <ul className="mt-4 space-y-3 text-sm text-ivory-100/80">
+            <li className="flex items-start gap-2.5">
+              <span aria-hidden="true" className="mt-0.5 shrink-0 text-gold-500">
+                <IconMapPin size={16} />
+              </span>
+              <span className="leading-relaxed">{address}</span>
+            </li>
             {contactRows.map((row) => (
-              <li key={row.label}>
-                <span className="text-ivory-100/60">{row.label}: </span>
-                {/* Placeholder value — replace before launch (see README). */}
-                <span className="rounded-sm border border-dashed border-gold-500/40 px-1.5 py-0.5 text-ivory-100/70">
-                  {row.value}
+              <li key={row.key} className="flex items-start gap-2.5">
+                <span
+                  aria-hidden="true"
+                  className="mt-0.5 shrink-0 text-gold-500"
+                >
+                  <row.icon size={16} />
                 </span>
+                <a
+                  href={row.href}
+                  {...(row.external
+                    ? { target: '_blank', rel: 'noopener noreferrer' }
+                    : {})}
+                  className="transition-colors hover:text-gold-500"
+                >
+                  <span className="text-ivory-100/60">{row.label}: </span>
+                  {row.value}
+                </a>
               </li>
             ))}
           </ul>
@@ -104,12 +154,11 @@ export function Footer({ lang, dict }: FooterProps) {
       </div>
 
       <div className="border-t border-ivory-100/10">
-        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-6 text-xs text-ivory-100/60">
+        <div className="mx-auto max-w-6xl px-6 py-6 text-xs text-ivory-100/60">
           <p>
             © {new Date().getFullYear()} {dict.site.name} · {PARENT_COMPANY} ·{' '}
             {dict.footer.rights}
           </p>
-          <p className="max-w-3xl leading-relaxed">{dict.footer.disclaimer}</p>
         </div>
       </div>
     </footer>

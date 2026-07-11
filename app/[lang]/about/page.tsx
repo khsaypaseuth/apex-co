@@ -8,8 +8,10 @@ import { CtaSection } from '@/components/CtaSection'
 import { Hero } from '@/components/Hero'
 import { SectionHeader } from '@/components/SectionHeader'
 import { TrustBadge } from '@/components/TrustBadge'
+import advisoryMeeting from '@/public/images/sections/advisory-consultation-meeting.jpg'
 import officeInterior from '@/public/images/sections/modern-office-interior.jpg'
 import stoneColumns from '@/public/images/sections/stone-columns-corridor.jpg'
+import teamCollaboration from '@/public/images/sections/team-office-collaboration.jpg'
 
 export async function generateMetadata({
   params,
@@ -85,24 +87,33 @@ export default async function AboutPage({ params }: PageProps<'/[lang]/about'>) 
         </div>
       </section>
 
-      {/* Mission / Vision */}
+      {/* Mission / Vision — editorial split beside the team image */}
       <section className="bg-ivory-100 py-16 md:py-24">
-        <div className="mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-2">
-          <div className="border-l-2 border-gold-500 pl-8">
-            <h2 className="font-display text-2xl text-navy-950 md:text-3xl">
-              {dict.about.missionTitle}
-            </h2>
-            <p className="mt-4 text-lg leading-relaxed text-navy-700/90">
-              {dict.about.missionText}
-            </p>
-          </div>
-          <div className="border-l-2 border-gold-500 pl-8">
-            <h2 className="font-display text-2xl text-navy-950 md:text-3xl">
-              {dict.about.visionTitle}
-            </h2>
-            <p className="mt-4 text-lg leading-relaxed text-navy-700/90">
-              {dict.about.visionText}
-            </p>
+        <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2">
+          <Image
+            src={teamCollaboration}
+            alt={dict.alt.teamCollaboration}
+            placeholder="blur"
+            sizes="(min-width: 1024px) 550px, 100vw"
+            className="order-last h-72 w-full rounded-sm object-cover lg:order-first md:h-96"
+          />
+          <div className="space-y-10">
+            <div className="border-l-2 border-gold-500 pl-8">
+              <h2 className="font-display text-2xl text-navy-950 md:text-3xl">
+                {dict.about.missionTitle}
+              </h2>
+              <p className="mt-4 text-lg leading-relaxed text-navy-700/90">
+                {dict.about.missionText}
+              </p>
+            </div>
+            <div className="border-l-2 border-gold-500 pl-8">
+              <h2 className="font-display text-2xl text-navy-950 md:text-3xl">
+                {dict.about.visionTitle}
+              </h2>
+              <p className="mt-4 text-lg leading-relaxed text-navy-700/90">
+                {dict.about.visionText}
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -136,16 +147,27 @@ export default async function AboutPage({ params }: PageProps<'/[lang]/about'>) 
       {/* How the firm works — 4 steps on navy */}
       <section className="bg-navy-950 py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-6">
-          <p className="mb-3 text-sm font-medium tracking-widest text-gold-500 uppercase">
-            {dict.about.howEyebrow}
-          </p>
-          <h2 className="font-display text-3xl leading-tight text-ivory-100 md:text-4xl">
-            {dict.about.howTitle}
-          </h2>
-          <div className="mt-5 h-px w-16 bg-gold-500" aria-hidden="true" />
-          <p className="mt-5 max-w-2xl leading-relaxed text-ivory-100/80">
-            {dict.about.howLede}
-          </p>
+          <div className="grid items-center gap-10 lg:grid-cols-2">
+            <div>
+              <p className="mb-3 text-sm font-medium tracking-widest text-gold-500 uppercase">
+                {dict.about.howEyebrow}
+              </p>
+              <h2 className="font-display text-3xl leading-tight text-ivory-100 md:text-4xl">
+                {dict.about.howTitle}
+              </h2>
+              <div className="mt-5 h-px w-16 bg-gold-500" aria-hidden="true" />
+              <p className="mt-5 max-w-2xl leading-relaxed text-ivory-100/80">
+                {dict.about.howLede}
+              </p>
+            </div>
+            <Image
+              src={advisoryMeeting}
+              alt={dict.alt.advisoryMeeting}
+              placeholder="blur"
+              sizes="(min-width: 1024px) 550px, 100vw"
+              className="h-60 w-full rounded-sm object-cover md:h-72"
+            />
+          </div>
           <ol className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
             {steps.map((step, index) => (
               <li key={step.title}>

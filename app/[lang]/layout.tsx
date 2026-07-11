@@ -64,14 +64,27 @@ export default async function RootLayout({
 
   const dict = await getDictionary(lang)
 
+  // Slimmed desktop nav (D-130): knowledge pages move to the footer and the
+  // mobile slide-over; the plain Contact link is covered by the CTA button.
   const navItems = [
     { label: dict.nav.about, href: `/${lang}/about` },
     { label: dict.nav.services, href: `/${lang}/services` },
-    { label: dict.nav.knowledge, href: `/${lang}/knowledge` },
-    { label: dict.nav.laws, href: `/${lang}/laws` },
     { label: dict.nav.guides, href: `/${lang}/guides` },
     { label: dict.nav.news, href: `/${lang}/news` },
-    { label: dict.nav.faq, href: `/${lang}/faq` },
+  ]
+
+  // The mobile slide-over keeps the FULL page list, with the moved pages
+  // under a small "Knowledge" group heading (D-130).
+  const mobileGroups = [
+    { items: navItems },
+    {
+      heading: dict.footer.knowledge,
+      items: [
+        { label: dict.nav.knowledge, href: `/${lang}/knowledge` },
+        { label: dict.nav.laws, href: `/${lang}/laws` },
+        { label: dict.nav.faq, href: `/${lang}/faq` },
+      ],
+    },
   ]
 
   return (
@@ -88,13 +101,14 @@ export default async function RootLayout({
           lang={lang}
           siteName={dict.site.name}
           navItems={navItems}
+          mobileGroups={mobileGroups}
           navLabel={dict.nav.mainNavLabel}
-          ctaLabel={dict.cta.bookConsultation}
+          ctaLabel={dict.cta.contactUs}
           ctaHref={`/${lang}/contact`}
           languageLabel={dict.language.label}
           languageOptions={[
-            { code: 'en', label: dict.language.enShort },
-            { code: 'lo', label: dict.language.loShort },
+            { code: 'en', label: dict.language.en },
+            { code: 'lo', label: dict.language.lo },
           ]}
           menuLabels={{
             menu: dict.nav.menu,
@@ -107,7 +121,7 @@ export default async function RootLayout({
         <FloatingContactButtons
           whatsAppLabel={dict.floating.whatsapp}
           lineLabel={dict.floating.line}
-          placeholderNote={dict.floating.placeholderNote}
+          linePlaceholderNote={dict.floating.placeholderNote}
         />
       </body>
     </html>
