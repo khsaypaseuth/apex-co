@@ -212,3 +212,33 @@ Format per master plan: question we would have asked → decision → reason →
 - **Decision:** New `components/LeadCaptureForm.tsx` client component with exactly the four master-plan fields, its own `dict.leadForm` namespace (added to en.json + lo.json in structural parity), placeholder submit revealing the demo notice, and `defaultServiceInterest` preselecting the guide's own service category. ContactForm stays untouched.
 - **Reason:** ContactForm carries three extra fields (company, preferred contact, message) the master plan doesn't ask for here; trimming it via props would complicate both forms. Field IDs are `lead-*` so a guide page and contact page never collide.
 - **Change later:** Point both forms at the same backend action when one exists.
+
+## D-070 — Shared metadata builder in lib/seo.ts
+- **Question:** Repeat title/description/OG/canonical/hreflang blocks in 14 `generateMetadata` implementations, or centralise?
+- **Decision:** New `lib/seo.ts` with `pageMetadata({ lang, path, title, description, ogType, absoluteTitle })` returning title (templated via layout's `%s | SV Consulting`), description, `alternates.canonical`, `alternates.languages` (ACTIVE locales en + lo plus `x-default` → en), and a full `openGraph` block (`og:locale` en_US / lo_LA, `alternateLocale`, siteName, url, type website/article, default image). All 13 routes + 3 detail routes call it; the layout keeps `metadataBase` + per-locale defaults as the safety net. Detail pages pass frontmatter `summary` as description and `ogType: 'article'`.
+- **Reason:** hreflang/canonical shape must be identical everywhere; one helper makes activating th/vi/zh a one-line change (`activeLocales`).
+- **Change later:** Add per-page OG images by extending `PageSeoInput` with an `image` override.
+
+## D-071 — hreflang and canonicals limited to active locales; x-default → en
+- **Decision:** `alternates.languages` lists only `en`, `lo`, and `x-default` (→ `/en/...`). Reserved locales (th/vi/zh) are excluded from hreflang, sitemap, and robots until they join `activeLocales`.
+- **Reason:** hreflang pointing at redirecting URLs (proxy sends inactive locales to /en) is an SEO error; x-default to English matches the proxy's default-locale behaviour.
+
+## D-072 — OG default image: static SVG → PNG via @resvg/resvg-js, serif stand-in font
+- **Question:** How to produce the branded 1200×630 og:image with no design tooling and og:image needing PNG/JPEG?
+- **Decision:** Hand-written `public/og/og-default.svg` (navy-950 field, navy-700 washes, thin gold frame + rule, ivory serif wordmark, gold tagline) rasterised to `public/og/og-default.png` (1200×630, 38 KB) with `@resvg/resvg-js` run from a scratch directory — NOT added to package.json (one-shot build asset; `@resvg/resvg-cli` does not exist on npm; ImageMagick/rsvg-convert absent; sips/qlmanage rasterise SVG unreliably). Wordmark uses Georgia/Times as a stand-in for Fraunces because the webfont isn't available to the rasteriser at build time.
+- **Change later:** Re-render with real Fraunces (download TTF, pass to resvg font options) or move to `next/og` dynamic images; keep URL `/og/og-default.png` stable.
+
+## D-073 — Sitemap derives URLs from content loaders; one entry per locale with hreflang
+- **Decision:** `app/sitemap.ts` emits every static route + article/law/guide detail route × active locale (en + lo), each entry with absolute-URL `alternates.languages` (→ xhtml:link hreflang in the rendered XML) and `lastModified` from frontmatter `lastUpdated` on content routes only (static routes carry no fake dates). Slugs come from the same fs loaders as `generateStaticParams` (union of en + lo), so sitemap and prerendered routes cannot drift. `/styleguide` is excluded and disallowed in `app/robots.ts` (which also carries the sitemap URL).
+
+## D-074 — Two-tone global focus ring (gold outline + navy inner ring)
+- **Question:** Master-plan "visible focus states" — gold-500 alone is 2.23:1 on ivory-50 (fails the 3:1 non-text minimum) but 7.4:1 on navy-950.
+- **Decision:** Un-layered `:focus-visible` rule in globals.css: 2px gold-500 outline (offset 2px) + 2px navy-950 box-shadow ring. The navy ring carries contrast on ivory/white surfaces (16.5:1), the gold outline on navy surfaces (7.4:1). Being un-layered, it also beats Tailwind's `focus:outline-none` on the form inputs for keyboard users, while mouse focus keeps the softer gold ring the inputs define.
+- **Risk:** The navy ring overrides `focus:ring-*` utilities on :focus-visible — acceptable; keyboard users get the stronger indicator.
+
+## D-075 — Muted-text contrast: slate-600 on ivory/tinted surfaces, slate-500 stays on white
+- **Decision:** Added derived token `--color-slate-600: #475569`. All `text-slate-500` sitting on ivory-100 sections/panels, on the slate-tinted verification badges, or as small status text on the ivory-50 page background was bumped to slate-600 (6.7:1 on ivory-100). `text-slate-500` remains only on white card/section surfaces where it measures 4.83:1 (AA pass). Decorative elements (breadcrumb "/" separators, borders) unchanged.
+- **Known AA exception (documented, not fixed):** gold-600 small uppercase eyebrow/label text on light surfaces measures 2.7–3.1:1. Fixing it means darkening the brand gold for text (identity change) — deferred to the owner with the recommendation to either accept (labels duplicate adjacent high-contrast headings) or approve a text-gold shade (~#8a7024).
+
+## D-076 — Card-grid pages get sr-only h2s; nav gets aria-current
+- **Decision:** Knowledge/Laws/Guides listing pages rendered h3 cards directly under the page h1 (skipped level). Added visually-hidden `<h2>` section headings (`knowledgePage.articlesTitle`, new `lawsPage.listTitle` / `guidesPage.listTitle` keys in both dictionaries) rather than restyling card headings. Header + MobileNav links now set `aria-current="page"` (match on exact path or path prefix) with a gold active state; a `.skip-link` (new `common.skipToContent` key) is the first focusable element in the body, jumping to `<main id="main-content">` present on every page.

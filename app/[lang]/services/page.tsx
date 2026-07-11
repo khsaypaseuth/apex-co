@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getDictionary, hasLocale } from '@/lib/dictionaries'
+import { pageMetadata } from '@/lib/seo'
 import { serviceGroups } from '@/content/en/services'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { CtaSection } from '@/components/CtaSection'
@@ -14,10 +15,12 @@ export async function generateMetadata({
   const { lang } = await params
   if (!hasLocale(lang)) return {}
   const dict = await getDictionary(lang)
-  return {
+  return pageMetadata({
+    lang,
+    path: '/services',
     title: dict.meta.services.title,
     description: dict.meta.services.description,
-  }
+  })
 }
 
 export default async function ServicesPage({
@@ -30,7 +33,7 @@ export default async function ServicesPage({
   const dict = await getDictionary(lang)
 
   return (
-    <main>
+    <main id="main-content">
       <Hero
         eyebrow={dict.site.name}
         title={dict.nav.services}
@@ -68,7 +71,7 @@ export default async function ServicesPage({
                     <h3 className="font-medium text-navy-950">
                       {service.title}
                     </h3>
-                    <p className="mt-1 text-sm leading-relaxed text-slate-500">
+                    <p className="mt-1 text-sm leading-relaxed text-slate-600">
                       {service.summary}
                     </p>
                   </div>

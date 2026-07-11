@@ -14,7 +14,7 @@ export interface LawTopicCardProps {
 
 const BADGE_STYLES: Record<VerificationStatus, string> = {
   verified: 'border-gold-500 bg-gold-500/10 text-gold-600',
-  'needs-verification': 'border-slate-500/50 bg-slate-500/10 text-slate-500',
+  'needs-verification': 'border-slate-500/50 bg-slate-500/10 text-slate-600',
   'general-info': 'border-navy-700/30 bg-navy-700/5 text-navy-700',
 }
 

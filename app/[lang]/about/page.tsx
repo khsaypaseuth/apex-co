@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { getDictionary, hasLocale } from '@/lib/dictionaries'
+import { pageMetadata } from '@/lib/seo'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { CtaSection } from '@/components/CtaSection'
 import { Hero } from '@/components/Hero'
@@ -16,10 +17,12 @@ export async function generateMetadata({
   const { lang } = await params
   if (!hasLocale(lang)) return {}
   const dict = await getDictionary(lang)
-  return {
+  return pageMetadata({
+    lang,
+    path: '/about',
     title: dict.meta.about.title,
     description: dict.meta.about.description,
-  }
+  })
 }
 
 export default async function AboutPage({ params }: PageProps<'/[lang]/about'>) {
@@ -46,7 +49,7 @@ export default async function AboutPage({ params }: PageProps<'/[lang]/about'>) 
   ]
 
   return (
-    <main>
+    <main id="main-content">
       <Hero
         eyebrow={dict.about.eyebrow}
         title={dict.about.title}

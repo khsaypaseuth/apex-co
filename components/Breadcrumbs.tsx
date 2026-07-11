@@ -36,7 +36,7 @@ export function Breadcrumbs({ items, label }: BreadcrumbsProps) {
               ) : (
                 <span
                   aria-current={isLast ? 'page' : undefined}
-                  className="text-slate-500"
+                  className="text-slate-600"
                 >
                   {item.label}
                 </span>

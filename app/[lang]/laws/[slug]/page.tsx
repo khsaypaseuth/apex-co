@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getDictionary, hasLocale } from '@/lib/dictionaries'
+import { pageMetadata } from '@/lib/seo'
 import { getArticle, getLawTopic, listLawTopicSlugs } from '@/lib/content'
 import { formatDate } from '@/lib/format'
 import type { ActiveLocale } from '@/lib/dictionaries'
@@ -36,7 +37,7 @@ const NAV_KEY_BY_CATEGORY: Record<
 
 const BADGE_STYLES: Record<VerificationStatus, string> = {
   verified: 'border-gold-500 bg-gold-500/10 text-gold-600',
-  'needs-verification': 'border-slate-500/50 bg-slate-500/10 text-slate-500',
+  'needs-verification': 'border-slate-500/50 bg-slate-500/10 text-slate-600',
   'general-info': 'border-navy-700/30 bg-navy-700/5 text-navy-700',
 }
 
@@ -75,7 +76,13 @@ export async function generateMetadata({
   if (!hasLocale(lang)) return {}
   const topic = await resolveLawTopic(lang, slug)
   if (!topic) return {}
-  return { title: topic.title, description: topic.summary }
+  return pageMetadata({
+    lang,
+    path: `/laws/${slug}`,
+    title: topic.title,
+    description: topic.summary,
+    ogType: 'article',
+  })
 }
 
 export default async function LawTopicPage({
@@ -113,7 +120,7 @@ export default async function LawTopicPage({
   const sources = topic.sources ?? []
 
   return (
-    <main>
+    <main id="main-content">
       {/* Topic header */}
       <section className="bg-ivory-100 py-14 md:py-20">
         <div className="mx-auto max-w-3xl px-6">
@@ -142,7 +149,7 @@ export default async function LawTopicPage({
           <p className="mt-6 text-lg leading-relaxed text-navy-700/90">
             {topic.summary}
           </p>
-          <p className="mt-6 text-sm text-slate-500">
+          <p className="mt-6 text-sm text-slate-600">
             {dict.common.lastUpdated}:{' '}
             <time dateTime={topic.lastUpdated}>
               {formatDate(lang, topic.lastUpdated)}

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getDictionary, hasLocale } from '@/lib/dictionaries'
+import { pageMetadata } from '@/lib/seo'
 import { listGuides } from '@/lib/content'
 import type { ServiceCategorySlug } from '@/lib/types'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
@@ -25,10 +26,12 @@ export async function generateMetadata({
   const { lang } = await params
   if (!hasLocale(lang)) return {}
   const dict = await getDictionary(lang)
-  return {
+  return pageMetadata({
+    lang,
+    path: '/guides',
     title: dict.meta.guides.title,
     description: dict.meta.guides.description,
-  }
+  })
 }
 
 export default async function GuidesPage({
@@ -43,7 +46,7 @@ export default async function GuidesPage({
   const guides = await listGuides(lang)
 
   return (
-    <main>
+    <main id="main-content">
       <Hero
         eyebrow={dict.site.name}
         title={dict.nav.guides}
@@ -81,7 +84,10 @@ export default async function GuidesPage({
               </Link>
             </div>
           ) : (
-            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <>
+              {/* sr-only section heading so card <h3>s don't skip a level */}
+              <h2 className="sr-only">{dict.guidesPage.listTitle}</h2>
+              <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {guides.map((guide) => (
                 <GuideCard
                   key={guide.slug}
@@ -92,7 +98,8 @@ export default async function GuidesPage({
                   eyebrow={dict.nav[NAV_KEY_BY_CATEGORY[guide.category]]}
                 />
               ))}
-            </div>
+              </div>
+            </>
           )}
         </div>
       </section>

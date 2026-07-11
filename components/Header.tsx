@@ -86,15 +86,22 @@ export function Header({
         </Link>
 
         <nav aria-label={navLabel} className="hidden items-center gap-6 lg:flex">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-sm text-ivory-100/85 transition-colors hover:text-gold-500"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {navItems.map((item) => {
+            const active =
+              pathname === item.href || pathname.startsWith(`${item.href}/`)
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                aria-current={active ? 'page' : undefined}
+                className={`text-sm transition-colors hover:text-gold-500 ${
+                  active ? 'text-gold-500' : 'text-ivory-100/85'
+                }`}
+              >
+                {item.label}
+              </Link>
+            )
+          })}
         </nav>
 
         <div className="flex items-center gap-4">

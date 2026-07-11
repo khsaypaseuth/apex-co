@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getDictionary, hasLocale } from '@/lib/dictionaries'
+import { pageMetadata } from '@/lib/seo'
 import { listArticles } from '@/lib/content'
 import { ARTICLE_CATEGORIES } from '@/lib/types'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
@@ -15,10 +16,12 @@ export async function generateMetadata({
   const { lang } = await params
   if (!hasLocale(lang)) return {}
   const dict = await getDictionary(lang)
-  return {
+  return pageMetadata({
+    lang,
+    path: '/knowledge',
     title: dict.meta.knowledge.title,
     description: dict.meta.knowledge.description,
-  }
+  })
 }
 
 export default async function KnowledgePage({
@@ -37,7 +40,7 @@ export default async function KnowledgePage({
   }))
 
   return (
-    <main>
+    <main id="main-content">
       <Hero
         eyebrow={dict.site.name}
         title={dict.nav.knowledge}
@@ -75,7 +78,10 @@ export default async function KnowledgePage({
               </Link>
             </div>
           ) : (
-            <ArticleList
+            <>
+              {/* sr-only section heading so card <h3>s don't skip a level */}
+              <h2 className="sr-only">{dict.knowledgePage.articlesTitle}</h2>
+              <ArticleList
               lang={lang}
               categories={categories}
               items={articles.map((article) => ({
@@ -99,7 +105,8 @@ export default async function KnowledgePage({
                 lastUpdated: dict.common.lastUpdated,
                 minRead: dict.common.minRead,
               }}
-            />
+              />
+            </>
           )}
         </div>
       </section>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getDictionary, hasLocale } from '@/lib/dictionaries'
+import { pageMetadata } from '@/lib/seo'
 import { getArticle, getGuide, listGuideSlugs } from '@/lib/content'
 import { formatDate } from '@/lib/format'
 import type { ActiveLocale } from '@/lib/dictionaries'
@@ -70,7 +71,13 @@ export async function generateMetadata({
   if (!hasLocale(lang)) return {}
   const guide = await resolveGuide(lang, slug)
   if (!guide) return {}
-  return { title: guide.title, description: guide.summary }
+  return pageMetadata({
+    lang,
+    path: `/guides/${slug}`,
+    title: guide.title,
+    description: guide.summary,
+    ogType: 'article',
+  })
 }
 
 export default async function GuidePage({
@@ -111,7 +118,7 @@ export default async function GuidePage({
   }))
 
   return (
-    <main>
+    <main id="main-content">
       {/* Guide header */}
       <section className="bg-ivory-100 py-14 md:py-20">
         <div className="mx-auto max-w-3xl px-6">
@@ -127,7 +134,7 @@ export default async function GuidePage({
             <span className="rounded-sm bg-white px-2 py-1 font-medium tracking-wide text-navy-700 uppercase">
               {dict.nav[NAV_KEY_BY_CATEGORY[guide.category]]}
             </span>
-            <span className="rounded-sm border border-slate-500/50 bg-slate-500/10 px-2 py-1 font-medium text-slate-500">
+            <span className="rounded-sm border border-slate-500/50 bg-slate-500/10 px-2 py-1 font-medium text-slate-600">
               {verificationLabels[guide.verificationStatus]}
             </span>
           </div>
@@ -138,7 +145,7 @@ export default async function GuidePage({
           <p className="mt-6 text-lg leading-relaxed text-navy-700/90">
             {guide.summary}
           </p>
-          <p className="mt-6 text-sm text-slate-500">
+          <p className="mt-6 text-sm text-slate-600">
             {dict.common.lastUpdated}:{' '}
             <time dateTime={guide.lastUpdated}>
               {formatDate(lang, guide.lastUpdated)}

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getDictionary, hasLocale } from '@/lib/dictionaries'
 import { listArticles } from '@/lib/content'
+import { pageMetadata } from '@/lib/seo'
 import { ArticleCard } from '@/components/ArticleCard'
 import { CtaSection } from '@/components/CtaSection'
 import { Hero } from '@/components/Hero'
@@ -17,10 +18,13 @@ export async function generateMetadata({
   const { lang } = await params
   if (!hasLocale(lang)) return {}
   const dict = await getDictionary(lang)
-  return {
-    title: { absolute: dict.meta.home.title },
+  return pageMetadata({
+    lang,
+    path: '/',
+    title: dict.meta.home.title,
     description: dict.meta.home.description,
-  }
+    absoluteTitle: true,
+  })
 }
 
 export default async function HomePage({ params }: PageProps<'/[lang]'>) {
@@ -67,7 +71,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
   ]
 
   return (
-    <main>
+    <main id="main-content">
       {/* 1 — Hero (confirmed-Laos Mekong image under a navy overlay) */}
       <Hero
         variant="home"

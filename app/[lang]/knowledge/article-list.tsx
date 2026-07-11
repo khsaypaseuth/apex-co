@@ -68,12 +68,12 @@ export function ArticleList({ lang, items, categories, labels }: ArticleListProp
       />
 
       {visible.length === 0 ? (
-        <p role="status" className="py-8 text-slate-500">
+        <p role="status" className="py-8 text-slate-600">
           {labels.noResults}
         </p>
       ) : (
         <>
-          <p role="status" className="text-sm text-slate-500">
+          <p role="status" className="text-sm text-slate-600">
             {visible.length}{' '}
             {visible.length === 1 ? labels.countSingular : labels.countPlural}
           </p>

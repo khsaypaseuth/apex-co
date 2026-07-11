@@ -122,7 +122,7 @@ export default async function StyleguidePage({
   return (
     <>
 
-      <main>
+      <main id="main-content">
         <Hero
           variant="page"
           eyebrow={dict.site.name}

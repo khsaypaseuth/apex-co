@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getDictionary, hasLocale } from '@/lib/dictionaries'
+import { pageMetadata } from '@/lib/seo'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { CtaSection } from '@/components/CtaSection'
 import { Hero } from '@/components/Hero'
@@ -11,10 +12,12 @@ export async function generateMetadata({
   const { lang } = await params
   if (!hasLocale(lang)) return {}
   const dict = await getDictionary(lang)
-  return {
+  return pageMetadata({
+    lang,
+    path: '/news',
     title: dict.meta.news.title,
     description: dict.meta.news.description,
-  }
+  })
 }
 
 /**
@@ -38,7 +41,7 @@ export default async function NewsPage({ params }: PageProps<'/[lang]/news'>) {
   ]
 
   return (
-    <main>
+    <main id="main-content">
       <Hero
         eyebrow={dict.site.name}
         title={dict.nav.news}

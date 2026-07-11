@@ -42,7 +42,7 @@ export function Hero({
             src={image.src}
             alt={image.alt}
             fill
-            priority={tall}
+            priority // hero images are always above the fold (LCP)
             placeholder={typeof image.src === 'string' ? 'empty' : 'blur'}
             sizes="100vw"
             className="-z-20 object-cover"

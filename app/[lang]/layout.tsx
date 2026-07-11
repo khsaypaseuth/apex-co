@@ -4,19 +4,50 @@ import { i18n } from '@/lib/i18n-config'
 import { getDictionary, hasLocale } from '@/lib/dictionaries'
 import { fraunces, manrope, notoSansLao, notoSerifLao } from '@/lib/fonts'
 import { SITE_NAME, SITE_URL } from '@/lib/site-config'
+import { DEFAULT_OG_IMAGE } from '@/lib/seo'
 import { FloatingContactButtons } from '@/components/FloatingContactButtons'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import '../globals.css'
 
-export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
-  title: {
-    default: `${SITE_NAME} — Business, Legal & Visa Consulting in Laos`,
-    template: `%s | ${SITE_NAME}`,
-  },
-  description:
-    'Business setup, visa & immigration, legal, and accounting consulting services in the Lao PDR.',
+/**
+ * Layout-level metadata: `metadataBase` (required for OG images), the
+ * `%s | SV Consulting` title template, and locale-aware Open Graph
+ * defaults. Every page overrides title/description/OG via
+ * `pageMetadata()` in lib/seo.ts; these values are the safety net.
+ */
+export async function generateMetadata({
+  params,
+}: LayoutProps<'/[lang]'>): Promise<Metadata> {
+  const { lang } = await params
+  const base: Metadata = {
+    metadataBase: new URL(SITE_URL),
+    title: {
+      default: `${SITE_NAME} — Business, Legal & Visa Consulting in Laos`,
+      template: `%s | ${SITE_NAME}`,
+    },
+    description:
+      'Business setup, visa & immigration, legal, and accounting consulting services in the Lao PDR.',
+  }
+
+  if (!hasLocale(lang)) return base
+
+  const dict = await getDictionary(lang)
+
+  return {
+    ...base,
+    title: {
+      default: dict.meta.home.title,
+      template: `%s | ${SITE_NAME}`,
+    },
+    description: dict.meta.home.description,
+    openGraph: {
+      siteName: SITE_NAME,
+      locale: lang === 'lo' ? 'lo_LA' : 'en_US',
+      type: 'website',
+      images: [DEFAULT_OG_IMAGE],
+    },
+  }
 }
 
 export async function generateStaticParams() {
@@ -49,6 +80,10 @@ export default async function RootLayout({
       className={`${fraunces.variable} ${manrope.variable} ${notoSansLao.variable} ${notoSerifLao.variable} antialiased`}
     >
       <body className="min-h-screen bg-ivory-50 text-navy-950">
+        {/* Skip link — first focusable element on every page (see globals.css) */}
+        <a href="#main-content" className="skip-link">
+          {dict.common.skipToContent}
+        </a>
         <Header
           lang={lang}
           siteName={dict.site.name}

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getDictionary, hasLocale } from '@/lib/dictionaries'
+import { pageMetadata } from '@/lib/seo'
 import { getArticle, listArticleSlugs } from '@/lib/content'
 import { formatDate } from '@/lib/format'
 import type { ActiveLocale } from '@/lib/dictionaries'
@@ -59,7 +60,13 @@ export async function generateMetadata({
   if (!hasLocale(lang)) return {}
   const article = await resolveArticle(lang, slug)
   if (!article) return {}
-  return { title: article.title, description: article.summary }
+  return pageMetadata({
+    lang,
+    path: `/knowledge/${slug}`,
+    title: article.title,
+    description: article.summary,
+    ogType: 'article',
+  })
 }
 
 export default async function ArticlePage({
@@ -95,7 +102,7 @@ export default async function ArticlePage({
     }))
 
   return (
-    <main>
+    <main id="main-content">
       {/* Article header */}
       <section className="bg-ivory-100 py-14 md:py-20">
         <div className="mx-auto max-w-3xl px-6">
@@ -111,7 +118,7 @@ export default async function ArticlePage({
             <span className="rounded-sm bg-white px-2 py-1 font-medium tracking-wide text-navy-700 uppercase">
               {dict.articleCategories[article.category]}
             </span>
-            <span className="rounded-sm border border-slate-500/50 bg-slate-500/10 px-2 py-1 font-medium text-slate-500">
+            <span className="rounded-sm border border-slate-500/50 bg-slate-500/10 px-2 py-1 font-medium text-slate-600">
               {verificationLabels[article.verificationStatus]}
             </span>
           </div>
@@ -122,7 +129,7 @@ export default async function ArticlePage({
           <p className="mt-6 text-lg leading-relaxed text-navy-700/90">
             {article.summary}
           </p>
-          <p className="mt-6 text-sm text-slate-500">
+          <p className="mt-6 text-sm text-slate-600">
             {dict.common.lastUpdated}:{' '}
             <time dateTime={article.lastUpdated}>
               {formatDate(lang, article.lastUpdated)}

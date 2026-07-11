@@ -47,7 +47,8 @@
     "relatedArticles": "Related articles",
     "relatedServices": "Related services",
     "sources": "Sources",
-    "sampleContent": "Sample content for preview purposes only."
+    "sampleContent": "Sample content for preview purposes only.",
+    "skipToContent": "Skip to main content"
   },
   "verification": {
     "verified": "Verified",
@@ -291,12 +292,14 @@
   "lawsPage": {
     "lede": "Plain-language summaries of Lao laws and regulations relevant to businesses and individuals.",
     "emptyTitle": "Law topics are on the way",
-    "emptyText": "Plain-language summaries of Lao laws will be published here soon. In the meantime, the Knowledge Center covers many related topics."
+    "emptyText": "Plain-language summaries of Lao laws will be published here soon. In the meantime, the Knowledge Center covers many related topics.",
+    "listTitle": "All law topics"
   },
   "guidesPage": {
     "lede": "In-depth, practical guides for starting, running, and living in Laos.",
     "emptyTitle": "Guides are being prepared",
-    "emptyText": "Practical business guides will be published here soon. Explore the Knowledge Center for articles in the meantime."
+    "emptyText": "Practical business guides will be published here soon. Explore the Knowledge Center for articles in the meantime.",
+    "listTitle": "All guides"
   },
   "newsPage": {
     "lede": "Official updates and announcements from SV Consulting.",

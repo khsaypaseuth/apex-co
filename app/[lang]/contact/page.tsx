@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getDictionary, hasLocale } from '@/lib/dictionaries'
+import { pageMetadata } from '@/lib/seo'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { ContactForm } from '@/components/ContactForm'
 import { Hero } from '@/components/Hero'
@@ -11,10 +12,12 @@ export async function generateMetadata({
   const { lang } = await params
   if (!hasLocale(lang)) return {}
   const dict = await getDictionary(lang)
-  return {
+  return pageMetadata({
+    lang,
+    path: '/contact',
     title: dict.meta.contact.title,
     description: dict.meta.contact.description,
-  }
+  })
 }
 
 export default async function ContactPage({
@@ -55,7 +58,7 @@ export default async function ContactPage({
   ]
 
   return (
-    <main>
+    <main id="main-content">
       <Hero
         eyebrow={dict.site.name}
         title={dict.nav.contact}
@@ -143,7 +146,7 @@ export default async function ContactPage({
                     </span>
                     <div>
                       <h3 className="font-medium text-navy-950">{step.title}</h3>
-                      <p className="mt-1 text-sm leading-relaxed text-slate-500">
+                      <p className="mt-1 text-sm leading-relaxed text-slate-600">
                         {step.description}
                       </p>
                     </div>

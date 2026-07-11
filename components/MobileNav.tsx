@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useId, useRef, useState } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export interface MobileNavItem {
   label: string
@@ -36,6 +37,7 @@ export function MobileNav({
   ctaHref,
 }: MobileNavProps) {
   const [open, setOpen] = useState(false)
+  const pathname = usePathname()
   const panelRef = useRef<HTMLDivElement>(null)
   const triggerRef = useRef<HTMLButtonElement>(null)
   const panelId = useId()
@@ -147,16 +149,24 @@ export function MobileNav({
             </div>
 
             <nav aria-label={menuLabel} className="mt-6 flex flex-col">
-              {items.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  className="border-b border-ivory-100/10 py-3 text-ivory-100/90 transition-colors hover:text-gold-500"
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {items.map((item) => {
+                const active =
+                  pathname === item.href ||
+                  pathname.startsWith(`${item.href}/`)
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    aria-current={active ? 'page' : undefined}
+                    className={`border-b border-ivory-100/10 py-3 transition-colors hover:text-gold-500 ${
+                      active ? 'text-gold-500' : 'text-ivory-100/90'
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                )
+              })}
             </nav>
 
             <Link

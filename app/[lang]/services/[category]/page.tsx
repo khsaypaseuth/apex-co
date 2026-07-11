@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import type { StaticImageData } from 'next/image'
 import { notFound } from 'next/navigation'
 import { getDictionary, hasLocale, type Dictionary } from '@/lib/dictionaries'
+import { pageMetadata } from '@/lib/seo'
 import { listArticles } from '@/lib/content'
 import {
   SERVICE_CATEGORY_SLUGS,
@@ -69,7 +70,12 @@ export async function generateMetadata({
   if (!hasLocale(lang) || !isCategorySlug(category)) return {}
   const dict = await getDictionary(lang)
   const meta = dict.meta[CATEGORY_CONFIG[category].dictKey]
-  return { title: meta.title, description: meta.description }
+  return pageMetadata({
+    lang,
+    path: `/services/${category}`,
+    title: meta.title,
+    description: meta.description,
+  })
 }
 
 export default async function ServiceCategoryPage({
@@ -99,7 +105,7 @@ export default async function ServiceCategoryPage({
   }))
 
   return (
-    <main>
+    <main id="main-content">
       <Hero
         eyebrow={dict.nav.services}
         title={title}
@@ -172,7 +178,7 @@ export default async function ServiceCategoryPage({
                         <p className="font-medium text-navy-950">
                           {service.title}
                         </p>
-                        <p className="mt-1 text-sm leading-relaxed text-slate-500">
+                        <p className="mt-1 text-sm leading-relaxed text-slate-600">
                           {service.summary}
                         </p>
                       </div>
@@ -246,7 +252,7 @@ export default async function ServiceCategoryPage({
                   </li>
                 ))}
               </ul>
-              <p className="mt-6 text-sm italic leading-relaxed text-slate-500">
+              <p className="mt-6 text-sm italic leading-relaxed text-slate-600">
                 {page.documents.note}
               </p>
             </div>

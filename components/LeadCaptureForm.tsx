@@ -65,7 +65,7 @@ export function LeadCaptureForm({
       >
         {labels.title}
       </h2>
-      <p className="mt-3 leading-relaxed text-slate-500">{labels.lede}</p>
+      <p className="mt-3 leading-relaxed text-slate-600">{labels.lede}</p>
 
       <form onSubmit={handleSubmit} className="mt-6 space-y-5">
         <div className="grid gap-5 sm:grid-cols-2">

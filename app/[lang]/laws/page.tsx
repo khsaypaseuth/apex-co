@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getDictionary, hasLocale } from '@/lib/dictionaries'
+import { pageMetadata } from '@/lib/seo'
 import { listLawTopics } from '@/lib/content'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { CtaSection } from '@/components/CtaSection'
@@ -15,10 +16,12 @@ export async function generateMetadata({
   const { lang } = await params
   if (!hasLocale(lang)) return {}
   const dict = await getDictionary(lang)
-  return {
+  return pageMetadata({
+    lang,
+    path: '/laws',
     title: dict.meta.laws.title,
     description: dict.meta.laws.description,
-  }
+  })
 }
 
 export default async function LawsPage({ params }: PageProps<'/[lang]/laws'>) {
@@ -37,7 +40,7 @@ export default async function LawsPage({ params }: PageProps<'/[lang]/laws'>) {
   }
 
   return (
-    <main>
+    <main id="main-content">
       <Hero
         eyebrow={dict.site.name}
         title={dict.nav.laws}
@@ -75,7 +78,10 @@ export default async function LawsPage({ params }: PageProps<'/[lang]/laws'>) {
               </Link>
             </div>
           ) : (
-            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <>
+              {/* sr-only section heading so card <h3>s don't skip a level */}
+              <h2 className="sr-only">{dict.lawsPage.listTitle}</h2>
+              <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {topics.map((topic) => (
                 <LawTopicCard
                   key={topic.slug}
@@ -87,7 +93,8 @@ export default async function LawsPage({ params }: PageProps<'/[lang]/laws'>) {
                   verificationLabels={verificationLabels}
                 />
               ))}
-            </div>
+              </div>
+            </>
           )}
 
           <div className="mt-12">
