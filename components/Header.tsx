@@ -76,7 +76,10 @@ export function Header({
   return (
     <header
       className={[
-        'inset-x-0 top-0 z-40 transition-colors duration-300',
+        // z-50 (above the z-40 floating contact buttons) — the header is a
+        // stacking context, so the mobile menu overlay inside it can never
+        // out-stack later fixed siblings on its own (D-201).
+        'inset-x-0 top-0 z-50 transition-colors duration-300',
         resolved === 'transparent' ? 'fixed' : 'sticky',
         solid
           ? 'bg-navy-950/95 shadow-md shadow-navy-950/20 backdrop-blur-sm'
