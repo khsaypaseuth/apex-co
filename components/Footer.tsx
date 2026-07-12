@@ -1,5 +1,7 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import type { Dictionary } from '@/lib/dictionaries'
+import logoSv from '@/public/images/brand/logo-sv.png'
 import type { Locale } from '@/lib/i18n-config'
 import { CONTACT, PARENT_COMPANY } from '@/lib/site-config'
 import {
@@ -73,7 +75,7 @@ export function Footer({ lang, dict }: FooterProps) {
     <footer className="bg-navy-950 text-ivory-100">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <p className="font-display text-lg tracking-wide">{dict.site.name}</p>
+          <Image src={logoSv} alt={dict.site.name} className="h-10 w-auto" />
           <p className="mt-3 text-sm leading-relaxed text-ivory-100/70">
             {dict.site.tagline}
           </p>

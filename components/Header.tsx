@@ -1,8 +1,10 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import logoSv from '@/public/images/brand/logo-sv.png'
 import type { Locale } from '@/lib/i18n-config'
 import { LanguageSwitcher, type LanguageOption } from './LanguageSwitcher'
 import { MobileNav, type MobileNavGroup } from './MobileNav'
@@ -84,9 +86,14 @@ export function Header({
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4">
         <Link
           href={`/${lang}`}
-          className="font-display text-lg tracking-wide text-ivory-100 transition-colors hover:text-gold-500"
+          className="shrink-0 transition-opacity hover:opacity-80"
         >
-          {siteName}
+          <Image
+            src={logoSv}
+            alt={siteName}
+            className="h-9 w-auto"
+            preload
+          />
         </Link>
 
         <nav aria-label={navLabel} className="hidden items-center gap-6 lg:flex">
