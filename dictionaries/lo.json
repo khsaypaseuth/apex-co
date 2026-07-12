@@ -2,7 +2,8 @@
   "site": {
     "name": "SV Consulting",
     "tagline": "ທີ່ປຶກສາດ້ານທຸລະກິດ, ກົດໝາຍ ແລະ ວີຊາ ໃນ ສປປ ລາວ",
-    "parentCompanyLine": "ໜ່ວຍທຸລະກິດຂອງ Super Vision Co., Ltd."
+    "parentCompanyLine": "ໜ່ວຍທຸລະກິດຂອງ Super Vision Co., Ltd.",
+    "footerAbout": "ທີ່ປຶກສາຕົວຈິງ ສຳລັບການດຳເນີນທຸລະກິດ ແລະ ການໃຊ້ຊີວິດໃນລາວ — ການສ້າງຕັ້ງບໍລິສັດ, ກົດໝາຍ, ວີຊາ, ບັນຊີ ແລະ ອາກອນ ດູແລຄົບວົງຈອນ."
   },
   "nav": {
     "home": "ໜ້າຫຼັກ",

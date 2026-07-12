@@ -77,10 +77,7 @@ export function Footer({ lang, dict }: FooterProps) {
         <div>
           <Image src={logoSv} alt={dict.site.name} className="h-10 w-auto" />
           <p className="mt-3 text-sm leading-relaxed text-ivory-100/70">
-            {dict.site.tagline}
-          </p>
-          <p className="mt-3 text-sm text-ivory-100/70">
-            {dict.site.parentCompanyLine}
+            {dict.site.footerAbout}
           </p>
         </div>
 

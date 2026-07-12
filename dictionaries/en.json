@@ -2,7 +2,8 @@
   "site": {
     "name": "SV Consulting",
     "tagline": "Business, Legal & Visa Consulting in Laos",
-    "parentCompanyLine": "A business unit of Super Vision Co., Ltd."
+    "parentCompanyLine": "A business unit of Super Vision Co., Ltd.",
+    "footerAbout": "Practical consulting for doing business and living in Laos — company setup, legal, visa, accounting, and tax, handled end to end."
   },
   "nav": {
     "home": "Home",
