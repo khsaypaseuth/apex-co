@@ -59,4 +59,4 @@ Minimum capital figures, incentive rates, and concession terms vary by sector an
 
 ## Where to confirm the current rules
 
-As of July 2026, investment promotion is overseen by the Investment Promotion and Management Committee (IPMC), whose office serves as the central one-stop investment service and publishes official information for investors through the Invest Laos portal. Sector ministries handle activity-specific approvals. Because sector lists and conditions change, confirm the current requirements for your specific activity with the authority — or ask SV Consulting to assess your planned investment.
+As of July 2026, investment promotion is overseen by the Investment Promotion and Management Committee (IPMC), whose office serves as the central one-stop investment service and publishes official information for investors through the Invest Laos portal. Sector ministries handle activity-specific approvals. Because sector lists and conditions change, confirm the current requirements for your specific activity with the authority — or ask Super Consulting to assess your planned investment.

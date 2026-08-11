@@ -65,8 +65,8 @@ Authorities may request additional documents depending on the sector, the nation
 
 Official fees and processing times depend on the entity type and the workload of the authorities, and they change. Current fee schedules and expected timelines should be confirmed with the registration authority before you budget or commit to dates.
 
-## How SV Consulting can help
+## How Super Consulting can help
 
-SV Consulting handles the registration process end to end: confirming your activity is open to your ownership structure, drafting and reviewing incorporation documents, filing with the registry, and coordinating the follow-on registrations so the company is genuinely ready to operate.
+Super Consulting handles the registration process end to end: confirming your activity is open to your ownership structure, drafting and reviewing incorporation documents, filing with the registry, and coordinating the follow-on registrations so the company is genuinely ready to operate.
 
 *The site-wide disclaimer applies to this article: it is general information, not legal, tax, or immigration advice.*

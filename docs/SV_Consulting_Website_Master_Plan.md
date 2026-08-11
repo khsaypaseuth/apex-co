@@ -1,6 +1,6 @@
-# SV Consulting Website Auto-Mode Master Prompt for Claude Code
+# Super Consulting Website Auto-Mode Master Prompt for Claude Code
 
-Use this file as the full instruction set for building the SV Consulting website automatically.
+Use this file as the full instruction set for building the Super Consulting website automatically.
 
 ---
 
@@ -18,9 +18,9 @@ Use this command in Claude Code:
 
 ## Mission
 
-Build a complete premium multilingual website for **SV Consulting**, a business unit under **Super Vision Co., Ltd.**
+Build a complete premium multilingual website for **Super Consulting**, a business unit under **Super Vision Co., Ltd.**
 
-SV Consulting provides professional consulting services in Laos, including:
+Super Consulting provides professional consulting services in Laos, including:
 
 - Business registration
 - Company setup
@@ -122,7 +122,7 @@ projects/sv-consulting-website/
 Every legal, tax, immigration, family law, investment, and business guide page must include:
 
 ```text
-This information is provided for general guidance only and does not constitute legal, tax, immigration, or accounting advice. Laws and procedures may change. Please contact SV Consulting or a qualified professional before making decisions.
+This information is provided for general guidance only and does not constitute legal, tax, immigration, or accounting advice. Laws and procedures may change. Please contact Super Consulting or a qualified professional before making decisions.
 ```
 
 ---
@@ -131,7 +131,7 @@ This information is provided for general guidance only and does not constitute l
 
 ### Brand Name
 
-SV Consulting
+Super Consulting
 
 ### Parent Company
 
@@ -139,7 +139,7 @@ Super Vision Co., Ltd.
 
 ### Brand Positioning
 
-SV Consulting is a professional business, legal, immigration, accounting, tax, and corporate services firm helping local and international clients start, operate, and grow in Laos.
+Super Consulting is a professional business, legal, immigration, accounting, tax, and corporate services firm helping local and international clients start, operate, and grow in Laos.
 
 ### Suggested Tagline
 
@@ -413,7 +413,7 @@ Sections:
 
 1. Hero
    - Headline: Professional Consulting Services for Doing Business and Living in Laos
-   - Subtext: SV Consulting helps local and international clients with business registration, legal support, visa and immigration services, accounting, tax, and corporate compliance.
+   - Subtext: Super Consulting helps local and international clients with business registration, legal support, visa and immigration services, accounting, tax, and corporate compliance.
    - CTA: Book a Consultation
    - CTA: Explore Services
 
@@ -428,7 +428,7 @@ Sections:
    - Family & Personal Legal Services
    - Lao Business Knowledge
 
-4. Why Choose SV Consulting
+4. Why Choose Super Consulting
    - Local knowledge
    - Practical advice
    - Clear process
@@ -448,7 +448,7 @@ Sections:
 
 Explain:
 
-- SV Consulting is under Super Vision Co., Ltd.
+- Super Consulting is under Super Vision Co., Ltd.
 - Practical support for individuals, entrepreneurs, investors, and companies
 - Mission
 - Vision
@@ -546,7 +546,7 @@ Sections:
 - Registration process overview
 - Documents commonly required
 - Timeline disclaimer
-- How SV Consulting helps
+- How Super Consulting helps
 - CTA
 
 Important:
@@ -770,7 +770,7 @@ Create FAQ sections:
 
 ### Legal
 
-- Can SV Consulting draft contracts?
+- Can Super Consulting draft contracts?
 - Can contracts be reviewed before signing?
 - What is due diligence?
 - Can you help with trademark registration?
@@ -779,13 +779,13 @@ Create FAQ sections:
 
 - Does every company need bookkeeping?
 - When should a company register for tax?
-- Can SV Consulting help with payroll?
+- Can Super Consulting help with payroll?
 - What annual compliance is required?
 
 ### Family & Personal
 
 - Can foreigners marry Lao citizens?
-- Can SV Consulting help with divorce documents?
+- Can Super Consulting help with divorce documents?
 - Can foreign spouses apply for long-term stay?
 
 Use careful wording and disclaimers.
@@ -807,7 +807,7 @@ Fields:
 Include:
 
 ```text
-SV Consulting
+Super Consulting
 A business unit of Super Vision Co., Ltd.
 Vientiane Capital, Lao PDR
 Phone: [Add phone number]

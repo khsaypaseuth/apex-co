@@ -157,7 +157,7 @@ export interface ServicePageContent {
   }
   /** Timeline disclaimer paragraph (never states fixed durations). */
   timelineNote: string
-  /** "How SV Consulting helps" bullet items. */
+  /** "How Super Consulting helps" bullet items. */
   howWeHelp: string[]
 }
 

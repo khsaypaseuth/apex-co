@@ -49,4 +49,4 @@ Procedures, required documents, and fees vary by case and district — confirm t
 
 ## Where to get help
 
-Divorce combines family law, property, and — in mixed-nationality cases — immigration questions, and the right route depends heavily on the facts. SV Consulting assists with understanding the options, preparing documents, and coordinating with the authorities, and works alongside qualified Lao lawyers where court proceedings are involved.
+Divorce combines family law, property, and — in mixed-nationality cases — immigration questions, and the right route depends heavily on the facts. Super Consulting assists with understanding the options, preparing documents, and coordinating with the authorities, and works alongside qualified Lao lawyers where court proceedings are involved.

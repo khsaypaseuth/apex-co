@@ -92,7 +92,7 @@ ivory-50, gold-600, slate-600 (D-002, D-016, D-075).
 `app/robots.ts`, OG image, `docs/seo-map.md`.
 
 - **Metadata:** every route calls `pageMetadata()` (D-070) — templated
-  titles (`%s | SV Consulting`), descriptions, canonicals, full OG blocks
+  titles (`%s | Super Consulting`), descriptions, canonicals, full OG blocks
   with locale variants, article OG type on detail pages.
 - **hreflang discipline:** only active locales + `x-default` → en (D-071);
   reserved locales are excluded from hreflang/sitemap/robots so redirecting

@@ -63,4 +63,4 @@ Minimum registered capital expectations, official fees, and processing timeframe
 
 ## Where to confirm the current rules
 
-The enterprise registration offices of the Ministry of Industry and Commerce are the primary authority for company registration questions. The Lao Trade Portal publishes procedural information in English. As of July 2026, registered enterprise names and basic company details can also be searched in the ministry's National Enterprise Database. Because forms, fees, and requirements change, always confirm the current requirements directly with the authority — or ask SV Consulting to confirm them for your specific case.
+The enterprise registration offices of the Ministry of Industry and Commerce are the primary authority for company registration questions. The Lao Trade Portal publishes procedural information in English. As of July 2026, registered enterprise names and basic company details can also be searched in the ministry's National Enterprise Database. Because forms, fees, and requirements change, always confirm the current requirements directly with the authority — or ask Super Consulting to confirm them for your specific case.

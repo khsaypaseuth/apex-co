@@ -12,7 +12,7 @@ import '../globals.css'
 
 /**
  * Layout-level metadata: `metadataBase` (required for OG images), the
- * `%s | SV Consulting` title template, and locale-aware Open Graph
+ * `%s | Super Consulting` title template, and locale-aware Open Graph
  * defaults. Every page overrides title/description/OG via
  * `pageMetadata()` in lib/seo.ts; these values are the safety net.
  */

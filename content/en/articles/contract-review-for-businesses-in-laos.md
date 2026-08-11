@@ -59,8 +59,8 @@ A review does not need to make a contract longer. It needs to make the contract 
 
 Before signing is best. Beyond that, sensible trigger points include: entering a new market or activity, renewing or extending a significant agreement, changes in ownership on either side, and any point where the relationship has already shown friction.
 
-## How SV Consulting can help
+## How Super Consulting can help
 
-SV Consulting reviews and drafts business contracts with both eyes on Lao law and local practice — flagging the clauses that will not work as written, aligning language versions, checking signing authority and approval requirements, and translating legal risk into plain commercial terms so you can decide with clear sight.
+Super Consulting reviews and drafts business contracts with both eyes on Lao law and local practice — flagging the clauses that will not work as written, aligning language versions, checking signing authority and approval requirements, and translating legal risk into plain commercial terms so you can decide with clear sight.
 
 *The site-wide disclaimer applies to this article: it is general information, not legal, tax, or immigration advice.*

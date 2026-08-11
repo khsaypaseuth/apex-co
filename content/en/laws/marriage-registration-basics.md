@@ -52,4 +52,4 @@ Document lists, validity windows for certificates, fees, and processing steps di
 
 ## Where to confirm the current rules
 
-The family registration authorities (through the Ministry of Home Affairs system) and, for mixed-nationality marriages, the offices that process the approval are the places to confirm current requirements. The foreign spouse's embassy is the source for home-country documents. SV Consulting can confirm the current document list for your nationality and manage the process end to end.
+The family registration authorities (through the Ministry of Home Affairs system) and, for mixed-nationality marriages, the offices that process the approval are the places to confirm current requirements. The foreign spouse's embassy is the source for home-country documents. Super Consulting can confirm the current document list for your nationality and manage the process end to end.

@@ -57,4 +57,4 @@ Current tax rates, VAT registration thresholds, filing deadlines, and penalty le
 
 ## Where to confirm the current rules
 
-The tax administration under the Ministry of Finance is the authority for registration, filings, and current rates. Requirements are updated regularly through amendments and official notifications, so confirm the position that applies to your company's specific situation with the authority — or ask SV Consulting to review your tax compliance position.
+The tax administration under the Ministry of Finance is the authority for registration, filings, and current rates. Requirements are updated regularly through amendments and official notifications, so confirm the position that applies to your company's specific situation with the authority — or ask Super Consulting to review your tax compliance position.

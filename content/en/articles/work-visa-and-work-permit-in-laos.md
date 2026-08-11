@@ -71,8 +71,8 @@ Work permits and work-category visas are issued for limited periods and must be 
 - **Letting one document lapse.** The visa, work permit, and stay permit have separate clocks.
 - **No exit plan for departures.** When employment ends, permits generally need to be dealt with rather than abandoned.
 
-## How SV Consulting can help
+## How Super Consulting can help
 
-SV Consulting manages work visa and work permit applications end to end — confirming the current requirements, preparing employer and employee files, coordinating with the labour and immigration authorities, and running renewal calendars so your foreign staff stay continuously compliant.
+Super Consulting manages work visa and work permit applications end to end — confirming the current requirements, preparing employer and employee files, coordinating with the labour and immigration authorities, and running renewal calendars so your foreign staff stay continuously compliant.
 
 *The site-wide disclaimer applies to this article: it is general information, not legal, tax, or immigration advice.*

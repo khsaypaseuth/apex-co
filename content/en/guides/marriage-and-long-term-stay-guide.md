@@ -59,6 +59,6 @@ Marriage is one basis for long-term residence; work, investment, and business ow
 
 Long-term life in Laos is a rhythm of renewals: stay permits, passports, and the records that link the family together. The closing chapter provides a simple family document register and renewal calendar, and lists the life events — a move, a new child, a change of employment — that trigger paperwork.
 
-## How SV Consulting helps
+## How Super Consulting helps
 
 We guide couples through marriage registration end to end, prepare and legalise documents, arrange spouse visas and stay permits, and keep families' renewals on track. Tell us about your situation using the form below and we will confirm the current requirements for your nationality.

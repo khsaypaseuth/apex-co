@@ -63,8 +63,8 @@ Under the rules in force as of July 2026, profit tax is declared on a twice-year
 
 Profit tax rates, incentive regimes, and small-business thresholds are set by law and have changed over time. As of July 2026, the standard profit tax rate for most companies is 20 percent under the Income Tax Law No. 67/NA (2019), with different rates for certain sectors — higher for areas such as minerals and tobacco, lower for some promoted activities — and lump-sum regimes for the smallest businesses. Because rates and incentives change, the current position and any incentives relevant to your sector should be confirmed with the tax authority or a qualified adviser before you build them into a business plan.
 
-## How SV Consulting can help
+## How Super Consulting can help
 
-SV Consulting keeps company accounts to Lao requirements throughout the year, prepares year-end financial statements, handles the annual tax finalisation, and advises on how the current rules apply to your specific situation — including whether any incentive regime is genuinely available to you.
+Super Consulting keeps company accounts to Lao requirements throughout the year, prepares year-end financial statements, handles the annual tax finalisation, and advises on how the current rules apply to your specific situation — including whether any incentive regime is genuinely available to you.
 
 *The site-wide disclaimer applies to this article: it is general information, not legal, tax, or immigration advice.*

@@ -59,8 +59,8 @@ A practical way to decide is to ask what your honest, documentable connection to
 - Assuming a spouse's status automatically covers dependants — dependant documentation is its own process
 - Leaving renewals until the final days
 
-## How SV Consulting can help
+## How Super Consulting can help
 
-SV Consulting helps you choose the route that matches your real situation, prepares and files the applications, keeps the underlying anchors (company, employment, family documentation) compliant, and manages renewals so a long-term life in Laos rests on solid paperwork.
+Super Consulting helps you choose the route that matches your real situation, prepares and files the applications, keeps the underlying anchors (company, employment, family documentation) compliant, and manages renewals so a long-term life in Laos rests on solid paperwork.
 
 *The site-wide disclaimer applies to this article: it is general information, not legal, tax, or immigration advice.*

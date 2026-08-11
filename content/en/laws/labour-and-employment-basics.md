@@ -55,4 +55,4 @@ Minimum wage levels, contribution rates, leave entitlements, and notice periods 
 
 ## Where to confirm the current rules
 
-The Ministry of Labour and Social Welfare and the social security organisation are the authorities for current requirements, rates, and procedures. For contracts, terminations, or disputes, take advice on your specific facts — or ask SV Consulting to review your employment documents and compliance.
+The Ministry of Labour and Social Welfare and the social security organisation are the authorities for current requirements, rates, and procedures. For contracts, terminations, or disputes, take advice on your specific facts — or ask Super Consulting to review your employment documents and compliance.

@@ -67,7 +67,7 @@ export const faqSections: FaqSection[] = [
     title: 'Legal',
     items: [
       {
-        question: 'Can SV Consulting draft contracts?',
+        question: 'Can Super Consulting draft contracts?',
         answer:
           'Yes. We draft contracts for businesses and individuals — in clear language, suited to how the agreement will actually be used in Laos. We also explain the key rights and obligations in plain terms, so you understand what you are signing, not just that it is signed.',
       },
@@ -102,7 +102,7 @@ export const faqSections: FaqSection[] = [
           'Tax registration is typically one of the first steps after a company is established — new businesses commonly need a taxpayer identification number before they can operate normally. We usually handle tax registration as part of the setup process so nothing is missed.',
       },
       {
-        question: 'Can SV Consulting help with payroll?',
+        question: 'Can Super Consulting help with payroll?',
         answer:
           'Yes. We run payroll for teams of all sizes — salary calculations, the related declarations and contributions, and clear payslips — accurately and on schedule, alongside the rest of your accounting.',
       },
@@ -122,7 +122,7 @@ export const faqSections: FaqSection[] = [
           'Yes — marriage between Lao and foreign nationals is possible, through a specific registration procedure. The documents and steps involved vary by case and by the foreign spouse’s nationality, and certificates often need translation and legalisation. We guide couples through the whole process.',
       },
       {
-        question: 'Can SV Consulting help with divorce documents?',
+        question: 'Can Super Consulting help with divorce documents?',
         answer:
           'Yes. We assist with the documentation and procedural side of divorce, including cases with an international element — carefully, discreetly, and with clear explanations of each step. For matters requiring court representation, we coordinate with qualified legal professionals.',
       },

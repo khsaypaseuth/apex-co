@@ -69,8 +69,8 @@ Registering a company in Laos is a one-time event; keeping it compliant is a yea
 - Leaving the whole year's bookkeeping to finalisation time
 - Nobody owning the calendar — compliance that is everyone's job is no one's job
 
-## How SV Consulting can help
+## How Super Consulting can help
 
-SV Consulting runs annual compliance as a service: we build your company's calendar, prepare and file the returns, manage licence and permit renewals, keep the corporate records current, and confirm the deadlines that apply to you each year — so compliance becomes background rhythm instead of recurring crisis.
+Super Consulting runs annual compliance as a service: we build your company's calendar, prepare and file the returns, manage licence and permit renewals, keep the corporate records current, and confirm the deadlines that apply to you each year — so compliance becomes background rhythm instead of recurring crisis.
 
 *The site-wide disclaimer applies to this article: it is general information, not legal, tax, or immigration advice.*

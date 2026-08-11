@@ -1,4 +1,4 @@
-# SV Consulting Website — Phased Build Plan
+# Super Consulting Website — Phased Build Plan
 
 > Execution plan derived from `SV_Consulting_Website_Master_Plan.md`, adjusted per owner decisions:
 > **Launch languages: English + Lao.** Thai / Vietnamese / Chinese get architecture only (routes, types, content folders) — content deferred until EN + LO are finalized.
@@ -87,13 +87,13 @@ export type Locale = (typeof i18n)['locales'][number]
 
 1. Scaffold into a temp dir (create-next-app refuses non-empty dirs), then move into repo root, preserving `SV_Consulting_Website_Master_Plan.md`, `BUILD_PLAN.md`, `websitecolotheme.avif` (move these into `docs/`):
    ```bash
-   cd /Users/khamphone/Documents/CodingProject/Projects/sv-consulting
+   cd /Users/khamphone/Documents/CodingProject/Projects/super-consulting
    npx create-next-app@latest _scaffold --ts --tailwind --eslint --app --no-src-dir --turbopack --import-alias "@/*" --skip-install --disable-git --yes
    rsync -a _scaffold/ ./ && rm -rf _scaffold && npm install
    mkdir -p docs && mv SV_Consulting_Website_Master_Plan.md websitecolotheme.avif docs/
    ```
 2. Create `lib/i18n-config.ts` (above), `proxy.ts` (copy pattern from nextjs.org/docs/app/guides/internationalization — Negotiator + `@formatjs/intl-localematcher`, redirect to `/${locale}${pathname}`), and restructure to `app/[lang]/layout.tsx` + `app/[lang]/page.tsx` with `generateStaticParams` and `hasLocale` guard → `notFound()`.
-3. `app/[lang]/layout.tsx`: load all four fonts via `next/font/google` with `variable:` options; `<html lang={lang}>` with font variable classes; set `metadataBase` (placeholder `https://svconsulting.la` — recorded in decision log).
+3. `app/[lang]/layout.tsx`: load all four fonts via `next/font/google` with `variable:` options; `<html lang={lang}>` with font variable classes; set `metadataBase` (placeholder `https://superconsulting.la` — recorded in decision log).
 4. `globals.css`: `@import "tailwindcss"`, `@theme` palette block, `@theme inline` font mapping, base prose/heading styles, `prefers-reduced-motion` guard.
 5. Dictionaries: `dictionaries/en.json`, `dictionaries/lo.json` (nav/footer/common UI strings only for now), `lib/dictionaries.ts` with `server-only`.
 
@@ -172,7 +172,7 @@ Routes under `app/[lang]/`: `/` (home), `/about`, `/services`, `/services/busine
 
 **Goal:** The "invisible expensive stuff."
 
-1. `generateMetadata` on every page: title template (`%s | SV Consulting`), description, OG (title/description/image placeholder 1200×630 generated in brand colors), `alternates.languages` hreflang for **active** locales, canonical.
+1. `generateMetadata` on every page: title template (`%s | Super Consulting`), description, OG (title/description/image placeholder 1200×630 generated in brand colors), `alternates.languages` hreflang for **active** locales, canonical.
 2. `app/sitemap.ts` (all active-locale URLs with `alternates.languages`) + `app/robots.ts`.
 3. Target keywords from master plan mapped page-by-page (documented in `docs/seo-map.md`).
 4. Accessibility sweep: WCAG AA contrast check on every color pair used, focus-visible styles, skip-to-content link, form labels/aria, alt text, heading order, reduced-motion.

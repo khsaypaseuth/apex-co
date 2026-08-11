@@ -1,6 +1,6 @@
-# SV Consulting Website
+# Super Consulting Website
 
-Premium multilingual website for **SV Consulting**, a business unit of
+Premium multilingual website for **Super Consulting**, a business unit of
 **Super Vision Co., Ltd.** — professional business, legal, immigration,
 accounting, and tax consulting in Laos. The site is both a services website
 and a **Knowledge Center** (articles, a plain-language Lao Laws Library, and
@@ -214,7 +214,7 @@ Full audit with evidence: `qa/qa-report.md` §14.
 | Email `[Add email]` | `dictionaries/en.json` + `lo.json` → `footer.emailPlaceholder` |
 | WhatsApp/LINE link `[Add contact link]` | `dictionaries/en.json` + `lo.json` → `footer.chatPlaceholder` |
 | Floating WhatsApp/LINE buttons (`href="#"`) | `components/FloatingContactButtons.tsx` — set real links, optionally drop in official logo SVGs, remove the placeholder `title` |
-| Real domain (currently `https://svconsulting.la`) | `lib/site-config.ts` → `SITE_URL` (feeds metadataBase, canonicals, hreflang, OG, sitemap, robots) |
+| Real domain (currently `https://superconsulting.la`) | `lib/site-config.ts` → `SITE_URL` (feeds metadataBase, canonicals, hreflang, OG, sitemap, robots) |
 | Contact form backend | `components/ContactForm.tsx` — replace the placeholder submit handler with a real action/endpoint |
 | Lead capture backend | `components/LeadCaptureForm.tsx` — same |
 | Legal verification | Have a qualified professional review every file marked `needs-verification`; add real `sources:`, remove the marker lines, flip `verificationStatus` to `"verified"`, update `lastUpdated` |

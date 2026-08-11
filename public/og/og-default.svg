@@ -1,6 +1,6 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
   <!--
-    SV Consulting default Open Graph card (1200×630).
+    Super Consulting default Open Graph card (1200×630).
     Brand palette: navy-950 #0A1B2A, navy-700 #203D63, gold-500 #C8A53A, ivory-100 #F8F0DC.
     Fonts: Georgia/Times as a serif stand-in for Fraunces (webfont not available
     to the rasterizer at build time — see decision log D-072).
@@ -15,7 +15,7 @@
   <!-- gold rule above the wordmark -->
   <rect x="120" y="238" width="96" height="2" fill="#C8A53A"/>
   <!-- wordmark -->
-  <text x="120" y="330" font-family="Georgia, 'Times New Roman', serif" font-size="88" fill="#F8F0DC">SV Consulting</text>
+  <text x="120" y="330" font-family="Georgia, 'Times New Roman', serif" font-size="72" fill="#F8F0DC">Super Consulting</text>
   <!-- tagline -->
   <text x="120" y="398" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#C8A53A" letter-spacing="1">Business, Legal &amp; Visa Consulting in Laos</text>
   <!-- parent company line -->

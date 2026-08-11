@@ -65,8 +65,8 @@ The filing cycle and the required invoice form are set by regulation and should 
 
 Laos applies VAT at rates set by law, and the standard rate has changed several times in recent years: it was reduced from 10 percent to 7 percent in 2022, then restored to 10 percent by Presidential Ordinance No. 003/PDT of 19 March 2024. As of July 2026, the standard rate is 10 percent, and exports of goods are generally zero-rated. Because the rate and the registration rules have a history of changing, current rates and thresholds should be confirmed with the tax authority or a qualified adviser before pricing, invoicing, or registration decisions are made.
 
-## How SV Consulting can help
+## How Super Consulting can help
 
-SV Consulting advises on whether and when your business needs VAT registration, handles the registration itself, sets up compliant invoicing and bookkeeping, and prepares and files the periodic returns so VAT becomes routine rather than a recurring emergency.
+Super Consulting advises on whether and when your business needs VAT registration, handles the registration itself, sets up compliant invoicing and bookkeeping, and prepares and files the periodic returns so VAT becomes routine rather than a recurring emergency.
 
 *The site-wide disclaimer applies to this article: it is general information, not legal, tax, or immigration advice.*

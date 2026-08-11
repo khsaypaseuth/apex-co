@@ -63,8 +63,8 @@ Foreign documents usually need to be issued recently, authenticated through the 
 
 Once the marriage is registered, couples typically deal with follow-on matters: the foreign spouse's stay documentation, updates to the family book, and — where relevant — advice on how Lao law treats property acquired during the marriage. It is worth understanding these before they become urgent.
 
-## How SV Consulting can help
+## How Super Consulting can help
 
-SV Consulting guides couples through the whole journey — confirming the current requirements, sequencing document collection so nothing expires, arranging certified translations, filing with the authorities, and handling the follow-on immigration and family documentation once the certificate is issued.
+Super Consulting guides couples through the whole journey — confirming the current requirements, sequencing document collection so nothing expires, arranging certified translations, filing with the authorities, and handling the follow-on immigration and family documentation once the certificate is issued.
 
 *The site-wide disclaimer applies to this article: it is general information, not legal, tax, or immigration advice.*

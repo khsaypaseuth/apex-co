@@ -72,8 +72,8 @@ If your activity touches any supervised sector, assume a licence question exists
 
 Licence fees and processing periods differ by sector and authority, and current rates should be confirmed with the relevant authority — published figures go stale quickly, so we do not repeat them here.
 
-## How SV Consulting can help
+## How Super Consulting can help
 
-SV Consulting maps the licences your activity actually needs, confirms current requirements with the supervising authorities, prepares and files applications, and builds a renewal calendar so nothing lapses. If you are unsure whether your activity is licensed at all, that is exactly the kind of question we answer before you spend money on the wrong assumption.
+Super Consulting maps the licences your activity actually needs, confirms current requirements with the supervising authorities, prepares and files applications, and builds a renewal calendar so nothing lapses. If you are unsure whether your activity is licensed at all, that is exactly the kind of question we answer before you spend money on the wrong assumption.
 
 *The site-wide disclaimer applies to this article: it is general information, not legal, tax, or immigration advice.*

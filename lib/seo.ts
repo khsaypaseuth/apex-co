@@ -54,7 +54,7 @@ export interface PageSeoInput {
   ogType?: 'website' | 'article'
   /**
    * Home page only: use the title as-is instead of running it through the
-   * `%s | SV Consulting` template (it already contains the site name).
+   * `%s | Super Consulting` template (it already contains the site name).
    */
   absoluteTitle?: boolean
 }

@@ -54,6 +54,6 @@ Permits are issued for fixed periods and renewing on time is far cheaper than re
 
 Spouses and children commonly hold stay permits linked to the worker's status. This chapter covers the typical arrangements for dependants, schooling and documentation practicalities, and what a change in the worker's status means for the family's permits.
 
-## How SV Consulting helps
+## How Super Consulting helps
 
 We manage the full process for employers and employees: confirming the right category, preparing the application file, coordinating translations and legalisation, filing with the authorities, and running the renewal calendar so nothing lapses. Use the form below and we will confirm the current requirements for your nationality and role.

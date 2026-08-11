@@ -66,8 +66,8 @@ The specific set of obligations depends on your regime, sector, and whether you 
 
 Tax rates, registration thresholds, and penalty amounts are set by law and change over time. We deliberately do not publish figures here — current rates and thresholds should be confirmed with the tax authority or a qualified adviser before making decisions.
 
-## How SV Consulting can help
+## How Super Consulting can help
 
-SV Consulting handles tax registration as part of company setup, confirms which obligations apply to your specific business, sets up compliant bookkeeping from day one, and manages the filing calendar so deadlines are met without drama.
+Super Consulting handles tax registration as part of company setup, confirms which obligations apply to your specific business, sets up compliant bookkeeping from day one, and manages the filing calendar so deadlines are met without drama.
 
 *The site-wide disclaimer applies to this article: it is general information, not legal, tax, or immigration advice.*

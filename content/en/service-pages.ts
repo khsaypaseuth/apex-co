@@ -15,7 +15,7 @@ export const servicePages: Record<ServicePageContent['slug'], ServicePageContent
       'From choosing a structure to holding your registration certificate — practical, step-by-step support for setting up a business in Laos.',
     overview: [
       'Setting up a business in Laos typically involves choosing a legal structure, registering the enterprise — as of July 2026 the registration certificate is issued together with the taxpayer identification number — and obtaining the licences your activity requires. The exact sequence and requirements vary by business activity, ownership structure, and the authorities involved.',
-      'SV Consulting manages this journey end to end: we help you confirm what applies to your specific case, prepare the paperwork, and coordinate with the relevant offices — so the process stays clear and predictable for you.',
+      'Super Consulting manages this journey end to end: we help you confirm what applies to your specific case, prepare the paperwork, and coordinate with the relevant offices — so the process stays clear and predictable for you.',
     ],
     whoItsFor: [
       'Foreign investors establishing a company, branch, or representative office in Laos',
@@ -84,7 +84,7 @@ export const servicePages: Record<ServicePageContent['slug'], ServicePageContent
       'Visas, work permits, and stay permits for professionals, investors, and families — handled carefully, so you can focus on your work and life in Laos.',
     overview: [
       'Living and working in Laos as a foreign national typically involves the right combination of visa, work permit, and stay permit — and keeping each of them current. The applicable category and requirements depend on your purpose of stay, your employer or business, and your nationality.',
-      'SV Consulting helps you identify the pathway that fits your situation, prepares the paperwork, and coordinates with the relevant authorities from first application through every renewal.',
+      'Super Consulting helps you identify the pathway that fits your situation, prepares the paperwork, and coordinates with the relevant authorities from first application through every renewal.',
     ],
     whoItsFor: [
       'Foreign employees and their employers arranging work visas and work permits',
@@ -270,7 +270,7 @@ export const servicePages: Record<ServicePageContent['slug'], ServicePageContent
       'Reliable books, filings submitted on time, and tax advice you can act on — financial foundations for doing business in Laos.',
     overview: [
       'Companies operating in Laos typically carry accounting and tax obligations from the moment they are registered — books to keep, periodic filings to submit, and annual reporting to complete. What exactly applies depends on the company’s size, sector, and registration.',
-      'SV Consulting keeps these foundations solid: accurate bookkeeping, filings prepared and submitted on time, payroll handled properly, and clear reports so you always know where the business stands.',
+      'Super Consulting keeps these foundations solid: accurate bookkeeping, filings prepared and submitted on time, payroll handled properly, and clear reports so you always know where the business stands.',
     ],
     whoItsFor: [
       'New companies that need tax registration and an accounting setup from day one',

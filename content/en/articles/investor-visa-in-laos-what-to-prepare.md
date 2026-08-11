@@ -61,8 +61,8 @@ Additional documents can be requested depending on the sector, the size of the i
 - **Confusing investor status with permission to work for other companies.** The status attaches to your investment, not to the labour market generally.
 - **Leaving renewals late.** Processing times vary; a lapsed status is far harder to fix than a renewed one.
 
-## How SV Consulting can help
+## How Super Consulting can help
 
-SV Consulting prepares investor visa applications alongside the company work they depend on — making sure the corporate file (registration, capital, tax) actually supports the immigration application, coordinating with the authorities, and managing renewals so your status tracks your investment without gaps.
+Super Consulting prepares investor visa applications alongside the company work they depend on — making sure the corporate file (registration, capital, tax) actually supports the immigration application, coordinating with the authorities, and managing renewals so your status tracks your investment without gaps.
 
 *The site-wide disclaimer applies to this article: it is general information, not legal, tax, or immigration advice.*

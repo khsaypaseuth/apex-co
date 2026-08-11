@@ -64,6 +64,6 @@ Opening the company bank account, documenting the injection of registered capita
 
 The first year sets the pattern. This chapter provides a practical rhythm: periodic tax declarations, social security remittances, license renewals, reporting changes (address, shareholders, directors) to the registration authority, and the annual profit tax finalisation. It closes with the signs that it is time to bring in professional accounting support rather than improvising.
 
-## How SV Consulting helps
+## How Super Consulting helps
 
 We handle the process end to end: confirming whether your activity is open and under what conditions, preparing and filing the registration, obtaining licenses, completing tax and social security registration, and running your compliance calendar after launch. Use the form below to tell us about your plans and receive advice tailored to your situation.

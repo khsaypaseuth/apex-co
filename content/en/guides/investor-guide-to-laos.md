@@ -63,6 +63,6 @@ An investment needs people on the ground and a place to operate. This chapter su
 
 After approval comes the routine: periodic reporting to the investment authorities, tax filings, license renewals, and keeping registered details current. This chapter sets out the compliance rhythm and the early warning signs that a project is drifting out of compliance.
 
-## How SV Consulting helps
+## How Super Consulting helps
 
 We help investors verify sector conditions, structure the entry, prepare and file applications, complete registration and licensing, and run ongoing compliance — with visa and work permit support for the team. Tell us about your project using the form below and we will come back with a clear assessment.

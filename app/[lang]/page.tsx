@@ -156,7 +156,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
         </div>
       </section>
 
-      {/* 4 — Why choose SV Consulting (navy band, numbered points) */}
+      {/* 4 — Why choose Super Consulting (navy band, numbered points) */}
       <section className="bg-navy-950 py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-6">
           <p className="mb-3 text-sm font-medium tracking-widest text-gold-500 uppercase">

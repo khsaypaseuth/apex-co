@@ -55,4 +55,4 @@ Precise permit durations for a given case, fees, quota percentages, and document
 
 ## Where to confirm the current rules
 
-The Ministry of Labour and Social Welfare handles foreign worker approval and work permits; the immigration authorities under the Ministry of Public Security handle visas and stay permits. Requirements vary by nationality, role, and employer — confirm the current position for your case with the authorities, or ask SV Consulting to manage the process.
+The Ministry of Labour and Social Welfare handles foreign worker approval and work permits; the immigration authorities under the Ministry of Public Security handle visas and stay permits. Requirements vary by nationality, role, and employer — confirm the current position for your case with the authorities, or ask Super Consulting to manage the process.

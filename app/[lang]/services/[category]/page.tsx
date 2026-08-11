@@ -274,7 +274,7 @@ export default async function ServiceCategoryPage({
         </div>
       </section>
 
-      {/* How SV Consulting helps + related links */}
+      {/* How Super Consulting helps + related links */}
       <section className="py-16 md:py-20">
         <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-3">
           <div className="lg:col-span-2">

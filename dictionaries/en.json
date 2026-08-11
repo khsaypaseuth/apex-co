@@ -1,6 +1,6 @@
 {
   "site": {
-    "name": "SV Consulting",
+    "name": "Super Consulting",
     "tagline": "Business, Legal & Visa Consulting in Laos",
     "parentCompanyLine": "A business unit of Super Vision Co., Ltd.",
     "footerAbout": "Practical consulting for doing business and living in Laos — company setup, legal, visa, accounting, and tax, handled end to end."
@@ -80,7 +80,7 @@
   },
   "legal": {
     "disclaimerLabel": "Important notice",
-    "disclaimer": "This information is provided for general guidance only and does not constitute legal, tax, immigration, or accounting advice. Laws and procedures may change. Please contact SV Consulting or a qualified professional before making decisions."
+    "disclaimer": "This information is provided for general guidance only and does not constitute legal, tax, immigration, or accounting advice. Laws and procedures may change. Please contact Super Consulting or a qualified professional before making decisions."
   },
   "filter": {
     "searchLabel": "Search",
@@ -110,7 +110,7 @@
   },
   "leadForm": {
     "title": "Get advice tailored to your situation",
-    "lede": "Leave your details and an SV Consulting adviser will follow up on the topics in this guide — no obligation.",
+    "lede": "Leave your details and an Super Consulting adviser will follow up on the topics in this guide — no obligation.",
     "fullName": "Full Name",
     "email": "Email",
     "phone": "Phone / WhatsApp",
@@ -139,7 +139,7 @@
   },
   "home": {
     "heroTitle": "Professional Consulting Services for Doing Business and Living in Laos",
-    "heroSubtitle": "SV Consulting helps local and international clients with business registration, legal support, visa and immigration services, accounting, tax, and corporate compliance.",
+    "heroSubtitle": "Super Consulting helps local and international clients with business registration, legal support, visa and immigration services, accounting, tax, and corporate compliance.",
     "trustLine": "A business unit of Super Vision Co., Ltd. — Vientiane Capital, Lao PDR.",
     "trustStatement": "Your trusted partner for business, legal, immigration, accounting, and corporate services in Laos.",
     "highlightsEyebrow": "What we do",
@@ -171,7 +171,7 @@
       }
     },
     "whyEyebrow": "Why choose us",
-    "whyTitle": "Why Choose SV Consulting",
+    "whyTitle": "Why Choose Super Consulting",
     "why": {
       "localKnowledge": {
         "title": "Local knowledge",
@@ -204,11 +204,11 @@
     "finalCtaLede": "Tell us about your situation — we will explain the options, the process, and provide a clear quote."
   },
   "about": {
-    "eyebrow": "About SV Consulting",
+    "eyebrow": "About Super Consulting",
     "title": "A one-stop consulting partner in Laos",
-    "lede": "SV Consulting, a business unit of Super Vision Co., Ltd., provides practical support for individuals, entrepreneurs, investors, and companies in Laos.",
+    "lede": "Super Consulting, a business unit of Super Vision Co., Ltd., provides practical support for individuals, entrepreneurs, investors, and companies in Laos.",
     "introP1": "Doing business — or building a life — in Laos involves procedures that are rarely written down in one place. Registrations, licences, visas, taxes, and family documents each follow their own path through different offices, in different languages, on different timetables.",
-    "introP2": "SV Consulting exists to walk those paths for you. We combine local knowledge with professional standards, explain every step in plain language, and stay with our clients long after the first certificate is issued.",
+    "introP2": "Super Consulting exists to walk those paths for you. We combine local knowledge with professional standards, explain every step in plain language, and stay with our clients long after the first certificate is issued.",
     "missionTitle": "Our mission",
     "missionText": "Make business, legal, immigration, and compliance processes easier, clearer, and more reliable for clients in Laos.",
     "visionTitle": "Our vision",
@@ -263,7 +263,7 @@
       }
     },
     "parentTitle": "Backed by Super Vision Co., Ltd.",
-    "parentText": "SV Consulting is a business unit of Super Vision Co., Ltd., an established Lao company. That backing gives our clients continuity, accountability, and a partner that will still be here next year."
+    "parentText": "Super Consulting is a business unit of Super Vision Co., Ltd., an established Lao company. That backing gives our clients continuity, accountability, and a partner that will still be here next year."
   },
   "servicesPage": {
     "lede": "Five service areas covering the full journey of doing business and living in Laos — explore each area, or contact us for a tailored assessment.",
@@ -276,7 +276,7 @@
     "processTitle": "How the process works",
     "documentsTitle": "Documents commonly required",
     "timelineTitle": "A note on timelines",
-    "helpTitle": "How SV Consulting helps",
+    "helpTitle": "How Super Consulting helps",
     "otherServicesTitle": "Other service areas"
   },
   "knowledgePage": {
@@ -303,7 +303,7 @@
     "listTitle": "All guides"
   },
   "newsPage": {
-    "lede": "Official updates and announcements from SV Consulting.",
+    "lede": "Official updates and announcements from Super Consulting.",
     "emptyTitle": "No news yet",
     "emptyText": "News and updates will be published here.",
     "typesTitle": "What will be published here",
@@ -342,12 +342,12 @@
   },
   "meta": {
     "home": {
-      "title": "SV Consulting — Business, Legal & Visa Consulting in Laos",
-      "description": "SV Consulting helps local and international clients with business registration, legal support, visa and immigration services, accounting, tax, and corporate compliance in Laos."
+      "title": "Super Consulting — Business, Legal & Visa Consulting in Laos",
+      "description": "Super Consulting helps local and international clients with business registration, legal support, visa and immigration services, accounting, tax, and corporate compliance in Laos."
     },
     "about": {
       "title": "About Us",
-      "description": "SV Consulting is a business unit of Super Vision Co., Ltd., providing practical business, legal, immigration, and accounting support in Laos."
+      "description": "Super Consulting is a business unit of Super Vision Co., Ltd., providing practical business, legal, immigration, and accounting support in Laos."
     },
     "services": {
       "title": "Services",
@@ -355,7 +355,7 @@
     },
     "businessSetup": {
       "title": "Business Setup & Licensing in Laos",
-      "description": "Company registration, foreign investment registration, business licences, and tax registration in Laos — practical setup support from SV Consulting."
+      "description": "Company registration, foreign investment registration, business licences, and tax registration in Laos — practical setup support from Super Consulting."
     },
     "visaImmigration": {
       "title": "Visa & Immigration Services in Laos",
@@ -383,7 +383,7 @@
     },
     "news": {
       "title": "News & Updates",
-      "description": "News and updates from SV Consulting: legal, tax, visa, and business notices for Laos."
+      "description": "News and updates from Super Consulting: legal, tax, visa, and business notices for Laos."
     },
     "faq": {
       "title": "Frequently Asked Questions",
@@ -391,7 +391,7 @@
     },
     "contact": {
       "title": "Contact Us",
-      "description": "Contact SV Consulting in Vientiane Capital, Lao PDR — book a consultation for business, legal, visa, or accounting support."
+      "description": "Contact Super Consulting in Vientiane Capital, Lao PDR — book a consultation for business, legal, visa, or accounting support."
     }
   },
   "alt": {

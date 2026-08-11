@@ -64,6 +64,6 @@ The annual review items that fall outside tax and licensing: key contracts appro
 
 The closing chapter assembles everything into a single annual calendar: what recurs monthly, what recurs annually, what is event-driven, and who owns each item. It includes guidance on running the calendar with simple tools and reviewing it once a year against current regulations, since requirements change.
 
-## How SV Consulting helps
+## How Super Consulting helps
 
 We run compliance calendars for companies in Laos: filings, renewals, registrations, and the paperwork between them — with a clear annual review of what changed in the rules. Use the form below and we will assess your company's current standing.

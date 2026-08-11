@@ -1,4 +1,4 @@
-# Decision Log — SV Consulting Website
+# Decision Log — Super Consulting Website
 
 Format per master plan: question we would have asked → decision → reason → risk → how to change later.
 
@@ -19,8 +19,8 @@ Format per master plan: question we would have asked → decision → reason →
 - **Change later:** Edit `@theme` block in `app/globals.css` (single source of truth).
 
 ## D-003 — Build location
-- **Question:** Master plan says `projects/sv-consulting-website/`; where do we actually build?
-- **Decision:** App lives at repo root `/Users/khamphone/Documents/CodingProject/Projects/sv-consulting/`; planning docs move to `docs/`.
+- **Question:** Master plan says `projects/super-consulting-website/`; where do we actually build?
+- **Decision:** App lives at repo root `/Users/khamphone/Documents/CodingProject/Projects/super-consulting/`; planning docs move to `docs/`.
 - **Reason:** This folder IS the project directory; nesting would duplicate the path meaning. Scaffold via temp dir because create-next-app refuses non-empty directories.
 - **Risk:** None.
 - **Change later:** N/A.
@@ -47,7 +47,7 @@ Format per master plan: question we would have asked → decision → reason →
 
 ## D-008 — Domain / metadataBase
 - **Question:** No domain purchased (guardrail forbids buying).
-- **Decision:** Placeholder `https://svconsulting.la` as `metadataBase`, clearly marked placeholder in README.
+- **Decision:** Placeholder `https://superconsulting.la` as `metadataBase`, clearly marked placeholder in README.
 - **Change later:** Single constant in `lib/site-config.ts`.
 
 ## D-009 — Images
@@ -60,7 +60,7 @@ Format per master plan: question we would have asked → decision → reason →
 
 ## D-011 — Scaffold temp dir name
 - **Question:** Plan says scaffold into `_scaffold`, but npm refuses project names starting with an underscore.
-- **Decision:** Scaffolded into `scaffold-tmp` instead, then rsynced into repo root and removed, exactly per the plan's flow. `package.json` name set to `sv-consulting` afterwards.
+- **Decision:** Scaffolded into `scaffold-tmp` instead, then rsynced into repo root and removed, exactly per the plan's flow. `package.json` name set to `super-consulting` afterwards.
 - **Risk:** None.
 - **Change later:** N/A.
 
@@ -188,7 +188,7 @@ Format per master plan: question we would have asked → decision → reason →
 - **Change later:** Add URLs to `sources:` during the legal verification pass; flip `verificationStatus` to `verified` per D-018 semantics.
 
 ## D-052 — Verification-marker and closing-section conventions
-- **Decision:** Every `needs-verification` article contains the literal blockquote line `> **Needs legal verification before publication.**` (standalone, with period) at each point where unverified process claims cluster — usually after the intro and after the step list. All numeric specifics (fees, processing times, rates, thresholds, visa durations) are replaced by "current X should be confirmed with the authority" wording; VAT/CIT articles explain concept + compliance cycle only, never rates. Every article ends with `## How SV Consulting can help` plus an italic note that the site-wide disclaimer applies (the page template additionally renders DisclaimerBox). `contract-review` is the sole `general-info` article (genuinely generic guidance, no Lao statutory claims). The pre-existing article #1 was normalised to these conventions and expanded (prep list + common-mistakes section).
+- **Decision:** Every `needs-verification` article contains the literal blockquote line `> **Needs legal verification before publication.**` (standalone, with period) at each point where unverified process claims cluster — usually after the intro and after the step list. All numeric specifics (fees, processing times, rates, thresholds, visa durations) are replaced by "current X should be confirmed with the authority" wording; VAT/CIT articles explain concept + compliance cycle only, never rates. Every article ends with `## How Super Consulting can help` plus an italic note that the site-wide disclaimer applies (the page template additionally renders DisclaimerBox). `contract-review` is the sole `general-info` article (genuinely generic guidance, no Lao statutory claims). The pre-existing article #1 was normalised to these conventions and expanded (prep list + common-mistakes section).
 - **Reason:** Master plan §Guardrails 5–6 and §Knowledge Center marker requirement; a machine-checkable literal marker lets the publication gate grep for it.
 - **Change later:** The verification pass removes marker lines it clears and updates `lastUpdated`.
 
@@ -215,7 +215,7 @@ Format per master plan: question we would have asked → decision → reason →
 
 ## D-070 — Shared metadata builder in lib/seo.ts
 - **Question:** Repeat title/description/OG/canonical/hreflang blocks in 14 `generateMetadata` implementations, or centralise?
-- **Decision:** New `lib/seo.ts` with `pageMetadata({ lang, path, title, description, ogType, absoluteTitle })` returning title (templated via layout's `%s | SV Consulting`), description, `alternates.canonical`, `alternates.languages` (ACTIVE locales en + lo plus `x-default` → en), and a full `openGraph` block (`og:locale` en_US / lo_LA, `alternateLocale`, siteName, url, type website/article, default image). All 13 routes + 3 detail routes call it; the layout keeps `metadataBase` + per-locale defaults as the safety net. Detail pages pass frontmatter `summary` as description and `ogType: 'article'`.
+- **Decision:** New `lib/seo.ts` with `pageMetadata({ lang, path, title, description, ogType, absoluteTitle })` returning title (templated via layout's `%s | Super Consulting`), description, `alternates.canonical`, `alternates.languages` (ACTIVE locales en + lo plus `x-default` → en), and a full `openGraph` block (`og:locale` en_US / lo_LA, `alternateLocale`, siteName, url, type website/article, default image). All 13 routes + 3 detail routes call it; the layout keeps `metadataBase` + per-locale defaults as the safety net. Detail pages pass frontmatter `summary` as description and `ogType: 'article'`.
 - **Reason:** hreflang/canonical shape must be identical everywhere; one helper makes activating th/vi/zh a one-line change (`activeLocales`).
 - **Change later:** Add per-page OG images by extending `PageSeoInput` with an `image` override.
 
@@ -326,7 +326,7 @@ Format per master plan: question we would have asked → decision → reason →
 - **Reason:** Owner supplied the real details; centralizing in one constant prevents drift across footer, contact page, and floating buttons.
 
 ## D-134 — Shared icon set (components/icons.tsx); icon placements kept restrained
-- **Decision:** One inline SVG icon set — 24px grid, stroke 1.75, `currentColor`, lucide-style paths: briefcase, stamp, scale, calculator, users, book-open, map-pin, mail, phone, message-circle, check-circle, arrow-right, chevron-down, building, file-text, shield-check. Placements: (a) home service-highlight cards get a category icon in a gold-tinted rounded square; (b) "Why Choose SV Consulting" swaps the 01–06 numerals for check-circle icons (shield-check on the Super Vision item); (c) contact-page company panel presents address/phone/WhatsApp/email as icon rows with live links; (d) footer contact rows carry small gold icons; (e) ServiceCard/GuideCard swap the "→" text arrow for the shared arrow-right icon and LawTopicCard gains the same subtle hover arrow affordance. `building` and `file-text` are currently unplaced (reserved for service pages).
+- **Decision:** One inline SVG icon set — 24px grid, stroke 1.75, `currentColor`, lucide-style paths: briefcase, stamp, scale, calculator, users, book-open, map-pin, mail, phone, message-circle, check-circle, arrow-right, chevron-down, building, file-text, shield-check. Placements: (a) home service-highlight cards get a category icon in a gold-tinted rounded square; (b) "Why Choose Super Consulting" swaps the 01–06 numerals for check-circle icons (shield-check on the Super Vision item); (c) contact-page company panel presents address/phone/WhatsApp/email as icon rows with live links; (d) footer contact rows carry small gold icons; (e) ServiceCard/GuideCard swap the "→" text arrow for the shared arrow-right icon and LawTopicCard gains the same subtle hover arrow affordance. `building` and `file-text` are currently unplaced (reserved for service pages).
 - **Reason:** Owner request for icon polish; a single set keeps stroke weight and corner language consistent — premium, not busy.
 
 ## D-120 — Imagery expansion: per-category thumbnails in `public/images/categories/`, four new `sections/` images

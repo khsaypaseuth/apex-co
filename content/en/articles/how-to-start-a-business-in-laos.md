@@ -72,8 +72,8 @@ Requirements differ by structure and sector, so treat this list as a starting po
 
 Processing times and official fees vary depending on the structure, the sector, and the completeness of the application. We deliberately do not publish figures here until they can be verified against current official schedules — current fees and timelines should be confirmed with the relevant authorities before you plan around them.
 
-## How SV Consulting can help
+## How Super Consulting can help
 
-SV Consulting supports clients through the full setup journey — advising on structure, preparing and filing documents, coordinating with the relevant authorities, and setting up tax and accounting foundations — so you can focus on the business itself.
+Super Consulting supports clients through the full setup journey — advising on structure, preparing and filing documents, coordinating with the relevant authorities, and setting up tax and accounting foundations — so you can focus on the business itself.
 
 *The site-wide disclaimer applies to this article: it is general information, not legal, tax, or immigration advice.*

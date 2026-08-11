@@ -51,4 +51,4 @@ Filing routes, class coverage, official fees, and current procedures follow the 
 
 ## Where to confirm the current rules
 
-The Department of Intellectual Property under the Ministry of Industry and Commerce is the registration authority (as of July 2026). Filing strategy — direct filing versus international routes, class coverage, clearance searching — depends on the specific brand and plans, so take advice on your case or ask SV Consulting to handle the search and filing.
+The Department of Intellectual Property under the Ministry of Industry and Commerce is the registration authority (as of July 2026). Filing strategy — direct filing versus international routes, class coverage, clearance searching — depends on the specific brand and plans, so take advice on your case or ask Super Consulting to handle the search and filing.

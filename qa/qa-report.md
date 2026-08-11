@@ -1,4 +1,4 @@
-# QA Report — SV Consulting Website
+# QA Report — Super Consulting Website
 
 Phase 8 QA pass, executed 2026-07-11 against the production build
 (`next build` + `next start`, port 3299). Covers the master plan's 15 QA
@@ -208,7 +208,7 @@ Complete placeholder inventory (= the owner's pre-launch task list):
 | 2 | `[Add email]` / `[ເພີ່ມອີເມວ]` | `dictionaries/*.json` → `footer.emailPlaceholder` | Footer + `/contact` |
 | 3 | `[Add contact link]` / `[ເພີ່ມລິ້ງຕິດຕໍ່]` | `dictionaries/*.json` → `footer.chatPlaceholder` | Footer + `/contact` |
 | 4 | WhatsApp / LINE `href="#"` buttons | `components/FloatingContactButtons.tsx` | Floating buttons on every page; hover title "Placeholder — add real contact" (`floating.placeholderNote`, localized) |
-| 5 | Domain `https://svconsulting.la` | `lib/site-config.ts` → `SITE_URL` | metadataBase, canonicals, hreflang, OG URLs, sitemap, robots |
+| 5 | Domain `https://superconsulting.la` | `lib/site-config.ts` → `SITE_URL` | metadataBase, canonicals, hreflang, OG URLs, sitemap, robots |
 | 6 | Contact form submit (no backend) | `components/ContactForm.tsx` | `/contact` — reveals a localized demo-only notice |
 | 7 | Lead capture submit (no backend) | `components/LeadCaptureForm.tsx` | All 6 guide pages |
 | 8 | OG image wordmark font (Georgia stand-in for Fraunces) | `public/og/og-default.svg` → `.png` (D-072) | og:image everywhere |
