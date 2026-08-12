@@ -1,11 +1,12 @@
 import 'server-only'
 
-// Lazy dictionary imports, keyed by ACTIVE locale only (en + lo at launch).
-// To activate th / vi / zh later: add the locale to `i18n.activeLocales` in
-// lib/i18n-config.ts and add its loader here.
+// Lazy dictionary imports, keyed by ACTIVE locale.
 const dictionaries = {
   en: () => import('@/dictionaries/en.json').then((module) => module.default),
   lo: () => import('@/dictionaries/lo.json').then((module) => module.default),
+  th: () => import('@/dictionaries/th.json').then((module) => module.default),
+  vi: () => import('@/dictionaries/vi.json').then((module) => module.default),
+  zh: () => import('@/dictionaries/zh.json').then((module) => module.default),
 }
 
 export type ActiveLocale = keyof typeof dictionaries

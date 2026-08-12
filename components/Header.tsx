@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import logoSv from '@/public/images/brand/logo-sv.png'
+import logoSuper from '@/public/images/brand/logo-super.png'
 import type { Locale } from '@/lib/i18n-config'
 import { LanguageSwitcher, type LanguageOption } from './LanguageSwitcher'
 import { MobileNav, type MobileNavGroup } from './MobileNav'
@@ -92,9 +92,9 @@ export function Header({
           className="shrink-0 transition-opacity hover:opacity-80"
         >
           <Image
-            src={logoSv}
+            src={logoSuper}
             alt={siteName}
-            className="h-9 w-auto"
+            className="h-10 w-auto"
             preload
           />
         </Link>
@@ -126,7 +126,7 @@ export function Header({
           />
           <Link
             href={ctaHref}
-            className="hidden rounded-sm bg-gold-500 px-4 py-2 text-sm font-medium text-navy-950 transition-colors hover:bg-gold-600 sm:inline-block"
+            className="btn-premium hidden rounded-sm bg-gold-500 px-4 py-2 text-sm font-medium text-navy-950 transition-colors hover:bg-gold-600 sm:inline-block"
           >
             {ctaLabel}
           </Link>

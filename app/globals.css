@@ -17,12 +17,14 @@
   --color-slate-600: #475569; /* darker slate — muted text on ivory (6.7:1 on ivory-100) */
 }
 
-/* next/font CSS variables mapped to Tailwind font utilities */
+  /* next/font CSS variables mapped to Tailwind font utilities */
 @theme inline {
   --font-display: var(--font-fraunces);
   --font-body: var(--font-manrope);
   --font-lao: var(--font-noto-sans-lao);
   --font-lao-display: var(--font-noto-serif-lao);
+  --font-thai: var(--font-noto-sans-thai);
+  --font-zh: var(--font-noto-sans-sc);
 }
 
 /* Base typography — English defaults */
@@ -73,6 +75,48 @@ html[lang='lo'] .font-display {
 html[lang='lo'] .leading-relaxed,
 html[lang='lo'] .prose-article {
   line-height: 1.8;
+}
+
+html[lang='th'] body {
+  font-family: var(--font-thai), var(--font-body);
+  line-height: 1.75;
+}
+
+html[lang='th'] h1,
+html[lang='th'] h2,
+html[lang='th'] h3,
+html[lang='th'] h4,
+html[lang='th'] h5,
+html[lang='th'] h6,
+html[lang='th'] .font-display {
+  font-family: var(--font-thai), var(--font-display);
+  line-height: 1.55;
+}
+
+html[lang='th'] .leading-relaxed,
+html[lang='th'] .prose-article {
+  line-height: 1.75;
+}
+
+html[lang='zh'] body {
+  font-family: var(--font-zh), var(--font-body);
+  line-height: 1.7;
+}
+
+html[lang='zh'] h1,
+html[lang='zh'] h2,
+html[lang='zh'] h3,
+html[lang='zh'] h4,
+html[lang='zh'] h5,
+html[lang='zh'] h6,
+html[lang='zh'] .font-display {
+  font-family: var(--font-zh), var(--font-display);
+  line-height: 1.45;
+}
+
+html[lang='zh'] .leading-relaxed,
+html[lang='zh'] .prose-article {
+  line-height: 1.7;
 }
 
 /*
@@ -210,5 +254,72 @@ html[lang='lo'] .prose-article {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  .animate-hero-kenburns {
+    animation: none !important;
+  }
+}
+
+/* Premium motion utilities — calm luxury, not flashy */
+@keyframes hero-kenburns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.06);
+  }
+}
+
+.animate-hero-kenburns {
+  animation: hero-kenburns 22s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.card-premium {
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.35s ease;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .card-premium:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-gold-500);
+    box-shadow: 0 18px 40px -18px color-mix(in oklab, var(--color-navy-950) 28%, transparent);
+  }
+}
+
+.btn-premium {
+  position: relative;
+  overflow: hidden;
+  transition:
+    background-color 0.3s ease,
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .btn-premium:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px -12px color-mix(in oklab, var(--color-gold-500) 70%, transparent);
+  }
+}
+
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInPanel {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
   }
 }

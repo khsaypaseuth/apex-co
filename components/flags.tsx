@@ -2,15 +2,8 @@ import type { SVGProps } from 'react'
 import type { Locale } from '@/lib/i18n-config'
 
 /**
- * Hand-drawn inline SVG flags for the language switcher (D-132).
- *
- * Rendered ~20×14 with a subtle ring so light details (e.g. the white
- * circle of the Lao flag) stay readable on the navy header. Both flags are
- * drawn on a 30×21 (10:7) canvas — simplified but proportionally faithful:
- *   - UK: standard Union Jack construction (diagonals simplified — no
- *     counterchange offset at this size).
- *   - Laos: red / double-height blue / red horizontal bands with a centred
- *     white circle (diameter ≈ 0.8 of the blue band height).
+ * Hand-drawn inline SVG flags for the language switcher.
+ * Rendered ~20×14 with a subtle ring on the navy header.
  */
 
 type FlagSvgProps = SVGProps<SVGSVGElement>
@@ -37,10 +30,48 @@ function LaosFlagSvg(props: FlagSvgProps) {
   )
 }
 
-const FLAGS: Partial<Record<Locale, (props: FlagSvgProps) => React.JSX.Element>> = {
-  en: UnionJackSvg,
-  lo: LaosFlagSvg,
+function ThailandFlagSvg(props: FlagSvgProps) {
+  return (
+    <svg viewBox="0 0 30 21" aria-hidden="true" focusable="false" {...props}>
+      <rect width="30" height="21" fill="#A51931" />
+      <rect y="3.5" width="30" height="14" fill="#F4F5F8" />
+      <rect y="7" width="30" height="7" fill="#2D2A4A" />
+    </svg>
+  )
 }
+
+function VietnamFlagSvg(props: FlagSvgProps) {
+  return (
+    <svg viewBox="0 0 30 21" aria-hidden="true" focusable="false" {...props}>
+      <rect width="30" height="21" fill="#DA251D" />
+      <polygon
+        fill="#FFFF00"
+        points="15,4.2 16.6,9.2 21.9,9.2 17.65,12.3 19.25,17.3 15,14.2 10.75,17.3 12.35,12.3 8.1,9.2 13.4,9.2"
+      />
+    </svg>
+  )
+}
+
+function ChinaFlagSvg(props: FlagSvgProps) {
+  return (
+    <svg viewBox="0 0 30 21" aria-hidden="true" focusable="false" {...props}>
+      <rect width="30" height="21" fill="#DE2910" />
+      <polygon
+        fill="#FFDE00"
+        points="5.5,3.2 6.35,5.85 9.1,5.85 6.9,7.5 7.75,10.15 5.5,8.5 3.25,10.15 4.1,7.5 1.9,5.85 4.65,5.85"
+      />
+    </svg>
+  )
+}
+
+const FLAGS: Partial<Record<Locale, (props: FlagSvgProps) => React.JSX.Element>> =
+  {
+    en: UnionJackSvg,
+    lo: LaosFlagSvg,
+    th: ThailandFlagSvg,
+    vi: VietnamFlagSvg,
+    zh: ChinaFlagSvg,
+  }
 
 export interface FlagIconProps {
   locale: Locale

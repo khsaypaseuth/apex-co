@@ -101,6 +101,22 @@ async function readEntry<Schema extends z.ZodType>(
   return { frontmatter, html }
 }
 
+/** Prefer locale file; fall back to English when the locale is not yet populated. */
+async function readEntryWithFallback<Schema extends z.ZodType>(
+  lang: Locale,
+  dir: ContentDir,
+  slug: string,
+  schema: Schema,
+): Promise<{ frontmatter: z.output<Schema>; html: string; contentLang: Locale } | null> {
+  const local = await readEntry(lang, dir, slug, schema)
+  if (local) return { ...local, contentLang: lang }
+  if (lang !== 'en') {
+    const fallback = await readEntry('en', dir, slug, schema)
+    if (fallback) return { ...fallback, contentLang: 'en' }
+  }
+  return null
+}
+
 /** List slugs of all markdown entries in a content directory. */
 async function listSlugs(lang: Locale, dir: ContentDir): Promise<string[]> {
   let files: string[]
@@ -115,6 +131,16 @@ async function listSlugs(lang: Locale, dir: ContentDir): Promise<string[]> {
     .filter((file) => file.endsWith('.md') && file !== 'README.md')
     .map((file) => file.replace(/\.md$/, ''))
     .sort()
+}
+
+/** Slugs for a locale, falling back to English when the locale folder is empty. */
+async function listSlugsWithFallback(
+  lang: Locale,
+  dir: ContentDir,
+): Promise<string[]> {
+  const local = await listSlugs(lang, dir)
+  if (local.length > 0 || lang === 'en') return local
+  return listSlugs('en', dir)
 }
 
 function byLastUpdatedDesc(
@@ -132,13 +158,18 @@ export async function getArticle(
   lang: Locale,
   slug: string,
 ): Promise<Article | null> {
-  const entry = await readEntry(lang, 'articles', slug, articleFrontmatterSchema)
+  const entry = await readEntryWithFallback(
+    lang,
+    'articles',
+    slug,
+    articleFrontmatterSchema,
+  )
   if (!entry) return null
-  return { slug, lang, html: entry.html, ...entry.frontmatter }
+  return { slug, lang: entry.contentLang, html: entry.html, ...entry.frontmatter }
 }
 
 export async function listArticleSlugs(lang: Locale): Promise<string[]> {
-  return listSlugs(lang, 'articles')
+  return listSlugsWithFallback(lang, 'articles')
 }
 
 export async function listArticles(
@@ -169,13 +200,18 @@ export async function getLawTopic(
   lang: Locale,
   slug: string,
 ): Promise<LawTopic | null> {
-  const entry = await readEntry(lang, 'laws', slug, lawTopicFrontmatterSchema)
+  const entry = await readEntryWithFallback(
+    lang,
+    'laws',
+    slug,
+    lawTopicFrontmatterSchema,
+  )
   if (!entry) return null
-  return { slug, lang, html: entry.html, ...entry.frontmatter }
+  return { slug, lang: entry.contentLang, html: entry.html, ...entry.frontmatter }
 }
 
 export async function listLawTopicSlugs(lang: Locale): Promise<string[]> {
-  return listSlugs(lang, 'laws')
+  return listSlugsWithFallback(lang, 'laws')
 }
 
 export async function listLawTopics(
@@ -206,13 +242,18 @@ export async function getGuide(
   lang: Locale,
   slug: string,
 ): Promise<Guide | null> {
-  const entry = await readEntry(lang, 'guides', slug, guideFrontmatterSchema)
+  const entry = await readEntryWithFallback(
+    lang,
+    'guides',
+    slug,
+    guideFrontmatterSchema,
+  )
   if (!entry) return null
-  return { slug, lang, html: entry.html, ...entry.frontmatter }
+  return { slug, lang: entry.contentLang, html: entry.html, ...entry.frontmatter }
 }
 
 export async function listGuideSlugs(lang: Locale): Promise<string[]> {
-  return listSlugs(lang, 'guides')
+  return listSlugsWithFallback(lang, 'guides')
 }
 
 export async function listGuides(

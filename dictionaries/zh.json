@@ -1,0 +1,441 @@
+{
+  "site": {
+    "name": "Super Consulting",
+    "tagline": "老挝商业、法律与签证咨询",
+    "parentCompanyLine": "Super Vision Co., Ltd. 旗下业务部门",
+    "footerAbout": "自2020年以来,为在老挝的商业与生活提供咨询服务——公司注册、法律、签证、会计与税务,全程办理并协调各政府部门。"
+  },
+  "nav": {
+    "home": "首页",
+    "about": "关于我们",
+    "services": "服务",
+    "businessSetup": "企业设立与许可",
+    "visaImmigration": "签证与移民",
+    "legalFamily": "法律与家庭服务",
+    "accountingTax": "会计与税务",
+    "knowledge": "知识中心",
+    "laws": "老挝法律库",
+    "lawsShort": "老挝法律",
+    "guides": "商业指南",
+    "news": "链接",
+    "links": "链接",
+    "faq": "常见问题",
+    "contact": "联系我们",
+    "menu": "菜单",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单",
+    "mainNavLabel": "主导航"
+  },
+  "cta": {
+    "bookConsultation": "预约咨询",
+    "exploreServices": "探索服务",
+    "contactUs": "联系我们",
+    "getInTouch": "与我们联系",
+    "learnMore": "了解更多",
+    "readMore": "阅读更多",
+    "viewAll": "查看全部",
+    "readGuide": "阅读指南"
+  },
+  "language": {
+    "label": "语言",
+    "en": "English",
+    "lo": "ພາສາລາວ",
+    "th": "ไทย",
+    "vi": "Tiếng Việt",
+    "zh": "中文",
+    "enShort": "EN",
+    "loShort": "ລາວ",
+    "thShort": "TH",
+    "viShort": "VI",
+    "zhShort": "中文"
+  },
+  "common": {
+    "lastUpdated": "最后更新",
+    "minRead": "分钟阅读",
+    "breadcrumbLabel": "面包屑导航",
+    "relatedArticles": "相关文章",
+    "relatedServices": "相关服务",
+    "sources": "资料来源",
+    "sampleContent": "仅供预览的示例内容。",
+    "skipToContent": "跳转至主要内容",
+    "contentInEnglish": "本文目前仅提供英文版本。"
+  },
+  "verification": {
+    "verified": "已核实",
+    "needsVerification": "待核实",
+    "generalInfo": "一般信息"
+  },
+  "articleCategories": {
+    "starting-a-business": "在老挝创业",
+    "tax-accounting": "税务与会计",
+    "visa-immigration": "签证与移民",
+    "lao-law-basics": "老挝法律基础",
+    "labour-employment": "劳工与就业",
+    "investment": "在老挝投资",
+    "marriage-family": "婚姻与家庭",
+    "living-in-laos": "在老挝生活",
+    "compliance-checklists": "合规检查清单"
+  },
+  "lawCategories": {
+    "company-law": "公司法",
+    "investment-law": "投资法",
+    "tax-law": "税法",
+    "labour-law": "劳动法",
+    "immigration": "移民",
+    "family-law": "家庭法",
+    "intellectual-property": "知识产权",
+    "commercial-contracts": "商业合同"
+  },
+  "legal": {
+    "disclaimerLabel": "重要提示",
+    "disclaimer": "本信息仅供一般性参考,不构成法律、税务、移民或会计方面的建议。相关法律和程序可能会有所变更。在做出决定之前,请联系 Super Consulting 或合格的专业人士。"
+  },
+  "filter": {
+    "searchLabel": "搜索",
+    "searchPlaceholder": "按标题或摘要搜索…",
+    "allCategories": "全部",
+    "categoriesLabel": "按类别筛选",
+    "noResults": "未找到相关结果。请尝试其他搜索词或类别。"
+  },
+  "contactForm": {
+    "fullName": "姓名",
+    "company": "公司名称",
+    "email": "电子邮箱",
+    "phone": "电话 / WhatsApp",
+    "preferredContact": "首选联系方式",
+    "serviceNeeded": "所需服务",
+    "message": "留言",
+    "selectPlaceholder": "请选择",
+    "required": "必填",
+    "submit": "发送留言",
+    "demoNotice": "仅为演示——此表单暂不能发送消息,请直接联系我们。",
+    "methods": {
+      "email": "电子邮箱",
+      "phone": "电话",
+      "whatsapp": "WhatsApp",
+      "line": "LINE"
+    }
+  },
+  "leadForm": {
+    "title": "获取针对您情况的专属建议",
+    "lede": "留下您的联系方式,Super Consulting 的顾问将就本指南中的主题与您联系跟进——不附带任何义务。",
+    "fullName": "姓名",
+    "email": "电子邮箱",
+    "phone": "电话 / WhatsApp",
+    "serviceInterest": "感兴趣的服务",
+    "selectPlaceholder": "请选择",
+    "required": "必填",
+    "submit": "申请咨询",
+    "demoNotice": "仅为演示——此表单暂不能发送消息,请直接联系我们。"
+  },
+  "floating": {
+    "whatsapp": "通过 WhatsApp 联系我们",
+    "line": "通过 LINE 联系我们",
+    "placeholderNote": "LINE 联系方式即将上线——此为临时链接"
+  },
+  "footer": {
+    "quickLinks": "快速链接",
+    "ourServices": "我们的服务",
+    "knowledge": "知识",
+    "contact": "联系方式",
+    "legal": "法律信息",
+    "rights": "版权所有。",
+    "poweredBy": "技术支持",
+    "addressLabel": "地址",
+    "phoneLabel": "电话",
+    "emailLabel": "电子邮箱",
+    "chatLabel": "WhatsApp"
+  },
+  "home": {
+    "heroTitle": "在老挝经商与生活的专业咨询服务",
+    "heroSubtitle": "Super Consulting 为本地及国际客户提供企业注册、法律支持、签证与移民服务、会计、税务及企业合规方面的协助。",
+    "trustLine": "Super Vision Co., Ltd. 旗下业务部门——老挝人民民主共和国万象首都。",
+    "trustStatement": "您在老挝值得信赖的商业、法律、移民、会计及企业服务合作伙伴。",
+    "highlightsEyebrow": "我们的业务",
+    "highlightsTitle": "服务亮点",
+    "highlights": {
+      "businessRegistration": {
+        "title": "企业注册",
+        "summary": "公司设立、许可及各类登记——全程办理。"
+      },
+      "visaImmigration": {
+        "title": "签证与移民",
+        "summary": "为专业人士、投资者及家庭提供签证、工作许可及居留许可。"
+      },
+      "legalServices": {
+        "title": "法律服务",
+        "summary": "为您的企业提供合同、合规、尽职调查及商标支持。"
+      },
+      "accountingTax": {
+        "title": "会计与税务",
+        "summary": "记账、税务申报、工资核算及年度合规——始终井然有序。"
+      },
+      "familyLegal": {
+        "title": "家庭与个人法律服务",
+        "summary": "婚姻登记、家庭文件及外籍配偶支持。"
+      },
+      "laoKnowledge": {
+        "title": "老挝商业知识",
+        "summary": "关于老挝商业、税务、签证及法律话题的通俗易懂文章。"
+      }
+    },
+    "whyEyebrow": "为何选择我们",
+    "whyTitle": "为何选择 Super Consulting",
+    "why": {
+      "localKnowledge": {
+        "title": "本地经验",
+        "description": "我们每天都在与老挝的各项程序及政府机构打交道。"
+      },
+      "practicalAdvice": {
+        "title": "务实建议",
+        "description": "清晰可行的建议——而非复杂的法律术语。"
+      },
+      "clearProcess": {
+        "title": "流程清晰",
+        "description": "您始终清楚有哪些步骤、目前的状态以及接下来会发生什么。"
+      },
+      "transparentCommunication": {
+        "title": "沟通透明",
+        "description": "诚实的进展更新与清晰的工作范围——绝无意外。"
+      },
+      "companiesAndIndividuals": {
+        "title": "支持企业与个人",
+        "description": "从外国投资者到普通家庭——为每一位客户提供同等悉心的服务。"
+      },
+      "backedBySuperVision": {
+        "title": "由 Super Vision Co., Ltd. 支持",
+        "description": "隶属于一家历史悠久的老挝企业集团。"
+      }
+    },
+    "knowledgeTitle": "决策前先了解",
+    "knowledgeLede": "关于老挝商业、税务、签证、合规及法律程序的科普文章。",
+    "finalCtaTitle": "从一次咨询开始。",
+    "finalCtaLede": "告诉我们您的情况——我们将为您说明各项选择、流程,并提供明确的报价。"
+  },
+  "about": {
+    "eyebrow": "关于 Super Consulting",
+    "title": "自2020年起,值得信赖的老挝咨询机构",
+    "lede": "自2020年以来,Super Consulting——Super Vision Co., Ltd. 旗下业务部门——已协助个人、创业者、投资者及企业以清晰细致的方式在老挝完成各项官方手续。",
+    "introP1": "在老挝经商或定居意味着要在不同的部委和机构之间办理注册、许可证、签证、税务申报及个人文件手续——每个部门都有各自的要求、语言及时间安排。客户真正需要的不是更多的理论,而是一位了解流程并能一路跟进落实的合作伙伴。",
+    "introP2": "凭借自2020年以来积累的经验,以及与相关政府部委及机构建立的良好工作关系,我们悉心准备您的文件,协调各项申报事宜,并确保您的案件能够一次性正确推进。您将在每个环节收到通俗易懂的进展说明,并获得负责到底的支持,直至工作完成。",
+    "missionTitle": "我们的使命",
+    "missionText": "以清晰的方式、审慎的文件准备及与相关部门可靠的协调,帮助在老挝的客户完成商业、法律、移民及合规事务。",
+    "visionTitle": "我们的愿景",
+    "visionText": "成为本地及国际客户信赖的一站式咨询伙伴,在老挝提供准确的流程指导及可靠的跟进服务。",
+    "valuesEyebrow": "指引我们的原则",
+    "valuesTitle": "我们的价值观",
+    "values": {
+      "trust": {
+        "title": "信任",
+        "description": "我们循序渐进地赢得信任,谨慎地守护信任,绝不以捷径来交换。"
+      },
+      "clarity": {
+        "title": "清晰",
+        "description": "通俗易懂的语言、诚实的回答,不在术语背后遮遮掩掩。"
+      },
+      "professionalism": {
+        "title": "专业精神",
+        "description": "细致周到、按时完成、达到我们引以为豪的标准。"
+      },
+      "practicalExecution": {
+        "title": "务实执行",
+        "description": "建议唯有付诸实施才有意义——我们会将事情跟进到底。"
+      },
+      "confidentiality": {
+        "title": "保密性",
+        "description": "您的商业与家庭事务始终受到严格保密。"
+      },
+      "longTermRelationship": {
+        "title": "长期客户关系",
+        "description": "我们期望成为您明年乃至更久的合作伙伴,而不仅仅是这个月。"
+      }
+    },
+    "howEyebrow": "我们的工作方式",
+    "howTitle": "公司如何运作",
+    "howLede": "每一次合作都遵循同样清晰的节奏——让您始终了解事情的进展。",
+    "steps": {
+      "consult": {
+        "title": "咨询",
+        "description": "我们首先与您沟通了解您的情况及想要达成的目标。"
+      },
+      "assess": {
+        "title": "评估与报价",
+        "description": "我们确认您的案件所需内容,并提供明确的工作范围及报价。"
+      },
+      "execute": {
+        "title": "执行与联络",
+        "description": "我们准备相关文件,并代表您与相关部委及机构进行协调。"
+      },
+      "deliver": {
+        "title": "交付与支持",
+        "description": "您将获得清晰说明的结果——并在仍有持续义务的方面获得后续支持。"
+      }
+    },
+    "parentTitle": "由 Super Vision Co., Ltd. 支持",
+    "parentText": "Super Consulting 是 Super Vision Co., Ltd. 旗下的业务部门,后者是一家历史悠久的老挝企业。这一背景,加上我们自2020年以来积累的经验及与各部委的工作关系,为客户提供了一个稳定的合作伙伴,能够以持续性和责任感为客户促成各项官方文件的办理。"
+  },
+  "servicesPage": {
+    "lede": "五大服务领域,涵盖在老挝经商与生活的全部流程——探索每个领域,或联系我们获取针对性评估。",
+    "exploreArea": "探索该服务领域"
+  },
+  "servicePage": {
+    "overviewTitle": "概览",
+    "whoTitle": "适用对象",
+    "servicesInAreaTitle": "该领域内的服务",
+    "processTitle": "流程如何运作",
+    "documentsTitle": "常见所需文件",
+    "timelineTitle": "关于时间安排的说明",
+    "helpTitle": "Super Consulting 如何提供帮助",
+    "otherServicesTitle": "其他服务领域"
+  },
+  "knowledgePage": {
+    "lede": "关于老挝商业、税务、签证、法律及生活事务的通俗易懂文章——分为九大类别。",
+    "browseTitle": "按类别浏览",
+    "articlesTitle": "所有文章",
+    "countSingular": "篇文章",
+    "countPlural": "篇文章",
+    "emptyTitle": "文章即将上线",
+    "emptyText": "知识中心的文章即将在此发布。与此同时,欢迎了解我们的服务。"
+  },
+  "lawsPage": {
+    "lede": "关于与企业及个人相关的老挝法律法规的通俗易懂摘要。",
+    "emptyTitle": "法律专题即将上线",
+    "emptyText": "通俗易懂的老挝法律摘要即将在此发布。与此同时,知识中心涵盖了许多相关主题。",
+    "listTitle": "所有法律专题",
+    "countSingular": "个法律专题",
+    "countPlural": "个法律专题"
+  },
+  "guidesPage": {
+    "lede": "关于在老挝创业、经营及生活的深入实用指南。",
+    "emptyTitle": "指南正在准备中",
+    "emptyText": "实用商业指南即将在此发布。与此同时,欢迎浏览知识中心的文章。",
+    "listTitle": "所有指南"
+  },
+  "newsPage": {
+    "lede": "来自 Super Consulting 的官方最新消息与公告。",
+    "emptyTitle": "暂无消息",
+    "emptyText": "最新消息与动态将在此发布。",
+    "typesTitle": "此处将发布的内容",
+    "types": {
+      "legal": "法律动态",
+      "tax": "税务动态",
+      "visa": "签证动态",
+      "business": "商业公告",
+      "investment": "投资资讯",
+      "company": "公司公告"
+    }
+  },
+  "linksPage": {
+    "lede": "老挝政府各部委及公共服务官方网站——为商业、税务、签证及合规事务提供实用入口。",
+    "ministriesEyebrow": "政府",
+    "ministriesTitle": "各部委",
+    "ministriesLede": "老挝人民民主共和国各部委官方网站。",
+    "servicesEyebrow": "服务",
+    "servicesTitle": "公共服务",
+    "servicesLede": "一站式服务平台,涵盖移民、税务、海关、贸易及相关政府服务。"
+  },
+  "faqPage": {
+    "lede": "针对我们最常被问到的问题的解答——涉及在老挝的企业设立、签证、法律事务、会计及家庭服务。"
+  },
+  "contactPage": {
+    "lede": "告诉我们您的情况,我们会为您提供明确的下一步安排。",
+    "formTitle": "给我们发送留言",
+    "detailsTitle": "公司信息",
+    "businessUnitLine": "Super Vision Co., Ltd. 旗下业务部门。",
+    "nextTitle": "接下来会发生什么",
+    "next": {
+      "read": {
+        "title": "我们会阅读您的留言",
+        "description": "由顾问审阅您的情况——而非自动化系统处理。"
+      },
+      "reply": {
+        "title": "我们会与您联系",
+        "description": "我们将通过您首选的联系方式与您沟通,以确认详细信息。"
+      },
+      "propose": {
+        "title": "您将获得明确的方案",
+        "description": "在做出任何承诺之前,我们会说明流程,并提供明确的工作范围及报价。"
+      }
+    }
+  },
+  "meta": {
+    "home": {
+      "title": "Super Consulting——老挝商业、法律与签证咨询",
+      "description": "Super Consulting 为本地及国际客户提供企业注册、法律支持、签证与移民服务、会计、税务及企业合规方面的协助,服务范围覆盖老挝全境。"
+    },
+    "about": {
+      "title": "关于我们",
+      "description": "自2020年以来,Super Consulting——Super Vision Co., Ltd. 旗下业务部门——通过细致的文件准备及与各部委的协调,协助在老挝的客户处理商业、法律、签证及会计事务。"
+    },
+    "services": {
+      "title": "服务",
+      "description": "五大服务领域:企业设立与许可、签证与移民、企业法律、家庭与个人法律,以及老挝的会计与税务服务。"
+    },
+    "businessSetup": {
+      "title": "老挝企业设立与许可",
+      "description": "在老挝的公司注册、外商投资登记、营业执照及税务登记——由 Super Consulting 提供切实可行的设立支持。"
+    },
+    "visaImmigration": {
+      "title": "老挝签证与移民服务",
+      "description": "商务签证、工作签证及许可、投资者签证以及在老挝长期居留支持——文件准备与政府联络。"
+    },
+    "legalFamily": {
+      "title": "老挝法律与家庭服务",
+      "description": "在老挝提供合同、合规、尽职调查、商标、婚姻登记及家庭文件支持。"
+    },
+    "accountingTax": {
+      "title": "老挝会计与税务服务",
+      "description": "在老挝提供记账、税务登记与申报、工资核算、财务报告及年度合规支持。"
+    },
+    "knowledge": {
+      "title": "知识中心",
+      "description": "关于老挝商业、税务、签证、法律及生活事务的通俗易懂文章。"
+    },
+    "laws": {
+      "title": "老挝法律库",
+      "description": "关于与企业及个人相关的老挝法律法规的通俗易懂摘要。"
+    },
+    "guides": {
+      "title": "商业指南",
+      "description": "关于在老挝创业、经营及生活的实用商业指南。"
+    },
+    "news": {
+      "title": "链接",
+      "description": "老挝政府各部委及公共服务官方网站,涉及商业、税务、签证及合规事务。"
+    },
+    "links": {
+      "title": "链接",
+      "description": "老挝政府各部委及公共服务官方网站,涉及商业、税务、签证及合规事务。"
+    },
+    "faq": {
+      "title": "常见问题",
+      "description": "关于在老挝的企业设立、签证、法律事务、会计及家庭服务的常见问题。"
+    },
+    "contact": {
+      "title": "联系我们",
+      "description": "在老挝人民民主共和国万象首都联系 Super Consulting——预约商业、法律、签证或会计方面的咨询。"
+    }
+  },
+  "alt": {
+    "heroPatuxai": "万象凯旋门(Patuxai)在黄昏中闪耀,金色尖顶映衬着柔和的傍晚天空",
+    "officeInterior": "静谧的现代办公室内部,自然光洒落其中",
+    "handshake": "两人在会议桌上的文件前握手",
+    "meetingDocuments": "顾问们在会议中查阅商业文件与图表",
+    "contractSigning": "特写镜头:双手正在签署一份商业文件",
+    "passportStamps": "手持一本打开的护照,展示签证印章",
+    "stoneColumns": "阳光洒落在古典石柱回廊上",
+    "accountingDesk": "办公桌上摆放着计算器、财务报表及一支笔",
+    "teamCollaboration": "团队在明亮的现代办公室共享办公桌前协作",
+    "advisoryMeeting": "顾问与客户在办公桌前共同查阅文件",
+    "luangPrabangStreet": "老挝琅勃拉邦一处宁静街角的殖民风格建筑",
+    "cityNight": "繁星点点的夜空下,城镇灯火闪烁",
+    "calmWorkspace": "极简风格的工作空间,笔记本电脑摆放在大窗户旁的木质书桌上",
+    "riversideCity": "黄昏时分,东南亚一座滨江城市的航拍全景",
+    "mekongSunset": "老挝琅勃拉邦附近,湄公河与林木葱郁的山丘上空的日落景色",
+    "meetingRoom": "阳光充足的空旷会议室,配有白色会议桌与黑色座椅",
+    "corporateLounge": "现代化企业休息区,透过落地窗可欣赏城市天际线景观",
+    "deskAnalysis": "特写镜头:办公桌上的图表、笔记本电脑,以及一只正在做笔记的手",
+    "overheadDeskWork": "俯拍视角:一人正在使用笔记本电脑与笔记本工作——未露出面部",
+    "deskCharts": "深色办公桌上,一只手正在查阅图表与笔记本电脑旁的记录"
+  }
+}

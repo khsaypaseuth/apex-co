@@ -1,4 +1,7 @@
+'use client'
+
 import { CONTACT } from '@/lib/site-config'
+import { motion, useReducedMotion } from 'motion/react'
 
 export interface FloatingContactButtonsProps {
   /** Accessible label, e.g. dict.floating.whatsapp. */
@@ -20,14 +23,21 @@ export function FloatingContactButtons({
   lineLabel,
   linePlaceholderNote,
 }: FloatingContactButtonsProps) {
+  const reduce = useReducedMotion()
+
   return (
-    <div className="fixed right-5 bottom-5 z-40 flex flex-col gap-3">
+    <motion.div
+      className="fixed right-5 bottom-5 z-40 flex flex-col gap-3"
+      initial={reduce ? false : { opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.6 }}
+    >
       <a
         href={CONTACT.whatsappHref}
         target="_blank"
         rel="noopener noreferrer"
         aria-label={whatsAppLabel}
-        className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-navy-950/20 transition-transform hover:scale-105 focus-visible:outline-2 focus-visible:outline-gold-500"
+        className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-navy-950/20 transition-transform duration-300 hover:scale-110 focus-visible:outline-2 focus-visible:outline-gold-500"
       >
         <svg
           aria-hidden="true"
@@ -49,7 +59,7 @@ export function FloatingContactButtons({
         href="#"
         title={linePlaceholderNote}
         aria-label={lineLabel}
-        className="flex h-12 w-12 items-center justify-center rounded-full bg-[#06C755] text-white shadow-lg shadow-navy-950/20 transition-transform hover:scale-105 focus-visible:outline-2 focus-visible:outline-gold-500"
+        className="flex h-12 w-12 items-center justify-center rounded-full bg-[#06C755] text-white shadow-lg shadow-navy-950/20 transition-transform duration-300 hover:scale-110 focus-visible:outline-2 focus-visible:outline-gold-500"
       >
         <svg
           aria-hidden="true"
@@ -66,6 +76,6 @@ export function FloatingContactButtons({
           <path d="M8 9.5v3M11 9.5v3M14 9.5v3l2-3v3" strokeWidth="1.5" />
         </svg>
       </a>
-    </div>
+    </motion.div>
   )
 }

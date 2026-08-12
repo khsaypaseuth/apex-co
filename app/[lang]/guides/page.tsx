@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation'
 import { getDictionary, hasLocale } from '@/lib/dictionaries'
 import { pageMetadata } from '@/lib/seo'
 import { listGuides } from '@/lib/content'
-import { GUIDE_CATEGORY_IMAGES } from '@/lib/category-images'
+import { guideImageFor } from '@/lib/category-images'
 import type { ServiceCategorySlug } from '@/lib/types'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { CtaSection } from '@/components/CtaSection'
@@ -99,7 +99,7 @@ export default async function GuidesPage({
                   href={`/${lang}/guides/${guide.slug}`}
                   ctaLabel={dict.cta.readGuide}
                   eyebrow={dict.nav[NAV_KEY_BY_CATEGORY[guide.category]]}
-                  image={{ src: GUIDE_CATEGORY_IMAGES[guide.category] }}
+                  image={{ src: guideImageFor(guide.slug, guide.category) }}
                 />
               ))}
               </div>

@@ -190,6 +190,7 @@ export default async function StyleguidePage({
                 href={`/${lang}/knowledge/${article.slug}`}
                 title={article.title}
                 summary={article.summary}
+                slug={article.slug}
                 category={article.category}
                 categoryLabel={dict.articleCategories[article.category]}
                 readingTime={article.readingTime}

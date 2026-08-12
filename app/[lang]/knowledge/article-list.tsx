@@ -86,6 +86,7 @@ export function ArticleList({ lang, items, categories, labels }: ArticleListProp
                 href={item.href}
                 title={item.title}
                 summary={item.summary}
+                slug={item.slug}
                 category={item.category}
                 categoryLabel={item.categoryLabel}
                 readingTime={item.readingTime}

@@ -7,6 +7,7 @@ import { pageMetadata } from '@/lib/seo'
 import { ArticleCard } from '@/components/ArticleCard'
 import { CtaSection } from '@/components/CtaSection'
 import { Hero } from '@/components/Hero'
+import { Reveal } from '@/components/motion'
 import { SectionHeader } from '@/components/SectionHeader'
 import { ServiceCard } from '@/components/ServiceCard'
 import { TrustBadge } from '@/components/TrustBadge'
@@ -44,7 +45,32 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
   if (!hasLocale(lang)) notFound()
 
   const dict = await getDictionary(lang)
-  const articles = (await listArticles(lang)).slice(0, 3)
+  // Prefer a curated, category-diverse trio so the home preview never
+  // shows the same category thumbnail twice (cards key off category image).
+  const HOME_ARTICLE_SLUGS = [
+    'how-to-start-a-business-in-laos',
+    'work-visa-and-work-permit-in-laos',
+    'tax-registration-for-new-companies-in-laos',
+  ] as const
+  const allArticles = await listArticles(lang)
+  const bySlug = new Map(allArticles.map((a) => [a.slug, a]))
+  const curated = HOME_ARTICLE_SLUGS.map((slug) => bySlug.get(slug)).filter(
+    (a): a is NonNullable<typeof a> => Boolean(a),
+  )
+  const articles =
+    curated.length === HOME_ARTICLE_SLUGS.length
+      ? curated
+      : (() => {
+          const seen = new Set<string>()
+          const picked = []
+          for (const article of allArticles) {
+            if (seen.has(article.category)) continue
+            seen.add(article.category)
+            picked.push(article)
+            if (picked.length === 3) break
+          }
+          return picked
+        })()
 
   // Six service highlights (master plan §Home — Service Highlights), each
   // linking to the page that covers it.
@@ -104,7 +130,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
           <>
             <Link
               href={`/${lang}/contact`}
-              className="rounded-sm bg-gold-500 px-6 py-3 font-medium text-navy-950 transition-colors hover:bg-gold-600"
+              className="btn-premium rounded-sm bg-gold-500 px-6 py-3 font-medium text-navy-950 transition-colors hover:bg-gold-600"
             >
               {dict.cta.bookConsultation}
             </Link>
@@ -121,12 +147,14 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
       {/* 2 — Trust statement band */}
       <section className="border-b border-navy-950/5 bg-ivory-100">
         <div className="mx-auto max-w-4xl px-6 py-14 text-center md:py-16">
-          <p className="font-display text-2xl leading-snug text-navy-950 md:text-3xl">
-            {dict.home.trustStatement}
-          </p>
-          <div className="mt-7 flex justify-center">
-            <TrustBadge text={dict.site.parentCompanyLine} />
-          </div>
+          <Reveal>
+            <p className="font-display text-2xl leading-snug text-navy-950 md:text-3xl">
+              {dict.home.trustStatement}
+            </p>
+            <div className="mt-7 flex justify-center">
+              <TrustBadge text={dict.site.parentCompanyLine} />
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -159,16 +187,18 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
       {/* 4 — Why choose Super Consulting (navy band, numbered points) */}
       <section className="bg-navy-950 py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-6">
-          <p className="mb-3 text-sm font-medium tracking-widest text-gold-500 uppercase">
-            {dict.home.whyEyebrow}
-          </p>
-          <h2 className="font-display text-3xl leading-tight text-ivory-100 md:text-4xl">
-            {dict.home.whyTitle}
-          </h2>
-          <div className="mt-5 h-px w-16 bg-gold-500" aria-hidden="true" />
+          <Reveal>
+            <p className="mb-3 text-sm font-medium tracking-widest text-gold-500 uppercase">
+              {dict.home.whyEyebrow}
+            </p>
+            <h2 className="font-display text-3xl leading-tight text-ivory-100 md:text-4xl">
+              {dict.home.whyTitle}
+            </h2>
+            <div className="mt-5 h-px w-16 bg-gold-500" aria-hidden="true" />
+          </Reveal>
           <div className="mt-12 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-            {whyPoints.map((point) => (
-              <div key={point.title}>
+            {whyPoints.map((point, index) => (
+              <Reveal key={point.title} delay={0.06 * index}>
                 <span
                   aria-hidden="true"
                   className="flex h-10 w-10 items-center justify-center rounded-sm bg-gold-500/10 text-gold-500"
@@ -181,7 +211,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
                 <p className="mt-2 text-sm leading-relaxed text-ivory-100/70">
                   {point.description}
                 </p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -213,6 +243,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
                   href={`/${lang}/knowledge/${article.slug}`}
                   title={article.title}
                   summary={article.summary}
+                  slug={article.slug}
                   category={article.category}
                   categoryLabel={dict.articleCategories[article.category]}
                   readingTime={article.readingTime}

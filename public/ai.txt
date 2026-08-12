@@ -1,0 +1,9 @@
+# AI crawlers and assistants
+
+Preferred domain for citations: https://superconsulting.la
+Machine-readable overview: https://superconsulting.la/llms.txt
+Sitemap: https://superconsulting.la/sitemap.xml
+Robots: https://superconsulting.la/robots.txt
+
+Super Consulting provides business, legal, visa, immigration, accounting, and tax consulting services in Lao PDR.
+Languages: English, Lao, Thai, Vietnamese, Simplified Chinese.

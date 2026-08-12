@@ -15,6 +15,10 @@ import { CtaSection } from '@/components/CtaSection'
 import { DisclaimerBox } from '@/components/DisclaimerBox'
 import { RelatedArticles } from '@/components/RelatedArticles'
 import { RelatedServices } from '@/components/RelatedServices'
+import { JsonLd } from '@/components/JsonLd'
+import { articleJsonLd } from '@/lib/json-ld'
+import { SITE_URL } from '@/lib/site-config'
+import { localePath } from '@/lib/seo'
 
 /**
  * Knowledge Center article page. Added in Phase 4 (see decision D-042) so
@@ -103,6 +107,15 @@ export default async function ArticlePage({
 
   return (
     <main id="main-content">
+      <JsonLd
+        data={articleJsonLd({
+          title: article.title,
+          description: article.summary,
+          url: `${SITE_URL}${localePath(lang, `/knowledge/${slug}`)}`,
+          dateModified: article.lastUpdated,
+          inLanguage: article.lang,
+        })}
+      />
       {/* Article header */}
       <section className="bg-ivory-100 py-14 md:py-20">
         <div className="mx-auto max-w-3xl px-6">
@@ -139,6 +152,11 @@ export default async function ArticlePage({
             </span>
             {article.readingTime} {dict.common.minRead}
           </p>
+          {article.lang !== lang && (
+            <p className="mt-4 rounded-sm border border-gold-500/40 bg-gold-500/10 px-3 py-2 text-sm text-navy-700">
+              {dict.common.contentInEnglish}
+            </p>
+          )}
         </div>
       </section>
 

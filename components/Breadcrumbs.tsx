@@ -1,3 +1,6 @@
+'use client'
+
+import { motion, useReducedMotion } from 'motion/react'
 import Link from 'next/link'
 
 export interface BreadcrumbItem {
@@ -14,8 +17,16 @@ export interface BreadcrumbsProps {
 
 /** Accessible breadcrumb trail (`nav` + ordered list + aria-current). */
 export function Breadcrumbs({ items, label }: BreadcrumbsProps) {
+  const reduce = useReducedMotion()
+
   return (
-    <nav aria-label={label} className="text-sm">
+    <motion.nav
+      aria-label={label}
+      className="text-sm"
+      initial={reduce ? false : { opacity: 0, y: 6 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+    >
       <ol className="flex flex-wrap items-center gap-2">
         {items.map((item, index) => {
           const isLast = index === items.length - 1
@@ -45,6 +56,6 @@ export function Breadcrumbs({ items, label }: BreadcrumbsProps) {
           )
         })}
       </ol>
-    </nav>
+    </motion.nav>
   )
 }

@@ -1,6 +1,9 @@
+'use client'
+
 import Link from 'next/link'
 import type { VerificationStatus } from '@/lib/types'
 import { IconArrowRight, IconBookOpen } from './icons'
+import { Reveal } from './motion'
 
 export interface LawTopicCardProps {
   title: string
@@ -29,41 +32,43 @@ export function LawTopicCard({
   verificationLabels,
 }: LawTopicCardProps) {
   return (
-    <Link
-      href={href}
-      className="group flex h-full flex-col rounded-sm border border-navy-950/10 bg-white p-6 transition-colors hover:border-gold-500 focus-visible:outline-2 focus-visible:outline-gold-500"
-    >
-      {/* Text-first reference card — a small book icon anchors it visually
-          instead of a thumbnail (D-142). */}
-      <div className="flex flex-wrap items-center gap-2 text-xs">
+    <Reveal className="h-full" variant="fade-up">
+      <Link
+        href={href}
+        className="card-premium group flex h-full flex-col rounded-sm border border-navy-950/10 bg-white p-6 focus-visible:outline-2 focus-visible:outline-gold-500"
+      >
+        {/* Text-first reference card — a small book icon anchors it visually
+            instead of a thumbnail (D-142). */}
+        <div className="flex flex-wrap items-center gap-2 text-xs">
+          <span
+            aria-hidden="true"
+            className="flex h-7 w-7 items-center justify-center rounded-sm bg-gold-500/10 text-gold-600 transition-transform duration-500 motion-safe:group-hover:-translate-y-0.5"
+          >
+            <IconBookOpen size={15} />
+          </span>
+          <span className="rounded-sm bg-ivory-100 px-2 py-1 font-medium tracking-wide text-navy-700 uppercase">
+            {categoryLabel}
+          </span>
+          <span
+            className={`rounded-sm border px-2 py-1 font-medium ${BADGE_STYLES[verificationStatus]}`}
+          >
+            {verificationLabels[verificationStatus]}
+          </span>
+        </div>
+        <h3 className="font-display mt-4 text-xl leading-snug text-navy-950 transition-colors group-hover:text-navy-700">
+          {title}
+        </h3>
+        <p className="mt-3 flex-1 text-sm leading-relaxed text-slate-500">
+          {summary}
+        </p>
+        {/* Subtle read-on affordance, consistent with ServiceCard/GuideCard */}
         <span
           aria-hidden="true"
-          className="flex h-7 w-7 items-center justify-center rounded-sm bg-gold-500/10 text-gold-600"
+          className="mt-5 inline-flex text-navy-700/50 transition-all duration-300 group-hover:translate-x-1 group-hover:text-gold-600"
         >
-          <IconBookOpen size={15} />
+          <IconArrowRight size={16} />
         </span>
-        <span className="rounded-sm bg-ivory-100 px-2 py-1 font-medium tracking-wide text-navy-700 uppercase">
-          {categoryLabel}
-        </span>
-        <span
-          className={`rounded-sm border px-2 py-1 font-medium ${BADGE_STYLES[verificationStatus]}`}
-        >
-          {verificationLabels[verificationStatus]}
-        </span>
-      </div>
-      <h3 className="font-display mt-4 text-xl leading-snug text-navy-950 transition-colors group-hover:text-navy-700">
-        {title}
-      </h3>
-      <p className="mt-3 flex-1 text-sm leading-relaxed text-slate-500">
-        {summary}
-      </p>
-      {/* Subtle read-on affordance, consistent with ServiceCard/GuideCard */}
-      <span
-        aria-hidden="true"
-        className="mt-5 inline-flex text-navy-700/50 transition-all group-hover:translate-x-0.5 group-hover:text-gold-600"
-      >
-        <IconArrowRight size={16} />
-      </span>
-    </Link>
+      </Link>
+    </Reveal>
   )
 }

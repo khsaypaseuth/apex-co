@@ -8,6 +8,8 @@ import { CtaSection } from '@/components/CtaSection'
 import { DisclaimerBox } from '@/components/DisclaimerBox'
 import { FaqAccordion } from '@/components/FaqAccordion'
 import { Hero } from '@/components/Hero'
+import { JsonLd } from '@/components/JsonLd'
+import { faqPageJsonLd } from '@/lib/json-ld'
 import calmWorkspace from '@/public/images/sections/calm-workspace.jpg'
 
 export async function generateMetadata({
@@ -31,9 +33,18 @@ export default async function FaqPage({ params }: PageProps<'/[lang]/faq'>) {
 
   const dict = await getDictionary(lang)
   const faqSections = getFaqSections(lang)
+  const faqLd = faqPageJsonLd(
+    faqSections.flatMap((section) =>
+      section.items.map((item) => ({
+        question: item.question,
+        answer: item.answer,
+      })),
+    ),
+  )
 
   return (
     <main id="main-content">
+      <JsonLd data={faqLd} />
       <Hero
         eyebrow={dict.site.name}
         title={dict.nav.faq}

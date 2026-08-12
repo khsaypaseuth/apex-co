@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import type { Dictionary } from '@/lib/dictionaries'
-import logoSv from '@/public/images/brand/logo-sv.png'
+import logoSuper from '@/public/images/brand/logo-super.png'
 import type { Locale } from '@/lib/i18n-config'
 import { CONTACT, PARENT_COMPANY } from '@/lib/site-config'
 import {
@@ -17,7 +17,7 @@ export interface FooterProps {
 }
 
 /**
- * Four-column footer: brand + parent company, services, knowledge, contact.
+ * Four-column footer: brand, services, knowledge, contact.
  * The knowledge column carries the pages slimmed out of the desktop nav
  * (D-130); contact rows are real mailto:/tel:/wa.me links (D-133).
  */
@@ -33,7 +33,7 @@ export function Footer({ lang, dict }: FooterProps) {
     { label: dict.nav.knowledge, href: `/${lang}/knowledge` },
     { label: dict.nav.lawsShort, href: `/${lang}/laws` },
     { label: dict.nav.guides, href: `/${lang}/guides` },
-    { label: dict.nav.news, href: `/${lang}/news` },
+    { label: dict.nav.links, href: `/${lang}/links` },
     { label: dict.nav.faq, href: `/${lang}/faq` },
   ]
 
@@ -75,7 +75,7 @@ export function Footer({ lang, dict }: FooterProps) {
     <footer className="bg-navy-950 text-ivory-100">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Image src={logoSv} alt={dict.site.name} className="h-10 w-auto" />
+          <Image src={logoSuper} alt={dict.site.name} className="h-10 w-auto" />
           <p className="mt-3 text-sm leading-relaxed text-ivory-100/70">
             {dict.site.footerAbout}
           </p>
@@ -155,7 +155,7 @@ export function Footer({ lang, dict }: FooterProps) {
       <div className="border-t border-ivory-100/10">
         <div className="mx-auto max-w-6xl px-6 py-6 text-xs text-ivory-100/60">
           <p>
-            © {new Date().getFullYear()} {dict.site.name} · {PARENT_COMPANY} ·{' '}
+            © 2020 {dict.site.name} · {dict.footer.poweredBy} {PARENT_COMPANY}.{' '}
             {dict.footer.rights}
           </p>
         </div>

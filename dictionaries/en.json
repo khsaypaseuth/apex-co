@@ -3,7 +3,7 @@
     "name": "Super Consulting",
     "tagline": "Business, Legal & Visa Consulting in Laos",
     "parentCompanyLine": "A business unit of Super Vision Co., Ltd.",
-    "footerAbout": "Practical consulting for doing business and living in Laos — company setup, legal, visa, accounting, and tax, handled end to end."
+    "footerAbout": "Consulting for business and life in Laos since 2020 — company setup, legal, visa, accounting, and tax, handled end to end with ministry coordination."
   },
   "nav": {
     "home": "Home",
@@ -17,7 +17,8 @@
     "laws": "Lao Laws Library",
     "lawsShort": "Lao Laws",
     "guides": "Business Guides",
-    "news": "News & Updates",
+    "news": "Links",
+    "links": "Links",
     "faq": "FAQ",
     "contact": "Contact",
     "menu": "Menu",
@@ -39,8 +40,14 @@
     "label": "Language",
     "en": "English",
     "lo": "ພາສາລາວ",
+    "th": "ไทย",
+    "vi": "Tiếng Việt",
+    "zh": "中文",
     "enShort": "EN",
-    "loShort": "ລາວ"
+    "loShort": "ລາວ",
+    "thShort": "TH",
+    "viShort": "VI",
+    "zhShort": "中文"
   },
   "common": {
     "lastUpdated": "Last updated",
@@ -50,7 +57,8 @@
     "relatedServices": "Related services",
     "sources": "Sources",
     "sampleContent": "Sample content for preview purposes only.",
-    "skipToContent": "Skip to main content"
+    "skipToContent": "Skip to main content",
+    "contentInEnglish": "This article is currently available in English."
   },
   "verification": {
     "verified": "Verified",
@@ -132,6 +140,7 @@
     "contact": "Contact",
     "legal": "Legal",
     "rights": "All rights reserved.",
+    "poweredBy": "Powered by",
     "addressLabel": "Address",
     "phoneLabel": "Phone",
     "emailLabel": "Email",
@@ -205,14 +214,14 @@
   },
   "about": {
     "eyebrow": "About Super Consulting",
-    "title": "A one-stop consulting partner in Laos",
-    "lede": "Super Consulting, a business unit of Super Vision Co., Ltd., provides practical support for individuals, entrepreneurs, investors, and companies in Laos.",
-    "introP1": "Doing business — or building a life — in Laos involves procedures that are rarely written down in one place. Registrations, licences, visas, taxes, and family documents each follow their own path through different offices, in different languages, on different timetables.",
-    "introP2": "Super Consulting exists to walk those paths for you. We combine local knowledge with professional standards, explain every step in plain language, and stay with our clients long after the first certificate is issued.",
+    "title": "Trusted consulting in Laos since 2020",
+    "lede": "Since 2020, Super Consulting — a business unit of Super Vision Co., Ltd. — has helped individuals, entrepreneurs, investors, and companies complete official procedures in Laos with clarity and care.",
+    "introP1": "Doing business or settling in Laos means navigating registrations, licences, visas, tax filings, and personal documents across different ministries and offices — each with its own requirements, language, and timeline. What clients need is not more theory, but a partner who knows the process and follows it through.",
+    "introP2": "With experience since 2020 and established working connections with relevant government ministries and agencies, we prepare your documents carefully, coordinate filings, and help move your case forward correctly the first time. You receive plain-language updates at every step, and accountable support until the work is complete.",
     "missionTitle": "Our mission",
-    "missionText": "Make business, legal, immigration, and compliance processes easier, clearer, and more reliable for clients in Laos.",
+    "missionText": "Help clients in Laos complete business, legal, immigration, and compliance matters with clarity, careful document preparation, and reliable coordination with the authorities involved.",
     "visionTitle": "Our vision",
-    "visionText": "Become a trusted one-stop professional consulting partner for local and international clients in Laos.",
+    "visionText": "Be the trusted one-stop consulting partner that local and international clients rely on for accurate process guidance and dependable follow-through in Laos.",
     "valuesEyebrow": "What guides us",
     "valuesTitle": "Our values",
     "values": {
@@ -255,7 +264,7 @@
       },
       "execute": {
         "title": "Execute & liaise",
-        "description": "We prepare the documents and coordinate with the relevant authorities on your behalf."
+        "description": "We prepare the documents and coordinate with the relevant ministries and agencies on your behalf."
       },
       "deliver": {
         "title": "Deliver & support",
@@ -263,7 +272,7 @@
       }
     },
     "parentTitle": "Backed by Super Vision Co., Ltd.",
-    "parentText": "Super Consulting is a business unit of Super Vision Co., Ltd., an established Lao company. That backing gives our clients continuity, accountability, and a partner that will still be here next year."
+    "parentText": "Super Consulting is a business unit of Super Vision Co., Ltd., an established Lao company. That backing, together with our experience since 2020 and ministry working relationships, gives clients a stable partner who can facilitate official documents with continuity and accountability."
   },
   "servicesPage": {
     "lede": "Five service areas covering the full journey of doing business and living in Laos — explore each area, or contact us for a tailored assessment.",
@@ -316,6 +325,15 @@
       "company": "Company announcements"
     }
   },
+  "linksPage": {
+    "lede": "Official Lao government ministries and public service websites — useful portals for business, tax, visas, and compliance.",
+    "ministriesEyebrow": "Government",
+    "ministriesTitle": "Ministries",
+    "ministriesLede": "Official websites of Lao PDR ministries.",
+    "servicesEyebrow": "Services",
+    "servicesTitle": "Public services",
+    "servicesLede": "One-stop portals, immigration, tax, customs, trade, and related government services."
+  },
   "faqPage": {
     "lede": "Answers to the questions we hear most — about business setup, visas, legal matters, accounting, and family services in Laos."
   },
@@ -347,7 +365,7 @@
     },
     "about": {
       "title": "About Us",
-      "description": "Super Consulting is a business unit of Super Vision Co., Ltd., providing practical business, legal, immigration, and accounting support in Laos."
+      "description": "Since 2020, Super Consulting — a business unit of Super Vision Co., Ltd. — has helped clients in Laos with business, legal, visa, and accounting matters through careful document preparation and ministry coordination."
     },
     "services": {
       "title": "Services",
@@ -382,8 +400,12 @@
       "description": "Practical business guides for starting, running, and living in Laos."
     },
     "news": {
-      "title": "News & Updates",
-      "description": "News and updates from Super Consulting: legal, tax, visa, and business notices for Laos."
+      "title": "Links",
+      "description": "Official Lao government ministries and public service websites for business, tax, visas, and compliance."
+    },
+    "links": {
+      "title": "Links",
+      "description": "Official Lao government ministries and public service websites for business, tax, visas, and compliance."
     },
     "faq": {
       "title": "Frequently Asked Questions",
@@ -409,6 +431,11 @@
     "cityNight": "Town lights glowing under a dark starry night sky",
     "calmWorkspace": "Minimalist workspace with a laptop on a wooden desk by large windows",
     "riversideCity": "Aerial view of a riverside city in Southeast Asia at dusk",
-    "mekongSunset": "Sunset over the Mekong River and forested hills near Luang Prabang, Laos"
+    "mekongSunset": "Sunset over the Mekong River and forested hills near Luang Prabang, Laos",
+    "meetingRoom": "Empty sunlit conference room with a white meeting table and black chairs",
+    "corporateLounge": "Modern corporate lounge with city skyline views through floor-to-ceiling windows",
+    "deskAnalysis": "Close-up of a desk with charts, a laptop, and a hand taking notes",
+    "overheadDeskWork": "Overhead view of someone working at a laptop and notebook — face not shown",
+    "deskCharts": "Hands reviewing charts and notes beside a laptop on a dark desk"
   }
 }

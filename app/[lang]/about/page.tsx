@@ -8,10 +8,11 @@ import { CtaSection } from '@/components/CtaSection'
 import { Hero } from '@/components/Hero'
 import { SectionHeader } from '@/components/SectionHeader'
 import { TrustBadge } from '@/components/TrustBadge'
-import advisoryMeeting from '@/public/images/sections/advisory-consultation-meeting.jpg'
-import officeInterior from '@/public/images/sections/modern-office-interior.jpg'
-import stoneColumns from '@/public/images/sections/stone-columns-corridor.jpg'
-import teamCollaboration from '@/public/images/sections/team-office-collaboration.jpg'
+import accountingDesk from '@/public/images/sections/accounting-calculator-report.jpg'
+import deskAnalysis from '@/public/images/sections/desk-analysis-closeup.jpg'
+import deskCharts from '@/public/images/sections/desk-charts-notebook.jpg'
+import meetingDocuments from '@/public/images/sections/meeting-documents.jpg'
+import overheadDeskWork from '@/public/images/sections/overhead-desk-work.jpg'
 
 export async function generateMetadata({
   params,
@@ -56,7 +57,7 @@ export default async function AboutPage({ params }: PageProps<'/[lang]/about'>) 
         eyebrow={dict.about.eyebrow}
         title={dict.about.title}
         lede={dict.about.lede}
-        image={{ src: officeInterior, alt: dict.alt.officeInterior }}
+        image={{ src: deskAnalysis, alt: dict.alt.deskAnalysis }}
       />
 
       <div className="border-b border-navy-950/5">
@@ -79,8 +80,8 @@ export default async function AboutPage({ params }: PageProps<'/[lang]/about'>) 
             <p>{dict.about.introP2}</p>
           </div>
           <Image
-            src={officeInterior}
-            alt={dict.alt.officeInterior}
+            src={overheadDeskWork}
+            alt={dict.alt.overheadDeskWork}
             placeholder="blur"
             sizes="(min-width: 1024px) 550px, 100vw"
             className="h-72 w-full rounded-sm object-cover md:h-96"
@@ -88,12 +89,12 @@ export default async function AboutPage({ params }: PageProps<'/[lang]/about'>) 
         </div>
       </section>
 
-      {/* Mission / Vision — editorial split beside the team image */}
+      {/* Mission / Vision — editorial split beside workspace imagery */}
       <section className="bg-ivory-100 py-16 md:py-24">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2">
           <Image
-            src={teamCollaboration}
-            alt={dict.alt.teamCollaboration}
+            src={deskCharts}
+            alt={dict.alt.deskCharts}
             placeholder="blur"
             sizes="(min-width: 1024px) 550px, 100vw"
             className="order-last h-72 w-full rounded-sm object-cover lg:order-first md:h-96"
@@ -162,8 +163,8 @@ export default async function AboutPage({ params }: PageProps<'/[lang]/about'>) 
               </p>
             </div>
             <Image
-              src={advisoryMeeting}
-              alt={dict.alt.advisoryMeeting}
+              src={meetingDocuments}
+              alt={dict.alt.meetingDocuments}
               placeholder="blur"
               sizes="(min-width: 1024px) 550px, 100vw"
               className="h-60 w-full rounded-sm object-cover md:h-72"
@@ -191,8 +192,8 @@ export default async function AboutPage({ params }: PageProps<'/[lang]/about'>) 
       <section className="bg-ivory-100 py-16 md:py-24">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2">
           <Image
-            src={stoneColumns}
-            alt={dict.alt.stoneColumns}
+            src={accountingDesk}
+            alt={dict.alt.accountingDesk}
             placeholder="blur"
             sizes="(min-width: 1024px) 550px, 100vw"
             className="order-last h-72 w-full rounded-sm object-cover lg:order-first md:h-96"

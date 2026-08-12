@@ -18,6 +18,10 @@ import { DisclaimerBox } from '@/components/DisclaimerBox'
 import { LeadCaptureForm } from '@/components/LeadCaptureForm'
 import { RelatedArticles } from '@/components/RelatedArticles'
 import { RelatedServices } from '@/components/RelatedServices'
+import { JsonLd } from '@/components/JsonLd'
+import { articleJsonLd } from '@/lib/json-ld'
+import { localePath } from '@/lib/seo'
+import { SITE_URL } from '@/lib/site-config'
 
 /**
  * Business guide page (Phase 5). Mirrors the Knowledge Center article route
@@ -119,6 +123,15 @@ export default async function GuidePage({
 
   return (
     <main id="main-content">
+      <JsonLd
+        data={articleJsonLd({
+          title: guide.title,
+          description: guide.summary,
+          url: `${SITE_URL}${localePath(lang, `/guides/${slug}`)}`,
+          dateModified: guide.lastUpdated,
+          inLanguage: guide.lang,
+        })}
+      />
       {/* Guide header */}
       <section className="bg-ivory-100 py-14 md:py-20">
         <div className="mx-auto max-w-3xl px-6">
@@ -155,6 +168,11 @@ export default async function GuidePage({
             </span>
             {guide.readingTime} {dict.common.minRead}
           </p>
+          {guide.lang !== lang && (
+            <p className="mt-4 rounded-sm border border-gold-500/40 bg-gold-500/10 px-3 py-2 text-sm text-navy-700">
+              {dict.common.contentInEnglish}
+            </p>
+          )}
         </div>
       </section>
 

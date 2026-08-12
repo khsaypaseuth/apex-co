@@ -2,12 +2,14 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { i18n } from '@/lib/i18n-config'
 import { getDictionary, hasLocale } from '@/lib/dictionaries'
-import { fraunces, manrope, notoSansLao, notoSerifLao } from '@/lib/fonts'
+import { fraunces, manrope, notoSansLao, notoSansSc, notoSansThai, notoSerifLao } from '@/lib/fonts'
 import { SITE_NAME, SITE_URL } from '@/lib/site-config'
-import { DEFAULT_OG_IMAGE } from '@/lib/seo'
+import { DEFAULT_OG_IMAGE, OG_LOCALE } from '@/lib/seo'
 import { FloatingContactButtons } from '@/components/FloatingContactButtons'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
+import { JsonLd } from '@/components/JsonLd'
+import { organizationJsonLd, websiteJsonLd } from '@/lib/json-ld'
 import '../globals.css'
 
 /**
@@ -28,6 +30,22 @@ export async function generateMetadata({
     },
     description:
       'Business setup, visa & immigration, legal, and accounting consulting services in the Lao PDR.',
+    manifest: '/site.webmanifest',
+    icons: {
+      icon: [
+        { url: '/favicon.ico', sizes: 'any' },
+        { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+        { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+        { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+        { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
+      ],
+      apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+    },
+    appleWebApp: {
+      capable: true,
+      title: SITE_NAME,
+      statusBarStyle: 'black-translucent',
+    },
   }
 
   if (!hasLocale(lang)) return base
@@ -43,7 +61,7 @@ export async function generateMetadata({
     description: dict.meta.home.description,
     openGraph: {
       siteName: SITE_NAME,
-      locale: lang === 'lo' ? 'lo_LA' : 'en_US',
+      locale: OG_LOCALE[lang as keyof typeof OG_LOCALE] ?? 'en_US',
       type: 'website',
       images: [DEFAULT_OG_IMAGE],
     },
@@ -70,7 +88,7 @@ export default async function RootLayout({
     { label: dict.nav.about, href: `/${lang}/about` },
     { label: dict.nav.services, href: `/${lang}/services` },
     { label: dict.nav.guides, href: `/${lang}/guides` },
-    { label: dict.nav.news, href: `/${lang}/news` },
+    { label: dict.nav.links, href: `/${lang}/links` },
   ]
 
   // The mobile slide-over keeps the FULL page list, with the moved pages
@@ -90,9 +108,10 @@ export default async function RootLayout({
   return (
     <html
       lang={lang}
-      className={`${fraunces.variable} ${manrope.variable} ${notoSansLao.variable} ${notoSerifLao.variable} antialiased`}
+      className={`${fraunces.variable} ${manrope.variable} ${notoSansLao.variable} ${notoSerifLao.variable} ${notoSansThai.variable} ${notoSansSc.variable} antialiased`}
     >
       <body className="min-h-screen bg-ivory-50 text-navy-950">
+        <JsonLd data={[organizationJsonLd(), websiteJsonLd()]} />
         {/* Skip link — first focusable element on every page (see globals.css) */}
         <a href="#main-content" className="skip-link">
           {dict.common.skipToContent}
@@ -109,6 +128,9 @@ export default async function RootLayout({
           languageOptions={[
             { code: 'en', label: dict.language.en },
             { code: 'lo', label: dict.language.lo },
+            { code: 'th', label: dict.language.th },
+            { code: 'vi', label: dict.language.vi },
+            { code: 'zh', label: dict.language.zh },
           ]}
           menuLabels={{
             menu: dict.nav.menu,

@@ -12,21 +12,27 @@ import { faqSections as faqSectionsEn } from '@/content/en/faq'
 import { serviceGroups as serviceGroupsLo } from '@/content/lo/services'
 import { servicePages as servicePagesLo } from '@/content/lo/service-pages'
 import { faqSections as faqSectionsLo } from '@/content/lo/faq'
+import { serviceGroups as serviceGroupsTh } from '@/content/th/services'
+import { servicePages as servicePagesTh } from '@/content/th/service-pages'
+import { faqSections as faqSectionsTh } from '@/content/th/faq'
+import { serviceGroups as serviceGroupsVi } from '@/content/vi/services'
+import { servicePages as servicePagesVi } from '@/content/vi/service-pages'
+import { faqSections as faqSectionsVi } from '@/content/vi/faq'
+import { serviceGroups as serviceGroupsZh } from '@/content/zh/services'
+import { servicePages as servicePagesZh } from '@/content/zh/service-pages'
+import { faqSections as faqSectionsZh } from '@/content/zh/faq'
 
 /**
- * Locale-keyed access to the structured page data under `content/{en,lo}/`
- * (Phase 7). Static imports keep every locale's data in the same server
- * bundle — fine at this size, and it keeps the pages fully prerenderable.
- *
- * Inactive locales (th / vi / zh — reserved routes, no content yet) fall
- * back to English, mirroring `proxy.ts` which redirects them to `/en`.
- * To activate a locale later: add its data files under `content/<locale>/`
- * and register them in the records below.
+ * Locale-keyed access to structured page data under `content/{lang}/`.
+ * Static imports keep every locale's data in the same server bundle.
  */
 
 const serviceGroupsByLocale: Record<ActiveLocale, ServiceGroup[]> = {
   en: serviceGroupsEn,
   lo: serviceGroupsLo,
+  th: serviceGroupsTh,
+  vi: serviceGroupsVi,
+  zh: serviceGroupsZh,
 }
 
 const servicePagesByLocale: Record<
@@ -35,11 +41,17 @@ const servicePagesByLocale: Record<
 > = {
   en: servicePagesEn,
   lo: servicePagesLo,
+  th: servicePagesTh,
+  vi: servicePagesVi,
+  zh: servicePagesZh,
 }
 
 const faqSectionsByLocale: Record<ActiveLocale, FaqSection[]> = {
   en: faqSectionsEn,
   lo: faqSectionsLo,
+  th: faqSectionsTh,
+  vi: faqSectionsVi,
+  zh: faqSectionsZh,
 }
 
 /** Narrow any routable locale to one with content, falling back to en. */

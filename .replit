@@ -1,0 +1,14 @@
+run = "npm run start:replit"
+entrypoint = "package.json"
+modules = ["nodejs-22"]
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "npm run start:replit"]
+build = ["sh", "-c", "npm install && npm run build"]
+
+[[ports]]
+localPort = 3000
+externalPort = 80

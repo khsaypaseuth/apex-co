@@ -1,3 +1,7 @@
+'use client'
+
+import { GoldRule, Reveal } from './motion'
+
 export interface SectionHeaderProps {
   eyebrow?: string
   title: string
@@ -18,7 +22,7 @@ export function SectionHeader({
   const center = align === 'center'
 
   return (
-    <div className={center ? 'text-center' : ''}>
+    <Reveal className={center ? 'text-center' : ''}>
       {eyebrow && (
         <p className="mb-3 text-sm font-medium tracking-widest text-gold-600 uppercase">
           {eyebrow}
@@ -27,10 +31,7 @@ export function SectionHeader({
       <h2 className="font-display text-3xl leading-tight text-navy-950 md:text-4xl">
         {title}
       </h2>
-      <div
-        className={`mt-5 h-px w-16 bg-gold-500 ${center ? 'mx-auto' : ''}`}
-        aria-hidden="true"
-      />
+      <GoldRule className={`mt-5 w-16 ${center ? 'mx-auto' : ''}`} center={center} />
       {lede && (
         <p
           className={`mt-5 max-w-2xl leading-relaxed text-navy-700/90 ${
@@ -40,6 +41,6 @@ export function SectionHeader({
           {lede}
         </p>
       )}
-    </div>
+    </Reveal>
   )
 }

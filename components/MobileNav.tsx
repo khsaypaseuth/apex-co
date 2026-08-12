@@ -142,9 +142,10 @@ export function MobileNav({
       {open && (
         <div className="fixed inset-0 z-50">
           <div
-            className="absolute inset-0 bg-navy-950/60"
+            className="absolute inset-0 bg-navy-950/60 motion-safe:animate-in motion-safe:fade-in"
             aria-hidden="true"
             onClick={close}
+            style={{ animation: 'fadeInOverlay 0.3s ease forwards' }}
           />
           <div
             ref={panelRef}
@@ -153,6 +154,7 @@ export function MobileNav({
             aria-modal="true"
             aria-label={menuLabel}
             className="absolute inset-y-0 right-0 flex w-80 max-w-[85vw] flex-col overflow-y-auto bg-navy-950 p-6 shadow-2xl"
+            style={{ animation: 'slideInPanel 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards' }}
           >
             <div className="flex justify-end">
               <button

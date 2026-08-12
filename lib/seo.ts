@@ -3,9 +3,9 @@ import { i18n, type Locale } from './i18n-config'
 import { SITE_NAME } from './site-config'
 
 /**
- * Shared SEO metadata builder (Phase 6). Every page route calls
- * `pageMetadata()` from its `generateMetadata` so title, description,
- * Open Graph, canonical, and hreflang stay consistent site-wide.
+ * Shared SEO metadata builder. Every page route calls `pageMetadata()` from
+ * its `generateMetadata` so title, description, Open Graph, Twitter cards,
+ * canonical, and hreflang stay consistent site-wide.
  *
  * Relative URLs returned here are resolved against `metadataBase`
  * (set in app/[lang]/layout.tsx from SITE_URL).
@@ -20,9 +20,12 @@ export const DEFAULT_OG_IMAGE = {
 } as const
 
 /** og:locale values for the active locales. */
-const OG_LOCALE: Partial<Record<Locale, string>> = {
+export const OG_LOCALE: Record<Locale, string> = {
   en: 'en_US',
   lo: 'lo_LA',
+  th: 'th_TH',
+  vi: 'vi_VN',
+  zh: 'zh_CN',
 }
 
 /** Prefix a locale-less path with a locale segment ('/' → '/en'). */
@@ -31,8 +34,7 @@ export function localePath(lang: string, path: string): string {
 }
 
 /**
- * hreflang map for a path: ACTIVE locales only (en, lo at launch) plus
- * x-default pointing at the default locale (en).
+ * hreflang map for a path: ACTIVE locales plus x-default → en.
  */
 export function languageAlternates(path: string): Record<string, string> {
   return {
@@ -68,6 +70,7 @@ export function pageMetadata({
   absoluteTitle = false,
 }: PageSeoInput): Metadata {
   const canonical = localePath(lang, path)
+  const fullTitle = absoluteTitle ? title : `${title} | ${SITE_NAME}`
 
   return {
     title: absoluteTitle ? { absolute: title } : title,
@@ -77,17 +80,22 @@ export function pageMetadata({
       languages: languageAlternates(path),
     },
     openGraph: {
-      title: absoluteTitle ? title : `${title} | ${SITE_NAME}`,
+      title: fullTitle,
       description,
       url: canonical,
       siteName: SITE_NAME,
       locale: OG_LOCALE[lang as Locale] ?? OG_LOCALE[i18n.defaultLocale],
       alternateLocale: i18n.activeLocales
         .filter((locale) => locale !== lang)
-        .map((locale) => OG_LOCALE[locale])
-        .filter((value): value is string => Boolean(value)),
+        .map((locale) => OG_LOCALE[locale]),
       type: ogType,
       images: [DEFAULT_OG_IMAGE],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: fullTitle,
+      description,
+      images: [DEFAULT_OG_IMAGE.url],
     },
   }
 }
