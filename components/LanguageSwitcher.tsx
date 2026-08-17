@@ -111,7 +111,7 @@ export function LanguageSwitcher({ lang, label, options }: LanguageSwitcherProps
         aria-controls={menuId}
         onClick={() => setOpen((value) => !value)}
         onKeyDown={onTriggerKeyDown}
-        className="flex items-center gap-1.5 rounded-sm px-1.5 py-1.5 text-ivory-100/85 transition-colors hover:text-gold-500 focus-visible:outline-2 focus-visible:outline-gold-500"
+        className="flex items-center gap-1.5 rounded-sm px-1.5 py-1.5 text-mist-100/85 transition-colors hover:text-gold-500 focus-visible:outline-2 focus-visible:outline-gold-500"
       >
         <span className="sr-only">
           {label}
@@ -131,7 +131,7 @@ export function LanguageSwitcher({ lang, label, options }: LanguageSwitcherProps
           role="menu"
           aria-label={label}
           onKeyDown={onMenuKeyDown}
-          className="absolute right-0 top-full z-50 mt-2 flex flex-col gap-0.5 rounded-sm border border-ivory-100/15 bg-navy-950/95 p-1.5 shadow-lg shadow-navy-950/30 backdrop-blur-sm"
+          className="absolute right-0 top-full z-50 mt-2 flex flex-col gap-0.5 rounded-sm border border-mist-100/15 bg-navy-950/95 p-1.5 shadow-lg shadow-navy-950/30 backdrop-blur-sm"
         >
           {options.map((option) => {
             const isCurrent = option.code === lang

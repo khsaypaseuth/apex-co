@@ -49,7 +49,7 @@ export function ArticleCard({
         {/* Decorative category thumbnail — the visible category badge below
             carries the same text, and several thumbnails are not Laos
             (see D-122/D-140), so empty alt avoids duplicate/misleading output. */}
-        <div className="relative aspect-video overflow-hidden bg-ivory-100">
+        <div className="relative aspect-video overflow-hidden bg-mist-100">
           <Image
             src={articleImageFor(slug, category)}
             alt=""
@@ -60,7 +60,7 @@ export function ArticleCard({
         </div>
         <div className="flex flex-1 flex-col p-6">
           <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs">
-            <span className="rounded-sm bg-ivory-100 px-2 py-1 font-medium tracking-wide text-navy-700 uppercase">
+            <span className="rounded-sm bg-mist-100 px-2 py-1 font-medium tracking-wide text-navy-700 uppercase">
               {categoryLabel}
             </span>
             <span className="text-slate-500">

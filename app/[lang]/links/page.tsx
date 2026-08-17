@@ -73,7 +73,7 @@ export default async function LinksPage({
         </div>
       </section>
 
-      <section className="border-t border-navy-950/5 bg-ivory-100 py-16 md:py-20">
+      <section className="border-t border-navy-950/5 bg-mist-100 py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-6">
           <SectionHeader
             eyebrow={dict.linksPage.servicesEyebrow}

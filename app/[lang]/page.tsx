@@ -136,7 +136,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
             </Link>
             <Link
               href={`/${lang}/services`}
-              className="rounded-sm border border-ivory-100/40 px-6 py-3 font-medium text-ivory-100 transition-colors hover:border-gold-500 hover:text-gold-500"
+              className="rounded-sm border border-mist-100/40 px-6 py-3 font-medium text-mist-100 transition-colors hover:border-gold-500 hover:text-gold-500"
             >
               {dict.cta.exploreServices}
             </Link>
@@ -145,7 +145,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
       />
 
       {/* 2 — Trust statement band */}
-      <section className="border-b border-navy-950/5 bg-ivory-100">
+      <section className="border-b border-navy-950/5 bg-mist-100">
         <div className="mx-auto max-w-4xl px-6 py-14 text-center md:py-16">
           <Reveal>
             <p className="font-display text-2xl leading-snug text-navy-950 md:text-3xl">
@@ -191,7 +191,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
             <p className="mb-3 text-sm font-medium tracking-widest text-gold-500 uppercase">
               {dict.home.whyEyebrow}
             </p>
-            <h2 className="font-display text-3xl leading-tight text-ivory-100 md:text-4xl">
+            <h2 className="font-display text-3xl leading-tight text-mist-100 md:text-4xl">
               {dict.home.whyTitle}
             </h2>
             <div className="mt-5 h-px w-16 bg-gold-500" aria-hidden="true" />
@@ -205,10 +205,10 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
                 >
                   <point.icon size={20} />
                 </span>
-                <h3 className="font-display mt-4 text-xl leading-snug text-ivory-100">
+                <h3 className="font-display mt-4 text-xl leading-snug text-mist-100">
                   {point.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-ivory-100/70">
+                <p className="mt-2 text-sm leading-relaxed text-mist-100/70">
                   {point.description}
                 </p>
               </Reveal>
@@ -218,7 +218,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
       </section>
 
       {/* 5 — Knowledge Center preview */}
-      <section className="bg-ivory-100 py-16 md:py-24">
+      <section className="bg-mist-100 py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-6">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <SectionHeader

@@ -46,7 +46,7 @@ export function LawTopicCard({
           >
             <IconBookOpen size={15} />
           </span>
-          <span className="rounded-sm bg-ivory-100 px-2 py-1 font-medium tracking-wide text-navy-700 uppercase">
+          <span className="rounded-sm bg-mist-100 px-2 py-1 font-medium tracking-wide text-navy-700 uppercase">
             {categoryLabel}
           </span>
           <span

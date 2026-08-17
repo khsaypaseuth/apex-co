@@ -54,6 +54,8 @@ export const GUIDE_CATEGORY_IMAGES: Record<
 export const GUIDE_SLUG_IMAGES: Record<string, StaticImageData> = {
   'investor-guide-to-laos': investorGuide,
   'work-visa-and-work-permit-guide': workVisaGuide,
+  // Same category as tax-and-accounting-guide — use checklist planner instead.
+  'annual-company-compliance-checklist': complianceChecklists,
 }
 
 /** Per-article thumbnail overrides (when category map would collide or mis-theme). */

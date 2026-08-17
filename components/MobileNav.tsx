@@ -122,7 +122,7 @@ export function MobileNav({
         aria-expanded={open}
         aria-controls={panelId}
         onClick={() => setOpen(true)}
-        className="flex h-10 w-10 items-center justify-center rounded-sm text-ivory-100 transition-colors hover:text-gold-500 focus-visible:outline-2 focus-visible:outline-gold-500"
+        className="flex h-10 w-10 items-center justify-center rounded-sm text-mist-100 transition-colors hover:text-gold-500 focus-visible:outline-2 focus-visible:outline-gold-500"
       >
         <span className="sr-only">{openLabel}</span>
         <svg
@@ -160,7 +160,7 @@ export function MobileNav({
               <button
                 type="button"
                 onClick={close}
-                className="flex h-10 w-10 items-center justify-center rounded-sm text-ivory-100 transition-colors hover:text-gold-500 focus-visible:outline-2 focus-visible:outline-gold-500"
+                className="flex h-10 w-10 items-center justify-center rounded-sm text-mist-100 transition-colors hover:text-gold-500 focus-visible:outline-2 focus-visible:outline-gold-500"
               >
                 <span className="sr-only">{closeLabel}</span>
                 <svg
@@ -197,8 +197,8 @@ export function MobileNav({
                           href={item.href}
                           onClick={() => setOpen(false)}
                           aria-current={active ? 'page' : undefined}
-                          className={`border-b border-ivory-100/10 py-3 transition-colors hover:text-gold-500 ${
-                            active ? 'text-gold-500' : 'text-ivory-100/90'
+                          className={`border-b border-mist-100/10 py-3 transition-colors hover:text-gold-500 ${
+                            active ? 'text-gold-500' : 'text-mist-100/90'
                           }`}
                         >
                           {item.label}
@@ -224,8 +224,8 @@ export function MobileNav({
                       href={hrefForLocale(option.code)}
                       onClick={() => setOpen(false)}
                       aria-current={isCurrent ? 'true' : undefined}
-                      className={`flex items-center gap-3 border-b border-ivory-100/10 py-3 transition-colors hover:text-gold-500 ${
-                        isCurrent ? 'text-gold-500' : 'text-ivory-100/90'
+                      className={`flex items-center gap-3 border-b border-mist-100/10 py-3 transition-colors hover:text-gold-500 ${
+                        isCurrent ? 'text-gold-500' : 'text-mist-100/90'
                       }`}
                     >
                       <FlagIcon locale={option.code} />

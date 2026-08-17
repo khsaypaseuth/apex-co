@@ -90,7 +90,7 @@ export default async function AboutPage({ params }: PageProps<'/[lang]/about'>) 
       </section>
 
       {/* Mission / Vision — editorial split beside workspace imagery */}
-      <section className="bg-ivory-100 py-16 md:py-24">
+      <section className="bg-mist-100 py-16 md:py-24">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2">
           <Image
             src={deskCharts}
@@ -154,11 +154,11 @@ export default async function AboutPage({ params }: PageProps<'/[lang]/about'>) 
               <p className="mb-3 text-sm font-medium tracking-widest text-gold-500 uppercase">
                 {dict.about.howEyebrow}
               </p>
-              <h2 className="font-display text-3xl leading-tight text-ivory-100 md:text-4xl">
+              <h2 className="font-display text-3xl leading-tight text-mist-100 md:text-4xl">
                 {dict.about.howTitle}
               </h2>
               <div className="mt-5 h-px w-16 bg-gold-500" aria-hidden="true" />
-              <p className="mt-5 max-w-2xl leading-relaxed text-ivory-100/80">
+              <p className="mt-5 max-w-2xl leading-relaxed text-mist-100/80">
                 {dict.about.howLede}
               </p>
             </div>
@@ -176,10 +176,10 @@ export default async function AboutPage({ params }: PageProps<'/[lang]/about'>) 
                 <p className="font-display text-3xl text-gold-500">
                   {String(index + 1).padStart(2, '0')}
                 </p>
-                <h3 className="font-display mt-4 text-xl leading-snug text-ivory-100">
+                <h3 className="font-display mt-4 text-xl leading-snug text-mist-100">
                   {step.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-ivory-100/70">
+                <p className="mt-2 text-sm leading-relaxed text-mist-100/70">
                   {step.description}
                 </p>
               </li>
@@ -189,7 +189,7 @@ export default async function AboutPage({ params }: PageProps<'/[lang]/about'>) 
       </section>
 
       {/* Parent company */}
-      <section className="bg-ivory-100 py-16 md:py-24">
+      <section className="bg-mist-100 py-16 md:py-24">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2">
           <Image
             src={accountingDesk}

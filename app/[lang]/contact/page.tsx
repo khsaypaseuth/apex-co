@@ -151,23 +151,23 @@ export default async function ContactPage({
 
           {/* Company details + what happens next */}
           <div className="space-y-10 lg:col-span-2">
-            <div className="rounded-sm bg-navy-950 p-8 text-ivory-100">
+            <div className="rounded-sm bg-navy-950 p-8 text-mist-100">
               <h2 className="font-display text-xl">
                 {dict.contactPage.detailsTitle}
               </h2>
               <div className="mt-4 h-px w-12 bg-gold-500" aria-hidden="true" />
               <p className="mt-5 font-display text-lg">{dict.site.name}</p>
-              <p className="mt-1 text-sm text-ivory-100/70">
+              <p className="mt-1 text-sm text-mist-100/70">
                 {dict.contactPage.businessUnitLine}
               </p>
               <ul className="mt-6 space-y-4 text-sm">
                 {contactRows.map((row) => {
                   const body = (
                     <>
-                      <span className="block text-xs tracking-wide text-ivory-100/60 uppercase">
+                      <span className="block text-xs tracking-wide text-mist-100/60 uppercase">
                         {row.label}
                       </span>
-                      <span className="mt-0.5 block leading-relaxed text-ivory-100/90">
+                      <span className="mt-0.5 block leading-relaxed text-mist-100/90">
                         {row.value}
                       </span>
                     </>

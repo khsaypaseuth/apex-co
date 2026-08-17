@@ -51,7 +51,7 @@ export function FilterBar({
   const pillClasses = (active: boolean) =>
     `rounded-full border px-4 py-1.5 text-sm transition-colors focus-visible:outline-2 focus-visible:outline-gold-500 ${
       active
-        ? 'border-navy-700 bg-navy-700 text-ivory-100'
+        ? 'border-navy-700 bg-navy-700 text-mist-100'
         : 'border-navy-950/20 bg-white text-navy-700 hover:border-gold-500 hover:text-gold-600'
     }`
 

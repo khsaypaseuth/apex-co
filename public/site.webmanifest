@@ -1,6 +1,6 @@
 {
-  "name": "Super Consulting",
-  "short_name": "Super Consulting",
+  "name": "Apex Co., Ltd.",
+  "short_name": "Apex",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#0A1B2A",
-  "background_color": "#0A1B2A",
+  "theme_color": "#17202F",
+  "background_color": "#17202F",
   "display": "standalone"
 }

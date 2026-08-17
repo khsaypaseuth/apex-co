@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { i18n } from '@/lib/i18n-config'
 import { getDictionary, hasLocale } from '@/lib/dictionaries'
-import { fraunces, manrope, notoSansLao, notoSansSc, notoSansThai, notoSerifLao } from '@/lib/fonts'
+import { archivo, manrope, notoSansLao, notoSansSc, notoSansThai } from '@/lib/fonts'
 import { SITE_NAME, SITE_URL } from '@/lib/site-config'
 import { DEFAULT_OG_IMAGE, OG_LOCALE } from '@/lib/seo'
 import { FloatingContactButtons } from '@/components/FloatingContactButtons'
@@ -108,9 +108,9 @@ export default async function RootLayout({
   return (
     <html
       lang={lang}
-      className={`${fraunces.variable} ${manrope.variable} ${notoSansLao.variable} ${notoSerifLao.variable} ${notoSansThai.variable} ${notoSansSc.variable} antialiased`}
+      className={`${archivo.variable} ${manrope.variable} ${notoSansLao.variable} ${notoSansThai.variable} ${notoSansSc.variable} antialiased`}
     >
-      <body className="min-h-screen bg-ivory-50 text-navy-950">
+      <body className="min-h-screen bg-mist-50 text-navy-950">
         <JsonLd data={[organizationJsonLd(), websiteJsonLd()]} />
         {/* Skip link — first focusable element on every page (see globals.css) */}
         <a href="#main-content" className="skip-link">

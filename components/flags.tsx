@@ -88,7 +88,7 @@ export function FlagIcon({ locale, className }: FlagIconProps) {
   return (
     <span
       aria-hidden="true"
-      className={`inline-flex shrink-0 overflow-hidden rounded-[3px] ring-1 ring-ivory-100/30 ${className ?? ''}`}
+      className={`inline-flex shrink-0 overflow-hidden rounded-[3px] ring-1 ring-mist-100/30 ${className ?? ''}`}
     >
       <Flag width={20} height={14} />
     </span>

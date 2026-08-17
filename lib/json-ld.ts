@@ -1,35 +1,43 @@
 import { i18n } from '@/lib/i18n-config'
-import { CONTACT, PARENT_COMPANY, SITE_NAME, SITE_URL } from '@/lib/site-config'
+import { CONTACT, FOUNDED_YEAR, SITE_NAME, SITE_URL } from '@/lib/site-config'
 
 /** JSON-LD helpers for Organization, WebSite, FAQ, Article, and Breadcrumb. */
 
 export function organizationJsonLd() {
   return {
     '@context': 'https://schema.org',
-    '@type': ['Organization', 'ProfessionalService', 'LocalBusiness'],
+    '@type': [
+      'Organization',
+      'GeneralContractor',
+      'ElectricalContractor',
+      'LocalBusiness',
+    ],
     name: SITE_NAME,
-    legalName: PARENT_COMPANY,
     url: SITE_URL,
-    logo: `${SITE_URL}/images/brand/logo-super.png`,
+    logo: `${SITE_URL}/images/brand/logo-apex.png`,
     image: `${SITE_URL}/og/og-default.png`,
     description:
-      'Business, legal, visa, immigration, accounting, and tax consulting in Lao PDR since 2020.',
+      'Electrical supply and installation at 22 kV and 115 kV, foundation and piling works, road and bridge construction, building construction, and real estate development in the Lao PDR.',
+    foundingDate: String(FOUNDED_YEAR),
     email: CONTACT.email,
     telephone: CONTACT.phone,
+    knowsAbout: [
+      '22 kV distribution networks',
+      '115 kV transmission lines and substations',
+      'Low, medium, and high voltage electrical equipment supply',
+      'Foundation pile and driven pile works',
+      'Road and bridge construction',
+      'Building construction',
+      'Real estate development',
+    ],
     address: {
       '@type': 'PostalAddress',
-      streetAddress:
-        '7th Floor, Vientiane Center, Nongchanh Village, Sisattanak District',
       addressLocality: 'Vientiane Capital',
       addressCountry: 'LA',
     },
     areaServed: {
       '@type': 'Country',
       name: 'Lao People\'s Democratic Republic',
-    },
-    parentOrganization: {
-      '@type': 'Organization',
-      name: PARENT_COMPANY,
     },
     sameAs: [] as string[],
   }
@@ -107,7 +115,7 @@ export function articleJsonLd(input: {
       name: SITE_NAME,
       logo: {
         '@type': 'ImageObject',
-        url: `${SITE_URL}/images/brand/logo-super.png`,
+        url: `${SITE_URL}/images/brand/logo-apex.png`,
       },
     },
     mainEntityOfPage: input.url,

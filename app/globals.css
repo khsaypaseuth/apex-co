@@ -1,28 +1,31 @@
 @import "tailwindcss";
 
 /*
- * Super Consulting design tokens — exact palette from docs/websitecolotheme.avif
- * (see BUILD_PLAN.md "Design Tokens (locked)").
+ * Apex Co., Ltd. design tokens — derived from the logo (slate navy + gold).
+ * See docs/APEX_REBRAND_PLAN.md §3 for the measured contrast ratios.
+ *
+ * Contrast rule that shapes the whole system: gold-500 is only 2.9:1 on the
+ * light surfaces, so it is a FILL and RULE colour there, never text. Gold text
+ * on light uses gold-600. On navy, gold-500 is 5.3:1 and reads fine as text.
  */
 @theme {
-  --color-navy-950: #0a1b2a; /* deep navy — primary dark surfaces, footer, hero */
-  --color-navy-700: #203d63; /* royal navy — secondary surfaces, links, accents */
-  --color-gold-500: #c8a53a; /* warm gold — CTA accent, rules, highlights (sparingly) */
-  --color-ivory-100: #f8f0dc; /* ivory — light section backgrounds */
-  --color-slate-500: #6b7280; /* slate — muted text, borders */
+  --color-navy-950: #17202f; /* deep slate navy — dark bands, header, footer, hero scrim */
+  --color-navy-700: #4a5570; /* logo navy — links, secondary surfaces (7.1:1 on mist-50) */
+  --color-gold-500: #ae8b4b; /* logo gold — CTA fills, rules, eyebrows on navy (5.3:1) */
+  --color-mist-100: #eceff4; /* cool light grey — alternating section backgrounds */
+  --color-slate-500: #6b7280; /* slate — borders, muted UI on white */
 
-  /* Derived tints/shades (identity stays the five above) */
-  --color-ivory-50: #fcf8ee; /* lighter ivory — page background */
-  --color-gold-600: #b08f2e; /* gold hover state */
-  --color-slate-600: #475569; /* darker slate — muted text on ivory (6.7:1 on ivory-100) */
+  /* Derived tints/shades (identity stays the four above) */
+  --color-mist-50: #f7f9fc; /* page background */
+  --color-gold-600: #85682f; /* deep bronze — gold TEXT on light (4.5:1) + CTA hover */
+  --color-slate-600: #475569; /* darker slate — muted text on tinted surfaces (6.6:1) */
 }
 
   /* next/font CSS variables mapped to Tailwind font utilities */
 @theme inline {
-  --font-display: var(--font-fraunces);
+  --font-display: var(--font-archivo);
   --font-body: var(--font-manrope);
   --font-lao: var(--font-noto-sans-lao);
-  --font-lao-display: var(--font-noto-serif-lao);
   --font-thai: var(--font-noto-sans-thai);
   --font-zh: var(--font-noto-sans-sc);
 }
@@ -42,8 +45,9 @@ h6 {
 }
 
 /*
- * Per-locale font strategy: Lao pages switch to Noto Sans Lao for body/UI
- * and Noto Serif Lao for display headings. Lao script needs a taller
+ * Per-locale font strategy: Lao pages use Noto Sans Lao for body, UI, AND
+ * headings — the Latin pairing is sans/sans since the rebrand, so the Lao
+ * serif display face was dropped with it. Lao script needs a taller
  * line-height (~1.8) to avoid clipped ascenders/descenders.
  */
 html[lang='lo'] body {
@@ -56,13 +60,10 @@ html[lang='lo'] h2,
 html[lang='lo'] h3,
 html[lang='lo'] h4,
 html[lang='lo'] h5,
-html[lang='lo'] h6 {
-  font-family: var(--font-lao-display), var(--font-display);
-  line-height: 1.6;
-}
-
+html[lang='lo'] h6,
 html[lang='lo'] .font-display {
-  font-family: var(--font-lao-display), var(--font-display);
+  font-family: var(--font-lao), var(--font-display);
+  line-height: 1.6;
 }
 
 /*
@@ -179,7 +180,7 @@ html[lang='zh'] .prose-article {
 .prose-article blockquote {
   margin-block: 1.5rem;
   border-inline-start: 4px solid var(--color-gold-500);
-  background: var(--color-ivory-100);
+  background: var(--color-mist-100);
   padding: 1rem 1.5rem;
 }
 
@@ -202,7 +203,7 @@ html[lang='zh'] .prose-article {
 }
 
 .prose-article th {
-  background: var(--color-ivory-100);
+  background: var(--color-mist-100);
   color: var(--color-navy-950);
 }
 
@@ -210,9 +211,9 @@ html[lang='zh'] .prose-article {
  * Global keyboard focus indicator (Phase 6 accessibility pass).
  *
  * Two-tone ring so it is visible on BOTH surface families:
- *   - inner 2px navy-950 ring — 16.5:1 against ivory-50/ivory-100/white
- *   - outer 2px gold-500 outline — 7.4:1 against navy-950/navy-700
- * (gold-500 alone is only 2.2:1 on ivory — insufficient.)
+ *   - inner 2px navy-950 ring — 15.5:1 against mist-50/mist-100/white
+ *   - outer 2px gold-500 outline — 5.3:1 against navy-950
+ * (gold-500 alone is only 2.9:1 on the light surfaces — insufficient.)
  *
  * Deliberately un-layered so it wins over Tailwind utilities like
  * `focus:outline-none` for keyboard (:focus-visible) users.
@@ -238,7 +239,7 @@ html[lang='zh'] .prose-article {
   padding: 0.75rem 1.25rem;
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--color-ivory-100);
+  color: var(--color-mist-100);
 }
 
 .skip-link:focus-visible {

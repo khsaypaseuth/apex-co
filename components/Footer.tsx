@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import type { Dictionary } from '@/lib/dictionaries'
-import logoSuper from '@/public/images/brand/logo-super.png'
+import logoApex from '@/public/images/brand/logo-apex-white.png'
 import type { Locale } from '@/lib/i18n-config'
-import { CONTACT, PARENT_COMPANY } from '@/lib/site-config'
+import { CONTACT } from '@/lib/site-config'
 import {
   IconMail,
   IconMapPin,
@@ -72,11 +72,11 @@ export function Footer({ lang, dict }: FooterProps) {
   ]
 
   return (
-    <footer className="bg-navy-950 text-ivory-100">
+    <footer className="bg-navy-950 text-mist-100">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Image src={logoSuper} alt={dict.site.name} className="h-10 w-auto" />
-          <p className="mt-3 text-sm leading-relaxed text-ivory-100/70">
+          <Image src={logoApex} alt={dict.site.name} className="h-16 w-auto" />
+          <p className="mt-3 text-sm leading-relaxed text-mist-100/70">
             {dict.site.footerAbout}
           </p>
         </div>
@@ -90,7 +90,7 @@ export function Footer({ lang, dict }: FooterProps) {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-ivory-100/80 transition-colors hover:text-gold-500"
+                  className="text-sm text-mist-100/80 transition-colors hover:text-gold-500"
                 >
                   {link.label}
                 </Link>
@@ -108,7 +108,7 @@ export function Footer({ lang, dict }: FooterProps) {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-ivory-100/80 transition-colors hover:text-gold-500"
+                  className="text-sm text-mist-100/80 transition-colors hover:text-gold-500"
                 >
                   {link.label}
                 </Link>
@@ -121,7 +121,7 @@ export function Footer({ lang, dict }: FooterProps) {
           <p className="text-sm font-semibold tracking-widest text-gold-500 uppercase">
             {dict.footer.contact}
           </p>
-          <ul className="mt-4 space-y-3 text-sm text-ivory-100/80">
+          <ul className="mt-4 space-y-3 text-sm text-mist-100/80">
             <li className="flex items-start gap-2.5">
               <span aria-hidden="true" className="mt-0.5 shrink-0 text-gold-500">
                 <IconMapPin size={16} />
@@ -143,7 +143,7 @@ export function Footer({ lang, dict }: FooterProps) {
                     : {})}
                   className="transition-colors hover:text-gold-500"
                 >
-                  <span className="text-ivory-100/60">{row.label}: </span>
+                  <span className="text-mist-100/60">{row.label}: </span>
                   {row.value}
                 </a>
               </li>
@@ -152,11 +152,10 @@ export function Footer({ lang, dict }: FooterProps) {
         </div>
       </div>
 
-      <div className="border-t border-ivory-100/10">
-        <div className="mx-auto max-w-6xl px-6 py-6 text-xs text-ivory-100/60">
+      <div className="border-t border-mist-100/10">
+        <div className="mx-auto max-w-6xl px-6 py-6 text-xs text-mist-100/60">
           <p>
-            © 2020 {dict.site.name} · {dict.footer.poweredBy} {PARENT_COMPANY}.{' '}
-            {dict.footer.rights}
+            © {new Date().getFullYear()} {dict.site.name}. {dict.footer.rights}
           </p>
         </div>
       </div>

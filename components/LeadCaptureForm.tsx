@@ -57,7 +57,7 @@ export function LeadCaptureForm({
   return (
     <section
       aria-labelledby="lead-capture-title"
-      className="rounded-sm border border-navy-950/10 border-t-2 border-t-gold-500 bg-ivory-100 p-6 md:p-8"
+      className="rounded-sm border border-navy-950/10 border-t-2 border-t-gold-500 bg-mist-100 p-6 md:p-8"
     >
       <h2
         id="lead-capture-title"

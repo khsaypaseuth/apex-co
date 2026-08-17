@@ -46,12 +46,12 @@ From `websitecolotheme.avif` (exact hex, overrides approximate values in master 
   --color-navy-950: #0A1B2A;  /* deep navy — primary dark surfaces, footer, hero */
   --color-navy-700: #203D63;  /* royal navy — secondary surfaces, links, accents */
   --color-gold-500: #C8A53A;  /* warm gold — CTA accent, rules, highlights (sparingly) */
-  --color-ivory-100: #F8F0DC; /* ivory — light section backgrounds */
+  --color-mist-100: #F8F0DC; /* ivory — light section backgrounds */
   --color-slate-500: #6B7280; /* slate — muted text, borders */
 }
 ```
 
-Derived tints/shades may be added (e.g. `--color-ivory-50: #FCF8EE`, gold hover `#B08F2E`) but these five are the identity. Gold on navy passes WCAG AA for large text/accents; body text on ivory uses navy-950, never slate-on-ivory below AA.
+Derived tints/shades may be added (e.g. `--color-mist-50: #FCF8EE`, gold hover `#B08F2E`) but these five are the identity. Gold on navy passes WCAG AA for large text/accents; body text on ivory uses navy-950, never slate-on-ivory below AA.
 
 **Typography:**
 - Display (EN): **Fraunces** (variable, `axes: ['opsz']`) — editorial, premium

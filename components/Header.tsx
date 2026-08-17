@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import logoSuper from '@/public/images/brand/logo-super.png'
+import logoApex from '@/public/images/brand/logo-apex-white.png'
 import type { Locale } from '@/lib/i18n-config'
 import { LanguageSwitcher, type LanguageOption } from './LanguageSwitcher'
 import { MobileNav, type MobileNavGroup } from './MobileNav'
@@ -92,9 +92,9 @@ export function Header({
           className="shrink-0 transition-opacity hover:opacity-80"
         >
           <Image
-            src={logoSuper}
+            src={logoApex}
             alt={siteName}
-            className="h-10 w-auto"
+            className="h-12 w-auto"
             preload
           />
         </Link>
@@ -109,7 +109,7 @@ export function Header({
                 href={item.href}
                 aria-current={active ? 'page' : undefined}
                 className={`text-sm transition-colors hover:text-gold-500 ${
-                  active ? 'text-gold-500' : 'text-ivory-100/85'
+                  active ? 'text-gold-500' : 'text-mist-100/85'
                 }`}
               >
                 {item.label}

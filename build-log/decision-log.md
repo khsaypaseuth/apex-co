@@ -82,7 +82,7 @@ Format per master plan: question we would have asked → decision → reason →
 - **Verified:** `/`→307 `/en`; `Accept-Language: lo` → 307 `/lo`; `/th/about`→307 `/en/about`; `/pricing`→307 `/en/pricing`.
 
 ## D-016 — Derived color tokens
-- **Decision:** Added the two derived tokens the plan explicitly allows: `--color-ivory-50: #FCF8EE` (page background, lighter than section ivory) and `--color-gold-600: #B08F2E` (gold hover). The five identity colors are unchanged.
+- **Decision:** Added the two derived tokens the plan explicitly allows: `--color-mist-50: #FCF8EE` (page background, lighter than section ivory) and `--color-gold-600: #B08F2E` (gold hover). The five identity colors are unchanged.
 
 ## D-017 — Lao terminology: "tax" = ອາກອນ
 - **Decision:** Dictionaries use ອາກອນ for "tax" (e.g. ບັນຊີ ແລະ ອາກອນ for Accounting & Tax), not ພາສີ, which in Lao usage commonly means customs duty.
@@ -232,12 +232,12 @@ Format per master plan: question we would have asked → decision → reason →
 - **Decision:** `app/sitemap.ts` emits every static route + article/law/guide detail route × active locale (en + lo), each entry with absolute-URL `alternates.languages` (→ xhtml:link hreflang in the rendered XML) and `lastModified` from frontmatter `lastUpdated` on content routes only (static routes carry no fake dates). Slugs come from the same fs loaders as `generateStaticParams` (union of en + lo), so sitemap and prerendered routes cannot drift. `/styleguide` is excluded and disallowed in `app/robots.ts` (which also carries the sitemap URL).
 
 ## D-074 — Two-tone global focus ring (gold outline + navy inner ring)
-- **Question:** Master-plan "visible focus states" — gold-500 alone is 2.23:1 on ivory-50 (fails the 3:1 non-text minimum) but 7.4:1 on navy-950.
+- **Question:** Master-plan "visible focus states" — gold-500 alone is 2.23:1 on mist-50 (fails the 3:1 non-text minimum) but 7.4:1 on navy-950.
 - **Decision:** Un-layered `:focus-visible` rule in globals.css: 2px gold-500 outline (offset 2px) + 2px navy-950 box-shadow ring. The navy ring carries contrast on ivory/white surfaces (16.5:1), the gold outline on navy surfaces (7.4:1). Being un-layered, it also beats Tailwind's `focus:outline-none` on the form inputs for keyboard users, while mouse focus keeps the softer gold ring the inputs define.
 - **Risk:** The navy ring overrides `focus:ring-*` utilities on :focus-visible — acceptable; keyboard users get the stronger indicator.
 
 ## D-075 — Muted-text contrast: slate-600 on ivory/tinted surfaces, slate-500 stays on white
-- **Decision:** Added derived token `--color-slate-600: #475569`. All `text-slate-500` sitting on ivory-100 sections/panels, on the slate-tinted verification badges, or as small status text on the ivory-50 page background was bumped to slate-600 (6.7:1 on ivory-100). `text-slate-500` remains only on white card/section surfaces where it measures 4.83:1 (AA pass). Decorative elements (breadcrumb "/" separators, borders) unchanged.
+- **Decision:** Added derived token `--color-slate-600: #475569`. All `text-slate-500` sitting on mist-100 sections/panels, on the slate-tinted verification badges, or as small status text on the mist-50 page background was bumped to slate-600 (6.7:1 on mist-100). `text-slate-500` remains only on white card/section surfaces where it measures 4.83:1 (AA pass). Decorative elements (breadcrumb "/" separators, borders) unchanged.
 - **Known AA exception (documented, not fixed):** gold-600 small uppercase eyebrow/label text on light surfaces measures 2.7–3.1:1. Fixing it means darkening the brand gold for text (identity change) — deferred to the owner with the recommendation to either accept (labels duplicate adjacent high-contrast headings) or approve a text-gold shade (~#8a7024).
 
 ## D-076 — Card-grid pages get sr-only h2s; nav gets aria-current

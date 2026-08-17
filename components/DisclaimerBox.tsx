@@ -13,7 +13,7 @@ export interface DisclaimerBoxProps {
  */
 export function DisclaimerBox({ label, text }: DisclaimerBoxProps) {
   return (
-    <aside role="note" className="border-l-4 border-gold-500 bg-ivory-100 p-6">
+    <aside role="note" className="border-l-4 border-gold-500 bg-mist-100 p-6">
       <p className="text-xs font-semibold tracking-widest text-navy-700 uppercase">
         {label}
       </p>

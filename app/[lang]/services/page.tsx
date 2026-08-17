@@ -59,7 +59,7 @@ export default async function ServicesPage({
       {serviceGroups.map((group, index) => (
         <section
           key={group.id}
-          className={index % 2 === 1 ? 'bg-ivory-100' : undefined}
+          className={index % 2 === 1 ? 'bg-mist-100' : undefined}
         >
           <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
             <SectionHeader title={group.title} lede={group.summary} />

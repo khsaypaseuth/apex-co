@@ -37,7 +37,7 @@ export function GuideCard({
         className="card-premium group flex h-full flex-col overflow-hidden rounded-sm border border-navy-950/10 border-t-2 border-t-gold-500 bg-white focus-visible:outline-2 focus-visible:outline-gold-500"
       >
         {image && (
-          <div className="relative aspect-video overflow-hidden bg-ivory-100">
+          <div className="relative aspect-video overflow-hidden bg-mist-100">
             <Image
               src={image.src}
               alt=""

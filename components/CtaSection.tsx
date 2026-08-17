@@ -53,7 +53,7 @@ export function CtaSection({
         delay={0.05}
       >
         <StaggerItem>
-          <h2 className="font-display mx-auto max-w-3xl text-3xl leading-tight text-ivory-100 md:text-4xl">
+          <h2 className="font-display mx-auto max-w-3xl text-3xl leading-tight text-mist-100 md:text-4xl">
             {title}
           </h2>
         </StaggerItem>
@@ -62,7 +62,7 @@ export function CtaSection({
         </StaggerItem>
         {lede && (
           <StaggerItem>
-            <p className="mx-auto max-w-2xl leading-relaxed text-ivory-100/80">
+            <p className="mx-auto max-w-2xl leading-relaxed text-mist-100/80">
               {lede}
             </p>
           </StaggerItem>
@@ -78,7 +78,7 @@ export function CtaSection({
             {secondaryLabel && secondaryHref && (
               <Link
                 href={secondaryHref}
-                className="rounded-sm border border-ivory-100/40 px-6 py-3 font-medium text-ivory-100 transition-colors hover:border-gold-500 hover:text-gold-500"
+                className="rounded-sm border border-mist-100/40 px-6 py-3 font-medium text-mist-100 transition-colors hover:border-gold-500 hover:text-gold-500"
               >
                 {secondaryLabel}
               </Link>

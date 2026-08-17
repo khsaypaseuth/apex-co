@@ -179,7 +179,7 @@ export function ContactForm({
       {submitted && (
         <p
           role="status"
-          className="rounded-sm border border-gold-500/50 bg-ivory-100 px-4 py-3 text-sm text-navy-950"
+          className="rounded-sm border border-gold-500/50 bg-mist-100 px-4 py-3 text-sm text-navy-950"
         >
           {labels.demoNotice}
         </p>

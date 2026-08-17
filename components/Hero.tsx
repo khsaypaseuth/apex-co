@@ -81,7 +81,7 @@ export function Hero({
         )}
         <StaggerItem>
           <h1
-            className={`font-display max-w-3xl text-ivory-100 ${centerBlock} ${
+            className={`font-display max-w-3xl text-mist-100 ${centerBlock} ${
               tall
                 ? 'text-4xl leading-tight md:text-6xl'
                 : 'text-3xl leading-tight md:text-5xl'
@@ -100,7 +100,7 @@ export function Hero({
         {lede && (
           <StaggerItem>
             <p
-              className={`max-w-2xl text-lg leading-relaxed text-ivory-100/80 ${centerBlock}`}
+              className={`max-w-2xl text-lg leading-relaxed text-mist-100/80 ${centerBlock}`}
             >
               {lede}
             </p>

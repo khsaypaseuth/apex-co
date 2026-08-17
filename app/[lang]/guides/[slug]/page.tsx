@@ -133,7 +133,7 @@ export default async function GuidePage({
         })}
       />
       {/* Guide header */}
-      <section className="bg-ivory-100 py-14 md:py-20">
+      <section className="bg-mist-100 py-14 md:py-20">
         <div className="mx-auto max-w-3xl px-6">
           <Breadcrumbs
             label={dict.common.breadcrumbLabel}
@@ -185,7 +185,7 @@ export default async function GuidePage({
           />
 
           {(guide.sources ?? []).length > 0 && (
-            <div className="mt-12 rounded-sm border border-navy-950/10 bg-ivory-100 p-6">
+            <div className="mt-12 rounded-sm border border-navy-950/10 bg-mist-100 p-6">
               <h2 className="font-display text-lg text-navy-950">
                 {dict.common.sources}
               </h2>

@@ -62,8 +62,8 @@ professional services*.
 ## 3. Frontend Designer
 
 **Design system delivered:** Tailwind v4 CSS-first tokens (`@theme` in
-`globals.css`) — navy-950/700, gold-500, ivory-100, slate-500 + derived
-ivory-50, gold-600, slate-600 (D-002, D-016, D-075).
+`globals.css`) — navy-950/700, gold-500, mist-100, slate-500 + derived
+mist-50, gold-600, slate-600 (D-002, D-016, D-075).
 
 - **Typography:** Fraunces (EN display) + Manrope (EN body); Noto Serif Lao
   (display) + Noto Sans Lao (body) with per-locale font-stack switching on

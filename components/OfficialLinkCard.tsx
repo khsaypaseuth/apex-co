@@ -22,7 +22,7 @@ export function OfficialLinkCard({
         rel="noopener noreferrer"
         className="card-premium group flex h-full flex-col items-center gap-4 rounded-sm border border-navy-950/10 bg-white px-4 py-6 text-center focus-visible:outline-2 focus-visible:outline-gold-500"
       >
-        <span className="relative flex h-20 w-20 items-center justify-center overflow-hidden rounded-sm bg-ivory-100 p-2 transition-transform duration-500 motion-safe:group-hover:scale-105">
+        <span className="relative flex h-20 w-20 items-center justify-center overflow-hidden rounded-sm bg-mist-100 p-2 transition-transform duration-500 motion-safe:group-hover:scale-105">
           <Image
             src={link.logo}
             alt=""

@@ -1,7 +1,7 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
   <!--
     Super Consulting default Open Graph card (1200×630).
-    Brand palette: navy-950 #0A1B2A, navy-700 #203D63, gold-500 #C8A53A, ivory-100 #F8F0DC.
+    Brand palette: navy-950 #0A1B2A, navy-700 #203D63, gold-500 #C8A53A, mist-100 #F8F0DC.
     Fonts: Georgia/Times as a serif stand-in for Fraunces (webfont not available
     to the rasterizer at build time — see decision log D-072).
     Rasterized to og-default.png via @resvg/resvg-cli.

@@ -138,7 +138,7 @@ export default async function StyleguidePage({
               </a>
               <a
                 href={`/${lang}/services`}
-                className="rounded-sm border border-ivory-100/40 px-6 py-3 font-medium text-ivory-100 transition-colors hover:border-gold-500 hover:text-gold-500"
+                className="rounded-sm border border-mist-100/40 px-6 py-3 font-medium text-mist-100 transition-colors hover:border-gold-500 hover:text-gold-500"
               >
                 {dict.cta.exploreServices}
               </a>

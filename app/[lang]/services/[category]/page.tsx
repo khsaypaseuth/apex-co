@@ -136,7 +136,7 @@ export default async function ServiceCategoryPage({
               ))}
             </div>
           </div>
-          <aside className="h-fit rounded-sm border-t-2 border-gold-500 bg-ivory-100 p-7">
+          <aside className="h-fit rounded-sm border-t-2 border-gold-500 bg-mist-100 p-7">
             <h2 className="font-display text-xl text-navy-950">
               {dict.servicePage.whoTitle}
             </h2>
@@ -155,7 +155,7 @@ export default async function ServiceCategoryPage({
       </section>
 
       {/* Services in this area — exact master-plan lists */}
-      <section className="bg-ivory-100 py-16 md:py-20">
+      <section className="bg-mist-100 py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-6">
           <SectionHeader title={dict.servicePage.servicesInAreaTitle} />
           <div className="mt-10 space-y-12">
@@ -210,7 +210,7 @@ export default async function ServiceCategoryPage({
       {/* Process overview — navy band */}
       <section className="bg-navy-950 py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-6">
-          <h2 className="font-display text-3xl leading-tight text-ivory-100 md:text-4xl">
+          <h2 className="font-display text-3xl leading-tight text-mist-100 md:text-4xl">
             {dict.servicePage.processTitle}
           </h2>
           <div className="mt-5 h-px w-16 bg-gold-500" aria-hidden="true" />
@@ -220,10 +220,10 @@ export default async function ServiceCategoryPage({
                 <p className="font-display text-3xl text-gold-500">
                   {String(index + 1).padStart(2, '0')}
                 </p>
-                <h3 className="font-display mt-4 text-xl leading-snug text-ivory-100">
+                <h3 className="font-display mt-4 text-xl leading-snug text-mist-100">
                   {step.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-ivory-100/70">
+                <p className="mt-2 text-sm leading-relaxed text-mist-100/70">
                   {step.description}
                 </p>
               </li>
@@ -233,7 +233,7 @@ export default async function ServiceCategoryPage({
       </section>
 
       {/* Documents commonly required + timeline note + disclaimer */}
-      <section className="bg-ivory-100 py-16 md:py-20">
+      <section className="bg-mist-100 py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-12 lg:grid-cols-2">
             <div>
