@@ -106,7 +106,7 @@
     "phoneLabel": "电话",
     "emailLabel": "邮箱",
     "chatLabel": "WhatsApp",
-    "contactPlaceholderNote": "联系方式正在更新中。"
+    "contactPlaceholderNote": "电话与 WhatsApp 号码已确认。街道地址与电子邮箱仍在确认中。"
   },
   "home": {
     "heroTitle": "22 千伏与 115 千伏电力供应与安装",

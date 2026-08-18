@@ -24,12 +24,13 @@ Node 22 or newer is required.
 Two things are deliberately unfinished and must be handled before this goes
 live. Both are flagged in the UI so nothing misleading ships by accident.
 
-1. **Contact details are placeholders.** `lib/site-config.ts` holds a fake
-   address, phone, email, and domain. Replace them and set
-   `CONTACT.isPlaceholder` to `false` — that flag drives the visible "contact
-   details are being updated" notice in the footer and on the contact page.
-   Also update `SITE_URL`, `public/llms.txt`, `public/.well-known/llms.txt`,
-   and `public/ai.txt` with the real domain.
+1. **Some contact details are still placeholders.** The phone and WhatsApp
+   number in `lib/site-config.ts` are confirmed; the street address, email,
+   and domain are not. Replace those and set `CONTACT.isPlaceholder` to
+   `false` — that flag drives the visible notice in the footer and on the
+   contact page, and the caveat in `public/llms.txt`. Changing the domain also
+   means updating `SITE_URL` plus `public/llms.txt`,
+   `public/.well-known/llms.txt`, and `public/ai.txt`, which hard-code it.
 2. **The project portfolio is empty.** `/projects` renders a designed empty
    state until real project records are added. See
    `content/en/projects/README.md` for the frontmatter contract and why the
@@ -97,9 +98,11 @@ The rule worth remembering: **`gold-500` is a fill and rule colour on light
 surfaces, never text** — it measures 2.9:1 there. Gold text on light uses
 `gold-600` (4.5:1). On navy, `gold-500` is 5.3:1 and reads fine as text.
 
-Project cards and capability heroes use drawn SVG schematics
-(`components/ProjectThumb.tsx`) rather than photographs, so no stock image is
-ever presented as an Apex project.
+Capability pages use photographs of the relevant trade; **project cards and
+project detail headers use drawn SVG schematics** (`components/ProjectThumb.tsx`)
+instead. That split is deliberate — an image under a named job reads as a
+picture of that job, so no stock photo is ever presented as Apex work. See
+[public/images/ATTRIBUTIONS.md](public/images/ATTRIBUTIONS.md).
 
 ## SEO / AEO
 

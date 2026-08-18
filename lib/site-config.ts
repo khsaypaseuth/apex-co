@@ -20,19 +20,28 @@ export function yearsOfExperience(now: Date = new Date()): number {
 }
 
 /**
- * PLACEHOLDER contact details — Apex has not supplied the real address,
- * phone, or email yet. Every one of these values is wrong on purpose and must
- * be replaced before launch; they live here so that is a single-file edit.
+ * Contact details. Some are confirmed, some are still placeholders — the
+ * comments below say which, so nobody has to guess when updating them.
+ *
+ * `isPlaceholder` stays true while ANY field here is unconfirmed. It drives
+ * the visible "contact details are being updated" notice in the footer and on
+ * the contact page, and the caveat in public/llms.txt. Flip it to false only
+ * once every value below is real.
  */
 export const CONTACT = {
-  address:
-    'Vientiane Capital, Lao PDR — full street address to be confirmed',
+  // --- Confirmed by the owner ---
+  /** Lao mobile: +856 20 5552 9751. */
+  phone: '+856 20 55 529 751',
+  phoneHref: 'tel:+8562055529751',
+  /** wa.me needs the number in full international form, digits only. */
+  whatsappHref: 'https://wa.me/8562055529751',
+
+  // --- NOT yet confirmed: placeholders, must be replaced before launch ---
+  address: 'Vientiane Capital, Lao PDR — full street address to be confirmed',
   addressLo: 'ນະຄອນຫຼວງວຽງຈັນ, ສປປ ລາວ — ທີ່ຢູ່ເຕັມຈະຢືນຢັນພາຍຫຼັງ',
+  /** Invented, and tied to the placeholder domain — see SITE_URL above. */
   email: 'info@apex.com.la',
-  phone: '+856 21 000 000',
-  phoneHref: 'tel:+85621000000',
-  whatsappHref: 'https://wa.me/85621000000',
-  /** Flip to false once the values above are the real ones. */
+
   isPlaceholder: true,
 } as const
 
