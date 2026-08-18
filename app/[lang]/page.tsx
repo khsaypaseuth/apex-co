@@ -2,27 +2,28 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getDictionary, hasLocale } from '@/lib/dictionaries'
-import { listArticles } from '@/lib/content'
+import { listProjects } from '@/lib/content'
 import { pageMetadata } from '@/lib/seo'
-import { ArticleCard } from '@/components/ArticleCard'
 import { CtaSection } from '@/components/CtaSection'
 import { Hero } from '@/components/Hero'
 import { Reveal } from '@/components/motion'
+import { ProjectCard } from '@/components/ProjectCard'
 import { SectionHeader } from '@/components/SectionHeader'
 import { ServiceCard } from '@/components/ServiceCard'
 import { TrustBadge } from '@/components/TrustBadge'
 import {
-  IconBookOpen,
-  IconBriefcase,
-  IconCalculator,
+  IconBolt,
+  IconBridge,
+  IconBuilding,
   IconCheckCircle,
-  IconScale,
-  IconShieldCheck,
-  IconStamp,
-  IconUsers,
+  IconHardHat,
+  IconPile,
+  IconRuler,
+  IconTransmissionTower,
+  IconTruck,
 } from '@/components/icons'
-import heroPatuxai from '@/public/images/hero/patuxai-victory-gate-vientiane.jpg'
-import cityNight from '@/public/images/sections/city-lights-night-skyline.jpg'
+import heroNightCity from '@/public/images/hero/night-city-lights.jpg'
+import riversideCity from '@/public/images/hero/riverside-city-dusk-aerial.jpg'
 
 export async function generateMetadata({
   params,
@@ -45,94 +46,72 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
   if (!hasLocale(lang)) notFound()
 
   const dict = await getDictionary(lang)
-  // Prefer a curated, category-diverse trio so the home preview never
-  // shows the same category thumbnail twice (cards key off category image).
-  const HOME_ARTICLE_SLUGS = [
-    'how-to-start-a-business-in-laos',
-    'work-visa-and-work-permit-in-laos',
-    'tax-registration-for-new-companies-in-laos',
-  ] as const
-  const allArticles = await listArticles(lang)
-  const bySlug = new Map(allArticles.map((a) => [a.slug, a]))
-  const curated = HOME_ARTICLE_SLUGS.map((slug) => bySlug.get(slug)).filter(
-    (a): a is NonNullable<typeof a> => Boolean(a),
-  )
-  const articles =
-    curated.length === HOME_ARTICLE_SLUGS.length
-      ? curated
-      : (() => {
-          const seen = new Set<string>()
-          const picked = []
-          for (const article of allArticles) {
-            if (seen.has(article.category)) continue
-            seen.add(article.category)
-            picked.push(article)
-            if (picked.length === 3) break
-          }
-          return picked
-        })()
 
-  // Six service highlights (master plan §Home — Service Highlights), each
-  // linking to the page that covers it.
+  // Newest three projects. Empty until the portfolio is populated, in which
+  // case the section is skipped entirely rather than rendering an empty grid.
+  const featuredProjects = (await listProjects(lang)).slice(0, 3)
+
+  // Six capability highlights. Electrical leads because it is the core of the
+  // business; the civil capabilities follow in the order Apex grew into them.
   const highlights = [
     {
-      ...dict.home.highlights.businessRegistration,
-      href: `/${lang}/services/business-setup`,
-      icon: IconBriefcase,
+      ...dict.home.highlights.electrical,
+      href: `/${lang}/services/electrical`,
+      icon: IconTransmissionTower,
     },
     {
-      ...dict.home.highlights.visaImmigration,
-      href: `/${lang}/services/visa-immigration`,
-      icon: IconStamp,
+      ...dict.home.highlights.equipment,
+      href: `/${lang}/services/electrical`,
+      icon: IconBolt,
     },
     {
-      ...dict.home.highlights.legalServices,
-      href: `/${lang}/services/legal-family`,
-      icon: IconScale,
+      ...dict.home.highlights.piling,
+      href: `/${lang}/services/piling-foundation`,
+      icon: IconPile,
     },
     {
-      ...dict.home.highlights.accountingTax,
-      href: `/${lang}/services/accounting-tax`,
-      icon: IconCalculator,
+      ...dict.home.highlights.roadsBridges,
+      href: `/${lang}/services/roads-bridges`,
+      icon: IconBridge,
     },
     {
-      ...dict.home.highlights.familyLegal,
-      href: `/${lang}/services/legal-family`,
-      icon: IconUsers,
+      ...dict.home.highlights.buildings,
+      href: `/${lang}/services/buildings-property`,
+      icon: IconBuilding,
     },
     {
-      ...dict.home.highlights.laoKnowledge,
-      href: `/${lang}/knowledge`,
-      icon: IconBookOpen,
+      ...dict.home.highlights.realEstate,
+      href: `/${lang}/services/buildings-property`,
+      icon: IconRuler,
     },
   ]
 
-  // Check icons for the proof points; shield for the parent-company backing.
   const whyPoints = [
-    { ...dict.home.why.localKnowledge, icon: IconCheckCircle },
-    { ...dict.home.why.practicalAdvice, icon: IconCheckCircle },
-    { ...dict.home.why.clearProcess, icon: IconCheckCircle },
-    { ...dict.home.why.transparentCommunication, icon: IconCheckCircle },
-    { ...dict.home.why.companiesAndIndividuals, icon: IconCheckCircle },
-    { ...dict.home.why.backedBySuperVision, icon: IconShieldCheck },
+    { ...dict.home.why.selfDelivery, icon: IconTruck },
+    { ...dict.home.why.bothVoltages, icon: IconBolt },
+    { ...dict.home.why.supplyAndInstall, icon: IconCheckCircle },
+    { ...dict.home.why.testRecords, icon: IconCheckCircle },
+    { ...dict.home.why.honestProgramme, icon: IconCheckCircle },
+    { ...dict.home.why.trackRecord, icon: IconHardHat },
   ]
 
   return (
     <main id="main-content">
-      {/* 1 — Hero (confirmed-Laos Mekong image under a navy overlay) */}
+      {/* 1 — Hero. Night-lit town: location-generic, and the closest honest
+          visual for a company whose business is putting power into places. */}
       <Hero
         variant="home"
-        eyebrow={dict.site.name}
+        eyebrow={dict.site.tagline}
         title={dict.home.heroTitle}
         lede={dict.home.heroSubtitle}
-        image={{ src: heroPatuxai, alt: dict.alt.heroPatuxai }}
+        image={{ src: heroNightCity, alt: dict.alt.heroNightCity }}
         actions={
           <>
             <Link
               href={`/${lang}/contact`}
-              className="btn-premium rounded-sm bg-gold-500 px-6 py-3 font-medium text-navy-950 transition-colors hover:bg-gold-600"
+              className="btn-premium rounded-sm bg-gold-500 px-6 py-3 font-medium text-navy-950 transition-colors hover:bg-gold-600 hover:text-mist-100"
             >
-              {dict.cta.bookConsultation}
+              {dict.cta.requestQuote}
             </Link>
             <Link
               href={`/${lang}/services`}
@@ -152,13 +131,13 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
               {dict.home.trustStatement}
             </p>
             <div className="mt-7 flex justify-center">
-              <TrustBadge text={dict.site.parentCompanyLine} />
+              <TrustBadge text={dict.site.experienceLine} />
             </div>
           </Reveal>
         </div>
       </section>
 
-      {/* 3 — Service highlights */}
+      {/* 3 — Capability highlights */}
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-6">
           <SectionHeader
@@ -184,7 +163,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
         </div>
       </section>
 
-      {/* 4 — Why choose Super Consulting (navy band, numbered points) */}
+      {/* 4 — Why Apex (navy band) */}
       <section className="bg-navy-950 py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-6">
           <Reveal>
@@ -217,55 +196,52 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
         </div>
       </section>
 
-      {/* 5 — Knowledge Center preview */}
-      <section className="bg-mist-100 py-16 md:py-24">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="flex flex-wrap items-end justify-between gap-6">
-            <SectionHeader
-              eyebrow={dict.nav.knowledge}
-              title={dict.home.knowledgeTitle}
-              lede={dict.home.knowledgeLede}
-            />
-            <Link
-              href={`/${lang}/knowledge`}
-              className="inline-flex items-center gap-2 text-sm font-medium text-navy-700 transition-colors hover:text-gold-600"
-            >
-              {dict.cta.viewAll}
-              <span aria-hidden="true">→</span>
-            </Link>
-          </div>
-          {articles.length > 0 && (
+      {/* 5 — Recent work. Skipped entirely while the portfolio is empty —
+          a "Recent work" heading over nothing is worse than no section. */}
+      {featuredProjects.length > 0 && (
+        <section className="bg-mist-100 py-16 md:py-24">
+          <div className="mx-auto max-w-6xl px-6">
+            <div className="flex flex-wrap items-end justify-between gap-6">
+              <SectionHeader
+                eyebrow={dict.nav.projects}
+                title={dict.home.projectsTitle}
+                lede={dict.home.projectsLede}
+              />
+              <Link
+                href={`/${lang}/projects`}
+                className="inline-flex items-center gap-2 text-sm font-medium text-navy-700 transition-colors hover:text-gold-600"
+              >
+                {dict.cta.viewAll}
+                <span aria-hidden="true">→</span>
+              </Link>
+            </div>
             <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {articles.map((article) => (
-                <ArticleCard
-                  key={article.slug}
-                  lang={lang}
-                  href={`/${lang}/knowledge/${article.slug}`}
-                  title={article.title}
-                  summary={article.summary}
-                  slug={article.slug}
-                  category={article.category}
-                  categoryLabel={dict.articleCategories[article.category]}
-                  readingTime={article.readingTime}
-                  lastUpdated={article.lastUpdated}
-                  labels={{
-                    lastUpdated: dict.common.lastUpdated,
-                    minRead: dict.common.minRead,
-                  }}
+              {featuredProjects.map((project) => (
+                <ProjectCard
+                  key={project.slug}
+                  href={`/${lang}/projects/${project.slug}`}
+                  title={project.title}
+                  summary={project.summary}
+                  category={project.category}
+                  categoryLabel={dict.serviceCategories[project.category]}
+                  status={project.status}
+                  statusLabel={dict.projectStatus[project.status]}
+                  location={project.location}
+                  year={project.year}
+                  capacity={project.capacity}
                 />
               ))}
             </div>
-          )}
-        </div>
-      </section>
+          </div>
+        </section>
+      )}
 
-      {/* 6 — Final CTA (night-lights background; image is location-generic,
-          so the alt never claims Laos — see D-143/D-122) */}
+      {/* 6 — Final CTA */}
       <CtaSection
-        image={{ src: cityNight, alt: dict.alt.cityNight }}
+        image={{ src: riversideCity, alt: dict.alt.riversideCity }}
         title={dict.home.finalCtaTitle}
         lede={dict.home.finalCtaLede}
-        ctaLabel={dict.cta.bookConsultation}
+        ctaLabel={dict.cta.requestQuote}
         ctaHref={`/${lang}/contact`}
         secondaryLabel={dict.cta.exploreServices}
         secondaryHref={`/${lang}/services`}

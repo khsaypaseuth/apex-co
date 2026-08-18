@@ -5,14 +5,14 @@ export interface RelatedLink {
   href: string
 }
 
-export interface RelatedArticlesProps {
-  /** Localized heading, e.g. dict.common.relatedArticles. */
+export interface RelatedLinksProps {
+  /** Localized heading, e.g. dict.common.relatedProjects. */
   heading: string
   items: RelatedLink[]
 }
 
-/** Compact list of related Knowledge Center articles. */
-export function RelatedArticles({ heading, items }: RelatedArticlesProps) {
+/** Compact cross-link list — related projects, related reading. */
+export function RelatedLinks({ heading, items }: RelatedLinksProps) {
   if (items.length === 0) return null
 
   return (

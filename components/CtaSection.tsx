@@ -14,7 +14,7 @@ export interface CtaSectionProps {
   /**
    * Optional background image (static import), rendered under a navy scrim
    * gradient — strongest at the bottom where a lit horizon would otherwise
-   * fight the ivory text (D-143). Default remains the plain navy band.
+   * fight the light text. Default remains the plain navy band.
    */
   image?: { src: StaticImageData; alt: string }
 }
@@ -71,7 +71,7 @@ export function CtaSection({
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
               href={ctaHref}
-              className="btn-premium rounded-sm bg-gold-500 px-6 py-3 font-medium text-navy-950 transition-colors hover:bg-gold-600"
+              className="btn-premium rounded-sm bg-gold-500 px-6 py-3 font-medium text-navy-950 transition-colors hover:bg-gold-600 hover:text-mist-100"
             >
               {ctaLabel}
             </Link>

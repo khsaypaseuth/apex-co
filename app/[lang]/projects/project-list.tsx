@@ -1,29 +1,32 @@
 'use client'
 
 import { useState } from 'react'
-import type { VerificationStatus } from '@/lib/types'
-import { LawTopicCard } from '@/components/LawTopicCard'
+import type { ProjectStatus, ServiceCategorySlug } from '@/lib/types'
+import { ProjectCard } from '@/components/ProjectCard'
 import {
   FilterBar,
   type FilterCategory,
   type FilterState,
 } from '@/components/FilterBar'
 
-/** Serializable law-topic metadata passed from the server page. */
-export interface LawListItem {
+/** Serializable project metadata passed from the server page. */
+export interface ProjectListItem {
   slug: string
   href: string
   title: string
   summary: string
-  category: string
+  category: ServiceCategorySlug
   categoryLabel: string
-  verificationStatus: VerificationStatus
+  status: ProjectStatus
+  statusLabel: string
+  location: string
+  year: number
+  capacity?: string
 }
 
-export interface LawListProps {
-  items: LawListItem[]
+export interface ProjectListProps {
+  items: ProjectListItem[]
   categories: FilterCategory[]
-  verificationLabels: Record<VerificationStatus, string>
   labels: {
     searchLabel: string
     searchPlaceholder: string
@@ -35,13 +38,8 @@ export interface LawListProps {
   }
 }
 
-/** Client wrapper: FilterBar (search + 8 law-category pills) filtering the grid. */
-export function LawList({
-  items,
-  categories,
-  verificationLabels,
-  labels,
-}: LawListProps) {
+/** Client wrapper: FilterBar (search + capability pills) filtering the grid. */
+export function ProjectList({ items, categories, labels }: ProjectListProps) {
   const [filter, setFilter] = useState<FilterState>({
     query: '',
     category: null,
@@ -51,11 +49,13 @@ export function LawList({
   const visible = items.filter((item) => {
     const matchesCategory =
       filter.category === null || item.category === filter.category
-    const matchesQuery =
-      query === '' ||
-      item.title.toLowerCase().includes(query) ||
-      item.summary.toLowerCase().includes(query)
-    return matchesCategory && matchesQuery
+    // Location and capacity are searchable too — "Savannakhet" and "115 kV"
+    // are the terms a visitor actually types when scanning a portfolio.
+    const haystack = [item.title, item.summary, item.location, item.capacity]
+      .filter(Boolean)
+      .join(' ')
+      .toLowerCase()
+    return matchesCategory && (query === '' || haystack.includes(query))
   })
 
   return (
@@ -81,14 +81,18 @@ export function LawList({
           </p>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {visible.map((item) => (
-              <LawTopicCard
+              <ProjectCard
                 key={item.slug}
+                href={item.href}
                 title={item.title}
                 summary={item.summary}
-                href={item.href}
+                category={item.category}
                 categoryLabel={item.categoryLabel}
-                verificationStatus={item.verificationStatus}
-                verificationLabels={verificationLabels}
+                status={item.status}
+                statusLabel={item.statusLabel}
+                location={item.location}
+                year={item.year}
+                capacity={item.capacity}
               />
             ))}
           </div>

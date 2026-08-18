@@ -14,7 +14,7 @@ import '../globals.css'
 
 /**
  * Layout-level metadata: `metadataBase` (required for OG images), the
- * `%s | Super Consulting` title template, and locale-aware Open Graph
+ * `%s | Apex Co., Ltd.` title template, and locale-aware Open Graph
  * defaults. Every page overrides title/description/OG via
  * `pageMetadata()` in lib/seo.ts; these values are the safety net.
  */
@@ -25,11 +25,11 @@ export async function generateMetadata({
   const base: Metadata = {
     metadataBase: new URL(SITE_URL),
     title: {
-      default: `${SITE_NAME} — Business, Legal & Visa Consulting in Laos`,
+      default: `${SITE_NAME} — Electrical & Construction Contractor in the Lao PDR`,
       template: `%s | ${SITE_NAME}`,
     },
     description:
-      'Business setup, visa & immigration, legal, and accounting consulting services in the Lao PDR.',
+      'Electrical supply and installation at 22 kV and 115 kV, foundation piling, road and bridge construction, and building works in the Lao PDR.',
     manifest: '/site.webmanifest',
     icons: {
       icon: [
@@ -82,28 +82,18 @@ export default async function RootLayout({
 
   const dict = await getDictionary(lang)
 
-  // Slimmed desktop nav (D-130): knowledge pages move to the footer and the
-  // mobile slide-over; the plain Contact link is covered by the CTA button.
+  // Desktop nav. The whole site is five pages now, so the full list fits —
+  // no overflow group is needed. The plain Contact link is covered by the
+  // header CTA button.
   const navItems = [
     { label: dict.nav.about, href: `/${lang}/about` },
     { label: dict.nav.services, href: `/${lang}/services` },
-    { label: dict.nav.guides, href: `/${lang}/guides` },
-    { label: dict.nav.links, href: `/${lang}/links` },
+    { label: dict.nav.projects, href: `/${lang}/projects` },
+    { label: dict.nav.news, href: `/${lang}/news` },
+    { label: dict.nav.faq, href: `/${lang}/faq` },
   ]
 
-  // The mobile slide-over keeps the FULL page list, with the moved pages
-  // under a small "Knowledge" group heading (D-130).
-  const mobileGroups = [
-    { items: navItems },
-    {
-      heading: dict.footer.knowledge,
-      items: [
-        { label: dict.nav.knowledge, href: `/${lang}/knowledge` },
-        { label: dict.nav.laws, href: `/${lang}/laws` },
-        { label: dict.nav.faq, href: `/${lang}/faq` },
-      ],
-    },
-  ]
+  const mobileGroups = [{ items: navItems }]
 
   return (
     <html
@@ -122,7 +112,7 @@ export default async function RootLayout({
           navItems={navItems}
           mobileGroups={mobileGroups}
           navLabel={dict.nav.mainNavLabel}
-          ctaLabel={dict.cta.contactUs}
+          ctaLabel={dict.cta.requestQuote}
           ctaHref={`/${lang}/contact`}
           languageLabel={dict.language.label}
           languageOptions={[

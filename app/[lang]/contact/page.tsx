@@ -3,12 +3,11 @@ import { notFound } from 'next/navigation'
 import { getDictionary, hasLocale } from '@/lib/dictionaries'
 import { pageMetadata } from '@/lib/seo'
 import { CONTACT } from '@/lib/site-config'
+import { SERVICE_CATEGORY_SLUGS } from '@/lib/types'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { ContactForm } from '@/components/ContactForm'
 import { Hero } from '@/components/Hero'
-// Confirmed-Laos image (freed up when the home hero switched to Patuxai,
-// D-147) — alt may name Luang Prabang/Mekong per ATTRIBUTIONS.md.
-import mekongSunset from '@/public/images/hero/mekong-river-sunset-luang-prabang.jpg'
+import riversideCity from '@/public/images/hero/riverside-city-dusk-aerial.jpg'
 import {
   IconMail,
   IconMapPin,
@@ -46,15 +45,14 @@ export default async function ContactPage({
     { value: 'line', label: dict.contactForm.methods.line },
   ]
 
-  const serviceOptions = [
-    { value: 'business-setup', label: dict.nav.businessSetup },
-    { value: 'visa-immigration', label: dict.nav.visaImmigration },
-    { value: 'legal-family', label: dict.nav.legalFamily },
-    { value: 'accounting-tax', label: dict.nav.accountingTax },
-  ]
+  const serviceOptions = SERVICE_CATEGORY_SLUGS.map((slug) => ({
+    value: slug,
+    label: dict.serviceCategories[slug],
+  }))
 
-  // Real contact details from lib/site-config.ts (D-133) — address, email,
-  // phone, and WhatsApp as icon rows with live mailto:/tel:/wa.me links.
+  // Contact details come from lib/site-config.ts. They are PLACEHOLDERS until
+  // Apex supplies the real ones — CONTACT.isPlaceholder drives the visible
+  // notice below so a visitor is never given a wrong number without warning.
   const contactRows: {
     key: string
     icon: typeof IconMapPin
@@ -105,7 +103,7 @@ export default async function ContactPage({
         eyebrow={dict.site.name}
         title={dict.nav.contact}
         lede={dict.contactPage.lede}
-        image={{ src: mekongSunset, alt: dict.alt.mekongSunset }}
+        image={{ src: riversideCity, alt: dict.alt.riversideCity }}
       />
 
       <div className="border-b border-navy-950/5">
@@ -158,7 +156,7 @@ export default async function ContactPage({
               <div className="mt-4 h-px w-12 bg-gold-500" aria-hidden="true" />
               <p className="mt-5 font-display text-lg">{dict.site.name}</p>
               <p className="mt-1 text-sm text-mist-100/70">
-                {dict.contactPage.businessUnitLine}
+                {dict.contactPage.taglineLine}
               </p>
               <ul className="mt-6 space-y-4 text-sm">
                 {contactRows.map((row) => {
@@ -197,6 +195,11 @@ export default async function ContactPage({
                   )
                 })}
               </ul>
+              {CONTACT.isPlaceholder && (
+                <p className="mt-6 border-l-2 border-gold-500 pl-4 text-xs leading-relaxed text-mist-100/70">
+                  {dict.footer.contactPlaceholderNote}
+                </p>
+              )}
             </div>
 
             <div>

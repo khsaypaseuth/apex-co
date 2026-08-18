@@ -8,7 +8,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { CtaSection } from '@/components/CtaSection'
 import { Hero } from '@/components/Hero'
 import { SectionHeader } from '@/components/SectionHeader'
-import handshakeOverTable from '@/public/images/sections/handshake-over-table.jpg'
+import teamCollaboration from '@/public/images/sections/team-collaboration.jpg'
 
 export async function generateMetadata({
   params,
@@ -40,7 +40,7 @@ export default async function ServicesPage({
         eyebrow={dict.site.name}
         title={dict.nav.services}
         lede={dict.servicesPage.lede}
-        image={{ src: handshakeOverTable, alt: dict.alt.handshake }}
+        image={{ src: teamCollaboration, alt: dict.alt.teamCollaboration }}
       />
 
       <div className="border-b border-navy-950/5">
@@ -55,7 +55,7 @@ export default async function ServicesPage({
         </div>
       </div>
 
-      {/* Five service groups — exact master-plan lists from content/{lang}/services.ts */}
+      {/* Four capability groups — see content/{lang}/services.ts */}
       {serviceGroups.map((group, index) => (
         <section
           key={group.id}
@@ -95,7 +95,7 @@ export default async function ServicesPage({
       <CtaSection
         title={dict.home.finalCtaTitle}
         lede={dict.home.finalCtaLede}
-        ctaLabel={dict.cta.bookConsultation}
+        ctaLabel={dict.cta.requestQuote}
         ctaHref={`/${lang}/contact`}
       />
     </main>

@@ -1,7 +1,7 @@
 import type { ReactNode, SVGProps } from 'react'
 
 /**
- * Consistent inline SVG icon set (D-134): 24px grid, stroke 1.75,
+ * Consistent inline SVG icon set: 24px grid, stroke 1.75,
  * `currentColor`, lucide-style paths. All icons are decorative
  * (`aria-hidden`) — pair them with visible or sr-only text.
  */
@@ -44,44 +44,8 @@ export function IconBriefcase(props: IconProps) {
   )
 }
 
-export function IconStamp(props: IconProps) {
-  return (
-    <Icon {...props}>
-      <path d="M5 22h14" />
-      <path d="M19.27 13.73A2.5 2.5 0 0 0 17.5 13h-11A2.5 2.5 0 0 0 4 15.5V17a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-1.5c0-.66-.26-1.3-.73-1.77Z" />
-      <path d="M14 13V8.5C14 7 15 7 15 5a3 3 0 0 0-6 0c0 2 1 2 1 3.5V13" />
-    </Icon>
-  )
-}
 
-export function IconScale(props: IconProps) {
-  return (
-    <Icon {...props}>
-      <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" />
-      <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" />
-      <path d="M7 21h10" />
-      <path d="M12 3v18" />
-      <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" />
-    </Icon>
-  )
-}
 
-export function IconCalculator(props: IconProps) {
-  return (
-    <Icon {...props}>
-      <rect x="4" y="2" width="16" height="20" rx="2" />
-      <path d="M8 6h8" />
-      <path d="M16 14v4" />
-      <path d="M16 10h.01" />
-      <path d="M12 10h.01" />
-      <path d="M8 10h.01" />
-      <path d="M12 14h.01" />
-      <path d="M8 14h.01" />
-      <path d="M12 18h.01" />
-      <path d="M8 18h.01" />
-    </Icon>
-  )
-}
 
 export function IconUsers(props: IconProps) {
   return (
@@ -94,14 +58,6 @@ export function IconUsers(props: IconProps) {
   )
 }
 
-export function IconBookOpen(props: IconProps) {
-  return (
-    <Icon {...props}>
-      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-      <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-    </Icon>
-  )
-}
 
 export function IconMapPin(props: IconProps) {
   return (
@@ -198,6 +154,80 @@ export function IconShieldCheck(props: IconProps) {
     <Icon {...props}>
       <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
       <path d="m9 12 2 2 4-4" />
+    </Icon>
+  )
+}
+
+export function IconBolt(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z" />
+    </Icon>
+  )
+}
+
+export function IconTransmissionTower(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M12 3 6 21M12 3l6 18" />
+      <path d="M4 8h16" />
+      <path d="M5.5 13h13" />
+      <path d="M7 18h10" />
+      <path d="M3 21h18" />
+    </Icon>
+  )
+}
+
+export function IconPile(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M2 9h20" />
+      <path d="M6 9v12M12 9v9M18 9v12" />
+      <path d="M9 3h6" />
+      <rect x="10" y="3" width="4" height="4" rx="1" />
+    </Icon>
+  )
+}
+
+export function IconBridge(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M2 10h20" />
+      <path d="M4 10c0 5 3.5 8 8 8s8-3 8-8" />
+      <path d="M4 10v10M20 10v10" />
+      <path d="M8 10v5M12 10v7M16 10v5" />
+    </Icon>
+  )
+}
+
+export function IconHardHat(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M2 18h20" />
+      <path d="M4 18v-3a8 8 0 0 1 16 0v3" />
+      <path d="M10 4.5A2.5 2.5 0 0 1 12.5 2h-1A2.5 2.5 0 0 0 9 4.5V8" />
+      <path d="M15 8V4.5" />
+    </Icon>
+  )
+}
+
+export function IconRuler(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M21.3 8.7 8.7 21.3a1 1 0 0 1-1.4 0l-4.6-4.6a1 1 0 0 1 0-1.4L15.3 2.7a1 1 0 0 1 1.4 0l4.6 4.6a1 1 0 0 1 0 1.4Z" />
+      <path d="m7.5 10.5 2 2M11 7l2 2M14.5 3.5l2 2M4 14l2 2" />
+    </Icon>
+  )
+}
+
+export function IconTruck(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M2 17V6a1 1 0 0 1 1-1h11v12" />
+      <path d="M14 9h4l3 3.5V17h-3" />
+      <circle cx="7" cy="17.5" r="2.5" />
+      <circle cx="17" cy="17.5" r="2.5" />
+      <path d="M9.5 17.5h5" />
     </Icon>
   )
 }

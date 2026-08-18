@@ -21,7 +21,7 @@ export interface MobileNavGroup {
 
 export interface MobileNavProps {
   /**
-   * The FULL page list (D-130): the slimmed desktop nav omits the
+   * The FULL page list: the slimmed desktop nav omits the
    * knowledge pages, but the slide-over keeps everything, grouped.
    */
   groups: MobileNavGroup[]
@@ -49,7 +49,7 @@ const FOCUSABLE_SELECTOR = 'a[href], button:not([disabled])'
  * panel while open, Escape closes it and returns focus to the trigger,
  * and body scroll is locked. Unlike the flag-only header dropdown, the
  * language links here show flag + language name — the panel has room and
- * names read clearer in a menu list (D-132).
+ * names read clearer in a menu list.
  */
 export function MobileNav({
   groups,
@@ -239,7 +239,7 @@ export function MobileNav({
             <Link
               href={ctaHref}
               onClick={() => setOpen(false)}
-              className="mt-8 rounded-sm bg-gold-500 px-5 py-3 text-center font-medium text-navy-950 transition-colors hover:bg-gold-600"
+              className="mt-8 rounded-sm bg-gold-500 px-5 py-3 text-center font-medium text-navy-950 transition-colors hover:bg-gold-600 hover:text-mist-100"
             >
               {ctaLabel}
             </Link>

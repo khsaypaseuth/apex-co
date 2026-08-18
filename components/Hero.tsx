@@ -12,14 +12,20 @@ export interface HeroProps {
   lede?: string
   /** Optional background image, rendered under a navy overlay for contrast. */
   image?: { src: string | StaticImageData; alt: string }
+  /**
+   * Decorative background artwork used where no honest photograph exists —
+   * the capability schematics on the service pages. Rendered under the same
+   * scrim as `image`, and ignored when `image` is supplied.
+   */
+  art?: ReactNode
   /** CTA buttons/links rendered under the lede. */
   actions?: ReactNode
 }
 
 /**
  * Navy hero band. The home variant is tall and centered; the page variant is
- * a short left-aligned banner. Background images always sit under a
- * navy-950 overlay so ivory text keeps WCAG-safe contrast.
+ * a short left-aligned banner. Backgrounds always sit under a navy-950
+ * overlay so the light text keeps WCAG-safe contrast.
  */
 export function Hero({
   variant = 'page',
@@ -27,6 +33,7 @@ export function Hero({
   title,
   lede,
   image,
+  art,
   actions,
 }: HeroProps) {
   const tall = variant === 'home'
@@ -61,6 +68,20 @@ export function Hero({
               mid-frame so the photo reads through; ivory/gold text stays AA. */}
           <div
             className="absolute inset-0 -z-10 bg-linear-to-b from-navy-950/80 via-navy-950/55 to-navy-950/85"
+            aria-hidden="true"
+          />
+        </>
+      )}
+
+      {!image && art && (
+        <>
+          <div className="absolute inset-0 -z-20" aria-hidden="true">
+            {art}
+          </div>
+          {/* Heavier scrim than the photo variant — the schematic is line-work
+              on navy, so it needs less light to stay legible behind text. */}
+          <div
+            className="absolute inset-0 -z-10 bg-linear-to-b from-navy-950/85 via-navy-950/70 to-navy-950/90"
             aria-hidden="true"
           />
         </>

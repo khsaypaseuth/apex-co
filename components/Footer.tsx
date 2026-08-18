@@ -4,6 +4,7 @@ import type { Dictionary } from '@/lib/dictionaries'
 import logoApex from '@/public/images/brand/logo-apex-white.png'
 import type { Locale } from '@/lib/i18n-config'
 import { CONTACT } from '@/lib/site-config'
+import { SERVICE_CATEGORY_SLUGS } from '@/lib/types'
 import {
   IconMail,
   IconMapPin,
@@ -17,24 +18,24 @@ export interface FooterProps {
 }
 
 /**
- * Four-column footer: brand, services, knowledge, contact.
- * The knowledge column carries the pages slimmed out of the desktop nav
- * (D-130); contact rows are real mailto:/tel:/wa.me links (D-133).
+ * Four-column footer: brand, capabilities, company, contact.
+ *
+ * Contact rows are live mailto:/tel:/wa.me links, but the values behind them
+ * are placeholders until Apex supplies real ones — `CONTACT.isPlaceholder`
+ * surfaces a visible notice so nobody dials a number that does not exist.
  */
 export function Footer({ lang, dict }: FooterProps) {
-  const serviceLinks = [
-    { label: dict.nav.businessSetup, href: `/${lang}/services/business-setup` },
-    { label: dict.nav.visaImmigration, href: `/${lang}/services/visa-immigration` },
-    { label: dict.nav.legalFamily, href: `/${lang}/services/legal-family` },
-    { label: dict.nav.accountingTax, href: `/${lang}/services/accounting-tax` },
-  ]
+  const serviceLinks = SERVICE_CATEGORY_SLUGS.map((slug) => ({
+    label: dict.serviceCategories[slug],
+    href: `/${lang}/services/${slug}`,
+  }))
 
-  const knowledgeLinks = [
-    { label: dict.nav.knowledge, href: `/${lang}/knowledge` },
-    { label: dict.nav.lawsShort, href: `/${lang}/laws` },
-    { label: dict.nav.guides, href: `/${lang}/guides` },
-    { label: dict.nav.links, href: `/${lang}/links` },
+  const companyLinks = [
+    { label: dict.nav.about, href: `/${lang}/about` },
+    { label: dict.nav.projects, href: `/${lang}/projects` },
+    { label: dict.nav.news, href: `/${lang}/news` },
     { label: dict.nav.faq, href: `/${lang}/faq` },
+    { label: dict.nav.contact, href: `/${lang}/contact` },
   ]
 
   const address = lang === 'lo' ? CONTACT.addressLo : CONTACT.address
@@ -101,10 +102,10 @@ export function Footer({ lang, dict }: FooterProps) {
 
         <div>
           <p className="text-sm font-semibold tracking-widest text-gold-500 uppercase">
-            {dict.footer.knowledge}
+            {dict.footer.company}
           </p>
           <ul className="mt-4 space-y-2">
-            {knowledgeLinks.map((link) => (
+            {companyLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
@@ -149,6 +150,11 @@ export function Footer({ lang, dict }: FooterProps) {
               </li>
             ))}
           </ul>
+          {CONTACT.isPlaceholder && (
+            <p className="mt-5 border-l-2 border-gold-500 pl-3 text-xs leading-relaxed text-mist-100/60">
+              {dict.footer.contactPlaceholderNote}
+            </p>
+          )}
         </div>
       </div>
 

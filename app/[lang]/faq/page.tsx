@@ -5,12 +5,11 @@ import { pageMetadata } from '@/lib/seo'
 import { getFaqSections } from '@/lib/page-data'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { CtaSection } from '@/components/CtaSection'
-import { DisclaimerBox } from '@/components/DisclaimerBox'
 import { FaqAccordion } from '@/components/FaqAccordion'
 import { Hero } from '@/components/Hero'
 import { JsonLd } from '@/components/JsonLd'
 import { faqPageJsonLd } from '@/lib/json-ld'
-import calmWorkspace from '@/public/images/sections/calm-workspace.jpg'
+import structuralColumns from '@/public/images/sections/structural-columns-corridor.jpg'
 
 export async function generateMetadata({
   params,
@@ -49,7 +48,7 @@ export default async function FaqPage({ params }: PageProps<'/[lang]/faq'>) {
         eyebrow={dict.site.name}
         title={dict.nav.faq}
         lede={dict.faqPage.lede}
-        image={{ src: calmWorkspace, alt: dict.alt.calmWorkspace }}
+        image={{ src: structuralColumns, alt: dict.alt.structuralColumns }}
       />
 
       <div className="border-b border-navy-950/5">
@@ -66,7 +65,7 @@ export default async function FaqPage({ params }: PageProps<'/[lang]/faq'>) {
 
       <section className="py-16 md:py-20">
         <div className="mx-auto max-w-3xl space-y-14 px-6">
-          {/* All five master-plan FAQ sections (content/{lang}/faq.ts) */}
+          {/* FAQ sections from content/{lang}/faq.ts */}
           {faqSections.map((section) => (
             <div key={section.title}>
               <h2 className="font-display text-2xl leading-tight text-navy-950 md:text-3xl">
@@ -78,18 +77,13 @@ export default async function FaqPage({ params }: PageProps<'/[lang]/faq'>) {
               </div>
             </div>
           ))}
-
-          <DisclaimerBox
-            label={dict.legal.disclaimerLabel}
-            text={dict.legal.disclaimer}
-          />
         </div>
       </section>
 
       <CtaSection
         title={dict.home.finalCtaTitle}
         lede={dict.home.finalCtaLede}
-        ctaLabel={dict.cta.bookConsultation}
+        ctaLabel={dict.cta.requestQuote}
         ctaHref={`/${lang}/contact`}
       />
     </main>

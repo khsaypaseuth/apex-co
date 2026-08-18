@@ -171,7 +171,7 @@ export function ContactForm({
 
       <button
         type="submit"
-        className="rounded-sm bg-gold-500 px-6 py-3 font-medium text-navy-950 transition-colors hover:bg-gold-600 focus-visible:outline-2 focus-visible:outline-gold-500"
+        className="rounded-sm bg-gold-500 px-6 py-3 font-medium text-navy-950 transition-colors hover:bg-gold-600 hover:text-mist-100 focus-visible:outline-2 focus-visible:outline-gold-500"
       >
         {labels.submit}
       </button>

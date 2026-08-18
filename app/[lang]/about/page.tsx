@@ -8,11 +8,10 @@ import { CtaSection } from '@/components/CtaSection'
 import { Hero } from '@/components/Hero'
 import { SectionHeader } from '@/components/SectionHeader'
 import { TrustBadge } from '@/components/TrustBadge'
-import accountingDesk from '@/public/images/sections/accounting-calculator-report.jpg'
-import deskAnalysis from '@/public/images/sections/desk-analysis-closeup.jpg'
-import deskCharts from '@/public/images/sections/desk-charts-notebook.jpg'
-import meetingDocuments from '@/public/images/sections/meeting-documents.jpg'
-import overheadDeskWork from '@/public/images/sections/overhead-desk-work.jpg'
+import patuxai from '@/public/images/hero/patuxai-victory-gate-vientiane.jpg'
+import siteCrew from '@/public/images/sections/site-crew-warehouse.jpg'
+import structuralColumns from '@/public/images/sections/structural-columns-corridor.jpg'
+import teamCollaboration from '@/public/images/sections/team-collaboration.jpg'
 
 export async function generateMetadata({
   params,
@@ -36,19 +35,19 @@ export default async function AboutPage({ params }: PageProps<'/[lang]/about'>) 
   const dict = await getDictionary(lang)
 
   const values = [
-    dict.about.values.trust,
-    dict.about.values.clarity,
-    dict.about.values.professionalism,
-    dict.about.values.practicalExecution,
-    dict.about.values.confidentiality,
-    dict.about.values.longTermRelationship,
+    dict.about.values.safety,
+    dict.about.values.quality,
+    dict.about.values.honesty,
+    dict.about.values.selfDelivery,
+    dict.about.values.technical,
+    dict.about.values.longTerm,
   ]
 
   const steps = [
-    dict.about.steps.consult,
-    dict.about.steps.assess,
-    dict.about.steps.execute,
-    dict.about.steps.deliver,
+    dict.about.steps.survey,
+    dict.about.steps.price,
+    dict.about.steps.build,
+    dict.about.steps.handover,
   ]
 
   return (
@@ -57,7 +56,7 @@ export default async function AboutPage({ params }: PageProps<'/[lang]/about'>) 
         eyebrow={dict.about.eyebrow}
         title={dict.about.title}
         lede={dict.about.lede}
-        image={{ src: deskAnalysis, alt: dict.alt.deskAnalysis }}
+        image={{ src: patuxai, alt: dict.alt.patuxai }}
       />
 
       <div className="border-b border-navy-950/5">
@@ -80,8 +79,8 @@ export default async function AboutPage({ params }: PageProps<'/[lang]/about'>) 
             <p>{dict.about.introP2}</p>
           </div>
           <Image
-            src={overheadDeskWork}
-            alt={dict.alt.overheadDeskWork}
+            src={siteCrew}
+            alt={dict.alt.siteCrew}
             placeholder="blur"
             sizes="(min-width: 1024px) 550px, 100vw"
             className="h-72 w-full rounded-sm object-cover md:h-96"
@@ -93,8 +92,8 @@ export default async function AboutPage({ params }: PageProps<'/[lang]/about'>) 
       <section className="bg-mist-100 py-16 md:py-24">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2">
           <Image
-            src={deskCharts}
-            alt={dict.alt.deskCharts}
+            src={structuralColumns}
+            alt={dict.alt.structuralColumns}
             placeholder="blur"
             sizes="(min-width: 1024px) 550px, 100vw"
             className="order-last h-72 w-full rounded-sm object-cover lg:order-first md:h-96"
@@ -146,7 +145,7 @@ export default async function AboutPage({ params }: PageProps<'/[lang]/about'>) 
         </div>
       </section>
 
-      {/* How the firm works — 4 steps on navy */}
+      {/* How a project runs — 4 steps on navy */}
       <section className="bg-navy-950 py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid items-center gap-10 lg:grid-cols-2">
@@ -163,8 +162,8 @@ export default async function AboutPage({ params }: PageProps<'/[lang]/about'>) 
               </p>
             </div>
             <Image
-              src={meetingDocuments}
-              alt={dict.alt.meetingDocuments}
+              src={teamCollaboration}
+              alt={dict.alt.teamCollaboration}
               placeholder="blur"
               sizes="(min-width: 1024px) 550px, 100vw"
               className="h-60 w-full rounded-sm object-cover md:h-72"
@@ -188,24 +187,24 @@ export default async function AboutPage({ params }: PageProps<'/[lang]/about'>) 
         </div>
       </section>
 
-      {/* Parent company */}
+      {/* One contractor, four capabilities */}
       <section className="bg-mist-100 py-16 md:py-24">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2">
           <Image
-            src={accountingDesk}
-            alt={dict.alt.accountingDesk}
+            src={siteCrew}
+            alt={dict.alt.siteCrew}
             placeholder="blur"
             sizes="(min-width: 1024px) 550px, 100vw"
             className="order-last h-72 w-full rounded-sm object-cover lg:order-first md:h-96"
           />
           <div>
-            <TrustBadge text={dict.site.parentCompanyLine} />
+            <TrustBadge text={dict.site.experienceLine} />
             <h2 className="font-display mt-6 text-3xl leading-tight text-navy-950 md:text-4xl">
-              {dict.about.parentTitle}
+              {dict.about.capabilityTitle}
             </h2>
             <div className="mt-5 h-px w-16 bg-gold-500" aria-hidden="true" />
             <p className="mt-5 leading-relaxed text-navy-700/90">
-              {dict.about.parentText}
+              {dict.about.capabilityText}
             </p>
           </div>
         </div>
@@ -214,7 +213,7 @@ export default async function AboutPage({ params }: PageProps<'/[lang]/about'>) 
       <CtaSection
         title={dict.home.finalCtaTitle}
         lede={dict.home.finalCtaLede}
-        ctaLabel={dict.cta.bookConsultation}
+        ctaLabel={dict.cta.requestQuote}
         ctaHref={`/${lang}/contact`}
         secondaryLabel={dict.cta.exploreServices}
         secondaryHref={`/${lang}/services`}

@@ -11,7 +11,7 @@ export interface LanguageOption {
   code: Locale
   /**
    * Full language name (e.g. "English", "ພາສາລາວ"). Not rendered visibly in
-   * the header dropdown (flags only, D-132) — carried by sr-only/title text.
+   * the header dropdown (flags only) — carried by sr-only/title text.
    */
   label: string
 }
@@ -26,7 +26,7 @@ export interface LanguageSwitcherProps {
 }
 
 /**
- * Flag-only locale dropdown (D-132). The trigger shows the current locale's
+ * Flag-only locale dropdown. The trigger shows the current locale's
  * flag + a chevron; the menu lists each locale as a flag icon. Language
  * names are provided to assistive tech via sr-only text and `title`.
  *

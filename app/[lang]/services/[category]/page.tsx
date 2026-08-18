@@ -1,56 +1,24 @@
 import type { Metadata } from 'next'
-import type { StaticImageData } from 'next/image'
 import { notFound } from 'next/navigation'
-import { getDictionary, hasLocale, type Dictionary } from '@/lib/dictionaries'
+import { getDictionary, hasLocale } from '@/lib/dictionaries'
 import { pageMetadata } from '@/lib/seo'
-import { listArticles } from '@/lib/content'
-import {
-  SERVICE_CATEGORY_SLUGS,
-  type ServiceCategorySlug,
-} from '@/lib/types'
+import { listProjects } from '@/lib/content'
+import { SERVICE_CATEGORY_SLUGS, type ServiceCategorySlug } from '@/lib/types'
 import { getGroupsForCategory, getServicePageContent } from '@/lib/page-data'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { CtaSection } from '@/components/CtaSection'
-import { DisclaimerBox } from '@/components/DisclaimerBox'
 import { Hero } from '@/components/Hero'
-import { RelatedArticles } from '@/components/RelatedArticles'
+import { ProjectThumb } from '@/components/ProjectThumb'
+import { RelatedLinks } from '@/components/RelatedLinks'
 import { RelatedServices } from '@/components/RelatedServices'
+import { ScopeNote } from '@/components/ScopeNote'
 import { SectionHeader } from '@/components/SectionHeader'
-import contractSigning from '@/public/images/sections/contract-signing.jpg'
-import passportStamps from '@/public/images/sections/passport-stamps.jpg'
-import meetingDocuments from '@/public/images/sections/meeting-documents.jpg'
-import accountingDesk from '@/public/images/sections/accounting-calculator-report.jpg'
 
-/** Per-category wiring: dictionary keys + hero image (static import → blur). */
-const CATEGORY_CONFIG: Record<
-  ServiceCategorySlug,
-  {
-    dictKey: 'businessSetup' | 'visaImmigration' | 'legalFamily' | 'accountingTax'
-    image: StaticImageData
-    altKey: keyof Dictionary['alt']
-  }
-> = {
-  'business-setup': {
-    dictKey: 'businessSetup',
-    image: meetingDocuments,
-    altKey: 'meetingDocuments',
-  },
-  'visa-immigration': {
-    dictKey: 'visaImmigration',
-    image: passportStamps,
-    altKey: 'passportStamps',
-  },
-  'legal-family': {
-    dictKey: 'legalFamily',
-    image: contractSigning,
-    altKey: 'contractSigning',
-  },
-  'accounting-tax': {
-    dictKey: 'accountingTax',
-    image: accountingDesk,
-    altKey: 'accountingDesk',
-  },
-}
+/**
+ * Capability page. The hero backdrop is the capability's own schematic rather
+ * than a photograph — Apex has no site photography yet, and a stock
+ * substation would imply work the company did not do.
+ */
 
 function isCategorySlug(value: string): value is ServiceCategorySlug {
   return (SERVICE_CATEGORY_SLUGS as readonly string[]).includes(value)
@@ -68,7 +36,7 @@ export async function generateMetadata({
   const { lang, category } = await params
   if (!hasLocale(lang) || !isCategorySlug(category)) return {}
   const dict = await getDictionary(lang)
-  const meta = dict.meta[CATEGORY_CONFIG[category].dictKey]
+  const meta = dict.meta.serviceCategories[category]
   return pageMetadata({
     lang,
     path: `/services/${category}`,
@@ -85,21 +53,19 @@ export default async function ServiceCategoryPage({
   if (!hasLocale(lang) || !isCategorySlug(category)) notFound()
 
   const dict = await getDictionary(lang)
-  const config = CATEGORY_CONFIG[category]
   const page = getServicePageContent(lang, category)
   const groups = getGroupsForCategory(lang, category)
-  const title = dict.nav[config.dictKey]
+  const title = dict.serviceCategories[category]
 
-  // Knowledge Center articles related to this service area (empty-safe).
-  const relatedArticles = (await listArticles(lang)).filter((article) =>
-    article.relatedServices.includes(category),
-  )
+  // Projects delivered under this capability (empty-safe until the portfolio
+  // is populated — see content/en/projects/README.md).
+  const relatedProjects = await listProjects(lang, category)
 
-  // The other three service areas.
+  // The other three capabilities.
   const otherServices = SERVICE_CATEGORY_SLUGS.filter(
     (slug) => slug !== category,
   ).map((slug) => ({
-    label: dict.nav[CATEGORY_CONFIG[slug].dictKey],
+    label: dict.serviceCategories[slug],
     href: `/${lang}/services/${slug}`,
   }))
 
@@ -109,7 +75,9 @@ export default async function ServiceCategoryPage({
         eyebrow={dict.nav.services}
         title={title}
         lede={page.heroLede}
-        image={{ src: config.image, alt: dict.alt[config.altKey] }}
+        art={
+          <ProjectThumb category={category} className="h-full w-full" />
+        }
       />
 
       <div className="border-b border-navy-950/5">
@@ -154,7 +122,7 @@ export default async function ServiceCategoryPage({
         </div>
       </section>
 
-      {/* Services in this area — exact master-plan lists */}
+      {/* Services in this capability */}
       <section className="bg-mist-100 py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-6">
           <SectionHeader title={dict.servicePage.servicesInAreaTitle} />
@@ -190,7 +158,7 @@ export default async function ServiceCategoryPage({
         </div>
       </section>
 
-      {/* Page-specific topics */}
+      {/* Capability-specific topics */}
       <section className="py-16 md:py-20">
         <div className="mx-auto grid max-w-6xl gap-x-12 gap-y-12 px-6 sm:grid-cols-2">
           {page.topics.map((topic) => (
@@ -207,14 +175,14 @@ export default async function ServiceCategoryPage({
         </div>
       </section>
 
-      {/* Process overview — navy band */}
+      {/* How a job runs — navy band */}
       <section className="bg-navy-950 py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-6">
           <h2 className="font-display text-3xl leading-tight text-mist-100 md:text-4xl">
             {dict.servicePage.processTitle}
           </h2>
           <div className="mt-5 h-px w-16 bg-gold-500" aria-hidden="true" />
-          <ol className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <ol className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
             {page.process.map((step, index) => (
               <li key={step.title}>
                 <p className="font-display text-3xl text-gold-500">
@@ -232,17 +200,17 @@ export default async function ServiceCategoryPage({
         </div>
       </section>
 
-      {/* Documents commonly required + timeline note + disclaimer */}
+      {/* Standards worked to + programme note + scope note */}
       <section className="bg-mist-100 py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-12 lg:grid-cols-2">
             <div>
               <SectionHeader
-                title={dict.servicePage.documentsTitle}
-                lede={page.documents.intro}
+                title={dict.servicePage.standardsTitle}
+                lede={page.standards.intro}
               />
               <ul className="mt-8 space-y-3">
-                {page.documents.items.map((item) => (
+                {page.standards.items.map((item) => (
                   <li key={item} className="flex gap-3 leading-relaxed">
                     <span aria-hidden="true" className="mt-0.5 text-gold-600">
                       →
@@ -252,7 +220,7 @@ export default async function ServiceCategoryPage({
                 ))}
               </ul>
               <p className="mt-6 text-sm italic leading-relaxed text-slate-600">
-                {page.documents.note}
+                {page.standards.note}
               </p>
             </div>
             <div className="h-fit rounded-sm border border-navy-950/10 bg-white p-7">
@@ -266,15 +234,12 @@ export default async function ServiceCategoryPage({
             </div>
           </div>
           <div className="mt-12">
-            <DisclaimerBox
-              label={dict.legal.disclaimerLabel}
-              text={dict.legal.disclaimer}
-            />
+            <ScopeNote label={dict.scopeNote.label} text={dict.scopeNote.text} />
           </div>
         </div>
       </section>
 
-      {/* How Super Consulting helps + related links */}
+      {/* How Apex delivers + related links */}
       <section className="py-16 md:py-20">
         <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-3">
           <div className="lg:col-span-2">
@@ -295,11 +260,11 @@ export default async function ServiceCategoryPage({
               heading={dict.servicePage.otherServicesTitle}
               items={otherServices}
             />
-            <RelatedArticles
-              heading={dict.common.relatedArticles}
-              items={relatedArticles.map((article) => ({
-                label: article.title,
-                href: `/${lang}/knowledge/${article.slug}`,
+            <RelatedLinks
+              heading={dict.common.relatedProjects}
+              items={relatedProjects.map((project) => ({
+                label: project.title,
+                href: `/${lang}/projects/${project.slug}`,
               }))}
             />
           </div>
@@ -309,7 +274,7 @@ export default async function ServiceCategoryPage({
       <CtaSection
         title={dict.home.finalCtaTitle}
         lede={dict.home.finalCtaLede}
-        ctaLabel={dict.cta.bookConsultation}
+        ctaLabel={dict.cta.requestQuote}
         ctaHref={`/${lang}/contact`}
       />
     </main>

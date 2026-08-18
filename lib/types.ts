@@ -1,66 +1,32 @@
 import type { Locale } from './i18n-config'
 
 /**
- * Verification flag carried by anything that makes factual claims
- * (articles, law topics, guides). Master plan guardrail: never state
- * legal/tax/visa facts without a source or an explicit
- * 'needs-verification' marker.
+ * Apex's four capability areas. Each one is a `/services/[category]` page and
+ * doubles as the taxonomy for the project portfolio, so a project is always
+ * filed under the capability that delivered it.
  */
-export const VERIFICATION_STATUSES = [
-  'verified',
-  'needs-verification',
-  'general-info',
-] as const
-
-export type VerificationStatus = (typeof VERIFICATION_STATUSES)[number]
-
-/** The four service category pages in the sitemap (master plan §Services). */
 export const SERVICE_CATEGORY_SLUGS = [
-  'business-setup',
-  'visa-immigration',
-  'legal-family',
-  'accounting-tax',
+  'electrical',
+  'piling-foundation',
+  'roads-bridges',
+  'buildings-property',
 ] as const
 
 export type ServiceCategorySlug = (typeof SERVICE_CATEGORY_SLUGS)[number]
 
-/** Knowledge Center taxonomy (master plan §Knowledge Center — 9 categories). */
-export const ARTICLE_CATEGORIES = [
-  'starting-a-business',
-  'tax-accounting',
-  'visa-immigration',
-  'lao-law-basics',
-  'labour-employment',
-  'investment',
-  'marriage-family',
-  'living-in-laos',
-  'compliance-checklists',
-] as const
+/** Whether a project is finished or still on site. */
+export const PROJECT_STATUSES = ['completed', 'ongoing'] as const
 
-export type ArticleCategory = (typeof ARTICLE_CATEGORIES)[number]
+export type ProjectStatus = (typeof PROJECT_STATUSES)[number]
 
-/** Lao Laws Library taxonomy (master plan §Lao Laws Library — 8 categories). */
-export const LAW_CATEGORIES = [
-  'company-law',
-  'investment-law',
-  'tax-law',
-  'labour-law',
-  'immigration',
-  'family-law',
-  'intellectual-property',
-  'commercial-contracts',
-] as const
-
-export type LawCategory = (typeof LAW_CATEGORIES)[number]
-
-/** One of the four top-level service categories (a `/services/*` page). */
+/** One of the four capability areas (a `/services/*` page). */
 export interface ServiceCategory {
   slug: ServiceCategorySlug
   title: string
   summary: string
 }
 
-/** An individual service offered within a category. */
+/** An individual service offered within a capability area. */
 export interface Service {
   slug: string
   category: ServiceCategorySlug
@@ -69,50 +35,43 @@ export interface Service {
 }
 
 /**
- * Shared shape of every markdown-backed content entry once loaded and
- * rendered by `lib/content.ts` (frontmatter + rendered HTML body).
+ * A delivered or in-progress project, loaded from
+ * `content/{lang}/projects/*.md` by `lib/content.ts`.
+ *
+ * `capacity` carries the headline engineering figure where one exists — a
+ * substation rating, a line length, a pile count, a span. It is free text
+ * rather than a number because the meaningful unit differs per capability.
  */
-export interface ContentEntryBase {
+export interface Project {
   slug: string
   lang: Locale
   title: string
   summary: string
+  category: ServiceCategorySlug
+  status: ProjectStatus
+  /** Province, district, or corridor — as specific as Apex will publish. */
+  location: string
+  /** Year of completion, or of commencement while `status` is 'ongoing'. */
+  year: number
+  /** Client or awarding authority. Omitted where the contract is confidential. */
+  client?: string
+  /** Headline figure, e.g. '115/22 kV substation, 2 × 25 MVA'. */
+  capacity?: string
+  /** Principal works delivered, as short bullet items. */
+  scope: string[]
   /** ISO date string, YYYY-MM-DD. */
   lastUpdated: string
   /** Reading time in minutes. */
   readingTime: number
-  verificationStatus: VerificationStatus
-  /** Slugs of related service categories/services. */
+  /** Capability slugs to cross-link from the project page. */
   relatedServices: string[]
-  /** Slugs of related knowledge-center articles. */
-  relatedArticles: string[]
-  /** Source URLs backing factual claims (required for 'verified'). */
-  sources?: string[]
+  /** Slugs of other projects worth showing alongside this one. */
+  relatedProjects: string[]
   /** Rendered HTML body (unified pipeline output). */
   html: string
 }
 
-/** Knowledge Center article. */
-export interface Article extends ContentEntryBase {
-  category: ArticleCategory
-}
-
-/** Lao Laws Library topic page. */
-export interface LawTopic extends ContentEntryBase {
-  category: LawCategory
-}
-
-/** Business guide (downloadable-style, with lead-capture CTA). */
-export interface Guide extends ContentEntryBase {
-  category: ServiceCategorySlug
-}
-
-/**
- * A display group on the `/services` overview page. The master plan lists
- * FIVE groups but the sitemap has FOUR category pages — Corporate Legal and
- * Family & Personal Legal both live on `/services/legal-family`, so each
- * group carries the category page it links to.
- */
+/** A display group on the `/services` overview page. */
 export interface ServiceGroup {
   id: string
   categorySlug: ServiceCategorySlug
@@ -127,16 +86,16 @@ export interface ProcessStep {
   description: string
 }
 
-/** A titled prose block on a service category page (page-specific sections). */
+/** A titled prose block on a service category page. */
 export interface ServicePageTopic {
   heading: string
   body: string
 }
 
 /**
- * Full English content for one `/services/[category]` page. Long-form prose
- * stays English-only until Phase 7 (see BUILD_PLAN.md); shared section
- * headings ("Overview", "Who this is for", …) are dictionary keys instead.
+ * Full content for one `/services/[category]` page. Shared section headings
+ * ("Overview", "Who this is for", …) are dictionary keys rather than fields,
+ * so only the capability-specific prose lives here.
  */
 export interface ServicePageContent {
   slug: ServiceCategorySlug
@@ -145,19 +104,22 @@ export interface ServicePageContent {
   overview: string[]
   /** "Who this is for" bullet items. */
   whoItsFor: string[]
-  /** Page-specific topical sections (per master plan section lists). */
+  /** Capability-specific topical sections. */
   topics: ServicePageTopic[]
-  /** Process overview steps. */
+  /** How a job runs, start to finish. */
   process: ProcessStep[]
-  /** Documents commonly requested — cautious wording required. */
-  documents: {
+  /**
+   * Standards, approvals, and certifications the capability works to.
+   * Replaces the previous brand's "documents commonly requested" block.
+   */
+  standards: {
     intro: string
     items: string[]
     note: string
   }
-  /** Timeline disclaimer paragraph (never states fixed durations). */
+  /** Programme note — never states fixed durations as a promise. */
   timelineNote: string
-  /** "How Super Consulting helps" bullet items. */
+  /** "How Apex delivers" bullet items. */
   howWeHelp: string[]
 }
 
@@ -167,15 +129,15 @@ export interface FaqItem {
   answer: string
 }
 
-/** Titled group of FAQ entries (master plan defines 5 sections). */
+/** Titled group of FAQ entries. */
 export interface FaqSection {
   title: string
   items: FaqItem[]
 }
 
 /**
- * News & Updates item. The section launches with a designed empty state
- * (decision D-010) — this type keeps the section CMS-ready.
+ * News & Updates item. The section launches with a designed empty state —
+ * this type keeps it CMS-ready.
  */
 export interface NewsItem {
   slug: string

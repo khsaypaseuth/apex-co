@@ -14,7 +14,7 @@ export interface FloatingContactButtonsProps {
 
 /**
  * Fixed WhatsApp + LINE contact buttons (bottom-right). WhatsApp opens the
- * real wa.me chat (CONTACT.whatsappHref, D-133). LINE has no official ID
+ * real wa.me chat (CONTACT.whatsappHref). LINE has no official ID
  * yet — its href stays a placeholder, marked with a `title` attribute so
  * the state is visible on hover.
  */
@@ -54,7 +54,7 @@ export function FloatingContactButtons({
           <path d="M9 9.5c.5 2.5 3 5 5.5 5.5l1-1.5-2-1-1 .5c-.8-.5-1.5-1.2-2-2l.5-1-1-2L9 9.5z" />
         </svg>
       </a>
-      {/* LINE placeholder — no official LINE ID yet (see decision log D-133). */}
+      {/* LINE placeholder — no official LINE ID yet. */}
       <a
         href="#"
         title={linePlaceholderNote}

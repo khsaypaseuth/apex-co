@@ -24,9 +24,9 @@ export interface HeaderProps {
    */
   variant?: 'solid' | 'transparent' | 'auto'
   siteName: string
-  /** Slimmed desktop nav (D-130) — the slide-over gets the full list. */
+  /** Slimmed desktop nav — the slide-over gets the full list. */
   navItems: HeaderNavItem[]
-  /** Full grouped page list for the mobile slide-over (D-130). */
+  /** Full grouped page list for the mobile slide-over. */
   mobileGroups: MobileNavGroup[]
   /** Accessible name for the desktop nav (dict.nav.mainNavLabel). */
   navLabel: string
@@ -78,7 +78,7 @@ export function Header({
       className={[
         // z-50 (above the z-40 floating contact buttons) — the header is a
         // stacking context, so the mobile menu overlay inside it can never
-        // out-stack later fixed siblings on its own (D-201).
+        // out-stack later fixed siblings on its own.
         'inset-x-0 top-0 z-50 transition-colors duration-300',
         resolved === 'transparent' ? 'fixed' : 'sticky',
         solid
@@ -126,7 +126,7 @@ export function Header({
           />
           <Link
             href={ctaHref}
-            className="btn-premium hidden rounded-sm bg-gold-500 px-4 py-2 text-sm font-medium text-navy-950 transition-colors hover:bg-gold-600 sm:inline-block"
+            className="btn-premium hidden rounded-sm bg-gold-500 px-4 py-2 text-sm font-medium text-navy-950 transition-colors hover:bg-gold-600 hover:text-mist-100 sm:inline-block"
           >
             {ctaLabel}
           </Link>

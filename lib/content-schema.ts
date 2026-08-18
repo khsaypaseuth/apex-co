@@ -1,10 +1,5 @@
 import { z } from 'zod'
-import {
-  ARTICLE_CATEGORIES,
-  LAW_CATEGORIES,
-  SERVICE_CATEGORY_SLUGS,
-  VERIFICATION_STATUSES,
-} from './types'
+import { PROJECT_STATUSES, SERVICE_CATEGORY_SLUGS } from './types'
 
 /**
  * Zod schemas validating markdown frontmatter at build time.
@@ -26,35 +21,32 @@ const isoDateString = z.preprocess(
     }),
 )
 
-const baseFrontmatterSchema = z.object({
+/**
+ * Project frontmatter. `scope` is required and non-empty: a portfolio entry
+ * that does not say what Apex actually built is not worth publishing, so an
+ * empty scope list fails the build rather than rendering a blank section.
+ */
+export const projectFrontmatterSchema = z.object({
   title: z.string().min(1, 'title is required'),
   summary: z.string().min(1, 'summary is required'),
+  category: z.enum(SERVICE_CATEGORY_SLUGS),
+  status: z.enum(PROJECT_STATUSES),
+  location: z.string().min(1, 'location is required'),
+  year: z
+    .number({ error: 'year must be a four-digit number' })
+    .int()
+    .min(1990)
+    .max(2100),
+  client: z.string().min(1).optional(),
+  capacity: z.string().min(1).optional(),
+  scope: z.array(z.string().min(1)).min(1, 'scope needs at least one item'),
   lastUpdated: isoDateString,
   readingTime: z
     .number({ error: 'readingTime must be a number of minutes' })
     .int()
     .positive(),
-  verificationStatus: z.enum(VERIFICATION_STATUSES),
   relatedServices: z.array(z.string()).default([]),
-  relatedArticles: z.array(z.string()).default([]),
-  sources: z.array(z.url()).optional(),
+  relatedProjects: z.array(z.string()).default([]),
 })
 
-/** Knowledge Center article frontmatter. */
-export const articleFrontmatterSchema = baseFrontmatterSchema.extend({
-  category: z.enum(ARTICLE_CATEGORIES),
-})
-
-/** Lao Laws Library topic frontmatter. */
-export const lawTopicFrontmatterSchema = baseFrontmatterSchema.extend({
-  category: z.enum(LAW_CATEGORIES),
-})
-
-/** Business guide frontmatter (categorised by service category). */
-export const guideFrontmatterSchema = baseFrontmatterSchema.extend({
-  category: z.enum(SERVICE_CATEGORY_SLUGS),
-})
-
-export type ArticleFrontmatter = z.infer<typeof articleFrontmatterSchema>
-export type LawTopicFrontmatter = z.infer<typeof lawTopicFrontmatterSchema>
-export type GuideFrontmatter = z.infer<typeof guideFrontmatterSchema>
+export type ProjectFrontmatter = z.infer<typeof projectFrontmatterSchema>

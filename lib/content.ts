@@ -9,27 +9,23 @@ import remarkGfm from 'remark-gfm'
 import remarkRehype from 'remark-rehype'
 import rehypeStringify from 'rehype-stringify'
 import { z } from 'zod'
-import {
-  articleFrontmatterSchema,
-  guideFrontmatterSchema,
-  lawTopicFrontmatterSchema,
-} from './content-schema'
+import { projectFrontmatterSchema } from './content-schema'
 import type { Locale } from './i18n-config'
-import type { Article, Guide, LawTopic } from './types'
+import type { Project, ServiceCategorySlug } from './types'
 
 /**
- * Markdown content pipeline — gray-matter + unified, exactly as verified in
- * BUILD_PLAN.md Phase 0 (remark-parse → remark-gfm → remark-rehype →
- * rehype-stringify). Content lives in `content/{lang}/{articles|laws|guides|pages}/`.
+ * Markdown content pipeline — gray-matter + unified (remark-parse →
+ * remark-gfm → remark-rehype → rehype-stringify). Content lives in
+ * `content/{lang}/projects/`.
  *
  * Frontmatter is Zod-validated; invalid content throws a descriptive error at
  * build time. Missing files return `null` (callers decide between fallback
- * and `notFound()`); missing directories list as empty (inactive locales).
+ * and `notFound()`); missing directories list as empty (unpopulated locales).
  */
 
 const CONTENT_ROOT = path.join(process.cwd(), 'content')
 
-type ContentDir = 'articles' | 'laws' | 'guides' | 'pages'
+type ContentDir = 'projects' | 'pages'
 
 function contentDir(lang: Locale, dir: ContentDir): string {
   return path.join(CONTENT_ROOT, lang, dir)
@@ -107,7 +103,11 @@ async function readEntryWithFallback<Schema extends z.ZodType>(
   dir: ContentDir,
   slug: string,
   schema: Schema,
-): Promise<{ frontmatter: z.output<Schema>; html: string; contentLang: Locale } | null> {
+): Promise<{
+  frontmatter: z.output<Schema>
+  html: string
+  contentLang: Locale
+} | null> {
   const local = await readEntry(lang, dir, slug, schema)
   if (local) return { ...local, contentLang: lang }
   if (lang !== 'en') {
@@ -143,135 +143,60 @@ async function listSlugsWithFallback(
   return listSlugs('en', dir)
 }
 
-function byLastUpdatedDesc(
-  a: { lastUpdated: string },
-  b: { lastUpdated: string },
-): number {
-  return b.lastUpdated.localeCompare(a.lastUpdated)
-}
-
 // ---------------------------------------------------------------------------
-// Articles (Knowledge Center)
+// Projects
 // ---------------------------------------------------------------------------
 
-export async function getArticle(
+export async function getProject(
   lang: Locale,
   slug: string,
-): Promise<Article | null> {
+): Promise<Project | null> {
   const entry = await readEntryWithFallback(
     lang,
-    'articles',
+    'projects',
     slug,
-    articleFrontmatterSchema,
+    projectFrontmatterSchema,
   )
   if (!entry) return null
-  return { slug, lang: entry.contentLang, html: entry.html, ...entry.frontmatter }
+  return {
+    slug,
+    lang: entry.contentLang,
+    html: entry.html,
+    ...entry.frontmatter,
+  }
 }
 
-export async function listArticleSlugs(lang: Locale): Promise<string[]> {
-  return listSlugsWithFallback(lang, 'articles')
+export async function listProjectSlugs(lang: Locale): Promise<string[]> {
+  return listSlugsWithFallback(lang, 'projects')
 }
 
-export async function listArticles(
+/**
+ * All projects for a locale, newest first. Ongoing work sorts above completed
+ * work of the same year — a live site is the more useful thing to show a
+ * visitor scanning the portfolio.
+ */
+export async function listProjects(
   lang: Locale,
-  category?: Article['category'],
-): Promise<Article[]> {
-  const slugs = await listArticleSlugs(lang)
-  const articles = await Promise.all(
+  category?: ServiceCategorySlug,
+): Promise<Project[]> {
+  const slugs = await listProjectSlugs(lang)
+  const projects = await Promise.all(
     slugs.map(async (slug) => {
-      const article = await getArticle(lang, slug)
-      if (!article) {
-        throw new Error(`Article listed but unreadable: content/${lang}/articles/${slug}.md`)
+      const project = await getProject(lang, slug)
+      if (!project) {
+        throw new Error(
+          `Project listed but unreadable: content/${lang}/projects/${slug}.md`,
+        )
       }
-      return article
+      return project
     }),
   )
 
-  return articles
-    .filter((article) => !category || article.category === category)
-    .sort(byLastUpdatedDesc)
-}
-
-// ---------------------------------------------------------------------------
-// Law topics (Lao Laws Library)
-// ---------------------------------------------------------------------------
-
-export async function getLawTopic(
-  lang: Locale,
-  slug: string,
-): Promise<LawTopic | null> {
-  const entry = await readEntryWithFallback(
-    lang,
-    'laws',
-    slug,
-    lawTopicFrontmatterSchema,
-  )
-  if (!entry) return null
-  return { slug, lang: entry.contentLang, html: entry.html, ...entry.frontmatter }
-}
-
-export async function listLawTopicSlugs(lang: Locale): Promise<string[]> {
-  return listSlugsWithFallback(lang, 'laws')
-}
-
-export async function listLawTopics(
-  lang: Locale,
-  category?: LawTopic['category'],
-): Promise<LawTopic[]> {
-  const slugs = await listLawTopicSlugs(lang)
-  const topics = await Promise.all(
-    slugs.map(async (slug) => {
-      const topic = await getLawTopic(lang, slug)
-      if (!topic) {
-        throw new Error(`Law topic listed but unreadable: content/${lang}/laws/${slug}.md`)
-      }
-      return topic
-    }),
-  )
-
-  return topics
-    .filter((topic) => !category || topic.category === category)
-    .sort(byLastUpdatedDesc)
-}
-
-// ---------------------------------------------------------------------------
-// Guides (Business Guides)
-// ---------------------------------------------------------------------------
-
-export async function getGuide(
-  lang: Locale,
-  slug: string,
-): Promise<Guide | null> {
-  const entry = await readEntryWithFallback(
-    lang,
-    'guides',
-    slug,
-    guideFrontmatterSchema,
-  )
-  if (!entry) return null
-  return { slug, lang: entry.contentLang, html: entry.html, ...entry.frontmatter }
-}
-
-export async function listGuideSlugs(lang: Locale): Promise<string[]> {
-  return listSlugsWithFallback(lang, 'guides')
-}
-
-export async function listGuides(
-  lang: Locale,
-  category?: Guide['category'],
-): Promise<Guide[]> {
-  const slugs = await listGuideSlugs(lang)
-  const guides = await Promise.all(
-    slugs.map(async (slug) => {
-      const guide = await getGuide(lang, slug)
-      if (!guide) {
-        throw new Error(`Guide listed but unreadable: content/${lang}/guides/${slug}.md`)
-      }
-      return guide
-    }),
-  )
-
-  return guides
-    .filter((guide) => !category || guide.category === category)
-    .sort(byLastUpdatedDesc)
+  return projects
+    .filter((project) => !category || project.category === category)
+    .sort((a, b) => {
+      if (a.year !== b.year) return b.year - a.year
+      if (a.status !== b.status) return a.status === 'ongoing' ? -1 : 1
+      return a.title.localeCompare(b.title)
+    })
 }

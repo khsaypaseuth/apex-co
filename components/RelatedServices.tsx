@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import type { RelatedLink } from './RelatedArticles'
+import type { RelatedLink } from './RelatedLinks'
 
 export interface RelatedServicesProps {
   /** Localized heading, e.g. dict.common.relatedServices. */
