@@ -6,7 +6,7 @@ import { pageMetadata } from '@/lib/seo'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { CtaSection } from '@/components/CtaSection'
 import { Hero } from '@/components/Hero'
-import siteCrew from '@/public/images/sections/site-crew-warehouse.jpg'
+import linemanOverhead from '@/public/images/sections/lineman-overhead-line.jpg'
 
 /**
  * News & Updates. Apex has no announcements to publish yet, so the page ships
@@ -40,7 +40,7 @@ export default async function NewsPage({ params }: PageProps<'/[lang]/news'>) {
         eyebrow={dict.site.name}
         title={dict.nav.news}
         lede={dict.newsPage.lede}
-        image={{ src: siteCrew, alt: dict.alt.siteCrew }}
+        image={{ src: linemanOverhead, alt: dict.alt.linemanOverhead }}
       />
 
       <div className="border-b border-navy-950/5">

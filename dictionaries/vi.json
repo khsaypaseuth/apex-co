@@ -345,10 +345,15 @@
     }
   },
   "alt": {
-    "heroNightCity": "Ánh đèn thị trấn rực sáng dưới bầu trời đêm đầy sao",
-    "structuralColumns": "Hành lang cột bê tông cao dưới ánh nắng",
-    "siteCrew": "Đội công nhân đang vận chuyển hàng trong một nhà kho lớn",
-    "teamCollaboration": "Nhóm làm việc cùng nhau tại bàn chung trong văn phòng sáng sủa",
+    "heroPowerLines": "Cột thép mạ tải đường dây cao thế in trên nền trời hoàng hôn",
+    "substationDusk": "Trạm biến áp ngoài trời với giàn thép và thanh cái, ngược sáng lúc hoàng hôn",
+    "pilingSite": "Những cọc bê tông dựng thành hàng trên mặt bằng móng đã san, phía sau là cần cẩu",
+    "roadEarthworks": "Ảnh chụp từ trên cao máy xúc và máy ủi đang thi công nền đường",
+    "buildingCranes": "Hai cần cẩu tháp bên cạnh một tòa nhà nhiều tầng đang xây dựng",
+    "linemanOverhead": "Công nhân đường dây đeo dây an toàn và mũ bảo hộ làm việc trên đường dây từ giỏ nâng",
+    "transformerInstall": "Máy biến áp lực lắp đặt trong sân trạm, với sứ xuyên và các đầu đấu nối",
+    "roadUnderConstruction": "Máy xúc và xe lu thi công trên tuyến đường đang xây dựng, cạnh mặt đường mới",
+    "electricianPanel": "Thợ điện đội mũ bảo hộ và đeo găng đang đấu nối tủ phân phối điện",
     "riversideCity": "Toàn cảnh từ trên cao một thành phố ven sông ở Đông Nam Á lúc hoàng hôn",
     "patuxai": "Khải Hoàn Môn Patuxai ở Viêng Chăn lúc hoàng hôn trên nền trời chiều"
   }

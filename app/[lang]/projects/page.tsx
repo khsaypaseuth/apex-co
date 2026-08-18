@@ -8,7 +8,7 @@ import { SERVICE_CATEGORY_SLUGS } from '@/lib/types'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { CtaSection } from '@/components/CtaSection'
 import { Hero } from '@/components/Hero'
-import structuralColumns from '@/public/images/sections/structural-columns-corridor.jpg'
+import roadUnderConstruction from '@/public/images/sections/road-under-construction.jpg'
 import { ProjectList } from './project-list'
 
 export async function generateMetadata({
@@ -46,7 +46,7 @@ export default async function ProjectsPage({
         eyebrow={dict.site.name}
         title={dict.nav.projects}
         lede={dict.projectsPage.lede}
-        image={{ src: structuralColumns, alt: dict.alt.structuralColumns }}
+        image={{ src: roadUnderConstruction, alt: dict.alt.roadUnderConstruction }}
       />
 
       <div className="border-b border-navy-950/5">

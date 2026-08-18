@@ -345,10 +345,15 @@
     }
   },
   "alt": {
-    "heroNightCity": "Town lights glowing under a dark starry night sky",
-    "structuralColumns": "Sunlit corridor of tall concrete columns",
-    "siteCrew": "Work crew moving goods in a large warehouse",
-    "teamCollaboration": "Team working together at shared desks in a bright office",
+    "heroPowerLines": "Steel lattice transmission towers carrying high-voltage conductors against a dusk sky",
+    "substationDusk": "An outdoor electrical substation with steel gantries and busbars, backlit at dusk",
+    "pilingSite": "Concrete piles standing in rows across a cleared foundation platform, with a crane behind",
+    "roadEarthworks": "Aerial view of excavators and a dozer cutting earthworks on a road formation",
+    "buildingCranes": "Two tower cranes beside a multi-storey building under construction",
+    "linemanOverhead": "A lineman in safety harness and helmet working on overhead conductors from a platform",
+    "transformerInstall": "A power transformer installed in a substation yard, with bushings and connections",
+    "roadUnderConstruction": "An excavator and roller working on a road under construction beside new pavement",
+    "electricianPanel": "An electrician in a hard hat and gloves wiring an electrical distribution panel",
     "riversideCity": "Aerial view of a riverside city in Southeast Asia at dusk",
     "patuxai": "Patuxai, the Victory Gate of Vientiane, at dusk against a soft evening sky"
   }

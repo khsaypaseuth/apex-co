@@ -9,9 +9,9 @@ import { Hero } from '@/components/Hero'
 import { SectionHeader } from '@/components/SectionHeader'
 import { TrustBadge } from '@/components/TrustBadge'
 import patuxai from '@/public/images/hero/patuxai-victory-gate-vientiane.jpg'
-import siteCrew from '@/public/images/sections/site-crew-warehouse.jpg'
-import structuralColumns from '@/public/images/sections/structural-columns-corridor.jpg'
-import teamCollaboration from '@/public/images/sections/team-collaboration.jpg'
+import buildingCranes from '@/public/images/capabilities/buildings-property-cranes.jpg'
+import linemanOverhead from '@/public/images/sections/lineman-overhead-line.jpg'
+import pilingSite from '@/public/images/capabilities/piling-foundation-site.jpg'
 
 export async function generateMetadata({
   params,
@@ -79,8 +79,8 @@ export default async function AboutPage({ params }: PageProps<'/[lang]/about'>) 
             <p>{dict.about.introP2}</p>
           </div>
           <Image
-            src={siteCrew}
-            alt={dict.alt.siteCrew}
+            src={pilingSite}
+            alt={dict.alt.pilingSite}
             placeholder="blur"
             sizes="(min-width: 1024px) 550px, 100vw"
             className="h-72 w-full rounded-sm object-cover md:h-96"
@@ -92,8 +92,8 @@ export default async function AboutPage({ params }: PageProps<'/[lang]/about'>) 
       <section className="bg-mist-100 py-16 md:py-24">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2">
           <Image
-            src={structuralColumns}
-            alt={dict.alt.structuralColumns}
+            src={buildingCranes}
+            alt={dict.alt.buildingCranes}
             placeholder="blur"
             sizes="(min-width: 1024px) 550px, 100vw"
             className="order-last h-72 w-full rounded-sm object-cover lg:order-first md:h-96"
@@ -162,8 +162,8 @@ export default async function AboutPage({ params }: PageProps<'/[lang]/about'>) 
               </p>
             </div>
             <Image
-              src={teamCollaboration}
-              alt={dict.alt.teamCollaboration}
+              src={linemanOverhead}
+              alt={dict.alt.linemanOverhead}
               placeholder="blur"
               sizes="(min-width: 1024px) 550px, 100vw"
               className="h-60 w-full rounded-sm object-cover md:h-72"
@@ -191,8 +191,8 @@ export default async function AboutPage({ params }: PageProps<'/[lang]/about'>) 
       <section className="bg-mist-100 py-16 md:py-24">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2">
           <Image
-            src={siteCrew}
-            alt={dict.alt.siteCrew}
+            src={pilingSite}
+            alt={dict.alt.pilingSite}
             placeholder="blur"
             sizes="(min-width: 1024px) 550px, 100vw"
             className="order-last h-72 w-full rounded-sm object-cover lg:order-first md:h-96"

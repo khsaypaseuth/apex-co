@@ -22,7 +22,7 @@ import {
   IconTransmissionTower,
   IconTruck,
 } from '@/components/icons'
-import heroNightCity from '@/public/images/hero/night-city-lights.jpg'
+import heroPowerLines from '@/public/images/hero/power-lines-dusk.jpg'
 import riversideCity from '@/public/images/hero/riverside-city-dusk-aerial.jpg'
 
 export async function generateMetadata({
@@ -97,14 +97,14 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
 
   return (
     <main id="main-content">
-      {/* 1 — Hero. Night-lit town: location-generic, and the closest honest
-          visual for a company whose business is putting power into places. */}
+      {/* 1 — Hero. Transmission towers at dusk: the sky runs navy into gold,
+          which is the brand palette, and the subject is the core business. */}
       <Hero
         variant="home"
         eyebrow={dict.site.tagline}
         title={dict.home.heroTitle}
         lede={dict.home.heroSubtitle}
-        image={{ src: heroNightCity, alt: dict.alt.heroNightCity }}
+        image={{ src: heroPowerLines, alt: dict.alt.heroPowerLines }}
         actions={
           <>
             <Link

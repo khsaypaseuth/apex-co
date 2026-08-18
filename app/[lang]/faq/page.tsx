@@ -9,7 +9,7 @@ import { FaqAccordion } from '@/components/FaqAccordion'
 import { Hero } from '@/components/Hero'
 import { JsonLd } from '@/components/JsonLd'
 import { faqPageJsonLd } from '@/lib/json-ld'
-import structuralColumns from '@/public/images/sections/structural-columns-corridor.jpg'
+import electricianPanel from '@/public/images/sections/electrician-panel.jpg'
 
 export async function generateMetadata({
   params,
@@ -48,7 +48,7 @@ export default async function FaqPage({ params }: PageProps<'/[lang]/faq'>) {
         eyebrow={dict.site.name}
         title={dict.nav.faq}
         lede={dict.faqPage.lede}
-        image={{ src: structuralColumns, alt: dict.alt.structuralColumns }}
+        image={{ src: electricianPanel, alt: dict.alt.electricianPanel }}
       />
 
       <div className="border-b border-navy-950/5">

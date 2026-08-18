@@ -345,10 +345,15 @@
     }
   },
   "alt": {
-    "heroNightCity": "星空下城镇灯火通明的夜景",
-    "structuralColumns": "阳光照射下的高大混凝土柱廊",
-    "siteCrew": "工人在大型仓库内搬运货物",
-    "teamCollaboration": "团队在明亮办公室的共用工位上协作",
+    "heroPowerLines": "暮色天空下架设高压导线的钢格构输电铁塔",
+    "substationDusk": "黄昏逆光下的户外变电站，可见钢构架与母线",
+    "pilingSite": "已平整的基础场地上成排竖立的混凝土桩，后方有一台起重机",
+    "roadEarthworks": "航拍挖掘机与推土机在路基上进行土方作业",
+    "buildingCranes": "两台塔式起重机矗立在一栋在建多层建筑旁",
+    "linemanOverhead": "系着安全带、戴着安全帽的线路工人在升降平台上作业架空导线",
+    "transformerInstall": "安装在变电站场地内的电力变压器，可见套管与接线端子",
+    "roadUnderConstruction": "挖掘机与压路机在新铺路面旁的在建道路上作业",
+    "electricianPanel": "戴安全帽和手套的电工正在配电箱内接线",
     "riversideCity": "东南亚滨河城市黄昏时分的航拍全景",
     "patuxai": "黄昏时分暮色天空下的万象凯旋门"
   }

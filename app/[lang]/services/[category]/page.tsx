@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { getDictionary, hasLocale } from '@/lib/dictionaries'
+import type { StaticImageData } from 'next/image'
+import { getDictionary, hasLocale, type Dictionary } from '@/lib/dictionaries'
 import { pageMetadata } from '@/lib/seo'
 import { listProjects } from '@/lib/content'
 import { SERVICE_CATEGORY_SLUGS, type ServiceCategorySlug } from '@/lib/types'
@@ -8,17 +9,32 @@ import { getGroupsForCategory, getServicePageContent } from '@/lib/page-data'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { CtaSection } from '@/components/CtaSection'
 import { Hero } from '@/components/Hero'
-import { ProjectThumb } from '@/components/ProjectThumb'
 import { RelatedLinks } from '@/components/RelatedLinks'
 import { RelatedServices } from '@/components/RelatedServices'
 import { ScopeNote } from '@/components/ScopeNote'
 import { SectionHeader } from '@/components/SectionHeader'
+import electricalHero from '@/public/images/capabilities/electrical-substation-dusk.jpg'
+import pilingHero from '@/public/images/capabilities/piling-foundation-site.jpg'
+import roadsHero from '@/public/images/capabilities/roads-bridges-earthworks.jpg'
+import buildingsHero from '@/public/images/capabilities/buildings-property-cranes.jpg'
 
 /**
- * Capability page. The hero backdrop is the capability's own schematic rather
- * than a photograph — Apex has no site photography yet, and a stock
- * substation would imply work the company did not do.
+ * Capability page.
+ *
+ * The hero photograph shows the KIND of work the capability covers, not an
+ * Apex site — the alt text stays generic for exactly that reason. Project
+ * cards keep the drawn schematics, because a card sitting under a project
+ * name would read as a claim about that specific job.
  */
+const CAPABILITY_HERO: Record<
+  ServiceCategorySlug,
+  { image: StaticImageData; altKey: keyof Dictionary['alt'] }
+> = {
+  electrical: { image: electricalHero, altKey: 'substationDusk' },
+  'piling-foundation': { image: pilingHero, altKey: 'pilingSite' },
+  'roads-bridges': { image: roadsHero, altKey: 'roadEarthworks' },
+  'buildings-property': { image: buildingsHero, altKey: 'buildingCranes' },
+}
 
 function isCategorySlug(value: string): value is ServiceCategorySlug {
   return (SERVICE_CATEGORY_SLUGS as readonly string[]).includes(value)
@@ -75,9 +91,10 @@ export default async function ServiceCategoryPage({
         eyebrow={dict.nav.services}
         title={title}
         lede={page.heroLede}
-        art={
-          <ProjectThumb category={category} className="h-full w-full" />
-        }
+        image={{
+          src: CAPABILITY_HERO[category].image,
+          alt: dict.alt[CAPABILITY_HERO[category].altKey],
+        }}
       />
 
       <div className="border-b border-navy-950/5">

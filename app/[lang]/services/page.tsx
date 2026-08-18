@@ -8,7 +8,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { CtaSection } from '@/components/CtaSection'
 import { Hero } from '@/components/Hero'
 import { SectionHeader } from '@/components/SectionHeader'
-import teamCollaboration from '@/public/images/sections/team-collaboration.jpg'
+import transformerInstall from '@/public/images/sections/transformer-installation.jpg'
 
 export async function generateMetadata({
   params,
@@ -40,7 +40,7 @@ export default async function ServicesPage({
         eyebrow={dict.site.name}
         title={dict.nav.services}
         lede={dict.servicesPage.lede}
-        image={{ src: teamCollaboration, alt: dict.alt.teamCollaboration }}
+        image={{ src: transformerInstall, alt: dict.alt.transformerInstall }}
       />
 
       <div className="border-b border-navy-950/5">
