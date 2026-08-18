@@ -1,23 +1,55 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
   <!--
-    Super Consulting default Open Graph card (1200×630).
-    Brand palette: navy-950 #0A1B2A, navy-700 #203D63, gold-500 #C8A53A, mist-100 #F8F0DC.
-    Fonts: Georgia/Times as a serif stand-in for Fraunces (webfont not available
-    to the rasterizer at build time — see decision log D-072).
-    Rasterized to og-default.png via @resvg/resvg-cli.
+    Apex Co., Ltd. default Open Graph card (1200×630).
+    Brand palette: navy-950 #17202F, navy-700 #4A5570, gold-500 #AE8B4B, mist-100 #ECEFF4.
+    Fonts: Helvetica/Arial as a stand-in for Archivo (the webfont is not available
+    to the rasteriser at build time).
+    Rasterised to og-default.png — see docs/APEX_REBRAND_PLAN.md §6.
   -->
-  <rect width="1200" height="630" fill="#0A1B2A"/>
+  <rect width="1200" height="630" fill="#17202F"/>
+
   <!-- subtle navy-700 corner wash for depth -->
-  <circle cx="1200" cy="0" r="560" fill="#203D63" opacity="0.35"/>
-  <circle cx="0" cy="630" r="420" fill="#203D63" opacity="0.22"/>
-  <!-- thin gold frame rules -->
-  <rect x="56" y="56" width="1088" height="518" fill="none" stroke="#C8A53A" stroke-width="1.5" opacity="0.55"/>
+  <circle cx="1200" cy="0" r="560" fill="#4A5570" opacity="0.35"/>
+  <circle cx="0" cy="630" r="420" fill="#4A5570" opacity="0.22"/>
+
+  <!-- setting-out grid, echoing the capability schematics on the site -->
+  <g stroke="#4A5570" stroke-width="1" opacity="0.28">
+    <line x1="200" y1="0" x2="200" y2="630"/>
+    <line x1="400" y1="0" x2="400" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="800" y1="0" x2="800" y2="630"/>
+    <line x1="1000" y1="0" x2="1000" y2="630"/>
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="480" x2="1200" y2="480"/>
+  </g>
+
+  <!-- transmission tower and conductors, right of the wordmark -->
+  <g fill="none" stroke="#AE8B4B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
+    <path d="M900 500 L940 250 L980 500"/>
+    <path d="M918 400 L962 400" stroke-width="2"/>
+    <path d="M926 350 L954 350" stroke-width="2"/>
+    <path d="M908 450 L972 450" stroke-width="2"/>
+    <path d="M856 290 L1024 290"/>
+    <path d="M876 330 L1004 330"/>
+    <path d="M880 290 L880 306 M1000 290 L1000 306" stroke-width="2"/>
+    <path d="M700 340 Q 790 380 880 306" stroke-width="2" opacity="0.7"/>
+    <path d="M1000 306 Q 1090 380 1180 340" stroke-width="2" opacity="0.7"/>
+    <line x1="820" y1="500" x2="1060" y2="500" stroke-width="3"/>
+  </g>
+
+  <!-- thin gold frame rule -->
+  <rect x="56" y="56" width="1088" height="518" fill="none" stroke="#AE8B4B" stroke-width="1.5" opacity="0.55"/>
+
   <!-- gold rule above the wordmark -->
-  <rect x="120" y="238" width="96" height="2" fill="#C8A53A"/>
+  <rect x="120" y="238" width="96" height="3" fill="#AE8B4B"/>
+
   <!-- wordmark -->
-  <text x="120" y="330" font-family="Georgia, 'Times New Roman', serif" font-size="72" fill="#F8F0DC">Super Consulting</text>
-  <!-- tagline -->
-  <text x="120" y="398" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#C8A53A" letter-spacing="1">Business, Legal &amp; Visa Consulting in Laos</text>
-  <!-- parent company line -->
-  <text x="120" y="502" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#F8F0DC" opacity="0.55" letter-spacing="2">SUPER VISION CO., LTD. — VIENTIANE, LAO PDR</text>
+  <text x="120" y="330" font-family="Helvetica, Arial, sans-serif" font-size="76" font-weight="bold" fill="#ECEFF4" letter-spacing="1">APEX CO., LTD.</text>
+
+  <!-- capability line -->
+  <text x="120" y="392" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#AE8B4B" letter-spacing="1">Electrical Supply &amp; Installation — 22 kV / 115 kV</text>
+
+  <!-- track-record line -->
+  <text x="120" y="502" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#ECEFF4" opacity="0.55" letter-spacing="2">PILING · ROADS &amp; BRIDGES · BUILDINGS — LAO PDR</text>
 </svg>

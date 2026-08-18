@@ -90,6 +90,51 @@ export function faqPageJsonLd(
   }
 }
 
+/**
+ * A delivered project is a `Project` in schema.org terms — a piece of work
+ * with a location and a timeframe — not an `Article`. Ongoing work sets
+ * `startDate`; completed work sets `endDate`, which is what a search engine
+ * needs to describe the job as finished.
+ */
+export function projectJsonLd(input: {
+  name: string
+  description: string
+  url: string
+  location: string
+  year: number
+  status: 'completed' | 'ongoing'
+  inLanguage: string
+}) {
+  const yearBoundary = `${input.year}-12-31`
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Project',
+    name: input.name,
+    description: input.description,
+    url: input.url,
+    inLanguage: input.inLanguage,
+    ...(input.status === 'completed'
+      ? { endDate: yearBoundary }
+      : { startDate: `${input.year}-01-01` }),
+    location: {
+      '@type': 'Place',
+      name: input.location,
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: input.location,
+        addressCountry: 'LA',
+      },
+    },
+    agent: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    mainEntityOfPage: input.url,
+  }
+}
+
 export function articleJsonLd(input: {
   title: string
   description: string

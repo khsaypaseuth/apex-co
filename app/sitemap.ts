@@ -1,14 +1,8 @@
 import type { MetadataRoute } from 'next'
-import {
-  getArticle,
-  getGuide,
-  getLawTopic,
-  listArticleSlugs,
-  listGuideSlugs,
-  listLawTopicSlugs,
-} from '@/lib/content'
-import { i18n, type Locale } from '@/lib/i18n-config'
+import { getProject, listProjectSlugs } from '@/lib/content'
+import { i18n } from '@/lib/i18n-config'
 import { languageAlternates, localePath } from '@/lib/seo'
+import { SERVICE_CATEGORY_SLUGS } from '@/lib/types'
 import { SITE_URL } from '@/lib/site-config'
 
 /**
@@ -20,14 +14,9 @@ const STATIC_PATHS = [
   '/',
   '/about',
   '/services',
-  '/services/business-setup',
-  '/services/visa-immigration',
-  '/services/legal-family',
-  '/services/accounting-tax',
-  '/knowledge',
-  '/laws',
-  '/guides',
-  '/links',
+  ...SERVICE_CATEGORY_SLUGS.map((slug) => `/services/${slug}`),
+  '/projects',
+  '/news',
   '/faq',
   '/contact',
 ]
@@ -51,37 +40,26 @@ function entriesFor(path: string, lastModified?: string): MetadataRoute.Sitemap 
   }))
 }
 
-/** Union of slugs across active locales (matches generateStaticParams). */
-async function unionSlugs(
-  list: (lang: Locale) => Promise<string[]>,
-): Promise<string[]> {
-  const sets = await Promise.all(
-    i18n.activeLocales.map((locale) => list(locale)),
-  )
-  return [...new Set(sets.flat())].sort()
-}
-
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const entries: MetadataRoute.Sitemap = STATIC_PATHS.flatMap((path) =>
     entriesFor(path),
   )
 
-  for (const slug of await unionSlugs(listArticleSlugs)) {
-    const article =
-      (await getArticle('en', slug)) ?? (await getArticle('lo', slug))
-    entries.push(...entriesFor(`/knowledge/${slug}`, article?.lastUpdated))
-  }
+  // Union of project slugs across active locales, matching generateStaticParams.
+  const projectSlugs = [
+    ...new Set(
+      (
+        await Promise.all(
+          i18n.activeLocales.map((locale) => listProjectSlugs(locale)),
+        )
+      ).flat(),
+    ),
+  ].sort()
 
-  for (const slug of await unionSlugs(listLawTopicSlugs)) {
-    const topic =
-      (await getLawTopic('en', slug)) ?? (await getLawTopic('lo', slug))
-    entries.push(...entriesFor(`/laws/${slug}`, topic?.lastUpdated))
-  }
-
-  for (const slug of await unionSlugs(listGuideSlugs)) {
-    const guide =
-      (await getGuide('en', slug)) ?? (await getGuide('lo', slug))
-    entries.push(...entriesFor(`/guides/${slug}`, guide?.lastUpdated))
+  for (const slug of projectSlugs) {
+    const project =
+      (await getProject('en', slug)) ?? (await getProject('lo', slug))
+    entries.push(...entriesFor(`/projects/${slug}`, project?.lastUpdated))
   }
 
   return entries

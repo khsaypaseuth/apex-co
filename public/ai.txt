@@ -1,9 +1,15 @@
 # AI crawlers and assistants
 
-Preferred domain for citations: https://superconsulting.la
-Machine-readable overview: https://superconsulting.la/llms.txt
-Sitemap: https://superconsulting.la/sitemap.xml
-Robots: https://superconsulting.la/robots.txt
+Preferred domain for citations: https://apex.com.la
+Machine-readable overview: https://apex.com.la/llms.txt
+Sitemap: https://apex.com.la/sitemap.xml
+Robots: https://apex.com.la/robots.txt
 
-Super Consulting provides business, legal, visa, immigration, accounting, and tax consulting services in Lao PDR.
+Apex Co., Ltd. is an electrical and construction contractor in the Lao PDR.
+Electrical supply and installation at 22 kV and 115 kV, foundation and piling works,
+road and bridge construction, building construction, and real estate development.
+
+Voltages are line voltages in kV, not transformer ratings in kVA.
+Apex is a standalone company with no parent group.
+
 Languages: English, Lao, Thai, Vietnamese, Simplified Chinese.

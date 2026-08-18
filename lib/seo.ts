@@ -16,7 +16,7 @@ export const DEFAULT_OG_IMAGE = {
   url: '/og/og-default.png',
   width: 1200,
   height: 630,
-  alt: `${SITE_NAME} — Business, Legal & Visa Consulting in Laos`,
+  alt: `${SITE_NAME} — Electrical & Construction Contractor in the Lao PDR`,
 } as const
 
 /** og:locale values for the active locales. */
@@ -47,16 +47,16 @@ export function languageAlternates(path: string): Record<string, string> {
 
 export interface PageSeoInput {
   lang: string
-  /** Locale-less pathname, e.g. '/', '/about', '/knowledge/some-slug'. */
+  /** Locale-less pathname, e.g. '/', '/about', '/projects/some-slug'. */
   path: string
   /** Page title WITHOUT the site-name suffix (the template appends it). */
   title: string
   description: string
-  /** 'article' for knowledge/laws/guides detail pages. */
+  /** 'article' for project detail pages. */
   ogType?: 'website' | 'article'
   /**
    * Home page only: use the title as-is instead of running it through the
-   * `%s | Super Consulting` template (it already contains the site name).
+   * site-name title template (it already contains the site name).
    */
   absoluteTitle?: boolean
 }

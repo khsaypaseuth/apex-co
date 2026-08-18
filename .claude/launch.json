@@ -2,7 +2,7 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "super-consulting",
+      "name": "apex-co",
       "runtimeExecutable": "npx",
       "runtimeArgs": ["next", "start", "-p", "3399"],
       "port": 3399
