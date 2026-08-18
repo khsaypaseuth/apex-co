@@ -82,10 +82,13 @@ export default async function RootLayout({
 
   const dict = await getDictionary(lang)
 
-  // Desktop nav. The whole site is five pages now, so the full list fits —
+  // Desktop nav. The whole site is six pages now, so the full list fits —
   // no overflow group is needed. The plain Contact link is covered by the
-  // header CTA button.
+  // header CTA button. Home is listed explicitly rather than relying on the
+  // logo alone: the logo is not an obvious link to every visitor, and on
+  // mobile the slide-over has no logo at all.
   const navItems = [
+    { label: dict.nav.home, href: `/${lang}` },
     { label: dict.nav.about, href: `/${lang}/about` },
     { label: dict.nav.services, href: `/${lang}/services` },
     { label: dict.nav.projects, href: `/${lang}/projects` },

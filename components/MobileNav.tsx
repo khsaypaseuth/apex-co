@@ -4,6 +4,7 @@ import { useCallback, useEffect, useId, useRef, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import type { Locale } from '@/lib/i18n-config'
+import { isNavItemActive } from '@/lib/nav'
 import { FlagIcon } from './flags'
 import type { LanguageOption } from './LanguageSwitcher'
 
@@ -188,9 +189,7 @@ export function MobileNav({
                   )}
                   <div className={`flex flex-col ${group.heading ? 'mt-1' : ''}`}>
                     {group.items.map((item) => {
-                      const active =
-                        pathname === item.href ||
-                        pathname.startsWith(`${item.href}/`)
+                      const active = isNavItemActive(pathname, item.href)
                       return (
                         <Link
                           key={item.href}

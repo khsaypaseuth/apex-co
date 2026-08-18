@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import logoApex from '@/public/images/brand/logo-apex-white.png'
 import type { Locale } from '@/lib/i18n-config'
+import { isNavItemActive } from '@/lib/nav'
 import { LanguageSwitcher, type LanguageOption } from './LanguageSwitcher'
 import { MobileNav, type MobileNavGroup } from './MobileNav'
 
@@ -99,16 +100,18 @@ export function Header({
           />
         </Link>
 
-        <nav aria-label={navLabel} className="hidden items-center gap-6 lg:flex">
+        {/* Tighter gap at lg: the Lao, Thai, and Vietnamese labels run ~50%
+            longer than the English ones, and six items plus the logo, language
+            switcher, and CTA is the widest this bar ever gets. */}
+        <nav aria-label={navLabel} className="hidden items-center gap-4 lg:flex xl:gap-6">
           {navItems.map((item) => {
-            const active =
-              pathname === item.href || pathname.startsWith(`${item.href}/`)
+            const active = isNavItemActive(pathname, item.href)
             return (
               <Link
                 key={item.href}
                 href={item.href}
                 aria-current={active ? 'page' : undefined}
-                className={`text-sm transition-colors hover:text-gold-500 ${
+                className={`text-sm whitespace-nowrap transition-colors hover:text-gold-500 ${
                   active ? 'text-gold-500' : 'text-mist-100/85'
                 }`}
               >
