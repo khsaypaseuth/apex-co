@@ -21,20 +21,21 @@ Node 22 or newer is required.
 
 ## Before launch
 
-Two things are deliberately unfinished and must be handled before this goes
-live. Both are flagged in the UI so nothing misleading ships by accident.
+Contact details in `lib/site-config.ts` are confirmed and live. Two items
+remain:
 
-1. **Some contact details are still placeholders.** The phone and WhatsApp
-   number in `lib/site-config.ts` are confirmed; the street address, email,
-   and domain are not. Replace those and set `CONTACT.isPlaceholder` to
-   `false` — that flag drives the visible notice in the footer and on the
-   contact page, and the caveat in `public/llms.txt`. Changing the domain also
-   means updating `SITE_URL` plus `public/llms.txt`,
-   `public/.well-known/llms.txt`, and `public/ai.txt`, which hard-code it.
+1. **Confirm the domain.** `SITE_URL` is `https://apex.com.la`, matching the
+   confirmed `info@apex.com.la` email. If the site will live somewhere else,
+   change `SITE_URL` **and** the three files that hard-code the domain:
+   `public/llms.txt`, `public/.well-known/llms.txt`, and `public/ai.txt`.
 2. **The project portfolio is empty.** `/projects` renders a designed empty
    state until real project records are added. See
    `content/en/projects/README.md` for the frontmatter contract and why the
    folder ships empty.
+
+`CONTACT.isPlaceholder` in `lib/site-config.ts` is the switch for the "still
+being confirmed" notice in the footer and on the contact page. It is `false`;
+set it back to `true` if any contact value becomes uncertain.
 
 ## Routes
 

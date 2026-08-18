@@ -32,6 +32,7 @@ export function organizationJsonLd() {
     ],
     address: {
       '@type': 'PostalAddress',
+      streetAddress: 'Unit 39, Xokkham Village, Saysettha District',
       addressLocality: 'Vientiane Capital',
       addressCountry: 'LA',
     },

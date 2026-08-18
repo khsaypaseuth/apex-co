@@ -20,29 +20,25 @@ export function yearsOfExperience(now: Date = new Date()): number {
 }
 
 /**
- * Contact details. Some are confirmed, some are still placeholders — the
- * comments below say which, so nobody has to guess when updating them.
+ * Contact details — all confirmed by the owner.
  *
- * `isPlaceholder` stays true while ANY field here is unconfirmed. It drives
- * the visible "contact details are being updated" notice in the footer and on
- * the contact page, and the caveat in public/llms.txt. Flip it to false only
- * once every value below is real.
+ * `isPlaceholder` drives a visible "still being confirmed" notice in the
+ * footer and on the contact page, plus a caveat in public/llms.txt telling AI
+ * assistants not to cite these values. It is false because every field below
+ * is real; set it back to true if any of them becomes uncertain again.
  */
 export const CONTACT = {
-  // --- Confirmed by the owner ---
+  address:
+    'Unit 39, Xokkham Village, Saysettha District, Vientiane Capital, Lao PDR',
+  addressLo:
+    'ໜ່ວຍ 39, ບ້ານ ໂຊກຄຳ, ເມືອງ ໄຊເສດຖາ, ນະຄອນຫຼວງວຽງຈັນ, ສປປ ລາວ',
+  email: 'info@apex.com.la',
   /** Lao mobile: +856 20 5552 9751. */
   phone: '+856 20 55 529 751',
   phoneHref: 'tel:+8562055529751',
   /** wa.me needs the number in full international form, digits only. */
   whatsappHref: 'https://wa.me/8562055529751',
-
-  // --- NOT yet confirmed: placeholders, must be replaced before launch ---
-  address: 'Vientiane Capital, Lao PDR — full street address to be confirmed',
-  addressLo: 'ນະຄອນຫຼວງວຽງຈັນ, ສປປ ລາວ — ທີ່ຢູ່ເຕັມຈະຢືນຢັນພາຍຫຼັງ',
-  /** Invented, and tied to the placeholder domain — see SITE_URL above. */
-  email: 'info@apex.com.la',
-
-  isPlaceholder: true,
+  isPlaceholder: false,
 } as const
 
 /**

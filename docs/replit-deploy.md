@@ -40,6 +40,5 @@ No environment variables are required for launch. If you later need an override,
 
 - The app is fully static at build time (content from `content/` + dictionaries). Do **not** enable `output: 'export'` — locale redirects in `proxy.ts` need the Node server.
 - Styleguide routes are noindexed and disallowed in `robots.txt`.
-- Contact details in `lib/site-config.ts` are placeholders. Replace them and set
-  `CONTACT.isPlaceholder = false` before announcing the site.
+- Contact details in `lib/site-config.ts` are confirmed and live.
 - After deploy, submit the sitemap in Google Search Console and verify `llms.txt` is publicly reachable for AI assistants.
