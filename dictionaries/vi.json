@@ -1,24 +1,16 @@
 {
   "site": {
-    "name": "Super Consulting",
-    "tagline": "Tư vấn Kinh doanh, Pháp lý và Visa tại Lào",
-    "parentCompanyLine": "Một đơn vị kinh doanh của Super Vision Co., Ltd.",
-    "footerAbout": "Tư vấn kinh doanh và cuộc sống tại Lào từ năm 2020 — thành lập công ty, pháp lý, visa, kế toán và thuế, được xử lý trọn gói với sự phối hợp cùng các bộ ngành."
+    "name": "Công ty TNHH Apex",
+    "tagline": "Nhà thầu điện và xây dựng tại CHDCND Lào",
+    "experienceLine": "Hơn 15 năm thi công trên khắp CHDCND Lào",
+    "footerAbout": "Cung cấp và lắp đặt điện ở cấp 22 kV và 115 kV, trên nền hơn mười lăm năm kinh nghiệm thi công cọc, đường và cầu, và công trình dân dụng khắp CHDCND Lào."
   },
   "nav": {
     "home": "Trang chủ",
     "about": "Về chúng tôi",
-    "services": "Dịch vụ",
-    "businessSetup": "Thành lập Doanh nghiệp & Cấp phép",
-    "visaImmigration": "Visa & Nhập cư",
-    "legalFamily": "Dịch vụ Pháp lý & Gia đình",
-    "accountingTax": "Kế toán & Thuế",
-    "knowledge": "Trung tâm Kiến thức",
-    "laws": "Thư viện Luật Lào",
-    "lawsShort": "Luật Lào",
-    "guides": "Hướng dẫn Kinh doanh",
-    "news": "Liên kết",
-    "links": "Liên kết",
+    "services": "Năng lực",
+    "projects": "Dự án",
+    "news": "Tin tức",
     "faq": "Câu hỏi thường gặp",
     "contact": "Liên hệ",
     "menu": "Menu",
@@ -26,15 +18,25 @@
     "closeMenu": "Đóng menu",
     "mainNavLabel": "Điều hướng chính"
   },
+  "serviceCategories": {
+    "electrical": "Cung cấp & Lắp đặt Điện",
+    "piling-foundation": "Nền móng & Cọc",
+    "roads-bridges": "Đường & Cầu",
+    "buildings-property": "Công trình & Bất động sản"
+  },
+  "projectStatus": {
+    "completed": "Đã hoàn thành",
+    "ongoing": "Đang thi công"
+  },
   "cta": {
-    "bookConsultation": "Đặt lịch Tư vấn",
-    "exploreServices": "Khám phá Dịch vụ",
-    "contactUs": "Liên hệ với chúng tôi",
+    "requestQuote": "Yêu cầu báo giá",
+    "exploreServices": "Xem năng lực",
+    "contactUs": "Liên hệ",
     "getInTouch": "Kết nối với chúng tôi",
     "learnMore": "Tìm hiểu thêm",
-    "readMore": "Đọc thêm",
+    "readMore": "Đọc tiếp",
     "viewAll": "Xem tất cả",
-    "readGuide": "Đọc Hướng dẫn"
+    "viewProjects": "Xem dự án"
   },
   "language": {
     "label": "Ngôn ngữ",
@@ -52,390 +54,302 @@
   "common": {
     "lastUpdated": "Cập nhật lần cuối",
     "minRead": "phút đọc",
-    "breadcrumbLabel": "Đường dẫn điều hướng",
-    "relatedArticles": "Bài viết liên quan",
-    "relatedServices": "Dịch vụ liên quan",
-    "sources": "Nguồn tham khảo",
-    "sampleContent": "Nội dung mẫu chỉ nhằm mục đích xem trước.",
+    "breadcrumbLabel": "Đường dẫn",
+    "relatedProjects": "Dự án liên quan",
+    "relatedServices": "Năng lực liên quan",
+    "sampleContent": "Nội dung mẫu chỉ dùng để xem trước.",
     "skipToContent": "Chuyển đến nội dung chính",
-    "contentInEnglish": "Bài viết này hiện chỉ có sẵn bằng tiếng Anh."
+    "contentInEnglish": "Trang này hiện có bằng tiếng Anh."
   },
-  "verification": {
-    "verified": "Đã xác minh",
-    "needsVerification": "Cần xác minh",
-    "generalInfo": "Thông tin chung"
-  },
-  "articleCategories": {
-    "starting-a-business": "Khởi nghiệp tại Lào",
-    "tax-accounting": "Thuế & Kế toán",
-    "visa-immigration": "Visa & Nhập cư",
-    "lao-law-basics": "Kiến thức Cơ bản về Luật Lào",
-    "labour-employment": "Lao động & Việc làm",
-    "investment": "Đầu tư tại Lào",
-    "marriage-family": "Hôn nhân & Gia đình",
-    "living-in-laos": "Sinh sống tại Lào",
-    "compliance-checklists": "Danh mục Tuân thủ"
-  },
-  "lawCategories": {
-    "company-law": "Luật Doanh nghiệp",
-    "investment-law": "Luật Đầu tư",
-    "tax-law": "Luật Thuế",
-    "labour-law": "Luật Lao động",
-    "immigration": "Nhập cư",
-    "family-law": "Luật Gia đình",
-    "intellectual-property": "Sở hữu Trí tuệ",
-    "commercial-contracts": "Hợp đồng Thương mại"
-  },
-  "legal": {
-    "disclaimerLabel": "Thông báo quan trọng",
-    "disclaimer": "Thông tin này chỉ được cung cấp nhằm mục đích hướng dẫn chung và không cấu thành tư vấn pháp lý, thuế, nhập cư hoặc kế toán. Luật pháp và thủ tục có thể thay đổi. Vui lòng liên hệ Super Consulting hoặc một chuyên gia có trình độ trước khi đưa ra quyết định."
+  "scopeNote": {
+    "label": "Ghi chú phạm vi",
+    "text": "Các thông số, phạm vi công việc và tiến độ nêu ở đây mang tính tham khảo. Thông số cuối cùng, khối lượng và tiến độ sẽ được xác nhận sau khảo sát hiện trường, rà soát thiết kế và các phê duyệt của điện lực hoặc cơ quan có thẩm quyền."
   },
   "filter": {
     "searchLabel": "Tìm kiếm",
-    "searchPlaceholder": "Tìm theo tiêu đề hoặc tóm tắt…",
+    "searchPlaceholder": "Tìm theo tên, địa điểm hoặc thông số…",
     "allCategories": "Tất cả",
-    "categoriesLabel": "Lọc theo danh mục",
-    "noResults": "Không tìm thấy kết quả nào. Hãy thử từ khóa hoặc danh mục khác."
+    "categoriesLabel": "Lọc theo năng lực",
+    "noResults": "Không tìm thấy kết quả. Hãy thử từ khóa hoặc năng lực khác."
   },
   "contactForm": {
-    "fullName": "Họ và Tên",
-    "company": "Tên Công ty",
+    "fullName": "Họ và tên",
+    "company": "Tên công ty",
     "email": "Email",
     "phone": "Điện thoại / WhatsApp",
-    "preferredContact": "Phương thức Liên hệ Ưa thích",
-    "serviceNeeded": "Dịch vụ Cần thiết",
-    "message": "Tin nhắn",
+    "preferredContact": "Kênh liên hệ ưu tiên",
+    "serviceNeeded": "Năng lực cần đến",
+    "message": "Thông tin dự án",
     "selectPlaceholder": "Vui lòng chọn",
     "required": "bắt buộc",
-    "submit": "Gửi Tin nhắn",
-    "demoNotice": "Chỉ là bản demo — biểu mẫu này chưa gửi được tin nhắn. Vui lòng liên hệ trực tiếp với chúng tôi.",
+    "submit": "Gửi tin nhắn",
+    "demoNotice": "Biểu mẫu này chưa gửi được tin nhắn. Vui lòng liên hệ trực tiếp qua điện thoại hoặc email.",
     "methods": {
       "email": "Email",
-      "phone": "Gọi điện thoại",
+      "phone": "Gọi điện",
       "whatsapp": "WhatsApp",
       "line": "LINE"
     }
   },
-  "leadForm": {
-    "title": "Nhận tư vấn phù hợp với tình huống của bạn",
-    "lede": "Để lại thông tin của bạn và một chuyên viên tư vấn của Super Consulting sẽ liên hệ lại về các chủ đề trong hướng dẫn này — không có ràng buộc nào.",
-    "fullName": "Họ và Tên",
-    "email": "Email",
-    "phone": "Điện thoại / WhatsApp",
-    "serviceInterest": "Dịch vụ Quan tâm",
-    "selectPlaceholder": "Vui lòng chọn",
-    "required": "bắt buộc",
-    "submit": "Yêu cầu Tư vấn",
-    "demoNotice": "Chỉ là bản demo — biểu mẫu này chưa gửi được tin nhắn. Vui lòng liên hệ trực tiếp với chúng tôi."
-  },
   "floating": {
-    "whatsapp": "Liên hệ với chúng tôi qua WhatsApp",
-    "line": "Liên hệ với chúng tôi qua LINE",
-    "placeholderNote": "Liên hệ qua LINE sắp ra mắt — liên kết tạm thời"
+    "whatsapp": "Liên hệ qua WhatsApp",
+    "line": "Liên hệ qua LINE",
+    "placeholderNote": "Kênh LINE sắp có — liên kết tạm thời"
   },
   "footer": {
-    "quickLinks": "Liên kết Nhanh",
-    "ourServices": "Dịch vụ của Chúng tôi",
-    "knowledge": "Kiến thức",
+    "quickLinks": "Liên kết nhanh",
+    "ourServices": "Năng lực",
+    "company": "Công ty",
     "contact": "Liên hệ",
-    "legal": "Pháp lý",
-    "rights": "Đã đăng ký Bản quyền.",
-    "poweredBy": "Được vận hành bởi",
+    "rights": "Bảo lưu mọi quyền.",
     "addressLabel": "Địa chỉ",
     "phoneLabel": "Điện thoại",
     "emailLabel": "Email",
-    "chatLabel": "WhatsApp"
+    "chatLabel": "WhatsApp",
+    "contactPlaceholderNote": "Thông tin liên hệ đang được cập nhật."
   },
   "home": {
-    "heroTitle": "Dịch vụ Tư vấn Chuyên nghiệp cho Kinh doanh và Sinh sống tại Lào",
-    "heroSubtitle": "Super Consulting hỗ trợ khách hàng trong nước và quốc tế về đăng ký kinh doanh, hỗ trợ pháp lý, dịch vụ visa và nhập cư, kế toán, thuế và tuân thủ doanh nghiệp.",
-    "trustLine": "Một đơn vị kinh doanh của Super Vision Co., Ltd. — Thủ đô Viêng Chăn, CHDCND Lào.",
-    "trustStatement": "Đối tác đáng tin cậy của bạn cho các dịch vụ kinh doanh, pháp lý, nhập cư, kế toán và doanh nghiệp tại Lào.",
-    "highlightsEyebrow": "Những gì chúng tôi làm",
-    "highlightsTitle": "Dịch vụ nổi bật",
+    "heroTitle": "Cung cấp & Lắp đặt Điện ở cấp 22 kV và 115 kV",
+    "heroSubtitle": "Công ty TNHH Apex thi công và đóng điện hạ tầng điện trên khắp CHDCND Lào — trên nền hơn mười lăm năm kinh nghiệm về cọc nền móng, đường và cầu, và xây dựng công trình.",
+    "trustStatement": "Hệ thống điện và công trình xây dựng nặng, do một nhà thầu thực hiện từ nền móng đến đóng điện.",
+    "highlightsEyebrow": "Chúng tôi xây dựng gì",
+    "highlightsTitle": "Năng lực",
     "highlights": {
-      "businessRegistration": {
-        "title": "Đăng ký Kinh doanh",
-        "summary": "Thành lập công ty, cấp phép và đăng ký — được xử lý trọn gói."
+      "electrical": {
+        "title": "Cung cấp & Lắp đặt Điện",
+        "summary": "Truyền tải 115 kV, phân phối 22 kV, trạm biến áp và điện hạ thế công trình — cung cấp, thi công, thí nghiệm và đóng điện."
       },
-      "visaImmigration": {
-        "title": "Visa & Nhập cư",
-        "summary": "Visa, giấy phép lao động và giấy phép cư trú cho chuyên gia, nhà đầu tư và gia đình."
+      "equipment": {
+        "title": "Cung cấp thiết bị điện",
+        "summary": "Máy biến áp, tủ đóng cắt, tủ bảo vệ, cáp và phụ kiện đường dây ở cấp hạ thế, trung thế và cao thế."
       },
-      "legalServices": {
-        "title": "Dịch vụ Pháp lý",
-        "summary": "Hợp đồng, tuân thủ pháp luật, thẩm định pháp lý và hỗ trợ nhãn hiệu cho doanh nghiệp của bạn."
+      "piling": {
+        "title": "Nền móng & Cọc",
+        "summary": "Cọc đóng, cọc khoan nhồi, cừ larsen và phần kết cấu ngầm chịu toàn bộ tải trọng bên trên."
       },
-      "accountingTax": {
-        "title": "Kế toán & Thuế",
-        "summary": "Sổ sách kế toán, khai thuế, tiền lương và tuân thủ hàng năm — luôn được giữ gọn gàng, hợp lệ."
+      "roadsBridges": {
+        "title": "Đường & Cầu",
+        "summary": "Tuyến mới, cải tạo, cầu bê tông cốt thép, cống và hệ thoát nước đủ sức qua mùa mưa."
       },
-      "familyLegal": {
-        "title": "Dịch vụ Pháp lý Gia đình & Cá nhân",
-        "summary": "Đăng ký kết hôn, giấy tờ gia đình và hỗ trợ cho vợ/chồng người nước ngoài."
+      "buildings": {
+        "title": "Xây dựng công trình",
+        "summary": "Công trình thương mại, nhà ở và công nghiệp từ phần ngầm đến bàn giao."
       },
-      "laoKnowledge": {
-        "title": "Kiến thức Kinh doanh tại Lào",
-        "summary": "Các bài viết dễ hiểu về kinh doanh, thuế, visa và các chủ đề pháp lý tại Lào."
+      "realEstate": {
+        "title": "Phát triển bất động sản",
+        "summary": "Đất đai và bất động sản do Apex tự phát triển, từ nghiên cứu khả thi đến bán hoặc cho thuê."
       }
     },
-    "whyEyebrow": "Vì sao chọn chúng tôi",
-    "whyTitle": "Vì sao chọn Super Consulting",
+    "whyEyebrow": "Vì sao chọn Apex",
+    "whyTitle": "Vì sao chủ đầu tư giao việc cho chúng tôi",
     "why": {
-      "localKnowledge": {
-        "title": "Am hiểu địa phương",
-        "description": "Chúng tôi làm việc với các thủ tục và cơ quan chức năng Lào mỗi ngày."
+      "selfDelivery": {
+        "title": "Tự thực hiện",
+        "description": "Cọc, xây dựng và điện đều là năng lực nội bộ — không có màn tranh cãi ba bên về việc ai làm chậm."
       },
-      "practicalAdvice": {
-        "title": "Tư vấn thực tiễn",
-        "description": "Những khuyến nghị rõ ràng mà bạn có thể hành động ngay — không phải thuật ngữ pháp lý phức tạp."
+      "bothVoltages": {
+        "title": "Truyền tải và phân phối",
+        "description": "Đội ngũ có kinh nghiệm ở cả 115 kV và 22 kV, chứ không phải cấp này đi thuê lại cấp kia."
       },
-      "clearProcess": {
-        "title": "Quy trình rõ ràng",
-        "description": "Bạn luôn biết các bước cần làm, tình trạng hiện tại và điều gì sẽ diễn ra tiếp theo."
+      "supplyAndInstall": {
+        "title": "Cung cấp và lắp đặt cùng lúc",
+        "description": "Chúng tôi mua chính thiết bị mình lắp, nên trách nhiệm về kết quả thí nghiệm không bị chia đôi."
       },
-      "transparentCommunication": {
-        "title": "Giao tiếp minh bạch",
-        "description": "Cập nhật trung thực và phạm vi công việc rõ ràng — không có bất ngờ."
+      "testRecords": {
+        "title": "Hồ sơ, không chỉ kết quả",
+        "description": "Hồ sơ độ chối, thí nghiệm độ chặt và biên bản nghiệm thu là một phần của sản phẩm bàn giao."
       },
-      "companiesAndIndividuals": {
-        "title": "Hỗ trợ cả doanh nghiệp và cá nhân",
-        "description": "Từ nhà đầu tư nước ngoài đến các gia đình — cùng một sự chăm sóc tận tâm cho mọi khách hàng."
+      "honestProgramme": {
+        "title": "Tiến độ trung thực",
+        "description": "Chúng tôi lập tiến độ vòng qua mùa mưa thay vì xuyên qua nó, và báo cáo khi bị chậm."
       },
-      "backedBySuperVision": {
-        "title": "Được hậu thuẫn bởi Super Vision Co., Ltd.",
-        "description": "Là một phần của tập đoàn công ty Lào đã được thành lập vững chắc."
+      "trackRecord": {
+        "title": "Mười lăm năm trên công trường",
+        "description": "Bề dày kinh nghiệm về cọc, đường, cầu, công trình dân dụng và điện tại CHDCND Lào."
       }
     },
-    "knowledgeTitle": "Tìm hiểu trước khi quyết định",
-    "knowledgeLede": "Các bài viết mang tính giáo dục về kinh doanh tại Lào, thuế, visa, tuân thủ pháp luật và thủ tục pháp lý.",
-    "finalCtaTitle": "Bắt đầu với một buổi tư vấn.",
-    "finalCtaLede": "Hãy cho chúng tôi biết về tình huống của bạn — chúng tôi sẽ giải thích các lựa chọn, quy trình và cung cấp báo giá rõ ràng."
+    "projectsTitle": "Công trình gần đây",
+    "projectsLede": "Các dự án đã thực hiện về hệ thống điện, nền móng, hạ tầng và công trình dân dụng.",
+    "finalCtaTitle": "Gửi bản vẽ cho chúng tôi.",
+    "finalCtaLede": "Cho chúng tôi biết phạm vi, vị trí và ngày cần hoàn thành. Nếu công việc nằm trong năng lực của chúng tôi, chúng tôi sẽ nói rõ và cho biết còn cần gì để lập giá."
   },
   "about": {
-    "eyebrow": "Về Super Consulting",
-    "title": "Đơn vị tư vấn đáng tin cậy tại Lào từ năm 2020",
-    "lede": "Từ năm 2020, Super Consulting — một đơn vị kinh doanh của Super Vision Co., Ltd. — đã hỗ trợ cá nhân, doanh nhân, nhà đầu tư và các công ty hoàn thành các thủ tục chính thức tại Lào một cách rõ ràng và tận tâm.",
-    "introP1": "Kinh doanh hoặc định cư tại Lào đồng nghĩa với việc phải xử lý các thủ tục đăng ký, giấy phép, visa, khai thuế và giấy tờ cá nhân tại nhiều bộ ngành và cơ quan khác nhau — mỗi nơi có yêu cầu, ngôn ngữ và thời gian riêng. Điều khách hàng cần không phải là thêm lý thuyết, mà là một đối tác am hiểu quy trình và theo sát đến cùng.",
-    "introP2": "Với kinh nghiệm từ năm 2020 và mối quan hệ hợp tác đã được thiết lập với các bộ ngành và cơ quan chức năng liên quan, chúng tôi chuẩn bị hồ sơ của bạn một cách cẩn thận, phối hợp việc nộp hồ sơ và giúp hồ sơ của bạn được xử lý chính xác ngay từ lần đầu. Bạn sẽ nhận được cập nhật bằng ngôn ngữ dễ hiểu ở mỗi bước, cùng sự hỗ trợ có trách nhiệm cho đến khi công việc hoàn tất.",
-    "missionTitle": "Sứ mệnh của chúng tôi",
-    "missionText": "Giúp khách hàng tại Lào hoàn thành các vấn đề về kinh doanh, pháp lý, nhập cư và tuân thủ pháp luật một cách rõ ràng, với việc chuẩn bị hồ sơ cẩn thận và phối hợp đáng tin cậy với các cơ quan liên quan.",
-    "visionTitle": "Tầm nhìn của chúng tôi",
-    "visionText": "Trở thành đối tác tư vấn trọn gói đáng tin cậy mà khách hàng trong nước và quốc tế tin tưởng để được hướng dẫn quy trình chính xác và theo sát công việc đáng tin cậy tại Lào.",
+    "eyebrow": "Về Công ty TNHH Apex",
+    "title": "Mười lăm năm xây dựng và cấp điện cho CHDCND Lào",
+    "lede": "Công ty TNHH Apex là nhà thầu điện và xây dựng của Lào. Chúng tôi thi công lưới truyền tải và phân phối ở cấp 115 kV và 22 kV, cung cấp thiết bị điện đủ ba cấp điện áp, và thực hiện phần cọc, đường, cầu và công trình đi kèm.",
+    "introP1": "Công ty khởi đầu từ công tác nền móng và cọc, và đến nay đây vẫn là năng lực có bề dày kinh nghiệm lớn nhất — cọc đóng, cọc khoan nhồi, cừ larsen và phần kết cấu ngầm mà mọi thứ trên mặt đất đều dựa vào. Từ đó, hoạt động mở rộng sang xây dựng đường và cầu, xây dựng công trình dân dụng, và phát triển bất động sản.",
+    "introP2": "Hiện nay mảng điện là trọng tâm của doanh nghiệp. Apex thi công đường dây và trạm biến áp 115 kV, lưới phân phối 22 kV và hệ thống hạ thế trong công trình, đồng thời cung cấp máy biến áp, tủ đóng cắt và cáp đi kèm. Vì năng lực xây dựng nằm trong cùng một công ty, một dự án trạm biến áp không cần đến ba nhà thầu và hai bộ tiến độ.",
+    "missionTitle": "Sứ mệnh",
+    "missionText": "Xây dựng và đóng điện những hạ tầng vận hành tốt ngay ngày bàn giao và vẫn vận hành tốt nhiều năm sau đó — kèm hồ sơ thí nghiệm để chứng minh.",
+    "visionTitle": "Tầm nhìn",
+    "visionText": "Trở thành nhà thầu Lào mà chủ đầu tư tìm đến khi một dự án cần đồng thời phần điện và phần xây dựng nặng, được thực hiện đúng và trên một tiến độ trung thực ngay từ đầu.",
     "valuesEyebrow": "Điều dẫn dắt chúng tôi",
-    "valuesTitle": "Giá trị của chúng tôi",
+    "valuesTitle": "Giá trị cốt lõi",
     "values": {
-      "trust": {
-        "title": "Niềm tin",
-        "description": "Chúng tôi xây dựng nó từ từ, gìn giữ nó cẩn thận và không bao giờ đánh đổi nó để đi đường tắt."
+      "safety": {
+        "title": "An toàn trước hết",
+        "description": "Không tiến độ nào đáng đổi bằng một tai nạn. Biện pháp thi công sinh ra để thực hiện, không phải để lưu hồ sơ."
       },
-      "clarity": {
-        "title": "Sự rõ ràng",
-        "description": "Ngôn ngữ dễ hiểu, câu trả lời trung thực và không ẩn giấu sau thuật ngữ chuyên môn."
+      "quality": {
+        "title": "Làm đúng ngay từ đầu",
+        "description": "Lớp nằm dưới lớp đang thí nghiệm thì không thể làm lại. Vì vậy chúng tôi làm đúng ngay lần đầu."
       },
-      "professionalism": {
-        "title": "Tính chuyên nghiệp",
-        "description": "Công việc cẩn thận, đúng hạn, đạt tiêu chuẩn mà chúng tôi tự hào để ký nhận."
+      "honesty": {
+        "title": "Báo cáo trung thực",
+        "description": "Chúng tôi báo cáo chậm tiến độ và thí nghiệm không đạt khi chúng xảy ra, chứ không đợi đến lúc không thể giấu."
       },
-      "practicalExecution": {
-        "title": "Thực thi thiết thực",
-        "description": "Lời khuyên chỉ có ý nghĩa khi được thực hiện — chúng tôi theo đuổi công việc đến cùng."
+      "selfDelivery": {
+        "title": "Tự thực hiện",
+        "description": "Nhân lực và thiết bị của chính chúng tôi nằm trên đường găng, nên trách nhiệm quy về một mối."
       },
-      "confidentiality": {
-        "title": "Bảo mật",
-        "description": "Các vấn đề kinh doanh và gia đình của bạn luôn được giữ kín."
+      "technical": {
+        "title": "Chặt chẽ về kỹ thuật",
+        "description": "Khi bản vẽ mâu thuẫn với thực tế nền đất, chúng tôi có văn bản trước, thay vì thi công ra một khiếm khuyết."
       },
-      "longTermRelationship": {
-        "title": "Mối quan hệ khách hàng lâu dài",
-        "description": "Chúng tôi dự định trở thành đối tác của bạn cho năm sau, chứ không chỉ trong tháng này."
+      "longTerm": {
+        "title": "Quan hệ dài hạn",
+        "description": "Phần lớn công việc của chúng tôi đến từ những khách hàng đã từng giao việc trước đó."
       }
     },
     "howEyebrow": "Cách chúng tôi làm việc",
-    "howTitle": "Cách công ty vận hành",
-    "howLede": "Mỗi dự án hợp tác đều tuân theo cùng một nhịp độ rõ ràng — để bạn luôn biết mọi việc đang ở đâu.",
+    "howTitle": "Một dự án vận hành thế nào",
+    "howLede": "Mọi dự án đều theo cùng một nhịp, dù đó là trạm biến áp, một cây cầu hay một nhà kho.",
     "steps": {
-      "consult": {
-        "title": "Tư vấn",
-        "description": "Chúng tôi bắt đầu bằng một cuộc trò chuyện về tình huống của bạn và điều bạn muốn đạt được."
+      "survey": {
+        "title": "Khảo sát & xác định phạm vi",
+        "description": "Chúng tôi đi thực địa, đọc hồ sơ địa chất hoặc sơ đồ một sợi, và xác nhận chính xác phạm vi công việc."
       },
-      "assess": {
-        "title": "Đánh giá & Báo giá",
-        "description": "Chúng tôi xác nhận những gì hồ sơ của bạn cần và cung cấp phạm vi công việc cùng báo giá rõ ràng."
+      "price": {
+        "title": "Lập giá & tiến độ",
+        "description": "Chúng tôi lập giá theo phạm vi đã xác nhận và phát hành tiến độ, nêu rõ giả thiết khi hồ sơ còn ở bản thảo."
       },
-      "execute": {
-        "title": "Thực hiện & Liên hệ",
-        "description": "Chúng tôi chuẩn bị hồ sơ và phối hợp với các bộ ngành, cơ quan liên quan thay mặt bạn."
+      "build": {
+        "title": "Thi công & ghi chép",
+        "description": "Nhân lực và thiết bị của chúng tôi triển khai công việc, lập hồ sơ độ chối, độ chặt và thí nghiệm song song."
       },
-      "deliver": {
-        "title": "Bàn giao & Hỗ trợ",
-        "description": "Bạn nhận được kết quả được giải thích rõ ràng — cùng sự hỗ trợ liên tục ở những nơi còn nghĩa vụ tiếp tục."
+      "handover": {
+        "title": "Thí nghiệm & bàn giao",
+        "description": "Chúng tôi thí nghiệm, nghiệm thu và bàn giao bản vẽ hoàn công, hồ sơ thí nghiệm và tài liệu thiết bị."
       }
     },
-    "parentTitle": "Được hậu thuẫn bởi Super Vision Co., Ltd.",
-    "parentText": "Super Consulting là một đơn vị kinh doanh của Super Vision Co., Ltd., một công ty Lào đã được thành lập vững chắc. Sự hậu thuẫn đó, cùng với kinh nghiệm của chúng tôi từ năm 2020 và các mối quan hệ hợp tác với các bộ ngành, mang đến cho khách hàng một đối tác ổn định có thể hỗ trợ xử lý các giấy tờ chính thức với tính liên tục và trách nhiệm."
+    "capabilityTitle": "Một nhà thầu, bốn năng lực",
+    "capabilityText": "Công tác điện, nền móng và cọc, xây dựng đường và cầu, cùng xây dựng công trình và phát triển bất động sản đều nằm trong cùng một công ty. Với những dự án cần nhiều hơn một trong số đó, đây chính là khác biệt giữa một tiến độ duy nhất và một bài toán phối hợp."
   },
   "servicesPage": {
-    "lede": "Năm lĩnh vực dịch vụ bao quát toàn bộ hành trình kinh doanh và sinh sống tại Lào — khám phá từng lĩnh vực, hoặc liên hệ với chúng tôi để được đánh giá riêng cho trường hợp của bạn.",
-    "exploreArea": "Khám phá lĩnh vực dịch vụ này"
+    "lede": "Bốn nhóm năng lực bao trùm điện, nền móng, hạ tầng và công trình — xem từng nhóm, hoặc gửi bản vẽ cho chúng tôi để nhận báo giá theo phạm vi.",
+    "exploreArea": "Xem năng lực này"
   },
   "servicePage": {
     "overviewTitle": "Tổng quan",
-    "whoTitle": "Dịch vụ này dành cho ai",
-    "servicesInAreaTitle": "Dịch vụ trong lĩnh vực này",
-    "processTitle": "Quy trình hoạt động như thế nào",
-    "documentsTitle": "Các giấy tờ thường được yêu cầu",
-    "timelineTitle": "Lưu ý về thời gian",
-    "helpTitle": "Super Consulting hỗ trợ như thế nào",
-    "otherServicesTitle": "Các lĩnh vực dịch vụ khác"
+    "whoTitle": "Phù hợp với ai",
+    "servicesInAreaTitle": "Dịch vụ trong năng lực này",
+    "processTitle": "Công việc vận hành thế nào",
+    "standardsTitle": "Tiêu chuẩn chúng tôi tuân thủ",
+    "timelineTitle": "Ghi chú về tiến độ",
+    "helpTitle": "Apex thực hiện thế nào",
+    "otherServicesTitle": "Các năng lực khác"
   },
-  "knowledgePage": {
-    "lede": "Các bài viết dễ hiểu về các vấn đề kinh doanh, thuế, visa, pháp lý và cuộc sống tại Lào — được sắp xếp theo chín danh mục.",
-    "browseTitle": "Duyệt theo danh mục",
-    "articlesTitle": "Tất cả bài viết",
-    "countSingular": "bài viết",
-    "countPlural": "bài viết",
-    "emptyTitle": "Bài viết sắp ra mắt",
-    "emptyText": "Các bài viết của Trung tâm Kiến thức sẽ sớm được đăng tải tại đây. Trong lúc chờ đợi, hãy khám phá các dịch vụ của chúng tôi."
+  "projectsPage": {
+    "lede": "Công việc đã hoàn thành và đang triển khai về hệ thống điện, nền móng, đường và cầu, và công trình dân dụng.",
+    "listTitle": "Tất cả dự án",
+    "countSingular": "dự án",
+    "countPlural": "dự án",
+    "emptyTitle": "Hồ sơ dự án đang được chuẩn bị",
+    "emptyText": "Chúng tôi đang tổng hợp hồ sơ đã được xác thực về các công trình đã hoàn thành và đang triển khai, kèm thông số, địa điểm và phạm vi công việc. Thay vì công bố những con số áng chừng, mục này sẽ mở khi các chi tiết đã được xác nhận. Trong thời gian đó, hãy liên hệ với chúng tôi và chúng tôi sẽ chia sẻ các công trình tham chiếu phù hợp với dự án của quý vị."
   },
-  "lawsPage": {
-    "lede": "Tóm tắt dễ hiểu về luật pháp và quy định của Lào liên quan đến doanh nghiệp và cá nhân.",
-    "emptyTitle": "Các chủ đề pháp luật sắp ra mắt",
-    "emptyText": "Các bản tóm tắt dễ hiểu về luật pháp Lào sẽ sớm được đăng tải tại đây. Trong lúc chờ đợi, Trung tâm Kiến thức đề cập đến nhiều chủ đề liên quan.",
-    "listTitle": "Tất cả chủ đề pháp luật",
-    "countSingular": "chủ đề pháp luật",
-    "countPlural": "chủ đề pháp luật"
-  },
-  "guidesPage": {
-    "lede": "Các hướng dẫn chuyên sâu, thực tiễn để khởi nghiệp, vận hành và sinh sống tại Lào.",
-    "emptyTitle": "Các hướng dẫn đang được chuẩn bị",
-    "emptyText": "Các hướng dẫn kinh doanh thực tiễn sẽ sớm được đăng tải tại đây. Trong lúc chờ đợi, hãy khám phá các bài viết tại Trung tâm Kiến thức.",
-    "listTitle": "Tất cả hướng dẫn"
+  "projectPage": {
+    "factsTitle": "Thông tin dự án",
+    "scopeTitle": "Phạm vi công việc",
+    "capability": "Năng lực",
+    "status": "Trạng thái",
+    "location": "Địa điểm",
+    "year": "Năm",
+    "client": "Chủ đầu tư",
+    "capacity": "Thông số"
   },
   "newsPage": {
-    "lede": "Thông báo và cập nhật chính thức từ Super Consulting.",
-    "emptyTitle": "Chưa có tin tức nào",
-    "emptyText": "Tin tức và cập nhật sẽ được đăng tải tại đây.",
-    "typesTitle": "Những gì sẽ được đăng tải tại đây",
-    "types": {
-      "legal": "Cập nhật Pháp lý",
-      "tax": "Cập nhật Thuế",
-      "visa": "Cập nhật Visa",
-      "business": "Thông báo Kinh doanh",
-      "investment": "Tin tức Đầu tư",
-      "company": "Thông báo của Công ty"
-    }
-  },
-  "linksPage": {
-    "lede": "Các trang web chính thức của bộ ngành chính phủ Lào và dịch vụ công — các cổng thông tin hữu ích cho kinh doanh, thuế, visa và tuân thủ pháp luật.",
-    "ministriesEyebrow": "Chính phủ",
-    "ministriesTitle": "Bộ ngành",
-    "ministriesLede": "Trang web chính thức của các bộ ngành CHDCND Lào.",
-    "servicesEyebrow": "Dịch vụ",
-    "servicesTitle": "Dịch vụ Công",
-    "servicesLede": "Cổng thông tin một cửa, nhập cư, thuế, hải quan, thương mại và các dịch vụ chính phủ liên quan."
+    "lede": "Thông báo và cập nhật từ Công ty TNHH Apex.",
+    "emptyTitle": "Chưa có thông báo",
+    "emptyText": "Thông báo của công ty, các mốc dự án và tin trúng thầu sẽ được đăng tại đây."
   },
   "faqPage": {
-    "lede": "Câu trả lời cho những câu hỏi chúng tôi thường gặp nhất — về thành lập doanh nghiệp, visa, các vấn đề pháp lý, kế toán và dịch vụ gia đình tại Lào."
+    "lede": "Giải đáp những gì chủ đầu tư hỏi trước khi giao việc — chúng tôi làm được gì, lập giá ra sao, và xử lý thế nào khi một thí nghiệm không đạt."
   },
   "contactPage": {
-    "lede": "Hãy cho chúng tôi biết về tình huống của bạn và chúng tôi sẽ phản hồi lại với các bước tiếp theo rõ ràng.",
+    "lede": "Gửi cho chúng tôi bản vẽ, vị trí công trình và ngày cần hoàn thành. Chúng tôi sẽ cho biết công việc có nằm trong năng lực của mình hay không và còn cần gì để lập giá.",
     "formTitle": "Gửi tin nhắn cho chúng tôi",
-    "detailsTitle": "Thông tin Công ty",
-    "businessUnitLine": "Một đơn vị kinh doanh của Super Vision Co., Ltd.",
-    "nextTitle": "Điều gì sẽ xảy ra tiếp theo",
+    "detailsTitle": "Thông tin công ty",
+    "taglineLine": "Nhà thầu điện và xây dựng, CHDCND Lào",
+    "nextTitle": "Các bước tiếp theo",
     "next": {
       "read": {
-        "title": "Chúng tôi đọc tin nhắn của bạn",
-        "description": "Một chuyên viên tư vấn sẽ xem xét tình huống của bạn — không phải một hệ thống tự động."
+        "title": "Chúng tôi đọc những gì quý vị gửi",
+        "description": "Một kỹ sư sẽ xem xét phạm vi và mặt bằng, không phải một hệ thống tự động."
       },
       "reply": {
-        "title": "Chúng tôi phản hồi lại bạn",
-        "description": "Bạn sẽ nhận được phản hồi từ chúng tôi qua phương thức liên hệ ưa thích của bạn để làm rõ các chi tiết."
+        "title": "Chúng tôi phản hồi",
+        "description": "Chúng tôi xác nhận công việc có nằm trong năng lực hay không và liệt kê những gì còn thiếu để lập giá."
       },
       "propose": {
-        "title": "Bạn nhận được một đề xuất rõ ràng",
-        "description": "Chúng tôi sẽ giải thích quy trình và cung cấp phạm vi công việc cùng báo giá rõ ràng trước khi có bất kỳ cam kết nào."
+        "title": "Quý vị nhận báo giá theo phạm vi",
+        "description": "Chúng tôi lập giá theo phạm vi đã xác nhận và phát hành tiến độ, nêu rõ mọi giả thiết đã phải đưa ra."
       }
     }
   },
   "meta": {
     "home": {
-      "title": "Super Consulting — Tư vấn Kinh doanh, Pháp lý và Visa tại Lào",
-      "description": "Super Consulting hỗ trợ khách hàng trong nước và quốc tế về đăng ký kinh doanh, hỗ trợ pháp lý, dịch vụ visa và nhập cư, kế toán, thuế và tuân thủ doanh nghiệp tại Lào."
+      "title": "Công ty TNHH Apex — Cung cấp & Lắp đặt Điện 22 kV và 115 kV, CHDCND Lào",
+      "description": "Công ty TNHH Apex thi công đường dây truyền tải 115 kV và lưới phân phối 22 kV, trạm biến áp và hệ thống điện công trình tại CHDCND Lào, trên nền hơn 15 năm kinh nghiệm thi công cọc, đường, cầu và công trình dân dụng."
     },
     "about": {
       "title": "Về chúng tôi",
-      "description": "Từ năm 2020, Super Consulting — một đơn vị kinh doanh của Super Vision Co., Ltd. — đã hỗ trợ khách hàng tại Lào về các vấn đề kinh doanh, pháp lý, visa và kế toán thông qua việc chuẩn bị hồ sơ cẩn thận và phối hợp với các bộ ngành."
+      "description": "Công ty TNHH Apex là nhà thầu điện và xây dựng của Lào với hơn mười lăm năm kinh nghiệm về nền móng và cọc, xây dựng đường và cầu, công trình dân dụng, và công tác điện ở cấp 22 kV và 115 kV."
     },
     "services": {
-      "title": "Dịch vụ",
-      "description": "Năm lĩnh vực dịch vụ: thành lập doanh nghiệp và cấp phép, visa và nhập cư, pháp lý doanh nghiệp, pháp lý gia đình và cá nhân, và dịch vụ kế toán và thuế tại Lào."
+      "title": "Năng lực",
+      "description": "Bốn nhóm năng lực: cung cấp và lắp đặt điện ở cấp 22 kV và 115 kV, nền móng và cọc, xây dựng đường và cầu, cùng công trình dân dụng và phát triển bất động sản tại CHDCND Lào."
     },
-    "businessSetup": {
-      "title": "Thành lập Doanh nghiệp & Cấp phép tại Lào",
-      "description": "Đăng ký công ty, đăng ký đầu tư nước ngoài, giấy phép kinh doanh và đăng ký thuế tại Lào — hỗ trợ thành lập thực tiễn từ Super Consulting."
+    "serviceCategories": {
+      "electrical": {
+        "title": "Cung cấp & Lắp đặt Điện tại Lào — 22 kV và 115 kV",
+        "description": "Đường dây và trạm biến áp 115 kV, lưới phân phối 22 kV, cung cấp máy biến áp và tủ đóng cắt, lắp đặt điện hạ thế công trình, thí nghiệm và nghiệm thu trên khắp CHDCND Lào."
+      },
+      "piling-foundation": {
+        "title": "Nền móng & Cọc tại Lào",
+        "description": "Cọc đóng, cọc khoan nhồi, cừ larsen, thí nghiệm sức chịu tải, đài cọc, đào đất và gia cố nền cho công trình dân dụng, cầu và móng công nghiệp tại CHDCND Lào."
+      },
+      "roads-bridges": {
+        "title": "Xây dựng Đường & Cầu tại Lào",
+        "description": "Xây dựng và cải tạo đường, cầu bê tông cốt thép, cống hộp, thoát nước, bảo vệ mái taluy và hệ thống an toàn giao thông trên khắp CHDCND Lào."
+      },
+      "buildings-property": {
+        "title": "Xây dựng Công trình & Phát triển Bất động sản tại Lào",
+        "description": "Công trình thương mại, nhà ở và công nghiệp từ phần ngầm đến bàn giao, cùng hạ tầng kỹ thuật khu đất và hoạt động phát triển bất động sản do Apex thực hiện tại CHDCND Lào."
+      }
     },
-    "visaImmigration": {
-      "title": "Dịch vụ Visa & Nhập cư tại Lào",
-      "description": "Visa kinh doanh, visa và giấy phép lao động, visa nhà đầu tư và hỗ trợ cư trú dài hạn tại Lào — chuẩn bị hồ sơ và liên hệ với cơ quan chính phủ."
-    },
-    "legalFamily": {
-      "title": "Dịch vụ Pháp lý & Gia đình tại Lào",
-      "description": "Hợp đồng, tuân thủ pháp luật, thẩm định pháp lý, nhãn hiệu, đăng ký kết hôn và hỗ trợ giấy tờ gia đình tại Lào."
-    },
-    "accountingTax": {
-      "title": "Dịch vụ Kế toán & Thuế tại Lào",
-      "description": "Sổ sách kế toán, đăng ký và khai thuế, tiền lương, báo cáo tài chính và hỗ trợ tuân thủ hàng năm tại Lào."
-    },
-    "knowledge": {
-      "title": "Trung tâm Kiến thức",
-      "description": "Các bài viết dễ hiểu về các vấn đề kinh doanh, thuế, visa, pháp lý và cuộc sống tại Lào."
-    },
-    "laws": {
-      "title": "Thư viện Luật Lào",
-      "description": "Tóm tắt dễ hiểu về luật pháp và quy định của Lào liên quan đến doanh nghiệp và cá nhân."
-    },
-    "guides": {
-      "title": "Hướng dẫn Kinh doanh",
-      "description": "Các hướng dẫn kinh doanh thực tiễn để khởi nghiệp, vận hành và sinh sống tại Lào."
+    "projects": {
+      "title": "Dự án",
+      "description": "Các dự án đã hoàn thành và đang triển khai của Công ty TNHH Apex về công tác điện, nền móng và cọc, đường và cầu, và xây dựng công trình tại CHDCND Lào."
     },
     "news": {
-      "title": "Liên kết",
-      "description": "Các trang web chính thức của bộ ngành chính phủ Lào và dịch vụ công cho kinh doanh, thuế, visa và tuân thủ pháp luật."
-    },
-    "links": {
-      "title": "Liên kết",
-      "description": "Các trang web chính thức của bộ ngành chính phủ Lào và dịch vụ công cho kinh doanh, thuế, visa và tuân thủ pháp luật."
+      "title": "Tin tức",
+      "description": "Thông báo, mốc dự án và cập nhật từ Công ty TNHH Apex."
     },
     "faq": {
       "title": "Câu hỏi thường gặp",
-      "description": "Các câu hỏi thường gặp về thành lập doanh nghiệp, visa, các vấn đề pháp lý, kế toán và dịch vụ gia đình tại Lào."
+      "description": "Những câu hỏi chủ đầu tư đặt ra cho Công ty TNHH Apex trước khi giao việc — năng lực, cấp điện áp, giá, tiến độ, thí nghiệm và an toàn công trường."
     },
     "contact": {
       "title": "Liên hệ",
-      "description": "Liên hệ Super Consulting tại Thủ đô Viêng Chăn, CHDCND Lào — đặt lịch tư vấn về kinh doanh, pháp lý, visa hoặc kế toán."
+      "description": "Liên hệ Công ty TNHH Apex tại CHDCND Lào về công tác điện 22 kV và 115 kV, thi công cọc, xây dựng đường và cầu, hoặc các dự án công trình."
     }
   },
   "alt": {
-    "heroPatuxai": "Patuxai, Khải Hoàn Môn của Viêng Chăn, rực rỡ lúc hoàng hôn với những đỉnh tháp vàng nổi bật trên nền trời chiều dịu nhẹ",
-    "officeInterior": "Nội thất văn phòng hiện đại, yên tĩnh với ánh sáng tự nhiên",
-    "handshake": "Hai người bắt tay nhau trên bàn tài liệu tại một cuộc họp",
-    "meetingDocuments": "Các chuyên viên tư vấn đang xem xét tài liệu kinh doanh và biểu đồ trong một cuộc họp",
-    "contractSigning": "Cận cảnh bàn tay đang ký một văn bản kinh doanh",
-    "passportStamps": "Bàn tay cầm một cuốn hộ chiếu đang mở, cho thấy các con dấu visa",
-    "stoneColumns": "Hành lang cột đá cổ điển tràn ngập ánh nắng",
-    "accountingDesk": "Bàn làm việc với máy tính cầm tay, báo cáo tài chính và bút",
-    "teamCollaboration": "Đội ngũ làm việc cùng nhau tại các bàn làm việc chung trong một văn phòng hiện đại, sáng sủa",
-    "advisoryMeeting": "Chuyên viên tư vấn và khách hàng cùng xem xét tài liệu tại bàn làm việc văn phòng",
-    "luangPrabangStreet": "Tòa nhà kiến trúc thuộc địa trên một góc phố yên tĩnh tại Luang Prabang, Lào",
-    "cityNight": "Ánh đèn thị trấn lấp lánh dưới bầu trời đêm đầy sao",
-    "calmWorkspace": "Không gian làm việc tối giản với một chiếc laptop trên bàn gỗ cạnh cửa sổ lớn",
-    "riversideCity": "Toàn cảnh trên không của một thành phố ven sông ở Đông Nam Á lúc hoàng hôn",
-    "mekongSunset": "Hoàng hôn trên sông Mê Kông và những ngọn đồi rừng gần Luang Prabang, Lào",
-    "meetingRoom": "Phòng họp trống tràn ngập ánh nắng với bàn họp trắng và ghế đen",
-    "corporateLounge": "Sảnh doanh nghiệp hiện đại với tầm nhìn ra đường chân trời thành phố qua các ô cửa kính từ sàn đến trần",
-    "deskAnalysis": "Cận cảnh một bàn làm việc với biểu đồ, laptop và một bàn tay đang ghi chú",
-    "overheadDeskWork": "Góc nhìn từ trên xuống của một người đang làm việc với laptop và sổ tay — không thấy khuôn mặt",
-    "deskCharts": "Bàn tay đang xem xét biểu đồ và ghi chú bên cạnh một chiếc laptop trên bàn làm việc tối màu"
+    "heroNightCity": "Ánh đèn thị trấn rực sáng dưới bầu trời đêm đầy sao",
+    "structuralColumns": "Hành lang cột bê tông cao dưới ánh nắng",
+    "siteCrew": "Đội công nhân đang vận chuyển hàng trong một nhà kho lớn",
+    "teamCollaboration": "Nhóm làm việc cùng nhau tại bàn chung trong văn phòng sáng sủa",
+    "riversideCity": "Toàn cảnh từ trên cao một thành phố ven sông ở Đông Nam Á lúc hoàng hôn",
+    "patuxai": "Khải Hoàn Môn Patuxai ở Viêng Chăn lúc hoàng hôn trên nền trời chiều"
   }
 }

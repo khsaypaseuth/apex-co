@@ -1,20 +1,10 @@
-# Vietnamese (vi) content — not yet active
+# Content — vi
 
-This locale is architecture-only at launch (decision D-001): routes, types,
-and folders exist, but content is deferred until English + Lao are finalized.
+Structured page data for this locale lives in the sibling `.ts` files
+(`services.ts`, `service-pages.ts`, `faq.ts`) and is fully translated.
 
-## How to activate Vietnamese
-
-1. Add `'vi'` to `activeLocales` in `lib/i18n-config.ts`.
-2. Create `dictionaries/vi.json` (copy `dictionaries/en.json` and translate
-   every key — the shape must match exactly) and register its loader in
-   `lib/dictionaries.ts`.
-3. Populate this folder mirroring `content/en/`:
-   - `articles/` — Knowledge Center articles (`.md` with validated frontmatter)
-   - `laws/` — Lao Laws Library topics
-   - `guides/` — Business guides
-   - `pages/` — page-level content
-4. Frontmatter is validated by `lib/content-schema.ts` — invalid files fail
-   the build with a descriptive error.
-5. Translate disclaimers and verification markers too — they must never be
-   dropped in translation.
+`projects/` is empty. Project markdown falls back to `content/en/projects/`
+when this folder has no matching file, and the page renders the
+`common.contentInEnglish` notice so the reader knows why. Drop a translated
+`<slug>.md` in here to override — see `content/en/projects/README.md` for the
+frontmatter contract.

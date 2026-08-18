@@ -1,135 +1,142 @@
 import type { FaqSection } from '@/lib/types'
 
 /**
- * FAQ content — the master plan's five sections and all listed questions
- * (§FAQ). Answers are deliberately cautious: nothing is stated as a fixed
- * legal fact, no processing times or fees are given, and readers are always
- * pointed to a case-by-case assessment. The FAQ page renders a DisclaimerBox
- * below these sections. English-only for now; Phase 7 adds Lao.
+ * FAQ for `/faq`, written around what a client actually asks a contractor
+ * before awarding work: what you can build, how you price it, who is liable,
+ * and what happens when something goes wrong.
+ *
+ * Guardrail: no answer states a fixed price, a guaranteed duration, or a
+ * certification Apex has not confirmed holding.
  */
+
 export const faqSections: FaqSection[] = [
   {
-    title: 'Business Setup',
+    title: 'Capabilities',
     items: [
       {
-        question: 'Can foreigners register a company in Laos?',
+        question: 'What voltage levels does Apex work at?',
         answer:
-          'In many sectors, yes — foreign investors commonly establish companies in Laos. However, some activities are subject to sector-specific conditions, ownership limits, or additional approvals, and the rules can change. The right starting point is confirming whether your planned activity is open to foreign investment and under what conditions — something we assess case by case.',
+          'We work at 115 kV on the transmission side and 22 kV on medium-voltage distribution, plus low-voltage installation inside buildings. That covers overhead lines, underground cable, substations, distribution transformers, switchgear, and building electrical systems. We also supply low, medium, and high voltage equipment as a standalone scope.',
       },
       {
-        question: 'How long does company registration take?',
+        question: 'Is Apex an electrical contractor or a construction contractor?',
         answer:
-          'It varies. Processing depends on the business structure, the sector, the completeness of the application, and the authorities involved, so we do not quote a standard duration. After an initial assessment of your case, we can give you a realistic expectation and keep you updated at every stage.',
+          'Both, and that is deliberate. The company has more than fifteen years in foundation and driven piling, road and bridge construction, and building construction, alongside the electrical business. On projects that need civil and electrical work together — a substation, an industrial site, a building needing its own supply — a single contractor delivers both under one programme.',
       },
       {
-        question: 'What documents are needed?',
+        question: 'Can you take on just the supply, without the installation?',
         answer:
-          'Applications commonly involve identity documents of shareholders and directors, articles of association, proof of a registered address, and a description of the business activity. Foreign companies are typically also asked for corporate documents from their home jurisdiction, often translated and legalised. The exact list is determined by the authorities and varies by case — we confirm it for your situation before anything is filed.',
+          'Yes. Equipment supply can be contracted on its own: transformers, switchgear and ring main units, protection panels, cable and accessories, poles and line hardware, and LV distribution equipment. Where a specification names an approved-vendor list, we procure against that list rather than substituting on price without your written agreement.',
       },
       {
-        question: 'Do I need a local partner?',
+        question: 'Do you do piling for other contractors?',
         answer:
-          'Not necessarily — it depends on the sector. Some activities allow full foreign ownership, while others have conditions or ownership limits that may make a Lao partner relevant. Because this varies by activity and can change, we verify the current position for your specific sector before you commit to a structure.',
+          'Yes. Foundation and piling is frequently contracted as a standalone package to building and infrastructure contractors, taken through pile installation, testing, trimming, and pile caps so the frame contractor starts on a finished, surveyed platform.',
       },
       {
-        question: 'What licenses are required?',
+        question: 'Does Apex develop its own property?',
         answer:
-          'Beyond enterprise registration, many activities require an operating licence, and regulated sectors typically require industry-specific approvals. Which licences apply depends entirely on what the business does. We identify the licences commonly required for your activity and manage the applications and later renewals.',
+          'Yes. Alongside contracting, Apex acts as a developer on its own account — taking land through feasibility, permitting, construction, and into sale or lease. It means we have taken the same commercial risk our development clients take.',
       },
     ],
   },
   {
-    title: 'Visa & Immigration',
+    title: 'Pricing and tendering',
     items: [
       {
-        question: 'What is the difference between a visa and a work permit?',
+        question: 'How do you price work?',
         answer:
-          'Broadly, a visa concerns your permission to enter and stay in Laos, while a work permit concerns your permission to work. Foreign employees typically need both, and they must stay aligned — an expiring permit can affect your stay, and vice versa. We handle the two together so nothing falls out of sync.',
+          'Against a confirmed scope. For tendered work we price the bill of quantities and specification as issued. For negotiated work we normally need a site visit and, for foundations, the geotechnical report before we can price anything meaningful. We do not quote a rate for piling or roadworks before knowing the ground.',
       },
       {
-        question: 'Can investors apply for long-term stay?',
+        question: 'Can you give a price over the phone?',
         answer:
-          'Investors who establish or fund a business in Laos may have longer-term visa and stay options, depending on the nature of the investment and the business. Eligibility and conditions vary by case, so we assess your situation first and then manage the application that fits.',
+          'We can give an indication of whether a project is within our capability and roughly how it would be approached, but not a price. Construction and electrical costs are driven by scope, site conditions, access, and equipment lead times, and a number given before those are known would be misleading rather than helpful.',
       },
       {
-        question: 'Can family members stay in Laos?',
+        question: 'What do you need from us to prepare a quotation?',
         answer:
-          'Commonly, yes — spouses and family members often have stay options connected to a family member who works, invests, or resides in Laos, or to marriage with a Lao national. The requirements depend on the relationship and the documents available, and we help families prepare and file the applications.',
+          'At minimum: the drawings and specification, the site location and access constraints, and the required completion date. For foundation work, the geotechnical investigation report. For electrical work, the single-line diagram, connection point, and load. Where documents are still in draft, we will price what exists and state the assumptions we have made.',
       },
       {
-        question: 'How do visa extensions work?',
+        question: 'Do you work as a subcontractor on larger projects?',
         answer:
-          'Most visas and permits have a validity period and can typically be extended or renewed before they expire, subject to the conditions of the category. Applying in good time matters. We track expiry dates for our clients and prepare extensions and renewals ahead of the deadline.',
+          'Yes. We regularly take the piling, electrical, or civil package on projects where another party holds the main contract, and we are used to working within a main contractor’s programme, site rules, and safety regime.',
       },
     ],
   },
   {
-    title: 'Legal',
+    title: 'Programme and delivery',
     items: [
       {
-        question: 'Can Super Consulting draft contracts?',
+        question: 'How long will our project take?',
         answer:
-          'Yes. We draft contracts for businesses and individuals — in clear language, suited to how the agreement will actually be used in Laos. We also explain the key rights and obligations in plain terms, so you understand what you are signing, not just that it is signed.',
+          'It depends on scope, site conditions, approvals, and equipment lead times, so we issue a programme against the confirmed scope rather than quoting a duration in advance. What we can commit to is reporting progress against that programme honestly, including when it slips and why.',
       },
       {
-        question: 'Can contracts be reviewed before signing?',
+        question: 'How does the wet season affect the programme?',
         answer:
-          'Yes, and we recommend it. We review the contract, flag the clauses that carry risk or need negotiation, and summarise the practical effect in plain language before you commit. Both English and Lao language documents are supported.',
+          'Significantly, for earthworks, pavement, and concrete. Layers cannot be compacted or surfaced to specification in sustained rain. We would rather write a programme around the wet season than through it, and we will say so at tender stage rather than after the works have started.',
       },
       {
-        question: 'What is due diligence?',
+        question: 'What happens if conditions on site turn out different from the design?',
         answer:
-          'Due diligence is a structured background check carried out before a partnership, purchase, or significant transaction — verifying that a company, asset, or document is what it appears to be. We examine the available records and documentation and report what we find, including anything that could not be verified.',
+          'We stop, record what we have found, and refer it to the engineer or client before continuing. This is most common on foundation work, where ground rarely matches the borehole log exactly. Building on regardless is how a buried problem becomes an expensive one.',
       },
       {
-        question: 'Can you help with trademark registration?',
+        question: 'Do you work on live electrical networks?',
         answer:
-          'Yes. We support trademark registration in Laos from start to finish — checking availability, preparing and filing the application, and following up until registration. We can also advise on practical steps to protect your brand more broadly.',
+          'Extensions and reinforcements to live distribution networks are normal scope, but they require outage planning and switching coordination with the utility. We treat that coordination as part of the works, and we plan the outage window before mobilising rather than after.',
       },
     ],
   },
   {
-    title: 'Accounting & Tax',
+    title: 'Quality, testing, and safety',
     items: [
       {
-        question: 'Does every company need bookkeeping?',
+        question: 'What testing is included in your scope?',
         answer:
-          'Companies operating in Laos are generally expected to keep proper books and records, though the detail of what applies can vary with the company’s size and registration. In practice, accurate bookkeeping is also what makes tax filings, reporting, and audits manageable — so we treat it as essential for every client.',
+          'Whatever the specification requires, carried out at the specified frequency and reported formally. For piling, that means set records, integrity testing, and load testing. For roads, material and compaction testing layer by layer. For electrical work, insulation and earth testing, transformer tests, protection relay injection, and functional commissioning checks.',
       },
       {
-        question: 'When should a company register for tax?',
+        question: 'What do we receive at handover?',
         answer:
-          'Tax registration is typically one of the first steps after a company is established — new businesses commonly need a taxpayer identification number before they can operate normally. We usually handle tax registration as part of the setup process so nothing is missed.',
+          'As-built drawings, the test and commissioning records for the works, equipment documentation and manuals for supplied plant, and the survey records where relevant. Test records are part of the deliverable, not an optional extra — an installation without them cannot be shown to be compliant.',
       },
       {
-        question: 'Can Super Consulting help with payroll?',
+        question: 'What happens if a test fails?',
         answer:
-          'Yes. We run payroll for teams of all sizes — salary calculations, the related declarations and contributions, and clear payslips — accurately and on schedule, alongside the rest of your accounting.',
+          'We report it to you and to the engineer immediately, and we do not proceed past it. A pile that has quietly failed its test or a circuit that was energised on an assumption is the most expensive kind of problem, precisely because it surfaces late.',
       },
       {
-        question: 'What annual compliance is required?',
+        question: 'How do you manage site safety?',
         answer:
-          'Companies typically face an annual cycle of closing the books, reporting, and renewing registrations or licences, but the exact obligations vary by company, sector, and registration. We map the calendar that applies to your business and complete each step before it is due.',
+          'Every project runs under an agreed safety plan covering method statements, plant and lifting operations, excavation and temporary works, and electrical safety and isolation. On subcontracted work we operate under the main contractor’s regime where it is more stringent than ours.',
       },
     ],
   },
   {
-    title: 'Family & Personal',
+    title: 'Working with Apex',
     items: [
       {
-        question: 'Can foreigners marry Lao citizens?',
+        question: 'Where does Apex work?',
         answer:
-          'Yes — marriage between Lao and foreign nationals is possible, through a specific registration procedure. The documents and steps involved vary by case and by the foreign spouse’s nationality, and certificates often need translation and legalisation. We guide couples through the whole process.',
+          'Across the Lao PDR. Provincial and remote work is normal for road, bridge, and transmission projects, though access and logistics affect both programme and cost and are assessed as part of pricing.',
       },
       {
-        question: 'Can Super Consulting help with divorce documents?',
+        question: 'What languages do you work in?',
         answer:
-          'Yes. We assist with the documentation and procedural side of divorce, including cases with an international element — carefully, discreetly, and with clear explanations of each step. For matters requiring court representation, we coordinate with qualified legal professionals.',
+          'Lao and English for day-to-day project communication and documentation. This website is also published in Thai, Vietnamese, and Chinese for clients and suppliers who prefer them.',
       },
       {
-        question: 'Can foreign spouses apply for long-term stay?',
+        question: 'Can you handle the permits and utility approvals?',
         answer:
-          'Foreign spouses of Lao nationals commonly have stay options connected to the marriage, though the requirements and conditions vary by case. We assess what may apply in your situation and handle the application together with our immigration team.',
+          'We support the approvals process and coordinate with the relevant authorities and the utility as part of the scope. Which approvals are the client’s responsibility and which are ours is agreed in the contract, because leaving that undefined is a reliable way to lose weeks.',
+      },
+      {
+        question: 'How do we start a conversation about a project?',
+        answer:
+          'Send us the drawings, the location, and the target completion date through the contact page, or call us. If it is within our capability we will say so and tell you what we need to price it. If it is not, we will tell you that too.',
       },
     ],
   },

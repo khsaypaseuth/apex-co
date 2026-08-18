@@ -1,11 +1,9 @@
 import type { Service, ServiceCategorySlug, ServiceGroup } from '@/lib/types'
 
 /**
- * Vietnamese services catalogue — the same five groups and 44 services as
- * `content/en/services.ts`, translated for a Vietnamese-reading audience.
- * Slugs are NOT derived from the Vietnamese titles: they are copied
- * verbatim from the English file so `/services/*` URLs stay identical
- * across locales.
+ * Vietnamese translation of `content/en/services.ts`. Slugs come from the
+ * ENGLISH titles in the source file and are passed explicitly here so they
+ * stay identical across locales.
  */
 
 function service(
@@ -19,102 +17,88 @@ function service(
 
 export const serviceGroups: ServiceGroup[] = [
   {
-    id: 'business-setup-licensing',
-    categorySlug: 'business-setup',
-    title: 'Thành lập doanh nghiệp & Cấp phép',
+    id: 'electrical-supply-installation',
+    categorySlug: 'electrical',
+    title: 'Cung cấp & Lắp đặt Điện',
     summary:
-      'Từ lần đăng ký đầu tiên đến việc gia hạn giấy phép liên tục — hỗ trợ thành lập và duy trì doanh nghiệp của bạn được đăng ký hợp lệ tại Lào.',
+      'Công trình truyền tải và phân phối ở cấp 115 kV và 22 kV, xây dựng trạm biến áp, và cung cấp thiết bị điện hạ thế, trung thế, cao thế — thi công, thí nghiệm và đóng điện.',
     services: [
-      service('business-setup', 'company-registration', 'Đăng ký thành lập công ty', 'Thành lập công ty mới với các cơ quan chức năng liên quan của Lào.'),
-      service('business-setup', 'foreign-investment-registration', 'Đăng ký đầu tư nước ngoài', 'Hỗ trợ đăng ký cho các doanh nghiệp có vốn đầu tư nước ngoài.'),
-      service('business-setup', 'representative-office-registration', 'Đăng ký văn phòng đại diện', 'Thành lập văn phòng đại diện cho công ty nước ngoài.'),
-      service('business-setup', 'branch-office-registration', 'Đăng ký chi nhánh', 'Đăng ký chi nhánh của một công ty nước ngoài hiện có.'),
-      service('business-setup', 'business-license-applications', 'Xin cấp giấy phép kinh doanh', 'Chuẩn bị và nộp hồ sơ xin cấp giấy phép hoạt động.'),
-      service('business-setup', 'industry-specific-licenses', 'Giấy phép chuyên ngành', 'Các giấy phép cần thiết cho các ngành và hoạt động có điều kiện.'),
-      service('business-setup', 'tax-registration', 'Đăng ký thuế', 'Đăng ký doanh nghiệp mới với cơ quan thuế.'),
-      service('business-setup', 'social-security-registration', 'Đăng ký bảo hiểm xã hội', 'Đăng ký công ty và nhân viên tham gia bảo hiểm xã hội.'),
-      service('business-setup', 'company-amendments', 'Thay đổi thông tin công ty', 'Cập nhật thông tin công ty, cổ đông, hoặc các chi tiết đã đăng ký.'),
-      service('business-setup', 'business-license-renewal', 'Gia hạn giấy phép kinh doanh', 'Duy trì giấy phép hoạt động hiệu lực thông qua việc gia hạn kịp thời.'),
+      service('electrical', '115-kv-transmission-lines', 'Đường dây truyền tải 115 kV', 'Khảo sát tuyến, móng, dựng cột thép và kéo dây cho đường dây trên không 115 kV.'),
+      service('electrical', '115-22-kv-substations', 'Trạm biến áp 115/22 kV', 'Phần xây dựng, kết cấu, lắp đặt thiết bị chính và nghiệm thu chạy thử trạm biến áp.'),
+      service('electrical', '22-kv-distribution-networks', 'Lưới phân phối 22 kV', 'Đường dây phân phối trung thế trên không và ngầm, mở rộng và tăng cường lưới.'),
+      service('electrical', 'overhead-line-construction', 'Thi công đường dây trên không', 'Dựng cột bê tông và cột thép, lắp xà, gắn sứ cách điện và kéo dây dẫn.'),
+      service('electrical', 'underground-cable-works', 'Công trình cáp ngầm', 'Đào rãnh, đặt ống, kéo cáp, nối cáp và đầu cáp cho mạch trung thế và hạ thế.'),
+      service('electrical', 'transformer-supply-installation', 'Cung cấp & lắp đặt máy biến áp', 'Máy biến áp phân phối và máy biến áp lực được cung cấp, lắp đặt, đấu nối và thí nghiệm.'),
+      service('electrical', 'switchgear-protection-panels', 'Tủ đóng cắt & tủ bảo vệ', 'Tủ trung thế, RMU, tủ bảo vệ và điều khiển, cài đặt rơ-le.'),
+      service('electrical', 'low-voltage-building-electrical', 'Điện hạ thế & điện công trình', 'Tủ phân phối chính, tuyến nhánh, ổ cắm, chiếu sáng và hệ thống tiếp địa cho công trình.'),
+      service('electrical', 'electrical-equipment-supply', 'Cung cấp thiết bị điện', 'Mua sắm và cung cấp thiết bị điện hạ thế, trung thế và cao thế, cáp và phụ kiện.'),
+      service('electrical', 'testing-commissioning', 'Thí nghiệm & nghiệm thu', 'Thí nghiệm trước khi đóng điện, kiểm tra bảo vệ và nghiệm thu theo yêu cầu của điện lực.'),
+      service('electrical', 'earthing-lightning-protection', 'Tiếp địa & chống sét', 'Lưới tiếp địa, cọc tiếp địa, liên kết đẳng thế và chống sét cho trạm và công trình.'),
+      service('electrical', 'maintenance-fault-response', 'Bảo trì & xử lý sự cố', 'Bảo trì theo kế hoạch, kiểm tra định kỳ và hỗ trợ ứng cứu cho hệ thống đã lắp đặt.'),
     ],
   },
   {
-    id: 'visa-immigration-services',
-    categorySlug: 'visa-immigration',
-    title: 'Dịch vụ Thị thực & Xuất nhập cảnh',
+    id: 'foundation-piling-works',
+    categorySlug: 'piling-foundation',
+    title: 'Công trình Nền móng & Cọc',
     summary:
-      'Hỗ trợ thị thực, giấy phép lao động, và giấy phép lưu trú cho các chuyên gia, nhà đầu tư, và gia đình đang sinh sống hoặc làm việc tại Lào.',
+      'Cọc đóng, cọc khoan nhồi, cừ larsen, thí nghiệm cọc và phần kết cấu ngầm chịu tải cho công trình, cầu và thiết bị nặng — năng lực khởi nguồn của Apex.',
     services: [
-      service('visa-immigration', 'business-visa', 'Thị thực doanh nghiệp', 'Hỗ trợ thị thực cho khách công tác và nhiệm vụ ngắn hạn.'),
-      service('visa-immigration', 'investor-visa', 'Thị thực nhà đầu tư', 'Hỗ trợ thị thực cho nhà đầu tư thành lập hoặc góp vốn vào doanh nghiệp.'),
-      service('visa-immigration', 'work-visa', 'Thị thực lao động', 'Hỗ trợ thị thực cho người lao động nước ngoài làm việc tại Lào.'),
-      service('visa-immigration', 'work-permit', 'Giấy phép lao động', 'Xin cấp và gia hạn giấy phép lao động cho nhân viên nước ngoài.'),
-      service('visa-immigration', 'long-term-stay-visa', 'Thị thực lưu trú dài hạn', 'Các lựa chọn lưu trú dài hạn tại Lào, được đánh giá theo từng trường hợp.'),
-      service('visa-immigration', 'visa-extension-renewal', 'Gia hạn & Kéo dài thị thực', 'Kéo dài hoặc gia hạn thị thực hiện có trước khi hết hạn.'),
-      service('visa-immigration', 'stay-permit', 'Giấy phép lưu trú', 'Xin cấp giấy phép lưu trú cho người nước ngoài cư trú.'),
-      service('visa-immigration', 'immigration-consulting', 'Tư vấn xuất nhập cảnh', 'Tư vấn thực tế về các con đường và yêu cầu xuất nhập cảnh.'),
-      service('visa-immigration', 'document-preparation', 'Chuẩn bị hồ sơ', 'Chuẩn bị, dịch thuật, và sắp xếp hồ sơ đăng ký.'),
-      service('visa-immigration', 'government-liaison', 'Liên hệ với cơ quan chức năng', 'Phối hợp với các cơ quan liên quan thay mặt bạn.'),
+      service('piling-foundation', 'driven-pile-installation', 'Thi công cọc đóng', 'Cọc bê tông đúc sẵn và cọc thép, đóng đến độ chối hoặc chiều sâu thiết kế.'),
+      service('piling-foundation', 'bored-pile-installation', 'Thi công cọc khoan nhồi', 'Cọc đổ tại chỗ cho nơi không phù hợp đóng cọc hoặc cần hạn chế rung động.'),
+      service('piling-foundation', 'sheet-piling', 'Thi công cừ larsen', 'Tường cừ chắn giữ hố đào, đê quây và công trình ven sông.'),
+      service('piling-foundation', 'pile-load-testing', 'Thí nghiệm sức chịu tải cọc', 'Thí nghiệm nén tĩnh, thí nghiệm động và kiểm tra khuyết tật, kèm báo cáo.'),
+      service('piling-foundation', 'pile-caps-substructure', 'Đài cọc & kết cấu ngầm', 'Cắt đầu cọc, gia công cốt thép, đài cọc, giằng móng và dầm liên kết.'),
+      service('piling-foundation', 'excavation-earthworks', 'Đào đất & công tác đất', 'Đào khối lớn và đào chi tiết, hạ mực nước ngầm, đắp trả và đầm nén.'),
+      service('piling-foundation', 'ground-improvement', 'Gia cố nền đất', 'Thay đất, đầm nén và gia cố khi sức chịu tải của nền không đủ.'),
+      service('piling-foundation', 'retaining-structures', 'Kết cấu chắn giữ', 'Tường chắn, chống đỡ và kết cấu tạm bảo đảm an toàn hố đào.'),
+      service('piling-foundation', 'setting-out-survey', 'Định vị & trắc đạc', 'Định vị tim cọc bằng máy trắc đạc và lập hồ sơ hoàn công.'),
     ],
   },
   {
-    id: 'corporate-legal-services',
-    categorySlug: 'legal-family',
-    title: 'Dịch vụ pháp lý doanh nghiệp',
+    id: 'road-bridge-construction',
+    categorySlug: 'roads-bridges',
+    title: 'Xây dựng Đường & Cầu',
     summary:
-      'Hỗ trợ về hợp đồng, tuân thủ pháp luật, thẩm định pháp lý, và sở hữu trí tuệ cho các công ty hoạt động tại Lào.',
+      'Tuyến đường mới, cải tạo, cầu bê tông cốt thép, cống và hệ thống thoát nước — từ nền đường đến lớp mặt và hệ thống an toàn giao thông.',
     services: [
-      service('legal-family', 'legal-consulting', 'Tư vấn pháp lý', 'Tư vấn pháp lý thực tế cho các quyết định kinh doanh tại Lào.'),
-      service('legal-family', 'contract-review', 'Rà soát hợp đồng', 'Rà soát hợp đồng trước khi bạn ký, bằng ngôn ngữ dễ hiểu.'),
-      service('legal-family', 'contract-drafting', 'Soạn thảo hợp đồng', 'Soạn thảo hợp đồng rõ ràng, khả thi cho doanh nghiệp của bạn.'),
-      service('legal-family', 'corporate-compliance', 'Tuân thủ pháp luật doanh nghiệp', 'Duy trì các nghĩa vụ và hồ sơ của công ty trong trạng thái tốt.'),
-      service('legal-family', 'due-diligence', 'Thẩm định pháp lý', 'Kiểm tra lý lịch đối tác, tài sản, và giao dịch.'),
-      service('legal-family', 'trademark-registration', 'Đăng ký nhãn hiệu', 'Đăng ký và bảo vệ nhãn hiệu tại Lào.'),
-      service('legal-family', 'intellectual-property-support', 'Hỗ trợ sở hữu trí tuệ', 'Hỗ trợ thực tế trong việc bảo vệ sở hữu trí tuệ.'),
-      service('legal-family', 'company-legal-documentation', 'Hồ sơ pháp lý công ty', 'Chuẩn bị và duy trì các hồ sơ pháp lý cốt lõi của công ty.'),
-      service('legal-family', 'legal-liaison-support', 'Hỗ trợ liên hệ pháp lý', 'Phối hợp với cơ quan chức năng và các bên liên quan về vấn đề pháp lý.'),
+      service('roads-bridges', 'road-construction', 'Xây dựng đường', 'Tuyến đường mới từ phát quang, nền đường, các lớp móng đến lớp mặt.'),
+      service('roads-bridges', 'road-rehabilitation-overlay', 'Cải tạo & thảm tăng cường', 'Làm lại kết cấu, vá ổ gà và thảm tăng cường mặt đường hiện hữu.'),
+      service('roads-bridges', 'bridge-construction', 'Xây dựng cầu', 'Cầu bê tông cốt thép — móng, trụ, mố, dầm và bản mặt cầu.'),
+      service('roads-bridges', 'culverts-drainage', 'Cống & thoát nước', 'Cống hộp, cống tròn, rãnh dọc và cửa xả.'),
+      service('roads-bridges', 'concrete-asphalt-paving', 'Thảm bê tông & asphalt', 'Thi công mặt đường cứng và mặt đường mềm.'),
+      service('roads-bridges', 'earthworks-subgrade', 'Công tác đất & nền đường', 'Đào đắp, nền đắp, chuẩn bị nền đường và kiểm soát độ chặt.'),
+      service('roads-bridges', 'slope-protection', 'Bảo vệ mái taluy', 'Rọ đá, đá hộc, tường chắn và chống xói lở mái đào, mái đắp.'),
+      service('roads-bridges', 'road-safety-furniture', 'Hệ thống an toàn giao thông', 'Hộ lan, biển báo, vạch sơn và cọc tiêu.'),
+      service('roads-bridges', 'access-haul-roads', 'Đường công vụ & đường vận chuyển', 'Đường vào tạm và đường vận chuyển phục vụ công trường.'),
     ],
   },
   {
-    id: 'family-personal-legal-services',
-    categorySlug: 'legal-family',
-    title: 'Dịch vụ pháp lý gia đình & cá nhân',
+    id: 'building-real-estate',
+    categorySlug: 'buildings-property',
+    title: 'Xây dựng Công trình & Phát triển Bất động sản',
     summary:
-      'Hỗ trợ về hôn nhân, giấy tờ gia đình, và các vấn đề lưu trú dài hạn liên quan đến công dân Lào và người nước ngoài.',
+      'Công trình thương mại, nhà ở và công nghiệp từ phần ngầm đến bàn giao — cùng hoạt động phát triển đất đai và bất động sản do chính Apex làm chủ đầu tư.',
     services: [
-      service('legal-family', 'marriage-registration-for-lao-and-foreign-nationals', 'Đăng ký kết hôn cho công dân Lào và người nước ngoài', 'Hướng dẫn các cặp đôi khác quốc tịch trong thủ tục đăng ký kết hôn.'),
-      service('legal-family', 'marriage-certificate-translation-and-legalisation-support', 'Hỗ trợ dịch thuật và hợp pháp hóa giấy chứng nhận kết hôn', 'Dịch thuật và hợp pháp hóa các giấy tờ kết hôn.'),
-      service('legal-family', 'divorce-assistance', 'Hỗ trợ ly hôn', 'Hỗ trợ về giấy tờ và thủ tục trong quá trình ly hôn.'),
-      service('legal-family', 'family-documentation', 'Giấy tờ gia đình', 'Chuẩn bị và điều chỉnh các giấy tờ hộ tịch gia đình.'),
-      service('legal-family', 'birth-certificate-support', 'Hỗ trợ giấy khai sinh', 'Hỗ trợ đăng ký khai sinh và cấp giấy chứng nhận.'),
-      service('legal-family', 'family-book-support', 'Hỗ trợ sổ hộ khẩu gia đình', 'Hỗ trợ đăng ký và cập nhật sổ hộ khẩu gia đình.'),
-      service('legal-family', 'long-term-stay-support-for-foreign-spouses', 'Hỗ trợ lưu trú dài hạn cho vợ/chồng nước ngoài', 'Các lựa chọn lưu trú cho vợ/chồng nước ngoài của công dân Lào.'),
-    ],
-  },
-  {
-    id: 'accounting-tax',
-    categorySlug: 'accounting-tax',
-    title: 'Kế toán & Thuế',
-    summary:
-      'Ghi sổ kế toán, khai thuế, tính lương, và tuân thủ hằng năm — nền tảng tài chính đáng tin cậy cho doanh nghiệp của bạn.',
-    services: [
-      service('accounting-tax', 'accounting-services', 'Dịch vụ kế toán', 'Hỗ trợ kế toán phù hợp với các yêu cầu của Lào.'),
-      service('accounting-tax', 'bookkeeping', 'Ghi sổ kế toán', 'Sổ sách chính xác, cập nhật cho doanh nghiệp của bạn.'),
-      service('accounting-tax', 'tax-registration', 'Đăng ký thuế', 'Đăng ký doanh nghiệp của bạn với cơ quan thuế.'),
-      service('accounting-tax', 'tax-filing', 'Khai thuế', 'Chuẩn bị và nộp các tờ khai thuế định kỳ.'),
-      service('accounting-tax', 'payroll-services', 'Dịch vụ tính lương', 'Xử lý tính lương và các khai báo liên quan cho đội ngũ của bạn.'),
-      service('accounting-tax', 'financial-reporting', 'Báo cáo tài chính', 'Báo cáo tài chính rõ ràng cho chủ sở hữu và cơ quan chức năng.'),
-      service('accounting-tax', 'annual-compliance-support', 'Hỗ trợ tuân thủ hằng năm', 'Theo dõi nghĩa vụ khai báo và báo cáo hằng năm.'),
-      service('accounting-tax', 'tax-advisory', 'Tư vấn thuế', 'Tư vấn thuế thực tế cho các quyết định và kế hoạch.'),
+      service('buildings-property', 'commercial-buildings', 'Công trình thương mại', 'Văn phòng, thương mại và công trình hỗn hợp, từ phần ngầm đến bàn giao.'),
+      service('buildings-property', 'residential-buildings', 'Công trình nhà ở', 'Nhà ở, căn hộ và khối nhà ở, đơn lẻ hoặc theo dãy.'),
+      service('buildings-property', 'industrial-warehouse', 'Công trình công nghiệp & kho', 'Nhà kho, xưởng và nhà công nghiệp nhẹ, bao gồm sân bãi bê tông.'),
+      service('buildings-property', 'structural-concrete-works', 'Kết cấu bê tông', 'Khung bê tông cốt thép, sàn, lõi và lắp dựng cấu kiện đúc sẵn.'),
+      service('buildings-property', 'building-services-installation', 'Lắp đặt hệ thống kỹ thuật', 'Lắp đặt điện, cấp nước, thoát nước và thông gió trong công trình.'),
+      service('buildings-property', 'renovation-fit-out', 'Cải tạo & hoàn thiện nội thất', 'Cải tạo, mở rộng và hoàn thiện nội thất công trình hiện hữu.'),
+      service('buildings-property', 'real-estate-development', 'Phát triển bất động sản', 'Apex tự phát triển đất và công trình, từ nghiên cứu khả thi đến bán hoặc cho thuê.'),
+      service('buildings-property', 'land-site-infrastructure', 'Hạ tầng kỹ thuật khu đất', 'Đường nội bộ, thoát nước, cấp nước và cấp điện phục vụ dự án.'),
+      service('buildings-property', 'project-construction-management', 'Quản lý dự án & thi công', 'Quản lý tiến độ, mua sắm và công trường thay mặt chủ đầu tư.'),
     ],
   },
 ]
 
-/** All individual services, flattened (44 items). */
+/** All individual services, flattened. */
 export const allServices: Service[] = serviceGroups.flatMap(
   (group) => group.services,
 )
 
-/** Service groups shown on a given category page. */
+/** Service groups shown on a given capability page. */
 export function groupsForCategory(slug: ServiceCategorySlug): ServiceGroup[] {
   return serviceGroups.filter((group) => group.categorySlug === slug)
 }

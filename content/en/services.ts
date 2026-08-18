@@ -1,10 +1,12 @@
 import type { Service, ServiceCategorySlug, ServiceGroup } from '@/lib/types'
 
 /**
- * Services catalogue — the FIVE groups and EXACT service lists from the
- * master plan (§Services Page). English-only for now; Phase 7 adds a Lao
- * copy under `content/lo/`. Do not edit service names without checking the
- * master plan — they are copied verbatim.
+ * Apex's capability catalogue — four groups, one per `/services/[category]`
+ * page.
+ *
+ * Voltage classes follow Lao practice: 115 kV is the transmission class and
+ * 22 kV the medium-voltage distribution class. These are line voltages in kV,
+ * not transformer ratings in kVA — see docs/APEX_REBRAND_PLAN.md D-5.
  */
 
 function service(
@@ -25,102 +27,88 @@ function service(
 
 export const serviceGroups: ServiceGroup[] = [
   {
-    id: 'business-setup-licensing',
-    categorySlug: 'business-setup',
-    title: 'Business Setup & Licensing',
+    id: 'electrical-supply-installation',
+    categorySlug: 'electrical',
+    title: 'Electrical Supply & Installation',
     summary:
-      'From first registration to ongoing licence renewals — support for setting up and keeping a business properly registered in Laos.',
+      'Transmission and distribution works at 115 kV and 22 kV, substation construction, and the supply of low, medium, and high voltage equipment — built, tested, and energised.',
     services: [
-      service('business-setup', 'Company Registration', 'Establishing a new company with the relevant Lao authorities.'),
-      service('business-setup', 'Foreign Investment Registration', 'Registration support for foreign-invested enterprises.'),
-      service('business-setup', 'Representative Office Registration', 'Setting up a representative office for a foreign company.'),
-      service('business-setup', 'Branch Office Registration', 'Registering a branch of an existing foreign company.'),
-      service('business-setup', 'Business License Applications', 'Preparing and filing applications for operating licences.'),
-      service('business-setup', 'Industry-Specific Licenses', 'Licences required for regulated sectors and activities.'),
-      service('business-setup', 'Tax Registration', 'Registering a new business with the tax authorities.'),
-      service('business-setup', 'Social Security Registration', 'Registering a company and its employees for social security.'),
-      service('business-setup', 'Company Amendments', 'Updating company details, shareholders, or registered particulars.'),
-      service('business-setup', 'Business License Renewal', 'Keeping operating licences current through timely renewals.'),
+      service('electrical', '115 kV Transmission Lines', 'Route survey, foundations, tower erection, and conductor stringing for 115 kV overhead lines.'),
+      service('electrical', '115/22 kV Substations', 'Substation civil works, structures, primary plant installation, and commissioning.'),
+      service('electrical', '22 kV Distribution Networks', 'Medium-voltage overhead and underground distribution feeders, extensions, and reinforcements.'),
+      service('electrical', 'Overhead Line Construction', 'Pole and tower erection, cross-arm assembly, insulator fitting, and conductor stringing.'),
+      service('electrical', 'Underground Cable Works', 'Trenching, ducting, cable pulling, jointing, and termination for MV and LV circuits.'),
+      service('electrical', 'Transformer Supply & Installation', 'Distribution and power transformers supplied, positioned, connected, and tested.'),
+      service('electrical', 'Switchgear & Protection Panels', 'MV switchgear, ring main units, protection and control panels, and relay settings.'),
+      service('electrical', 'Low Voltage & Building Electrical', 'Main distribution boards, submains, small power, lighting, and earthing for buildings.'),
+      service('electrical', 'Electrical Equipment Supply', 'Procurement and supply of low, medium, and high voltage equipment, cable, and accessories.'),
+      service('electrical', 'Testing & Commissioning', 'Pre-energisation testing, protection checks, and commissioning to the utility’s requirements.'),
+      service('electrical', 'Earthing & Lightning Protection', 'Earth grids, electrodes, bonding, and lightning protection for substations and buildings.'),
+      service('electrical', 'Maintenance & Fault Response', 'Planned maintenance, inspections, and callout support for installed networks.'),
     ],
   },
   {
-    id: 'visa-immigration-services',
-    categorySlug: 'visa-immigration',
-    title: 'Visa & Immigration Services',
+    id: 'foundation-piling-works',
+    categorySlug: 'piling-foundation',
+    title: 'Foundation & Piling Works',
     summary:
-      'Visa, work permit, and stay permit support for professionals, investors, and families living or working in Laos.',
+      'Driven and bored piling, pile testing, and the substructure works that carry buildings, bridges, and heavy plant — the capability Apex was built on.',
     services: [
-      service('visa-immigration', 'Business Visa', 'Visa support for business visitors and short-term assignments.'),
-      service('visa-immigration', 'Investor Visa', 'Visa support for investors establishing or funding a business.'),
-      service('visa-immigration', 'Work Visa', 'Visa support for foreign employees working in Laos.'),
-      service('visa-immigration', 'Work Permit', 'Work permit applications and renewals for foreign staff.'),
-      service('visa-immigration', 'Long-Term Stay Visa', 'Options for longer stays in Laos, assessed case by case.'),
-      service('visa-immigration', 'Visa Extension & Renewal', 'Extending or renewing an existing visa before it lapses.'),
-      service('visa-immigration', 'Stay Permit', 'Stay permit applications for foreign residents.'),
-      service('visa-immigration', 'Immigration Consulting', 'Practical advice on immigration pathways and requirements.'),
-      service('visa-immigration', 'Document Preparation', 'Preparing, translating, and organising application documents.'),
-      service('visa-immigration', 'Government Liaison', 'Coordinating with the relevant authorities on your behalf.'),
+      service('piling-foundation', 'Driven Pile Installation', 'Precast concrete and steel piles driven to set or to design depth.'),
+      service('piling-foundation', 'Bored Pile Installation', 'Cast-in-situ bored piles where driving is unsuitable or vibration must be limited.'),
+      service('piling-foundation', 'Sheet Piling', 'Sheet pile walls for excavation support, cofferdams, and river works.'),
+      service('piling-foundation', 'Pile Load Testing', 'Static and dynamic load testing and integrity testing, with reporting.'),
+      service('piling-foundation', 'Pile Caps & Substructure', 'Pile trimming, reinforcement, pile caps, ground beams, and tie works.'),
+      service('piling-foundation', 'Excavation & Earthworks', 'Bulk and detailed excavation, dewatering, backfill, and compaction.'),
+      service('piling-foundation', 'Ground Improvement', 'Replacement, compaction, and stabilisation where bearing capacity is marginal.'),
+      service('piling-foundation', 'Retaining Structures', 'Retaining walls, shoring, and temporary works to keep excavations safe.'),
+      service('piling-foundation', 'Setting Out & Survey', 'Instrument setting out of pile positions and as-built survey records.'),
     ],
   },
   {
-    id: 'corporate-legal-services',
-    categorySlug: 'legal-family',
-    title: 'Corporate Legal Services',
+    id: 'road-bridge-construction',
+    categorySlug: 'roads-bridges',
+    title: 'Road & Bridge Construction',
     summary:
-      'Contracts, compliance, due diligence, and intellectual property support for companies operating in Laos.',
+      'New road corridors, rehabilitation, bridges, culverts, and drainage — from subgrade through to surfacing and road safety furniture.',
     services: [
-      service('legal-family', 'Legal Consulting', 'Practical legal guidance for business decisions in Laos.'),
-      service('legal-family', 'Contract Review', 'Reviewing contracts before you sign, in plain language.'),
-      service('legal-family', 'Contract Drafting', 'Drafting clear, workable contracts for your business.'),
-      service('legal-family', 'Corporate Compliance', 'Keeping company obligations and filings in good order.'),
-      service('legal-family', 'Due Diligence', 'Background checks on partners, assets, and transactions.'),
-      service('legal-family', 'Trademark Registration', 'Registering and protecting trademarks in Laos.'),
-      service('legal-family', 'Intellectual Property Support', 'Practical support for protecting intellectual property.'),
-      service('legal-family', 'Company Legal Documentation', 'Preparing and maintaining core company legal documents.'),
-      service('legal-family', 'Legal Liaison Support', 'Coordinating with authorities and counterparties on legal matters.'),
+      service('roads-bridges', 'Road Construction', 'New road corridors from clearing and subgrade through base courses to surfacing.'),
+      service('roads-bridges', 'Road Rehabilitation & Overlay', 'Reconstruction, patching, and overlay of existing carriageways.'),
+      service('roads-bridges', 'Bridge Construction', 'Reinforced concrete bridges — foundations, piers, abutments, beams, and deck.'),
+      service('roads-bridges', 'Culverts & Drainage', 'Box culverts, pipe culverts, side drains, and outfall works.'),
+      service('roads-bridges', 'Concrete & Asphalt Paving', 'Rigid and flexible pavement construction and surfacing.'),
+      service('roads-bridges', 'Earthworks & Subgrade', 'Cut and fill, embankments, subgrade preparation, and compaction control.'),
+      service('roads-bridges', 'Slope Protection', 'Gabions, riprap, retaining walls, and erosion control on cuttings and embankments.'),
+      service('roads-bridges', 'Road Safety Furniture', 'Guardrail, signage, road markings, and delineation.'),
+      service('roads-bridges', 'Access & Haul Roads', 'Temporary access and haul roads serving construction and plant sites.'),
     ],
   },
   {
-    id: 'family-personal-legal-services',
-    categorySlug: 'legal-family',
-    title: 'Family & Personal Legal Services',
+    id: 'building-real-estate',
+    categorySlug: 'buildings-property',
+    title: 'Building Construction & Real Estate Development',
     summary:
-      'Support for marriage, family documentation, and long-term stay matters involving Lao and foreign nationals.',
+      'Commercial, residential, and industrial buildings delivered structure-to-handover — plus land and property development where Apex takes the development role itself.',
     services: [
-      service('legal-family', 'Marriage Registration for Lao and Foreign Nationals', 'Guiding mixed-nationality couples through marriage registration.'),
-      service('legal-family', 'Marriage Certificate Translation and Legalisation Support', 'Translation and legalisation of marriage documents.'),
-      service('legal-family', 'Divorce Assistance', 'Document and procedure support during divorce.'),
-      service('legal-family', 'Family Documentation', 'Preparing and correcting family civil documents.'),
-      service('legal-family', 'Birth Certificate Support', 'Assistance with birth registration and certificates.'),
-      service('legal-family', 'Family Book Support', 'Support with family book registration and updates.'),
-      service('legal-family', 'Long-Term Stay Support for Foreign Spouses', 'Stay options for foreign spouses of Lao nationals.'),
-    ],
-  },
-  {
-    id: 'accounting-tax',
-    categorySlug: 'accounting-tax',
-    title: 'Accounting & Tax',
-    summary:
-      'Bookkeeping, tax filings, payroll, and annual compliance — reliable financial foundations for your business.',
-    services: [
-      service('accounting-tax', 'Accounting Services', 'Accounting support aligned with Lao requirements.'),
-      service('accounting-tax', 'Bookkeeping', 'Accurate, up-to-date books for your business.'),
-      service('accounting-tax', 'Tax Registration', 'Registering your business with the tax authorities.'),
-      service('accounting-tax', 'Tax Filing', 'Preparing and submitting periodic tax filings.'),
-      service('accounting-tax', 'Payroll Services', 'Payroll processing and related filings for your team.'),
-      service('accounting-tax', 'Financial Reporting', 'Clear financial reports for owners and authorities.'),
-      service('accounting-tax', 'Annual Compliance Support', 'Staying on top of annual filing and reporting obligations.'),
-      service('accounting-tax', 'Tax Advisory', 'Practical tax guidance for decisions and planning.'),
+      service('buildings-property', 'Commercial Buildings', 'Offices, retail, and mixed-use buildings from substructure to handover.'),
+      service('buildings-property', 'Residential Buildings', 'Houses, apartments, and residential blocks, single units or in series.'),
+      service('buildings-property', 'Industrial & Warehouse', 'Warehouses, workshops, and light industrial buildings, including hardstanding.'),
+      service('buildings-property', 'Structural Concrete Works', 'Reinforced concrete frames, slabs, cores, and precast erection.'),
+      service('buildings-property', 'Building Services Installation', 'Electrical, water supply, drainage, and ventilation installation within buildings.'),
+      service('buildings-property', 'Renovation & Fit-Out', 'Refurbishment, extension, and interior fit-out of existing buildings.'),
+      service('buildings-property', 'Real Estate Development', 'Apex-led development of land and buildings, from feasibility to sale or lease.'),
+      service('buildings-property', 'Land & Site Infrastructure', 'Site roads, drainage, water, and power reticulation serving a development.'),
+      service('buildings-property', 'Project & Construction Management', 'Programme, procurement, and site management on behalf of the owner.'),
     ],
   },
 ]
 
-/** All individual services, flattened (44 items). */
+/** All individual services, flattened. */
 export const allServices: Service[] = serviceGroups.flatMap(
   (group) => group.services,
 )
 
-/** Service groups shown on a given category page. */
+/** Service groups shown on a given capability page. */
 export function groupsForCategory(slug: ServiceCategorySlug): ServiceGroup[] {
   return serviceGroups.filter((group) => group.categorySlug === slug)
 }

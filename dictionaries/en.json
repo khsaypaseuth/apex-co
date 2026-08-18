@@ -1,24 +1,16 @@
 {
   "site": {
-    "name": "Super Consulting",
-    "tagline": "Business, Legal & Visa Consulting in Laos",
-    "parentCompanyLine": "A business unit of Super Vision Co., Ltd.",
-    "footerAbout": "Consulting for business and life in Laos since 2020 — company setup, legal, visa, accounting, and tax, handled end to end with ministry coordination."
+    "name": "Apex Co., Ltd.",
+    "tagline": "Electrical & Construction Contractor in the Lao PDR",
+    "experienceLine": "More than 15 years on site across the Lao PDR",
+    "footerAbout": "Electrical supply and installation at 22 kV and 115 kV, backed by more than fifteen years of piling, road and bridge, and building construction across the Lao PDR."
   },
   "nav": {
     "home": "Home",
     "about": "About Us",
-    "services": "Services",
-    "businessSetup": "Business Setup & Licensing",
-    "visaImmigration": "Visa & Immigration",
-    "legalFamily": "Legal & Family Services",
-    "accountingTax": "Accounting & Tax",
-    "knowledge": "Knowledge Center",
-    "laws": "Lao Laws Library",
-    "lawsShort": "Lao Laws",
-    "guides": "Business Guides",
-    "news": "Links",
-    "links": "Links",
+    "services": "Capabilities",
+    "projects": "Projects",
+    "news": "News",
     "faq": "FAQ",
     "contact": "Contact",
     "menu": "Menu",
@@ -26,15 +18,25 @@
     "closeMenu": "Close menu",
     "mainNavLabel": "Main navigation"
   },
+  "serviceCategories": {
+    "electrical": "Electrical Supply & Installation",
+    "piling-foundation": "Foundation & Piling Works",
+    "roads-bridges": "Road & Bridge Construction",
+    "buildings-property": "Buildings & Real Estate"
+  },
+  "projectStatus": {
+    "completed": "Completed",
+    "ongoing": "Ongoing"
+  },
   "cta": {
-    "bookConsultation": "Book a Consultation",
-    "exploreServices": "Explore Services",
+    "requestQuote": "Request a Quotation",
+    "exploreServices": "View Capabilities",
     "contactUs": "Contact Us",
     "getInTouch": "Get in Touch",
     "learnMore": "Learn More",
     "readMore": "Read More",
     "viewAll": "View All",
-    "readGuide": "Read the Guide"
+    "viewProjects": "View Projects"
   },
   "language": {
     "label": "Language",
@@ -53,49 +55,22 @@
     "lastUpdated": "Last updated",
     "minRead": "min read",
     "breadcrumbLabel": "Breadcrumb",
-    "relatedArticles": "Related articles",
-    "relatedServices": "Related services",
-    "sources": "Sources",
+    "relatedProjects": "Related projects",
+    "relatedServices": "Related capabilities",
     "sampleContent": "Sample content for preview purposes only.",
     "skipToContent": "Skip to main content",
-    "contentInEnglish": "This article is currently available in English."
+    "contentInEnglish": "This page is currently available in English."
   },
-  "verification": {
-    "verified": "Verified",
-    "needsVerification": "Needs verification",
-    "generalInfo": "General information"
-  },
-  "articleCategories": {
-    "starting-a-business": "Starting a Business in Laos",
-    "tax-accounting": "Tax & Accounting",
-    "visa-immigration": "Visa & Immigration",
-    "lao-law-basics": "Lao Law Basics",
-    "labour-employment": "Labour & Employment",
-    "investment": "Investment in Laos",
-    "marriage-family": "Marriage & Family",
-    "living-in-laos": "Living in Laos",
-    "compliance-checklists": "Compliance Checklists"
-  },
-  "lawCategories": {
-    "company-law": "Company Law",
-    "investment-law": "Investment Law",
-    "tax-law": "Tax Law",
-    "labour-law": "Labour Law",
-    "immigration": "Immigration",
-    "family-law": "Family Law",
-    "intellectual-property": "Intellectual Property",
-    "commercial-contracts": "Commercial Contracts"
-  },
-  "legal": {
-    "disclaimerLabel": "Important notice",
-    "disclaimer": "This information is provided for general guidance only and does not constitute legal, tax, immigration, or accounting advice. Laws and procedures may change. Please contact Super Consulting or a qualified professional before making decisions."
+  "scopeNote": {
+    "label": "Scope note",
+    "text": "Capacities, scopes of work, and schedules shown here are indicative. Final ratings, quantities, and programme are confirmed after site survey, design review, and the applicable utility or authority approvals."
   },
   "filter": {
     "searchLabel": "Search",
-    "searchPlaceholder": "Search by title or summary…",
+    "searchPlaceholder": "Search by name, location, or capacity…",
     "allCategories": "All",
-    "categoriesLabel": "Filter by category",
-    "noResults": "No results found. Try a different search or category."
+    "categoriesLabel": "Filter by capability",
+    "noResults": "No results found. Try a different search or capability."
   },
   "contactForm": {
     "fullName": "Full Name",
@@ -103,30 +78,18 @@
     "email": "Email",
     "phone": "Phone / WhatsApp",
     "preferredContact": "Preferred Contact Method",
-    "serviceNeeded": "Service Needed",
-    "message": "Message",
+    "serviceNeeded": "Capability Required",
+    "message": "Project Details",
     "selectPlaceholder": "Please select",
     "required": "required",
     "submit": "Send Message",
-    "demoNotice": "Demo only — this form does not send messages yet. Please contact us directly.",
+    "demoNotice": "This form does not send messages yet. Please contact us directly by phone or email.",
     "methods": {
       "email": "Email",
       "phone": "Phone call",
       "whatsapp": "WhatsApp",
       "line": "LINE"
     }
-  },
-  "leadForm": {
-    "title": "Get advice tailored to your situation",
-    "lede": "Leave your details and an Super Consulting adviser will follow up on the topics in this guide — no obligation.",
-    "fullName": "Full Name",
-    "email": "Email",
-    "phone": "Phone / WhatsApp",
-    "serviceInterest": "Service Interest",
-    "selectPlaceholder": "Please select",
-    "required": "required",
-    "submit": "Request a Consultation",
-    "demoNotice": "Demo only — this form does not send messages yet. Please contact us directly."
   },
   "floating": {
     "whatsapp": "Contact us on WhatsApp",
@@ -135,307 +98,258 @@
   },
   "footer": {
     "quickLinks": "Quick Links",
-    "ourServices": "Our Services",
-    "knowledge": "Knowledge",
+    "ourServices": "Capabilities",
+    "company": "Company",
     "contact": "Contact",
-    "legal": "Legal",
     "rights": "All rights reserved.",
-    "poweredBy": "Powered by",
     "addressLabel": "Address",
     "phoneLabel": "Phone",
     "emailLabel": "Email",
-    "chatLabel": "WhatsApp"
+    "chatLabel": "WhatsApp",
+    "contactPlaceholderNote": "Contact details are being updated."
   },
   "home": {
-    "heroTitle": "Professional Consulting Services for Doing Business and Living in Laos",
-    "heroSubtitle": "Super Consulting helps local and international clients with business registration, legal support, visa and immigration services, accounting, tax, and corporate compliance.",
-    "trustLine": "A business unit of Super Vision Co., Ltd. — Vientiane Capital, Lao PDR.",
-    "trustStatement": "Your trusted partner for business, legal, immigration, accounting, and corporate services in Laos.",
-    "highlightsEyebrow": "What we do",
-    "highlightsTitle": "Service highlights",
+    "heroTitle": "Electrical Supply & Installation at 22 kV and 115 kV",
+    "heroSubtitle": "Apex Co., Ltd. builds and energises electrical infrastructure across the Lao PDR — backed by more than fifteen years of foundation piling, road and bridge, and building construction.",
+    "trustStatement": "Power systems and heavy civil works, delivered by one contractor from foundation to energisation.",
+    "highlightsEyebrow": "What we build",
+    "highlightsTitle": "Capabilities",
     "highlights": {
-      "businessRegistration": {
-        "title": "Business Registration",
-        "summary": "Company setup, licensing, and registrations — handled end to end."
+      "electrical": {
+        "title": "Electrical Supply & Installation",
+        "summary": "115 kV transmission, 22 kV distribution, substations, and LV building installation — supplied, built, tested, and energised."
       },
-      "visaImmigration": {
-        "title": "Visa & Immigration",
-        "summary": "Visas, work permits, and stay permits for professionals, investors, and families."
+      "equipment": {
+        "title": "Electrical Equipment Supply",
+        "summary": "Transformers, switchgear, protection panels, cable, and line hardware at low, medium, and high voltage."
       },
-      "legalServices": {
-        "title": "Legal Services",
-        "summary": "Contracts, compliance, due diligence, and trademark support for your business."
+      "piling": {
+        "title": "Foundation & Piling Works",
+        "summary": "Driven piles, bored piles, sheet piling, and the substructure that carries everything above it."
       },
-      "accountingTax": {
-        "title": "Accounting & Tax",
-        "summary": "Bookkeeping, tax filings, payroll, and annual compliance — kept in good order."
+      "roadsBridges": {
+        "title": "Road & Bridge Construction",
+        "summary": "New corridors, rehabilitation, reinforced concrete bridges, culverts, and drainage built to last the wet season."
       },
-      "familyLegal": {
-        "title": "Family & Personal Legal Services",
-        "summary": "Marriage registration, family documents, and support for foreign spouses."
+      "buildings": {
+        "title": "Building Construction",
+        "summary": "Commercial, residential, and industrial buildings delivered from substructure to handover."
       },
-      "laoKnowledge": {
-        "title": "Lao Business Knowledge",
-        "summary": "Plain-language articles on Lao business, tax, visa, and legal topics."
+      "realEstate": {
+        "title": "Real Estate Development",
+        "summary": "Land and property developed on Apex's own account, from feasibility through to sale or lease."
       }
     },
-    "whyEyebrow": "Why choose us",
-    "whyTitle": "Why Choose Super Consulting",
+    "whyEyebrow": "Why Apex",
+    "whyTitle": "Why clients award us the work",
     "why": {
-      "localKnowledge": {
-        "title": "Local knowledge",
-        "description": "We work with Lao procedures and authorities every day."
+      "selfDelivery": {
+        "title": "Self-delivery",
+        "description": "Piling, civils, and electrical installation are all in-house — no three-way argument about whose delay it was."
       },
-      "practicalAdvice": {
-        "title": "Practical advice",
-        "description": "Clear recommendations you can act on — not legal jargon."
+      "bothVoltages": {
+        "title": "Transmission and distribution",
+        "description": "Crews experienced at 115 kV and 22 kV, not one voltage class subcontracting the other."
       },
-      "clearProcess": {
-        "title": "Clear process",
-        "description": "You always know the steps, the status, and what comes next."
+      "supplyAndInstall": {
+        "title": "Supply and install together",
+        "description": "We procure the equipment we install, so responsibility for the test results is not split."
       },
-      "transparentCommunication": {
-        "title": "Transparent communication",
-        "description": "Honest updates and clear scopes of work — no surprises."
+      "testRecords": {
+        "title": "Records, not just results",
+        "description": "Set records, compaction tests, and commissioning reports are part of the deliverable."
       },
-      "companiesAndIndividuals": {
-        "title": "Support for companies and individuals",
-        "description": "From foreign investors to families — the same care for every client."
+      "honestProgramme": {
+        "title": "Honest programme",
+        "description": "We write a programme around the wet season rather than through it, and report slippage when it happens."
       },
-      "backedBySuperVision": {
-        "title": "Backed by Super Vision Co., Ltd.",
-        "description": "Part of an established Lao company group."
+      "trackRecord": {
+        "title": "Fifteen years on site",
+        "description": "A track record across piling, roads, bridges, buildings, and power works in the Lao PDR."
       }
     },
-    "knowledgeTitle": "Learn before you decide",
-    "knowledgeLede": "Educational articles about business in Laos, taxes, visas, compliance, and legal procedures.",
-    "finalCtaTitle": "Start with a consultation.",
-    "finalCtaLede": "Tell us about your situation — we will explain the options, the process, and provide a clear quote."
+    "projectsTitle": "Recent work",
+    "projectsLede": "Projects delivered across power, foundations, infrastructure, and buildings.",
+    "finalCtaTitle": "Send us the drawings.",
+    "finalCtaLede": "Tell us the scope, the site, and the date you need it finished. If it is within our capability we will say so and tell you what we need to price it."
   },
   "about": {
-    "eyebrow": "About Super Consulting",
-    "title": "Trusted consulting in Laos since 2020",
-    "lede": "Since 2020, Super Consulting — a business unit of Super Vision Co., Ltd. — has helped individuals, entrepreneurs, investors, and companies complete official procedures in Laos with clarity and care.",
-    "introP1": "Doing business or settling in Laos means navigating registrations, licences, visas, tax filings, and personal documents across different ministries and offices — each with its own requirements, language, and timeline. What clients need is not more theory, but a partner who knows the process and follows it through.",
-    "introP2": "With experience since 2020 and established working connections with relevant government ministries and agencies, we prepare your documents carefully, coordinate filings, and help move your case forward correctly the first time. You receive plain-language updates at every step, and accountable support until the work is complete.",
+    "eyebrow": "About Apex Co., Ltd.",
+    "title": "Fifteen years of building and powering the Lao PDR",
+    "lede": "Apex Co., Ltd. is a Lao electrical and construction contractor. We build transmission and distribution networks at 115 kV and 22 kV, supply electrical equipment across all three voltage classes, and deliver the piling, roads, bridges, and buildings that carry them.",
+    "introP1": "The company began in foundation and piling work, and that is still the capability with the deepest track record — driven piles, bored piles, sheet piling, and the substructure works that everything above ground depends on. From there the business grew outward into road and bridge construction, building construction, and real estate development.",
+    "introP2": "The electrical side is now the core of the business. Apex builds 115 kV transmission lines and substations, 22 kV distribution networks, and low-voltage installations inside buildings, and supplies the transformers, switchgear, and cable that go into them. Because the civil capability sits in the same company, a substation project does not need three contractors and two programmes.",
     "missionTitle": "Our mission",
-    "missionText": "Help clients in Laos complete business, legal, immigration, and compliance matters with clarity, careful document preparation, and reliable coordination with the authorities involved.",
+    "missionText": "Build and energise infrastructure that works on the day it is handed over and still works years later — with the test records to prove it.",
     "visionTitle": "Our vision",
-    "visionText": "Be the trusted one-stop consulting partner that local and international clients rely on for accurate process guidance and dependable follow-through in Laos.",
+    "visionText": "Be the Lao contractor clients turn to when a project needs power and heavy civil works delivered together, correctly, and on a programme that was honest from the start.",
     "valuesEyebrow": "What guides us",
     "valuesTitle": "Our values",
     "values": {
-      "trust": {
-        "title": "Trust",
-        "description": "We earn it slowly, protect it carefully, and never trade it for a shortcut."
+      "safety": {
+        "title": "Safety first",
+        "description": "Nobody's programme is worth an injury. Method statements exist to be followed, not filed."
       },
-      "clarity": {
-        "title": "Clarity",
-        "description": "Plain language, honest answers, and no hiding behind jargon."
+      "quality": {
+        "title": "Build it right",
+        "description": "The layer under the one being tested cannot be re-done later. We get it right the first time."
       },
-      "professionalism": {
-        "title": "Professionalism",
-        "description": "Careful work, on time, to a standard we are proud to sign."
+      "honesty": {
+        "title": "Honest reporting",
+        "description": "We report slippage and failed tests when they happen, not when they become impossible to hide."
       },
-      "practicalExecution": {
-        "title": "Practical execution",
-        "description": "Advice matters only when it gets done — we carry matters through."
+      "selfDelivery": {
+        "title": "Self-delivery",
+        "description": "Our own crews and plant on the critical path, so accountability sits in one place."
       },
-      "confidentiality": {
-        "title": "Confidentiality",
-        "description": "Your business and family matters stay private, always."
+      "technical": {
+        "title": "Technical rigour",
+        "description": "Where a drawing conflicts with the ground, we raise it in writing before building a defect."
       },
-      "longTermRelationship": {
-        "title": "Long-term client relationship",
-        "description": "We plan to be your partner next year, not just this month."
+      "longTerm": {
+        "title": "Long-term relationships",
+        "description": "Most of our work comes from clients who have awarded us work before."
       }
     },
     "howEyebrow": "How we work",
-    "howTitle": "How the firm works",
-    "howLede": "Every engagement follows the same clear rhythm — so you always know where things stand.",
+    "howTitle": "How a project runs",
+    "howLede": "Every project follows the same rhythm, whether it is a substation, a bridge, or a warehouse.",
     "steps": {
-      "consult": {
-        "title": "Consult",
-        "description": "We start with a conversation about your situation and what you want to achieve."
+      "survey": {
+        "title": "Survey & scope",
+        "description": "We walk the site, read the ground investigation or the single-line diagram, and confirm exactly what is in scope."
       },
-      "assess": {
-        "title": "Assess & quote",
-        "description": "We confirm what your case requires and give you a clear scope of work and quote."
+      "price": {
+        "title": "Price & programme",
+        "description": "We price the confirmed scope and issue a programme, stating the assumptions where documents are still in draft."
       },
-      "execute": {
-        "title": "Execute & liaise",
-        "description": "We prepare the documents and coordinate with the relevant ministries and agencies on your behalf."
+      "build": {
+        "title": "Build & record",
+        "description": "Our own crews and plant deliver the works, keeping the set, compaction, and test records as we go."
       },
-      "deliver": {
-        "title": "Deliver & support",
-        "description": "You receive the outcome clearly explained — and ongoing support where obligations continue."
+      "handover": {
+        "title": "Test & hand over",
+        "description": "We test, commission, and hand over as-built drawings, test records, and equipment documentation."
       }
     },
-    "parentTitle": "Backed by Super Vision Co., Ltd.",
-    "parentText": "Super Consulting is a business unit of Super Vision Co., Ltd., an established Lao company. That backing, together with our experience since 2020 and ministry working relationships, gives clients a stable partner who can facilitate official documents with continuity and accountability."
+    "capabilityTitle": "One contractor, four capabilities",
+    "capabilityText": "Electrical works, foundation and piling, road and bridge construction, and building and property development all sit inside the same company. On projects that need more than one of them, that is the difference between a single programme and a coordination problem."
   },
   "servicesPage": {
-    "lede": "Five service areas covering the full journey of doing business and living in Laos — explore each area, or contact us for a tailored assessment.",
-    "exploreArea": "Explore this service area"
+    "lede": "Four capability areas covering power, foundations, infrastructure, and buildings — explore each, or send us the drawings for a scoped quotation.",
+    "exploreArea": "Explore this capability"
   },
   "servicePage": {
     "overviewTitle": "Overview",
     "whoTitle": "Who this is for",
-    "servicesInAreaTitle": "Services in this area",
-    "processTitle": "How the process works",
-    "documentsTitle": "Documents commonly required",
-    "timelineTitle": "A note on timelines",
-    "helpTitle": "How Super Consulting helps",
-    "otherServicesTitle": "Other service areas"
+    "servicesInAreaTitle": "Services in this capability",
+    "processTitle": "How a job runs",
+    "standardsTitle": "Standards we work to",
+    "timelineTitle": "A note on programme",
+    "helpTitle": "How Apex delivers",
+    "otherServicesTitle": "Other capabilities"
   },
-  "knowledgePage": {
-    "lede": "Plain-language articles about business, tax, visa, legal, and life matters in Laos — organised into nine categories.",
-    "browseTitle": "Browse by category",
-    "articlesTitle": "All articles",
-    "countSingular": "article",
-    "countPlural": "articles",
-    "emptyTitle": "Articles are on the way",
-    "emptyText": "Knowledge Center articles will be published here soon. Explore our services in the meantime."
+  "projectsPage": {
+    "lede": "Delivered and ongoing work across power systems, foundations, roads and bridges, and buildings.",
+    "listTitle": "All projects",
+    "countSingular": "project",
+    "countPlural": "projects",
+    "emptyTitle": "Project records are being prepared",
+    "emptyText": "We are compiling verified records of completed and ongoing work, with capacities, locations, and scope. Rather than publish approximations, this section will open when the details have been confirmed. In the meantime, contact us and we will share references relevant to your project."
   },
-  "lawsPage": {
-    "lede": "Plain-language summaries of Lao laws and regulations relevant to businesses and individuals.",
-    "emptyTitle": "Law topics are on the way",
-    "emptyText": "Plain-language summaries of Lao laws will be published here soon. In the meantime, the Knowledge Center covers many related topics.",
-    "listTitle": "All law topics",
-    "countSingular": "law topic",
-    "countPlural": "law topics"
-  },
-  "guidesPage": {
-    "lede": "In-depth, practical guides for starting, running, and living in Laos.",
-    "emptyTitle": "Guides are being prepared",
-    "emptyText": "Practical business guides will be published here soon. Explore the Knowledge Center for articles in the meantime.",
-    "listTitle": "All guides"
+  "projectPage": {
+    "factsTitle": "Project details",
+    "scopeTitle": "Scope of works",
+    "capability": "Capability",
+    "status": "Status",
+    "location": "Location",
+    "year": "Year",
+    "client": "Client",
+    "capacity": "Capacity"
   },
   "newsPage": {
-    "lede": "Official updates and announcements from Super Consulting.",
-    "emptyTitle": "No news yet",
-    "emptyText": "News and updates will be published here.",
-    "typesTitle": "What will be published here",
-    "types": {
-      "legal": "Legal updates",
-      "tax": "Tax updates",
-      "visa": "Visa updates",
-      "business": "Business notices",
-      "investment": "Investment news",
-      "company": "Company announcements"
-    }
-  },
-  "linksPage": {
-    "lede": "Official Lao government ministries and public service websites — useful portals for business, tax, visas, and compliance.",
-    "ministriesEyebrow": "Government",
-    "ministriesTitle": "Ministries",
-    "ministriesLede": "Official websites of Lao PDR ministries.",
-    "servicesEyebrow": "Services",
-    "servicesTitle": "Public services",
-    "servicesLede": "One-stop portals, immigration, tax, customs, trade, and related government services."
+    "lede": "Announcements and updates from Apex Co., Ltd.",
+    "emptyTitle": "No announcements yet",
+    "emptyText": "Company announcements, project milestones, and award notices will be published here."
   },
   "faqPage": {
-    "lede": "Answers to the questions we hear most — about business setup, visas, legal matters, accounting, and family services in Laos."
+    "lede": "Answers to what clients ask before awarding work — what we can build, how we price it, and what happens when a test fails."
   },
   "contactPage": {
-    "lede": "Tell us about your situation and we will come back to you with clear next steps.",
+    "lede": "Send us the drawings, the site location, and the date you need it finished. We will tell you whether it is within our capability and what we need to price it.",
     "formTitle": "Send us a message",
     "detailsTitle": "Company details",
-    "businessUnitLine": "A business unit of Super Vision Co., Ltd.",
+    "taglineLine": "Electrical & construction contractor, Lao PDR",
     "nextTitle": "What happens next",
     "next": {
       "read": {
-        "title": "We read your message",
-        "description": "A consultant reviews your situation — not an automated system."
+        "title": "We read what you sent",
+        "description": "An engineer reviews the scope and the site, not an automated system."
       },
       "reply": {
         "title": "We come back to you",
-        "description": "You hear from us through your preferred contact method to clarify the details."
+        "description": "We confirm whether the work is within our capability and list what we still need to price it."
       },
       "propose": {
-        "title": "You receive a clear proposal",
-        "description": "We explain the process and provide a clear scope and quote before any commitment."
+        "title": "You receive a scoped quotation",
+        "description": "We price the confirmed scope and issue a programme, stating any assumptions we have had to make."
       }
     }
   },
   "meta": {
     "home": {
-      "title": "Super Consulting — Business, Legal & Visa Consulting in Laos",
-      "description": "Super Consulting helps local and international clients with business registration, legal support, visa and immigration services, accounting, tax, and corporate compliance in Laos."
+      "title": "Apex Co., Ltd. — Electrical Supply & Installation, 22 kV and 115 kV, Lao PDR",
+      "description": "Apex Co., Ltd. builds 115 kV transmission and 22 kV distribution networks, substations, and building electrical systems in the Lao PDR, backed by 15+ years of piling, road, bridge, and building construction."
     },
     "about": {
       "title": "About Us",
-      "description": "Since 2020, Super Consulting — a business unit of Super Vision Co., Ltd. — has helped clients in Laos with business, legal, visa, and accounting matters through careful document preparation and ministry coordination."
+      "description": "Apex Co., Ltd. is a Lao electrical and construction contractor with more than fifteen years in foundation piling, road and bridge construction, buildings, and electrical works at 22 kV and 115 kV."
     },
     "services": {
-      "title": "Services",
-      "description": "Five service areas: business setup and licensing, visa and immigration, corporate legal, family and personal legal, and accounting and tax services in Laos."
+      "title": "Capabilities",
+      "description": "Four capability areas: electrical supply and installation at 22 kV and 115 kV, foundation and piling works, road and bridge construction, and buildings and real estate development in the Lao PDR."
     },
-    "businessSetup": {
-      "title": "Business Setup & Licensing in Laos",
-      "description": "Company registration, foreign investment registration, business licences, and tax registration in Laos — practical setup support from Super Consulting."
+    "serviceCategories": {
+      "electrical": {
+        "title": "Electrical Supply & Installation in Laos — 22 kV and 115 kV",
+        "description": "115 kV transmission lines and substations, 22 kV distribution networks, transformer and switchgear supply, LV building installation, testing and commissioning across the Lao PDR."
+      },
+      "piling-foundation": {
+        "title": "Foundation & Piling Works in Laos",
+        "description": "Driven piles, bored piles, sheet piling, pile load testing, pile caps, excavation, and ground improvement for buildings, bridges, and industrial foundations in the Lao PDR."
+      },
+      "roads-bridges": {
+        "title": "Road & Bridge Construction in Laos",
+        "description": "Road construction and rehabilitation, reinforced concrete bridges, box culverts, drainage, slope protection, and road safety furniture across the Lao PDR."
+      },
+      "buildings-property": {
+        "title": "Building Construction & Real Estate Development in Laos",
+        "description": "Commercial, residential, and industrial buildings from substructure to handover, plus site infrastructure and Apex-led real estate development in the Lao PDR."
+      }
     },
-    "visaImmigration": {
-      "title": "Visa & Immigration Services in Laos",
-      "description": "Business visas, work visas and permits, investor visas, and long-term stay support in Laos — document preparation and government liaison."
-    },
-    "legalFamily": {
-      "title": "Legal & Family Services in Laos",
-      "description": "Contracts, compliance, due diligence, trademarks, marriage registration, and family documentation support in Laos."
-    },
-    "accountingTax": {
-      "title": "Accounting & Tax Services in Laos",
-      "description": "Bookkeeping, tax registration and filing, payroll, financial reporting, and annual compliance support in Laos."
-    },
-    "knowledge": {
-      "title": "Knowledge Center",
-      "description": "Plain-language articles about business, tax, visa, legal, and life matters in Laos."
-    },
-    "laws": {
-      "title": "Lao Laws Library",
-      "description": "Plain-language summaries of Lao laws and regulations relevant to businesses and individuals."
-    },
-    "guides": {
-      "title": "Business Guides",
-      "description": "Practical business guides for starting, running, and living in Laos."
+    "projects": {
+      "title": "Projects",
+      "description": "Delivered and ongoing Apex Co., Ltd. projects across electrical works, foundations and piling, roads and bridges, and building construction in the Lao PDR."
     },
     "news": {
-      "title": "Links",
-      "description": "Official Lao government ministries and public service websites for business, tax, visas, and compliance."
-    },
-    "links": {
-      "title": "Links",
-      "description": "Official Lao government ministries and public service websites for business, tax, visas, and compliance."
+      "title": "News",
+      "description": "Announcements, project milestones, and updates from Apex Co., Ltd."
     },
     "faq": {
       "title": "Frequently Asked Questions",
-      "description": "Frequently asked questions about business setup, visas, legal matters, accounting, and family services in Laos."
+      "description": "Questions clients ask Apex Co., Ltd. before awarding work — capabilities, voltage levels, pricing, programme, testing, and site safety."
     },
     "contact": {
       "title": "Contact Us",
-      "description": "Contact Super Consulting in Vientiane Capital, Lao PDR — book a consultation for business, legal, visa, or accounting support."
+      "description": "Contact Apex Co., Ltd. in the Lao PDR about electrical works at 22 kV and 115 kV, piling, road and bridge construction, or building projects."
     }
   },
   "alt": {
-    "heroPatuxai": "Patuxai, the Victory Gate of Vientiane, glowing at dusk with its golden spires against a soft evening sky",
-    "officeInterior": "Calm modern office interior with natural light",
-    "handshake": "Two people shaking hands over documents at a meeting table",
-    "meetingDocuments": "Consultants reviewing business documents and charts in a meeting",
-    "contractSigning": "Close-up of hands signing a business document",
-    "passportStamps": "Hand holding an open passport showing visa stamps",
-    "stoneColumns": "Sunlit corridor of classical stone columns",
-    "accountingDesk": "Desk with a calculator, financial report, and pen",
-    "teamCollaboration": "Team working together at shared desks in a bright modern office",
-    "advisoryMeeting": "Consultant and client reviewing documents together at an office table",
-    "luangPrabangStreet": "Colonial-style building on a quiet street corner in Luang Prabang, Laos",
-    "cityNight": "Town lights glowing under a dark starry night sky",
-    "calmWorkspace": "Minimalist workspace with a laptop on a wooden desk by large windows",
+    "heroNightCity": "Town lights glowing under a dark starry night sky",
+    "structuralColumns": "Sunlit corridor of tall concrete columns",
+    "siteCrew": "Work crew moving goods in a large warehouse",
+    "teamCollaboration": "Team working together at shared desks in a bright office",
     "riversideCity": "Aerial view of a riverside city in Southeast Asia at dusk",
-    "mekongSunset": "Sunset over the Mekong River and forested hills near Luang Prabang, Laos",
-    "meetingRoom": "Empty sunlit conference room with a white meeting table and black chairs",
-    "corporateLounge": "Modern corporate lounge with city skyline views through floor-to-ceiling windows",
-    "deskAnalysis": "Close-up of a desk with charts, a laptop, and a hand taking notes",
-    "overheadDeskWork": "Overhead view of someone working at a laptop and notebook — face not shown",
-    "deskCharts": "Hands reviewing charts and notes beside a laptop on a dark desk"
+    "patuxai": "Patuxai, the Victory Gate of Vientiane, at dusk against a soft evening sky"
   }
 }

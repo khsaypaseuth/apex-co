@@ -1,24 +1,16 @@
 {
   "site": {
-    "name": "Super Consulting",
-    "tagline": "老挝商业、法律与签证咨询",
-    "parentCompanyLine": "Super Vision Co., Ltd. 旗下业务部门",
-    "footerAbout": "自2020年以来,为在老挝的商业与生活提供咨询服务——公司注册、法律、签证、会计与税务,全程办理并协调各政府部门。"
+    "name": "Apex 有限公司",
+    "tagline": "老挝电气与建筑工程承包商",
+    "experienceLine": "在老挝各地施工逾 15 年",
+    "footerAbout": "承接 22 千伏与 115 千伏电力供应与安装，并具备十五年以上的桩基、道路与桥梁及房屋建筑施工经验，业务遍及老挝全国。"
   },
   "nav": {
     "home": "首页",
     "about": "关于我们",
-    "services": "服务",
-    "businessSetup": "企业设立与许可",
-    "visaImmigration": "签证与移民",
-    "legalFamily": "法律与家庭服务",
-    "accountingTax": "会计与税务",
-    "knowledge": "知识中心",
-    "laws": "老挝法律库",
-    "lawsShort": "老挝法律",
-    "guides": "商业指南",
-    "news": "链接",
-    "links": "链接",
+    "services": "业务能力",
+    "projects": "工程业绩",
+    "news": "新闻",
     "faq": "常见问题",
     "contact": "联系我们",
     "menu": "菜单",
@@ -26,15 +18,25 @@
     "closeMenu": "关闭菜单",
     "mainNavLabel": "主导航"
   },
+  "serviceCategories": {
+    "electrical": "电力供应与安装",
+    "piling-foundation": "基础与桩基工程",
+    "roads-bridges": "道路与桥梁工程",
+    "buildings-property": "房屋建筑与房地产"
+  },
+  "projectStatus": {
+    "completed": "已完工",
+    "ongoing": "在建"
+  },
   "cta": {
-    "bookConsultation": "预约咨询",
-    "exploreServices": "探索服务",
+    "requestQuote": "索取报价",
+    "exploreServices": "查看业务能力",
     "contactUs": "联系我们",
-    "getInTouch": "与我们联系",
+    "getInTouch": "取得联系",
     "learnMore": "了解更多",
     "readMore": "阅读更多",
     "viewAll": "查看全部",
-    "readGuide": "阅读指南"
+    "viewProjects": "查看工程业绩"
   },
   "language": {
     "label": "语言",
@@ -50,65 +52,38 @@
     "zhShort": "中文"
   },
   "common": {
-    "lastUpdated": "最后更新",
+    "lastUpdated": "最近更新",
     "minRead": "分钟阅读",
     "breadcrumbLabel": "面包屑导航",
-    "relatedArticles": "相关文章",
-    "relatedServices": "相关服务",
-    "sources": "资料来源",
-    "sampleContent": "仅供预览的示例内容。",
-    "skipToContent": "跳转至主要内容",
-    "contentInEnglish": "本文目前仅提供英文版本。"
+    "relatedProjects": "相关工程",
+    "relatedServices": "相关业务能力",
+    "sampleContent": "示例内容，仅供预览。",
+    "skipToContent": "跳转到主要内容",
+    "contentInEnglish": "本页目前提供英文版本。"
   },
-  "verification": {
-    "verified": "已核实",
-    "needsVerification": "待核实",
-    "generalInfo": "一般信息"
-  },
-  "articleCategories": {
-    "starting-a-business": "在老挝创业",
-    "tax-accounting": "税务与会计",
-    "visa-immigration": "签证与移民",
-    "lao-law-basics": "老挝法律基础",
-    "labour-employment": "劳工与就业",
-    "investment": "在老挝投资",
-    "marriage-family": "婚姻与家庭",
-    "living-in-laos": "在老挝生活",
-    "compliance-checklists": "合规检查清单"
-  },
-  "lawCategories": {
-    "company-law": "公司法",
-    "investment-law": "投资法",
-    "tax-law": "税法",
-    "labour-law": "劳动法",
-    "immigration": "移民",
-    "family-law": "家庭法",
-    "intellectual-property": "知识产权",
-    "commercial-contracts": "商业合同"
-  },
-  "legal": {
-    "disclaimerLabel": "重要提示",
-    "disclaimer": "本信息仅供一般性参考,不构成法律、税务、移民或会计方面的建议。相关法律和程序可能会有所变更。在做出决定之前,请联系 Super Consulting 或合格的专业人士。"
+  "scopeNote": {
+    "label": "范围说明",
+    "text": "此处列示的参数、工程范围与进度均为初步信息。最终参数、工程量与进度计划将在现场踏勘、设计复核以及取得供电部门或主管机关批准后确认。"
   },
   "filter": {
     "searchLabel": "搜索",
-    "searchPlaceholder": "按标题或摘要搜索…",
+    "searchPlaceholder": "按名称、地点或参数搜索…",
     "allCategories": "全部",
-    "categoriesLabel": "按类别筛选",
-    "noResults": "未找到相关结果。请尝试其他搜索词或类别。"
+    "categoriesLabel": "按业务能力筛选",
+    "noResults": "未找到结果。请尝试其他关键词或业务能力。"
   },
   "contactForm": {
     "fullName": "姓名",
     "company": "公司名称",
     "email": "电子邮箱",
     "phone": "电话 / WhatsApp",
-    "preferredContact": "首选联系方式",
-    "serviceNeeded": "所需服务",
-    "message": "留言",
+    "preferredContact": "希望的联系方式",
+    "serviceNeeded": "所需业务能力",
+    "message": "项目情况",
     "selectPlaceholder": "请选择",
     "required": "必填",
-    "submit": "发送留言",
-    "demoNotice": "仅为演示——此表单暂不能发送消息,请直接联系我们。",
+    "submit": "发送信息",
+    "demoNotice": "此表单暂时无法发送信息，请通过电话或邮箱直接与我们联系。",
     "methods": {
       "email": "电子邮箱",
       "phone": "电话",
@@ -116,326 +91,265 @@
       "line": "LINE"
     }
   },
-  "leadForm": {
-    "title": "获取针对您情况的专属建议",
-    "lede": "留下您的联系方式,Super Consulting 的顾问将就本指南中的主题与您联系跟进——不附带任何义务。",
-    "fullName": "姓名",
-    "email": "电子邮箱",
-    "phone": "电话 / WhatsApp",
-    "serviceInterest": "感兴趣的服务",
-    "selectPlaceholder": "请选择",
-    "required": "必填",
-    "submit": "申请咨询",
-    "demoNotice": "仅为演示——此表单暂不能发送消息,请直接联系我们。"
-  },
   "floating": {
     "whatsapp": "通过 WhatsApp 联系我们",
     "line": "通过 LINE 联系我们",
-    "placeholderNote": "LINE 联系方式即将上线——此为临时链接"
+    "placeholderNote": "LINE 渠道即将开通——暂用占位链接"
   },
   "footer": {
-    "quickLinks": "快速链接",
-    "ourServices": "我们的服务",
-    "knowledge": "知识",
+    "quickLinks": "快捷链接",
+    "ourServices": "业务能力",
+    "company": "公司",
     "contact": "联系方式",
-    "legal": "法律信息",
-    "rights": "版权所有。",
-    "poweredBy": "技术支持",
+    "rights": "保留所有权利。",
     "addressLabel": "地址",
     "phoneLabel": "电话",
-    "emailLabel": "电子邮箱",
-    "chatLabel": "WhatsApp"
+    "emailLabel": "邮箱",
+    "chatLabel": "WhatsApp",
+    "contactPlaceholderNote": "联系方式正在更新中。"
   },
   "home": {
-    "heroTitle": "在老挝经商与生活的专业咨询服务",
-    "heroSubtitle": "Super Consulting 为本地及国际客户提供企业注册、法律支持、签证与移民服务、会计、税务及企业合规方面的协助。",
-    "trustLine": "Super Vision Co., Ltd. 旗下业务部门——老挝人民民主共和国万象首都。",
-    "trustStatement": "您在老挝值得信赖的商业、法律、移民、会计及企业服务合作伙伴。",
-    "highlightsEyebrow": "我们的业务",
-    "highlightsTitle": "服务亮点",
+    "heroTitle": "22 千伏与 115 千伏电力供应与安装",
+    "heroSubtitle": "Apex 有限公司在老挝各地建设并送电电力基础设施——依托十五年以上的桩基、道路与桥梁及房屋建筑施工经验。",
+    "trustStatement": "电力系统与重型土建工程，由同一家承包商从基础做到送电。",
+    "highlightsEyebrow": "我们建什么",
+    "highlightsTitle": "业务能力",
     "highlights": {
-      "businessRegistration": {
-        "title": "企业注册",
-        "summary": "公司设立、许可及各类登记——全程办理。"
+      "electrical": {
+        "title": "电力供应与安装",
+        "summary": "115 千伏输电、22 千伏配电、变电站及建筑低压安装——供货、施工、试验并完成送电。"
       },
-      "visaImmigration": {
-        "title": "签证与移民",
-        "summary": "为专业人士、投资者及家庭提供签证、工作许可及居留许可。"
+      "equipment": {
+        "title": "电气设备供应",
+        "summary": "低压、中压、高压的变压器、开关柜、保护屏、电缆与线路金具。"
       },
-      "legalServices": {
-        "title": "法律服务",
-        "summary": "为您的企业提供合同、合规、尽职调查及商标支持。"
+      "piling": {
+        "title": "基础与桩基工程",
+        "summary": "打入桩、钻孔灌注桩、板桩，以及承载上部一切荷载的地下结构。"
       },
-      "accountingTax": {
-        "title": "会计与税务",
-        "summary": "记账、税务申报、工资核算及年度合规——始终井然有序。"
+      "roadsBridges": {
+        "title": "道路与桥梁工程",
+        "summary": "新建路线、路面修复、钢筋混凝土桥梁、涵洞，以及能挺过雨季的排水系统。"
       },
-      "familyLegal": {
-        "title": "家庭与个人法律服务",
-        "summary": "婚姻登记、家庭文件及外籍配偶支持。"
+      "buildings": {
+        "title": "房屋建筑施工",
+        "summary": "商业、住宅与工业建筑，从地下结构做到竣工交付。"
       },
-      "laoKnowledge": {
-        "title": "老挝商业知识",
-        "summary": "关于老挝商业、税务、签证及法律话题的通俗易懂文章。"
+      "realEstate": {
+        "title": "房地产开发",
+        "summary": "由 Apex 以自有资金开发的土地与物业，从可行性研究到销售或出租。"
       }
     },
-    "whyEyebrow": "为何选择我们",
-    "whyTitle": "为何选择 Super Consulting",
+    "whyEyebrow": "为什么选择 Apex",
+    "whyTitle": "业主把工程交给我们的理由",
     "why": {
-      "localKnowledge": {
-        "title": "本地经验",
-        "description": "我们每天都在与老挝的各项程序及政府机构打交道。"
+      "selfDelivery": {
+        "title": "自行施工",
+        "description": "桩基、土建与电气安装全部自有，不必三方争论工期延误该算谁的。"
       },
-      "practicalAdvice": {
-        "title": "务实建议",
-        "description": "清晰可行的建议——而非复杂的法律术语。"
+      "bothVoltages": {
+        "title": "输电与配电兼备",
+        "description": "班组同时具备 115 千伏与 22 千伏的施工经验，而不是一个等级去分包另一个等级。"
       },
-      "clearProcess": {
-        "title": "流程清晰",
-        "description": "您始终清楚有哪些步骤、目前的状态以及接下来会发生什么。"
+      "supplyAndInstall": {
+        "title": "供货与安装一体",
+        "description": "我们采购自己要安装的设备，试验结果的责任不会被切割。"
       },
-      "transparentCommunication": {
-        "title": "沟通透明",
-        "description": "诚实的进展更新与清晰的工作范围——绝无意外。"
+      "testRecords": {
+        "title": "有记录，而不只有结果",
+        "description": "贯入度记录、压实度检测与调试报告都是交付成果的组成部分。"
       },
-      "companiesAndIndividuals": {
-        "title": "支持企业与个人",
-        "description": "从外国投资者到普通家庭——为每一位客户提供同等悉心的服务。"
+      "honestProgramme": {
+        "title": "如实的进度计划",
+        "description": "我们把进度绕开雨季编制，而不是硬穿过去，并在出现拖期时如实汇报。"
       },
-      "backedBySuperVision": {
-        "title": "由 Super Vision Co., Ltd. 支持",
-        "description": "隶属于一家历史悠久的老挝企业集团。"
+      "trackRecord": {
+        "title": "十五年现场经验",
+        "description": "在老挝积累的桩基、道路、桥梁、房建与电力工程业绩。"
       }
     },
-    "knowledgeTitle": "决策前先了解",
-    "knowledgeLede": "关于老挝商业、税务、签证、合规及法律程序的科普文章。",
-    "finalCtaTitle": "从一次咨询开始。",
-    "finalCtaLede": "告诉我们您的情况——我们将为您说明各项选择、流程,并提供明确的报价。"
+    "projectsTitle": "近期工程",
+    "projectsLede": "在电力系统、基础工程、基础设施与房屋建筑方面已完成的项目。",
+    "finalCtaTitle": "把图纸发给我们。",
+    "finalCtaLede": "告诉我们工程范围、场地位置和要求的完工日期。若在我们的能力范围内，我们会明确说明，并告知还需要哪些资料才能报价。"
   },
   "about": {
-    "eyebrow": "关于 Super Consulting",
-    "title": "自2020年起,值得信赖的老挝咨询机构",
-    "lede": "自2020年以来,Super Consulting——Super Vision Co., Ltd. 旗下业务部门——已协助个人、创业者、投资者及企业以清晰细致的方式在老挝完成各项官方手续。",
-    "introP1": "在老挝经商或定居意味着要在不同的部委和机构之间办理注册、许可证、签证、税务申报及个人文件手续——每个部门都有各自的要求、语言及时间安排。客户真正需要的不是更多的理论,而是一位了解流程并能一路跟进落实的合作伙伴。",
-    "introP2": "凭借自2020年以来积累的经验,以及与相关政府部委及机构建立的良好工作关系,我们悉心准备您的文件,协调各项申报事宜,并确保您的案件能够一次性正确推进。您将在每个环节收到通俗易懂的进展说明,并获得负责到底的支持,直至工作完成。",
+    "eyebrow": "关于 Apex 有限公司",
+    "title": "十五年建设并点亮老挝",
+    "lede": "Apex 有限公司是一家老挝本土的电气与建筑工程承包商。我们建设 115 千伏与 22 千伏的输配电网络，供应三个电压等级的电气设备，并承接与之配套的桩基、道路、桥梁与房屋建筑工程。",
+    "introP1": "公司起步于基础与桩基工程，这至今仍是业绩积累最深的板块——打入桩、钻孔灌注桩、板桩，以及地面之上一切都要依赖的地下结构工程。此后业务逐步拓展到道路与桥梁施工、房屋建筑，以及房地产开发。",
+    "introP2": "如今电力业务已成为公司的核心。Apex 建设 115 千伏输电线路与变电站、22 千伏配电网以及建筑内部的低压系统，并供应其中使用的变压器、开关柜与电缆。由于土建能力同处一家公司，一个变电站项目不需要三家承包商和两套进度计划。",
     "missionTitle": "我们的使命",
-    "missionText": "以清晰的方式、审慎的文件准备及与相关部门可靠的协调,帮助在老挝的客户完成商业、法律、移民及合规事务。",
+    "missionText": "建设并送电那些交付当天就能正常运行、多年之后依然可靠的基础设施——并有试验记录可以证明。",
     "visionTitle": "我们的愿景",
-    "visionText": "成为本地及国际客户信赖的一站式咨询伙伴,在老挝提供准确的流程指导及可靠的跟进服务。",
-    "valuesEyebrow": "指引我们的原则",
+    "visionText": "成为业主在项目同时需要电力与重型土建工程时首先想到的老挝承包商：做得对，并且从一开始就给出一份如实的进度计划。",
+    "valuesEyebrow": "指引我们的准则",
     "valuesTitle": "我们的价值观",
     "values": {
-      "trust": {
-        "title": "信任",
-        "description": "我们循序渐进地赢得信任,谨慎地守护信任,绝不以捷径来交换。"
+      "safety": {
+        "title": "安全第一",
+        "description": "没有哪份进度值得用工伤去换。施工方案是用来执行的，不是用来归档的。"
       },
-      "clarity": {
-        "title": "清晰",
-        "description": "通俗易懂的语言、诚实的回答,不在术语背后遮遮掩掩。"
+      "quality": {
+        "title": "一次做对",
+        "description": "正在检测的这一层之下的那一层无法返工，所以我们第一次就把它做对。"
       },
-      "professionalism": {
-        "title": "专业精神",
-        "description": "细致周到、按时完成、达到我们引以为豪的标准。"
+      "honesty": {
+        "title": "如实汇报",
+        "description": "拖期和不合格的检测结果，我们在发生时就上报，而不是等到瞒不住的时候。"
       },
-      "practicalExecution": {
-        "title": "务实执行",
-        "description": "建议唯有付诸实施才有意义——我们会将事情跟进到底。"
+      "selfDelivery": {
+        "title": "自行施工",
+        "description": "关键线路上是我们自己的班组和设备，责任因此归于一处。"
       },
-      "confidentiality": {
-        "title": "保密性",
-        "description": "您的商业与家庭事务始终受到严格保密。"
+      "technical": {
+        "title": "技术上的严谨",
+        "description": "当图纸与实际地层相矛盾时，我们先出具书面意见，而不是照图建出一个缺陷。"
       },
-      "longTermRelationship": {
-        "title": "长期客户关系",
-        "description": "我们期望成为您明年乃至更久的合作伙伴,而不仅仅是这个月。"
+      "longTerm": {
+        "title": "长期合作关系",
+        "description": "我们的大部分工程来自此前已经把项目交给过我们的业主。"
       }
     },
-    "howEyebrow": "我们的工作方式",
-    "howTitle": "公司如何运作",
-    "howLede": "每一次合作都遵循同样清晰的节奏——让您始终了解事情的进展。",
+    "howEyebrow": "我们如何工作",
+    "howTitle": "一个项目如何推进",
+    "howLede": "无论是变电站、桥梁还是仓库，每个项目都遵循同样的节奏。",
     "steps": {
-      "consult": {
-        "title": "咨询",
-        "description": "我们首先与您沟通了解您的情况及想要达成的目标。"
+      "survey": {
+        "title": "踏勘与界定范围",
+        "description": "我们到现场踏勘，研读岩土勘察报告或单线图，并明确界定工程范围。"
       },
-      "assess": {
-        "title": "评估与报价",
-        "description": "我们确认您的案件所需内容,并提供明确的工作范围及报价。"
+      "price": {
+        "title": "报价与编制进度",
+        "description": "我们按已确认的范围报价并出具进度计划，文件仍为草稿时会写明所作的假设。"
       },
-      "execute": {
-        "title": "执行与联络",
-        "description": "我们准备相关文件,并代表您与相关部委及机构进行协调。"
+      "build": {
+        "title": "施工与记录",
+        "description": "由我们自己的班组和设备完成工程，并在过程中同步留存贯入度、压实度与试验记录。"
       },
-      "deliver": {
-        "title": "交付与支持",
-        "description": "您将获得清晰说明的结果——并在仍有持续义务的方面获得后续支持。"
+      "handover": {
+        "title": "试验与移交",
+        "description": "我们完成试验与调试，移交竣工图纸、试验记录与设备资料。"
       }
     },
-    "parentTitle": "由 Super Vision Co., Ltd. 支持",
-    "parentText": "Super Consulting 是 Super Vision Co., Ltd. 旗下的业务部门,后者是一家历史悠久的老挝企业。这一背景,加上我们自2020年以来积累的经验及与各部委的工作关系,为客户提供了一个稳定的合作伙伴,能够以持续性和责任感为客户促成各项官方文件的办理。"
+    "capabilityTitle": "一家承包商，四项能力",
+    "capabilityText": "电气工程、基础与桩基、道路与桥梁施工，以及房屋建筑与房地产开发，都在同一家公司之内。对于需要其中不止一项的项目，这就是一套统一进度与一个协调难题之间的区别。"
   },
   "servicesPage": {
-    "lede": "五大服务领域,涵盖在老挝经商与生活的全部流程——探索每个领域,或联系我们获取针对性评估。",
-    "exploreArea": "探索该服务领域"
+    "lede": "四大业务板块，涵盖电力、基础、基础设施与房屋建筑——可逐项查看，或把图纸发给我们以获取按范围编制的报价。",
+    "exploreArea": "查看该项业务能力"
   },
   "servicePage": {
-    "overviewTitle": "概览",
-    "whoTitle": "适用对象",
-    "servicesInAreaTitle": "该领域内的服务",
-    "processTitle": "流程如何运作",
-    "documentsTitle": "常见所需文件",
-    "timelineTitle": "关于时间安排的说明",
-    "helpTitle": "Super Consulting 如何提供帮助",
-    "otherServicesTitle": "其他服务领域"
+    "overviewTitle": "概述",
+    "whoTitle": "适合哪些客户",
+    "servicesInAreaTitle": "该板块下的服务",
+    "processTitle": "工程如何推进",
+    "standardsTitle": "我们遵循的标准",
+    "timelineTitle": "关于工期的说明",
+    "helpTitle": "Apex 如何交付",
+    "otherServicesTitle": "其他业务能力"
   },
-  "knowledgePage": {
-    "lede": "关于老挝商业、税务、签证、法律及生活事务的通俗易懂文章——分为九大类别。",
-    "browseTitle": "按类别浏览",
-    "articlesTitle": "所有文章",
-    "countSingular": "篇文章",
-    "countPlural": "篇文章",
-    "emptyTitle": "文章即将上线",
-    "emptyText": "知识中心的文章即将在此发布。与此同时,欢迎了解我们的服务。"
+  "projectsPage": {
+    "lede": "在电力系统、基础工程、道路与桥梁以及房屋建筑方面已完成和在建的工程。",
+    "listTitle": "全部工程",
+    "countSingular": "项工程",
+    "countPlural": "项工程",
+    "emptyTitle": "工程业绩资料正在整理中",
+    "emptyText": "我们正在汇总已完工与在建工程的核实资料，包括参数、地点与工程范围。与其发布近似数据，本栏目将在细节核实完毕后开放。在此期间，欢迎与我们联系，我们会提供与贵方项目相关的业绩参考。"
   },
-  "lawsPage": {
-    "lede": "关于与企业及个人相关的老挝法律法规的通俗易懂摘要。",
-    "emptyTitle": "法律专题即将上线",
-    "emptyText": "通俗易懂的老挝法律摘要即将在此发布。与此同时,知识中心涵盖了许多相关主题。",
-    "listTitle": "所有法律专题",
-    "countSingular": "个法律专题",
-    "countPlural": "个法律专题"
-  },
-  "guidesPage": {
-    "lede": "关于在老挝创业、经营及生活的深入实用指南。",
-    "emptyTitle": "指南正在准备中",
-    "emptyText": "实用商业指南即将在此发布。与此同时,欢迎浏览知识中心的文章。",
-    "listTitle": "所有指南"
+  "projectPage": {
+    "factsTitle": "工程概况",
+    "scopeTitle": "工程范围",
+    "capability": "业务能力",
+    "status": "状态",
+    "location": "地点",
+    "year": "年份",
+    "client": "业主",
+    "capacity": "参数"
   },
   "newsPage": {
-    "lede": "来自 Super Consulting 的官方最新消息与公告。",
-    "emptyTitle": "暂无消息",
-    "emptyText": "最新消息与动态将在此发布。",
-    "typesTitle": "此处将发布的内容",
-    "types": {
-      "legal": "法律动态",
-      "tax": "税务动态",
-      "visa": "签证动态",
-      "business": "商业公告",
-      "investment": "投资资讯",
-      "company": "公司公告"
-    }
-  },
-  "linksPage": {
-    "lede": "老挝政府各部委及公共服务官方网站——为商业、税务、签证及合规事务提供实用入口。",
-    "ministriesEyebrow": "政府",
-    "ministriesTitle": "各部委",
-    "ministriesLede": "老挝人民民主共和国各部委官方网站。",
-    "servicesEyebrow": "服务",
-    "servicesTitle": "公共服务",
-    "servicesLede": "一站式服务平台,涵盖移民、税务、海关、贸易及相关政府服务。"
+    "lede": "Apex 有限公司的公告与动态。",
+    "emptyTitle": "暂无公告",
+    "emptyText": "公司公告、工程节点与中标信息将在此处发布。"
   },
   "faqPage": {
-    "lede": "针对我们最常被问到的问题的解答——涉及在老挝的企业设立、签证、法律事务、会计及家庭服务。"
+    "lede": "业主在定标之前最常问的问题——我们能建什么、如何报价，以及检测不合格时会怎么处理。"
   },
   "contactPage": {
-    "lede": "告诉我们您的情况,我们会为您提供明确的下一步安排。",
-    "formTitle": "给我们发送留言",
+    "lede": "把图纸、场地位置和要求的完工日期发给我们。我们会告知该工程是否在我们的能力范围内，以及还需要哪些资料才能报价。",
+    "formTitle": "给我们留言",
     "detailsTitle": "公司信息",
-    "businessUnitLine": "Super Vision Co., Ltd. 旗下业务部门。",
+    "taglineLine": "老挝电气与建筑工程承包商",
     "nextTitle": "接下来会发生什么",
     "next": {
       "read": {
-        "title": "我们会阅读您的留言",
-        "description": "由顾问审阅您的情况——而非自动化系统处理。"
+        "title": "我们会认真阅读您发来的资料",
+        "description": "由工程师复核工程范围与场地情况，而不是自动系统。"
       },
       "reply": {
-        "title": "我们会与您联系",
-        "description": "我们将通过您首选的联系方式与您沟通,以确认详细信息。"
+        "title": "我们会回复您",
+        "description": "我们会确认该工程是否在能力范围内，并列出报价还需要补充的资料。"
       },
       "propose": {
-        "title": "您将获得明确的方案",
-        "description": "在做出任何承诺之前,我们会说明流程,并提供明确的工作范围及报价。"
+        "title": "您将收到按范围编制的报价",
+        "description": "我们按已确认的范围报价并出具进度计划，同时写明不得不作出的各项假设。"
       }
     }
   },
   "meta": {
     "home": {
-      "title": "Super Consulting——老挝商业、法律与签证咨询",
-      "description": "Super Consulting 为本地及国际客户提供企业注册、法律支持、签证与移民服务、会计、税务及企业合规方面的协助,服务范围覆盖老挝全境。"
+      "title": "Apex 有限公司 — 老挝 22 千伏与 115 千伏电力供应与安装",
+      "description": "Apex 有限公司在老挝建设 115 千伏输电线路、22 千伏配电网、变电站及建筑电气系统，并具备 15 年以上桩基、道路、桥梁与房屋建筑施工经验。"
     },
     "about": {
       "title": "关于我们",
-      "description": "自2020年以来,Super Consulting——Super Vision Co., Ltd. 旗下业务部门——通过细致的文件准备及与各部委的协调,协助在老挝的客户处理商业、法律、签证及会计事务。"
+      "description": "Apex 有限公司是一家老挝电气与建筑工程承包商，在基础与桩基、道路与桥梁施工、房屋建筑，以及 22 千伏与 115 千伏电气工程方面拥有十五年以上经验。"
     },
     "services": {
-      "title": "服务",
-      "description": "五大服务领域:企业设立与许可、签证与移民、企业法律、家庭与个人法律,以及老挝的会计与税务服务。"
+      "title": "业务能力",
+      "description": "四大业务板块：22 千伏与 115 千伏电力供应与安装、基础与桩基工程、道路与桥梁施工，以及老挝的房屋建筑与房地产开发。"
     },
-    "businessSetup": {
-      "title": "老挝企业设立与许可",
-      "description": "在老挝的公司注册、外商投资登记、营业执照及税务登记——由 Super Consulting 提供切实可行的设立支持。"
+    "serviceCategories": {
+      "electrical": {
+        "title": "老挝电力供应与安装 — 22 千伏与 115 千伏",
+        "description": "115 千伏输电线路与变电站、22 千伏配电网、变压器与开关柜供应、建筑低压安装，以及老挝全境的试验与调试服务。"
+      },
+      "piling-foundation": {
+        "title": "老挝基础与桩基工程",
+        "description": "打入桩、钻孔灌注桩、板桩、桩基承载力检测、承台、土方开挖与地基处理，服务于老挝的房屋建筑、桥梁与工业基础工程。"
+      },
+      "roads-bridges": {
+        "title": "老挝道路与桥梁工程",
+        "description": "道路建设与修复、钢筋混凝土桥梁、箱涵、排水系统、边坡防护及交通安全设施，覆盖老挝全国。"
+      },
+      "buildings-property": {
+        "title": "老挝房屋建筑与房地产开发",
+        "description": "商业、住宅与工业建筑，从地下结构到竣工交付，并含场地市政配套以及由 Apex 主导的房地产开发业务。"
+      }
     },
-    "visaImmigration": {
-      "title": "老挝签证与移民服务",
-      "description": "商务签证、工作签证及许可、投资者签证以及在老挝长期居留支持——文件准备与政府联络。"
-    },
-    "legalFamily": {
-      "title": "老挝法律与家庭服务",
-      "description": "在老挝提供合同、合规、尽职调查、商标、婚姻登记及家庭文件支持。"
-    },
-    "accountingTax": {
-      "title": "老挝会计与税务服务",
-      "description": "在老挝提供记账、税务登记与申报、工资核算、财务报告及年度合规支持。"
-    },
-    "knowledge": {
-      "title": "知识中心",
-      "description": "关于老挝商业、税务、签证、法律及生活事务的通俗易懂文章。"
-    },
-    "laws": {
-      "title": "老挝法律库",
-      "description": "关于与企业及个人相关的老挝法律法规的通俗易懂摘要。"
-    },
-    "guides": {
-      "title": "商业指南",
-      "description": "关于在老挝创业、经营及生活的实用商业指南。"
+    "projects": {
+      "title": "工程业绩",
+      "description": "Apex 有限公司在老挝已完成和在建的电气工程、基础与桩基、道路与桥梁，以及房屋建筑项目。"
     },
     "news": {
-      "title": "链接",
-      "description": "老挝政府各部委及公共服务官方网站,涉及商业、税务、签证及合规事务。"
-    },
-    "links": {
-      "title": "链接",
-      "description": "老挝政府各部委及公共服务官方网站,涉及商业、税务、签证及合规事务。"
+      "title": "新闻",
+      "description": "Apex 有限公司的公告、工程节点与最新动态。"
     },
     "faq": {
       "title": "常见问题",
-      "description": "关于在老挝的企业设立、签证、法律事务、会计及家庭服务的常见问题。"
+      "description": "业主在定标前向 Apex 有限公司提出的常见问题——业务能力、电压等级、报价、工期、检测与现场安全。"
     },
     "contact": {
       "title": "联系我们",
-      "description": "在老挝人民民主共和国万象首都联系 Super Consulting——预约商业、法律、签证或会计方面的咨询。"
+      "description": "就 22 千伏与 115 千伏电气工程、桩基施工、道路与桥梁工程或房屋建筑项目，联系老挝的 Apex 有限公司。"
     }
   },
   "alt": {
-    "heroPatuxai": "万象凯旋门(Patuxai)在黄昏中闪耀,金色尖顶映衬着柔和的傍晚天空",
-    "officeInterior": "静谧的现代办公室内部,自然光洒落其中",
-    "handshake": "两人在会议桌上的文件前握手",
-    "meetingDocuments": "顾问们在会议中查阅商业文件与图表",
-    "contractSigning": "特写镜头:双手正在签署一份商业文件",
-    "passportStamps": "手持一本打开的护照,展示签证印章",
-    "stoneColumns": "阳光洒落在古典石柱回廊上",
-    "accountingDesk": "办公桌上摆放着计算器、财务报表及一支笔",
-    "teamCollaboration": "团队在明亮的现代办公室共享办公桌前协作",
-    "advisoryMeeting": "顾问与客户在办公桌前共同查阅文件",
-    "luangPrabangStreet": "老挝琅勃拉邦一处宁静街角的殖民风格建筑",
-    "cityNight": "繁星点点的夜空下,城镇灯火闪烁",
-    "calmWorkspace": "极简风格的工作空间,笔记本电脑摆放在大窗户旁的木质书桌上",
-    "riversideCity": "黄昏时分,东南亚一座滨江城市的航拍全景",
-    "mekongSunset": "老挝琅勃拉邦附近,湄公河与林木葱郁的山丘上空的日落景色",
-    "meetingRoom": "阳光充足的空旷会议室,配有白色会议桌与黑色座椅",
-    "corporateLounge": "现代化企业休息区,透过落地窗可欣赏城市天际线景观",
-    "deskAnalysis": "特写镜头:办公桌上的图表、笔记本电脑,以及一只正在做笔记的手",
-    "overheadDeskWork": "俯拍视角:一人正在使用笔记本电脑与笔记本工作——未露出面部",
-    "deskCharts": "深色办公桌上,一只手正在查阅图表与笔记本电脑旁的记录"
+    "heroNightCity": "星空下城镇灯火通明的夜景",
+    "structuralColumns": "阳光照射下的高大混凝土柱廊",
+    "siteCrew": "工人在大型仓库内搬运货物",
+    "teamCollaboration": "团队在明亮办公室的共用工位上协作",
+    "riversideCity": "东南亚滨河城市黄昏时分的航拍全景",
+    "patuxai": "黄昏时分暮色天空下的万象凯旋门"
   }
 }
